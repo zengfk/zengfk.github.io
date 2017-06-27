@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zengfk.github.io/"/>
-  <updated>2017-06-27T15:13:15.148Z</updated>
+  <updated>2017-06-27T15:51:31.452Z</updated>
   <id>https://zengfk.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://zengfk.github.io/2017/06/27/About/"/>
     <id>https://zengfk.github.io/2017/06/27/About/</id>
     <published>2017-06-26T16:00:00.000Z</published>
-    <updated>2017-06-27T15:13:15.148Z</updated>
+    <updated>2017-06-27T15:51:31.452Z</updated>
     
     <content type="html"><![CDATA[<p><blockquote><br>Wir müssen wissen, wir werden wissen. –大卫.希尔伯特<br></blockquote><br>“我们终将知道, 我们必将知道.” 数学家大卫.希尔伯特在一次演讲中, 坚定有力的喊出 了这句话. 尽管不久在大西洋的另一端, 数学家哥德尔的不完备性定理打破了希尔伯特形式化整个数学的理想, 但这句话到如今, 依然支撑着无数人的信念.<br>这个小小的博客网站, 是我这个正在学习和跋涉的数学僧的一方小小田地. 在这里写下自己学习和生活中的一些记录, 反思, 收获. 一切都是美好的.<br>最后用我最喜爱的 Euler 公式来结束这份开篇词吧. 这个公式大概是我认为的数学里最 美的公式了:<br>$$e^{i \pi} + 1 =0$$</p>
 ]]></content>
@@ -30,6 +30,8 @@
       &lt;p&gt;&lt;blockquote&gt;&lt;br&gt;Wir müssen wissen, wir werden wissen. –大卫.希尔伯特&lt;br&gt;&lt;/blockquote&gt;&lt;br&gt;“我们终将知道, 我们必将知道.” 数学家大卫.希尔伯特在一次演讲中, 坚定有力的喊出 了这句话. 尽管不久
     
     </summary>
+    
+      <category term="随笔" scheme="https://zengfk.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
       <category term="introduction" scheme="https://zengfk.github.io/tags/introduction/"/>
