@@ -4,9 +4,9 @@
   <subtitle>Wir müssen wissen, wir werden wissen.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://zengfk.github.io/"/>
   <updated>2017-06-27T15:13:15.148Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://zengfk.github.io/</id>
   
   <author>
     <name>Zengfk</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Wir müssen wissen, wir werden wissen.关于这个博客.</title>
-    <link href="http://yoursite.com/2017/06/27/hello-world/"/>
-    <id>http://yoursite.com/2017/06/27/hello-world/</id>
+    <link href="https://zengfk.github.io/2017/06/27/hello-world/"/>
+    <id>https://zengfk.github.io/2017/06/27/hello-world/</id>
     <published>2017-06-26T16:00:00.000Z</published>
     <updated>2017-06-27T15:13:15.148Z</updated>
     
@@ -32,7 +32,7 @@
     </summary>
     
     
-      <category term="introduction" scheme="http://yoursite.com/tags/introduction/"/>
+      <category term="introduction" scheme="https://zengfk.github.io/tags/introduction/"/>
     
   </entry>
   
