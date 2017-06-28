@@ -619,7 +619,7 @@ body {
   text-decoration: none;
   font-size: 2em;
   font-weight: bold;
-  color: #555;
+  color: #03004c;
   line-height: 1.1em;
   -webkit-transition: color 0.2s;
   -moz-transition: color 0.2s;
@@ -706,7 +706,7 @@ a.article-title:hover {
   font-family: "Droid Serif", Georgia, Serif;
   margin: 1.6em 0;
   padding: 0 0.8em;
-  border-left: 4px solid #ddd;
+  border-left: 4px solid #004986;
   color: #777;
 }
 .article-entry blockquote footer {

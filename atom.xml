@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>微分同学的Blog</title>
+  <title>虎头微分同学的Blog</title>
   <subtitle>Wir müssen wissen, wir werden wissen.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
-  <updated>2017-06-27T15:13:15.148Z</updated>
-  <id>http://yoursite.com/</id>
+  <link href="https://zengfk.github.io/"/>
+  <updated>2017-06-28T06:59:46.284Z</updated>
+  <id>https://zengfk.github.io/</id>
   
   <author>
     <name>Zengfk</name>
@@ -16,23 +16,60 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Wir müssen wissen, wir werden wissen.关于这个博客.</title>
-    <link href="http://yoursite.com/2017/06/27/hello-world/"/>
-    <id>http://yoursite.com/2017/06/27/hello-world/</id>
-    <published>2017-06-26T16:00:00.000Z</published>
-    <updated>2017-06-27T15:13:15.148Z</updated>
+    <title>送给我汪:爱的心脏线</title>
+    <link href="https://zengfk.github.io/2017/06/28/%E9%80%81%E7%BB%99%E6%88%91%E6%B1%AA-%E7%88%B1%E7%9A%84%E5%BF%83%E8%84%8F%E7%BA%BF/"/>
+    <id>https://zengfk.github.io/2017/06/28/送给我汪-爱的心脏线/</id>
+    <published>2017-06-27T16:46:53.000Z</published>
+    <updated>2017-06-28T06:59:46.284Z</updated>
     
-    <content type="html"><![CDATA[<p><blockquote><br>Wir müssen wissen, wir werden wissen. –大卫.希尔伯特<br></blockquote><br>“我们终将知道, 我们必将知道.” 数学家大卫.希尔伯特在一次演讲中, 坚定有力的喊出 了这句话. 尽管不久在大西洋的另一端, 数学家哥德尔的不完备性定理打破了希尔伯特形式化整个数学的理想, 但这句话到如今, 依然支撑着无数人的信念.<br>这个小小的博客网站, 是我这个正在学习和跋涉的数学僧的一方小小田地. 在这里写下自己学习和生活中的一些记录, 反思, 收获. 一切都是美好的.<br>最后用我最喜爱的 Euler 公式来结束这份开篇词吧. 这个公式大概是我认为的数学里最 美的公式了:<br>$$e^{i \pi} + 1 =0$$</p>
+    <content type="html"><![CDATA[<p>我想先讲一个流传很广的数学家的爱情故事.</p>
+<h3 id="笛卡尔的爱情故事"><a href="#笛卡尔的爱情故事" class="headerlink" title="笛卡尔的爱情故事"></a>笛卡尔的爱情故事</h3><p>相传, 法国数学家笛卡尔曾到瑞典与瑞典公主克里斯蒂娜邂逅,<img src="../../../../images/Dheart.jpg" width="30%" align="right"> 并成为了公主的数学老师, 这对师生互相萌生爱意.国王知道后, 强行拆散他们, 并且没收了之后笛卡尔写给公主的所有信件。后来, 笛卡尔染上黑死病, 临死前给公主寄去了最后一封信, 信中只写着一行字：$r=a(1-sinθ)$. 国王和大臣们都看不懂这是什么意思, 只好交还给公主. 这里面的秘密只有公主和笛卡尔明白. 这便是著名的心脏线的极坐标方程.<a id="more"></a></p>
+<p>在历史上, 笛卡尔和克里斯蒂娜的确有过交情. 笛卡尔是 1649 年 10 月 4 日应克里斯蒂娜邀请才来到瑞典, 而当时克里斯蒂娜已成为了瑞典女王. 笛卡尔与克里斯蒂娜谈论的主要是哲学问题而不是数学. 而笛卡尔的死因是因天气寒冷加上过度操劳患上的肺炎.</p>
+<h3 id="借花献佛-画出心脏线-献给我亲爱的汪"><a href="#借花献佛-画出心脏线-献给我亲爱的汪" class="headerlink" title="借花献佛, 画出心脏线, 献给我亲爱的汪"></a>借花献佛, 画出心脏线, 献给我亲爱的汪</h3><p>借助数学科学软件 Mathematica 的符号计算能力, 我一行简洁的代码画出一条心脏线:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">PolarPlot[\[Pi] (1 - Sin[\[Theta]]), &#123;\[Theta], 0, 2 \[Pi]&#125;, PlotTheme -&gt; &quot;Scientific&quot;]</div></pre></td></tr></table></figure></p>
+<p>一切都在心里. </p>
+<blockquote>当我跨过沉沦的一切, 向着永恒开战的时候, 你是我的军旗.<br><strong>王小波</strong> —《爱你就像爱生命》<br></blockquote>
+
+<p><img src="../../../../images/heartline.jpg" alt="Heart Line"></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;blockquote&gt;&lt;br&gt;Wir müssen wissen, wir werden wissen. –大卫.希尔伯特&lt;br&gt;&lt;/blockquote&gt;&lt;br&gt;“我们终将知道, 我们必将知道.” 数学家大卫.希尔伯特在一次演讲中, 坚定有力的喊出 了这句话. 尽管不久
+      &lt;p&gt;我想先讲一个流传很广的数学家的爱情故事.&lt;/p&gt;
+&lt;h3 id=&quot;笛卡尔的爱情故事&quot;&gt;&lt;a href=&quot;#笛卡尔的爱情故事&quot; class=&quot;headerlink&quot; title=&quot;笛卡尔的爱情故事&quot;&gt;&lt;/a&gt;笛卡尔的爱情故事&lt;/h3&gt;&lt;p&gt;相传, 法国数学家笛卡尔曾到瑞典与瑞典公主克里斯蒂娜邂逅,&lt;img src=&quot;../../../../images/Dheart.jpg&quot; width=&quot;30%&quot; align=&quot;right&quot;&gt; 并成为了公主的数学老师, 这对师生互相萌生爱意.国王知道后, 强行拆散他们, 并且没收了之后笛卡尔写给公主的所有信件。后来, 笛卡尔染上黑死病, 临死前给公主寄去了最后一封信, 信中只写着一行字：$r=a(1-sinθ)$. 国王和大臣们都看不懂这是什么意思, 只好交还给公主. 这里面的秘密只有公主和笛卡尔明白. 这便是著名的心脏线的极坐标方程.
     
     </summary>
     
+      <category term="编程" scheme="https://zengfk.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
     
-      <category term="introduction" scheme="http://yoursite.com/tags/introduction/"/>
+    
+      <category term="MY LIFE" scheme="https://zengfk.github.io/tags/MY-LIFE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Wir müssen wissen, wir werden wissen.关于这个博客.</title>
+    <link href="https://zengfk.github.io/2017/06/27/About/"/>
+    <id>https://zengfk.github.io/2017/06/27/About/</id>
+    <published>2017-06-26T16:00:00.000Z</published>
+    <updated>2017-06-28T02:35:08.758Z</updated>
+    
+    <content type="html"><![CDATA[<p><blockquote><br>Wir müssen wissen, wir werden wissen.<br><br><strong>David Hillbert</strong> — <em> Address to the Society of German Scientists and Physicians, in Königsberg (8 September 1930) </em>.<br></blockquote><br>“我们终将知道, 我们必将知道.” 数学家大卫.希尔伯特在一次演讲中, 坚定有力的喊出 了这句话. 尽管不久在大西洋的另一端, 数学家哥德尔的不完备性定理打破了希尔伯特形式化整个数学的理想, 但这句话到如今, 依然支撑着无数人的信念.</p>
+<p>这个小小的博客网站, 是我这个正在学习和跋涉的数学僧的一方小小田地. 在这里写下自己学习和生活中的一些记录, 反思, 收获. 一切都是美好的.<br><a id="more"></a></p>
+<p>最后用我最喜爱的 Euler 公式来结束这份开篇词吧. 这个公式大概是我认为的数学里最 美的公式了:<br>$$e^{i \pi} + 1 =0$$</p>
+<p><img src="../../../../images/tiger.jpg" alt="虎头微分"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;blockquote&gt;&lt;br&gt;Wir müssen wissen, wir werden wissen.&lt;br&gt;&lt;br&gt;&lt;strong&gt;David Hillbert&lt;/strong&gt; — &lt;em&gt; Address to the Society of German Scientists and Physicians, in Königsberg (8 September 1930) &lt;/em&gt;.&lt;br&gt;&lt;/blockquote&gt;&lt;br&gt;“我们终将知道, 我们必将知道.” 数学家大卫.希尔伯特在一次演讲中, 坚定有力的喊出 了这句话. 尽管不久在大西洋的另一端, 数学家哥德尔的不完备性定理打破了希尔伯特形式化整个数学的理想, 但这句话到如今, 依然支撑着无数人的信念.&lt;/p&gt;
+&lt;p&gt;这个小小的博客网站, 是我这个正在学习和跋涉的数学僧的一方小小田地. 在这里写下自己学习和生活中的一些记录, 反思, 收获. 一切都是美好的.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://zengfk.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="introduction" scheme="https://zengfk.github.io/tags/introduction/"/>
     
   </entry>
   
