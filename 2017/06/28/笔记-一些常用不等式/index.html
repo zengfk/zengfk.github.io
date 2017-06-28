@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
   <title>笔记: 一些常用不等式 | 虎头微分同学的Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -13,7 +13,7 @@
 <meta property="og:url" content="https://zengfk.github.io/2017/06/28/笔记-一些常用不等式/index.html">
 <meta property="og:site_name" content="虎头微分同学的Blog">
 <meta property="og:description" content="这是一些常用到的不等式,和大概的证明方法.部分方法很重要.">
-<meta property="og:updated_time" content="2017-06-28T14:54:32.866Z">
+<meta property="og:updated_time" content="2017-06-28T15:09:48.243Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="笔记: 一些常用不等式">
 <meta name="twitter:description" content="这是一些常用到的不等式,和大概的证明方法.部分方法很重要.">
@@ -24,11 +24,11 @@
     <link rel="icon" href="/favicon.png">
   
   <link rel="stylesheet" href="/css/style.css">
-  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]--><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 </head>
 <body>
-<div id="container">
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
   <div id="wrap">
     <header id="header">
   <div id="banner"></div>
@@ -112,17 +112,17 @@
 <h3 id="Bernoulli-不等式"><a href="#Bernoulli-不等式" class="headerlink" title="Bernoulli 不等式"></a>Bernoulli 不等式</h3><p>设 $h&gt;-1$, $n\in \mathbb{N}_{+}$, 则<br>$$(1+h)^{n}\geqslant 1+nh.$$<br>其中当 $n&gt;1$ 时等号成立的<strong>充分必要条件</strong>为 $h=0$. </p>
 <p>将其推广为双参数形式: 令 $h=\frac{B}{A}$, $A\neq 0$ 且 $A+B&gt;0$, 则<br>$$(A+B)^{n}\geqslant A^{n}+nA^{n-1}B. $$<br>当 $n&gt;1$ 时等号成立的<strong>充分必要条件</strong>为 $B=0$</p>
 <p><strong>说明:</strong> 这个不等式的证明, 只需要将 $(1+h)^{n}-1$ 进行因式分解并讨论就可以了.</p>
-<h3 id="均值不等式"><a href="#均值不等式" class="headerlink" title="均值不等式"></a>均值不等式</h3><p>设 $a<em>{1}, a</em>{2}, \cdots, a<em>{n}$ 是 $n$ 个<strong>非负实数</strong>, 则成立不等式<br>$$\frac{a</em>{1}+ a<em>{2}+ \cdots+ a</em>{n}}{n}=\sqrt[n]{a<em>{1} a</em>{2} \cdots a<em>{n}}$$<br>其中等号成立的充分必要条件是 $a</em>{1}= a<em>{2}= \cdots= a</em>{n}$.</p>
+<h3 id="均值不等式"><a href="#均值不等式" class="headerlink" title="均值不等式"></a>均值不等式</h3><p>设 $a_{1}, a_{2}, \cdots, a_{n}$<br>是 $n$ 个<strong>非负实数</strong>, 则成立不等式<br>$$\frac{a_{1}+ a_{2}+ \cdots+ a_{n}}{n} \geqslant \sqrt[n]{a_{1} a_{2} \cdots a_{n}}$$<br>其中等号成立的充分必要条件是 $a_{1}= a_{2}= \cdots= a_{n}$.</p>
 <p><strong>说明:</strong> 均值不等式有多种证明方法,其中一种很有趣的方法是使用 Cauchy 于 1897 年给出的利用向前向后(Forward and Backward)数学归纳法.</p>
-<h3 id="Cauchy-不等式"><a href="#Cauchy-不等式" class="headerlink" title="Cauchy 不等式"></a>Cauchy 不等式</h3><p>对于实数 $a<em>{1}, a</em>{2}, \cdots, a<em>{n}$ 和 $b</em>{1}, b<em>{2}, \cdots, b</em>{n}$ 成立<br>$$\left| \sum<em>{i=1}^{n}{a</em>{i}b<em>{i}}\right| \leqslant \sqrt{\sum</em>{i=1}^{n}{a<em>{i}^{2}}}\sqrt{\sum</em>{i=1}^{n}{b_{i}^{2}}}.$$<br>式中等号成立的充分必要条件为, 这两个序列成比例.</p>
-<p><strong>说明:</strong> 构造法证明. 引入变量 $x\in \mathbb{R}^{1}$, 构造二次三项式 $\sum<em>{i=1}^{n}(xa</em>{i}-b_{i})^2$, 利用根判别式得到结果. 利用柯西不等式, 可以得到以下闵可夫斯基不等式:</p>
-<h3 id="Minkovwski-不等式"><a href="#Minkovwski-不等式" class="headerlink" title="Minkovwski 不等式"></a>Minkovwski 不等式</h3><p>对于实数 $a<em>{1}, a</em>{2}, \cdots, a<em>{n}$ 和 $b</em>{1}, b<em>{2}, \cdots, b</em>{n}$ 成立<br>$$\left[ \sum<em>{i=1}^{n}{(a</em>{i}+b<em>{i})^{2}}\right]^{\frac{1}{2}} \leqslant \left(\sum</em>{i=1}^{n}{a<em>{i}^{2}}\right)^{\frac{1}{2}}+\left(\sum</em>{i=1}^{n}{b_{i}^{2}}\right)^{\frac{1}{2}}.$$</p>
+<h3 id="Cauchy-不等式"><a href="#Cauchy-不等式" class="headerlink" title="Cauchy 不等式"></a>Cauchy 不等式</h3><p>对于实数 $a_{1}, a_{2}, \cdots, a_{n}$<br>和<br>$b_{1}, b_{2}, \cdots, b_{n}$<br>成立<br>$$\left| \sum_{i=1}^{n} {a_{i} b_{i} } \right| \leqslant \sqrt{\sum_{i=1}^{n}{a_{i}^{2}}}\sqrt{\sum_{i=1}^{n}{b_{i}^{2}}}.$$<br>式中等号成立的充分必要条件为, 这两个序列成比例.</p>
+<p><strong>说明:</strong> 构造法证明. 引入变量 $x\in \mathbb{R}^{1}$, 构造二次三项式 $\sum_{i=1}^{n}(xa_{i}-b_{i})^2$, 利用根判别式得到结果. 利用柯西不等式, 可以得到以下闵可夫斯基不等式:</p>
+<h3 id="Minkovwski-不等式"><a href="#Minkovwski-不等式" class="headerlink" title="Minkovwski 不等式"></a>Minkovwski 不等式</h3><p>对于实数 $a_{1}, a_{2}, \cdots, a_{n}$<br>和<br>$b_{1}, b_{2}, \cdots, b_{n}$ 成立<br>$$\left[ \sum_{i=1}^{n}{(a_{i}+b_{i})^{2}}\right]^{\frac{1}{2}} \leqslant \left(\sum_{i=1}^{n}{a_{i}^{2}}\right)^{\frac{1}{2}}+\left(\sum_{i=1}^{n}{b_{i}^{2}}\right)^{\frac{1}{2}}.$$</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://zengfk.github.io/2017/06/28/笔记-一些常用不等式/" data-id="cj4h4jfd4000008w42oa7n8h1" class="article-share-link">分享到</a>
+        <a data-url="https://zengfk.github.io/2017/06/28/笔记-一些常用不等式/" data-id="cj4h4mlih00016kw46eeyj5p4" class="article-share-link">分享到</a>
       
 
       
@@ -322,6 +322,6 @@ MathJax.Hub.Queue(function() {
 
 
 <script src="/js/script.js"></script>
-</div>
+</div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
