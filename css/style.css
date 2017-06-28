@@ -619,7 +619,7 @@ body {
   text-decoration: none;
   font-size: 2em;
   font-weight: bold;
-  color: #555;
+  color: #03004c;
   line-height: 1.1em;
   -webkit-transition: color 0.2s;
   -moz-transition: color 0.2s;
@@ -632,7 +632,7 @@ a.article-title:hover {
 }
 .article-entry {
   zoom: 1;
-  color: #03004c;
+  color: #555;
   padding: 0 20px;
 }
 .article-entry:before,
