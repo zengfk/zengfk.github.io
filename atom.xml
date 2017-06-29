@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zengfk.github.io/"/>
-  <updated>2017-06-28T06:59:46.284Z</updated>
+  <updated>2017-06-28T15:28:42.124Z</updated>
   <id>https://zengfk.github.io/</id>
   
   <author>
@@ -14,6 +14,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>笔记: 一些常用不等式</title>
+    <link href="https://zengfk.github.io/2017/06/28/%E7%AC%94%E8%AE%B0-%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E4%B8%8D%E7%AD%89%E5%BC%8F/"/>
+    <id>https://zengfk.github.io/2017/06/28/笔记-一些常用不等式/</id>
+    <published>2017-06-28T14:23:44.000Z</published>
+    <updated>2017-06-28T15:28:42.124Z</updated>
+    
+    <content type="html"><![CDATA[<p>这是一些常用到的不等式,和大概的证明方法.部分方法很重要.<br><a id="more"></a></p>
+<h3 id="Bernoulli-不等式"><a href="#Bernoulli-不等式" class="headerlink" title="Bernoulli 不等式"></a>Bernoulli 不等式</h3><p>设 $h&gt;-1$, $n\in \mathbb{N}_{+}$, 则<br>$$(1+h)^{n}\geqslant 1+nh.$$<br>其中当 $n&gt;1$ 时等号成立的<strong>充分必要条件</strong>为 $h=0$. </p>
+<p>将其推广为双参数形式: 令 $h=\frac{B}{A}$, $A\neq 0$ 且 $A+B&gt;0$, 则<br>$$(A+B)^{n}\geqslant A^{n}+nA^{n-1}B. $$<br>当 $n&gt;1$ 时等号成立的<strong>充分必要条件</strong>为 $B=0$</p>
+<p><strong>说明:</strong> 这个不等式的证明, 只需要将 $(1+h)^{n}-1$ 进行因式分解并讨论就可以了.</p>
+<h3 id="均值不等式"><a href="#均值不等式" class="headerlink" title="均值不等式"></a>均值不等式</h3><p>设 $a_{1}, a_{2}, \cdots, a_{n}$ 是 $n$ 个<strong>非负实数</strong>, 则成立不等式<br>$$\frac{a_{1}+ a_{2}+ \cdots+ a_{n}}{n} \geqslant \sqrt[n]{a_{1} a_{2} \cdots a_{n}}$$<br>其中等号成立的充分必要条件是 $a_{1}= a_{2}= \cdots= a_{n}$.</p>
+<p><strong>说明:</strong> 均值不等式有多种证明方法,其中一种很有趣的方法是使用 Cauchy 于 1897 年给出的利用向前向后(Forward and Backward)数学归纳法.</p>
+<h3 id="Cauchy-不等式"><a href="#Cauchy-不等式" class="headerlink" title="Cauchy 不等式"></a>Cauchy 不等式</h3><p>对于实数 $a_{1}, a_{2}, \cdots, a_{n}$ 和 $b_{1}, b_{2}, \cdots, b_{n}$ 成立<br>$$\left| \sum_{i=1}^{n} {a_{i} b_{i} } \right| \leqslant \sqrt{\sum_{i=1}^{n}{a_{i}^{2}}}\sqrt{\sum_{i=1}^{n}{b_{i}^{2}}}.$$<br>式中等号成立的充分必要条件为, 这两个序列成比例.</p>
+<p><strong>说明:</strong> 构造法证明. 引入变量 $x\in \mathbb{R}^{1}$, 构造二次三项式 $\sum_{i=1}^{n}(xa_{i}-b_{i})^2$, 利用根判别式得到结果. 利用柯西不等式, 可以得到以下闵可夫斯基不等式:</p>
+<h3 id="Minkovwski-不等式"><a href="#Minkovwski-不等式" class="headerlink" title="Minkovwski 不等式"></a>Minkovwski 不等式</h3><p>对于实数 $a_{1}, a_{2}, \cdots, a_{n}$ 和$b_{1}, b_{2}, \cdots, b_{n}$ 成立<br>$$\left[ \sum_{i=1}^{n}{(a_{i}+b_{i})^{2}}\right]^{\frac{1}{2}} \leqslant \left(\sum_{i=1}^{n}{a_{i}^{2}}\right)^{\frac{1}{2}}+\left(\sum_{i=1}^{n}{b_{i}^{2}}\right)^{\frac{1}{2}}.$$</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这是一些常用到的不等式,和大概的证明方法.部分方法很重要.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="https://zengfk.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="Notes" scheme="https://zengfk.github.io/tags/Notes/"/>
+    
+  </entry>
   
   <entry>
     <title>送给我汪:爱的心脏线</title>
