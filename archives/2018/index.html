@@ -400,7 +400,7 @@
                 <div class="media-content">
                     <div class="content">
                         <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2018-01-22T08:52:34.000Z">2018-01-22</time>
-                        <a href="/2018/01/22/分析之-一元微分学/" class="has-link-black-ter is-size-6">分析之[一元微分学]</a>
+                        <a href="/2018/01/22/分析之-一元微分学/" class="has-link-black-ter is-size-6">分析之【一元微分学】</a>
                         <div class="level article-meta is-mobile">
                             <div class="level-left">
                                 
@@ -2014,20 +2014,29 @@
 document.addEventListener('DOMContentLoaded', function () {
     MathJax.Hub.Config({
         'HTML-CSS': {
-            matchFontHeight: false
+            matchFontHeight: true
         },
         SVG: {
-            matchFontHeight: false
+            matchFontHeight: true
         },
         CommonHTML: {
-            matchFontHeight: false
+            matchFontHeight: true
         },
         tex2jax: {
             inlineMath: [
                 ['$','$'],
                 ['\\(','\\)']
-            ]
-        }
+            ],
+            displayMath: [ 
+                ['$$','$$'],
+                ['\[','\]'] 
+            ],
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
     });
 });
 </script>

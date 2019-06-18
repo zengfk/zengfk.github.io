@@ -8,7 +8,7 @@
 
 
     <meta name="description" content="矩阵的秩矩阵的秩,是用于描述矩阵的一个重要的性质,它由行(列)向量组的极大线性无关组中包含的向量的个数来定义, 描述了矩阵的行(列)向量空间的维数. 关于一个矩阵 $A$ 的秩,有一点重要基本的性质: **【定理】** 初等变换不改变矩阵的秩.进一步的,初等行(列)变换不改变矩阵任意列(行)之间的线性相关性.">
-<meta name="keywords" content="Notes,重温 &amp; 新知,线性代数,矩阵">
+<meta name="keywords" content="重温 &amp; 新知,Notes,线性代数,矩阵">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线性代数-矩阵基础-3">
 <meta property="og:url" content="https://zengfk.com.cn/2018/06/01/线性代数-矩阵基础-3/index.html">
@@ -16,7 +16,7 @@
 <meta property="og:description" content="矩阵的秩矩阵的秩,是用于描述矩阵的一个重要的性质,它由行(列)向量组的极大线性无关组中包含的向量的个数来定义, 描述了矩阵的行(列)向量空间的维数. 关于一个矩阵 $A$ 的秩,有一点重要基本的性质: **【定理】** 初等变换不改变矩阵的秩.进一步的,初等行(列)变换不改变矩阵任意列(行)之间的线性相关性.">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://zengfk.com.cn/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-14T07:54:32.323Z">
+<meta property="og:updated_time" content="2019-06-18T10:14:53.556Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性代数-矩阵基础-3">
 <meta name="twitter:description" content="矩阵的秩矩阵的秩,是用于描述矩阵的一个重要的性质,它由行(列)向量组的极大线性无关组中包含的向量的个数来定义, 描述了矩阵的行(列)向量空间的维数. 关于一个矩阵 $A$ 的秩,有一点重要基本的性质: **【定理】** 初等变换不改变矩阵的秩.进一步的,初等行(列)变换不改变矩阵任意列(行)之间的线性相关性.">
@@ -159,7 +159,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    18 分钟 读完 (大约 2687 个字)
+                    18 分钟 读完 (大约 2695 个字)
                 </span>
                 
                 
@@ -184,8 +184,8 @@
 
 <a id="more"></a>
 <h3 id="矩阵秩的求法"><a href="#矩阵秩的求法" class="headerlink" title="矩阵秩的求法"></a>矩阵秩的求法</h3><p>根据矩阵秩的定义, 秩的唯一的求法就是通过初等行(列)变换,将举证化为阶梯型矩阵, 其中非零行的个数即为行秩. 由由于矩阵的行秩等于列秩,等于矩阵的秩, 这也就求出了矩阵的秩. 这里仅举一例作为参考.</p>
-<p><font color="red">【例】</font><br>求以下矩阵$A$的秩.<br>$$A=\begin{pmatrix}<br>3 &amp; 1 &amp; 1 &amp; 4 \<br>\lambda &amp; 4 &amp; 10 &amp; 1 \<br>1 &amp; 7 &amp; 17 &amp; 3 \<br>2 &amp; 2 &amp; 4 &amp; 3 \<br>\end{pmatrix}$$</p>
-<p><font color="red">【解】</font><br>对矩阵施行初等行变换. 得到<br>$$A_1=\begin{pmatrix}<br>1 &amp; 7 &amp; 17 &amp; 3 \<br>0 &amp; 4 &amp; 10 &amp; 1 \<br>0 &amp; -7\lambda &amp; -17\lambda &amp; -3\lambda \<br>0 &amp; 0 &amp; 0 &amp; 0 \<br>\end{pmatrix}$$<br>可以看到, 若 $\lambda=0$, 则$\text{rank} A=2$; 若$\lambda\neq 0$, 对矩阵进一步化简, 容易得到 $\text{rank} A=3$.</p>
+<p><font color="red">【例】</font><br>求以下矩阵$A$的秩.<br>$$A=\begin{pmatrix}<br>3 &amp; 1 &amp; 1 &amp; 4 \\<br>\lambda &amp; 4 &amp; 10 &amp; 1 \\<br>1 &amp; 7 &amp; 17 &amp; 3 \\<br>2 &amp; 2 &amp; 4 &amp; 3 \\<br>\end{pmatrix}$$</p>
+<p><font color="red">【解】</font><br>对矩阵施行初等行变换. 得到<br>$$A_1=\begin{pmatrix}<br>1 &amp; 7 &amp; 17 &amp; 3 \\<br>0 &amp; 4 &amp; 10 &amp; 1 \\<br>0 &amp; -7\lambda &amp; -17\lambda &amp; -3\lambda \\<br>0 &amp; 0 &amp; 0 &amp; 0 \\<br>\end{pmatrix}$$<br>可以看到, 若 $\lambda=0$, 则$\text{rank} A=2$; 若$\lambda\neq 0$, 对矩阵进一步化简, 容易得到 $\text{rank} A=3$.</p>
 <h3 id="关于秩的等式与不等式"><a href="#关于秩的等式与不等式" class="headerlink" title="关于秩的等式与不等式"></a>关于秩的等式与不等式</h3><p>以下命题的证明中, 将大量的使用分块矩阵的方法. 其实不难, 只要学会了, 解题就会变得很简单, 相比于一般课本上, 使用极大线性无关组叙述的冗长证明, 不仅简单, 而且易于掌握.</p>
 <blockquote>【命题】
 设$A$为$s\times n$矩阵. $P,Q$分别为$s$与$n$阶的可逆矩阵, 则
@@ -204,28 +204,28 @@ $\text{rank} A=\text{rank} A^{T}=\text{rank} (kA)$,其中$k\neq 0$.
 <blockquote>【命题】\label{prop:1.4}
 $\text{rank} \begin{pmatrix}
 A & 0 \\
-0 & B \\
+0 & B 
 \end{pmatrix}=\text{rank} A+\text{rank} B$
 </blockquote>
 
 <p>由秩的定义,以上三个命题显然.</p>
-<blockquote>【命题】[秩的第一降阶定理]\label{prop:1.5}
+<blockquote>【命题】【秩的第一降阶定理】\label{prop:1.5}
 设$A$可逆,$\begin{pmatrix}
 A & B \\
-C & D \\
+C & D 
 \end{pmatrix}$是$m\times n$矩阵, 则
 $$\label{eq:prop5}
 \text{rank} \begin{pmatrix}
 A & B \\
-C & D \\
+C & D 
 \end{pmatrix}=\text{rank} A+\text{rank} (D-CA^{-1}B).
 $$
 </blockquote>
 
-<p><font color="red">【证明】</font><br>类似于例\ref{eg:1.3},我们有<br>$$\begin{array}{l}<br>\begin{pmatrix}<br>    I &amp; 0 \<br>    -CA^{-1} &amp; I \<br>\end{pmatrix}<br>\begin{pmatrix}<br>    A &amp; B \<br>    C &amp; D \<br>\end{pmatrix}<br>\begin{pmatrix}<br>    I &amp; -A^{-1}B \<br>    0 &amp; I \<br>\end{pmatrix}\<br>=\begin{pmatrix}<br>    A &amp; 0 \<br>    0 &amp; D-CA^{-1}B \<br>\end{pmatrix}.<br>\end{array}$$<br>其中$\begin{pmatrix}<br>I &amp; 0 \<br>-CA^{-1} &amp; I \<br>\end{pmatrix}$和$\begin{pmatrix}<br>I &amp; -A^{-1}B \<br>0 &amp; I \<br>\end{pmatrix}$均为广义初等矩阵.自然有命题成立.</p>
-<p><strong>【NOTE】</strong>: 若$D$为可逆矩阵, 则也有类似公式. 亦称为第一降阶公式. 另外将以上命题中式(\ref{eq:prop5})改写为:<br>\begin{equation}\label{eq:prop5.2}<br>\text{rank} (D-CA^{-1}B)=\text{rank} \begin{pmatrix}<br>A &amp; B \<br>C &amp; D \<br>\end{pmatrix}-\text{rank} A.<br>\end{equation}<br>称为秩的<strong>升阶公式</strong>.</p>
+<p><font color="red">【证明】</font><br>类似于例\ref{eg:1.3},我们有<br>$$\begin{array}{l}<br>\begin{pmatrix}<br>    I &amp; 0 \\<br>    -CA^{-1} &amp; I \\<br>\end{pmatrix}<br>\begin{pmatrix}<br>    A &amp; B \\<br>    C &amp; D \\<br>\end{pmatrix}<br>\begin{pmatrix}<br>    I &amp; -A^{-1}B \\<br>    0 &amp; I \\<br>\end{pmatrix}\\<br>=\begin{pmatrix}<br>    A &amp; 0 \\<br>    0 &amp; D-CA^{-1}B \\<br>\end{pmatrix}.<br>\end{array}$$<br>其中$\begin{pmatrix}<br>I &amp; 0 \\<br>-CA^{-1} &amp; I \\<br>\end{pmatrix}$和$\begin{pmatrix}<br>I &amp; -A^{-1}B \\<br>0 &amp; I \\<br>\end{pmatrix}$均为广义初等矩阵.自然有命题成立.</p>
+<p><strong>【NOTE】</strong>: 若$D$为可逆矩阵, 则也有类似公式. 亦称为第一降阶公式. 另外将以上命题中式(\ref{eq:prop5})改写为:<br>\begin{equation}\label{eq:prop5.2}<br>\text{rank} (D-CA^{-1}B)=\text{rank} \begin{pmatrix}<br>A &amp; B \\<br>C &amp; D \\<br>\end{pmatrix}-\text{rank} A.<br>\end{equation}<br>称为秩的<strong>升阶公式</strong>.</p>
 <p>应用命题\ref{prop:1.6}立刻得到下面命题.</p>
-<blockquote>【命题】[秩的第二降阶定理]\label{prop:1.6}
+<blockquote>【命题】【秩的第二降阶定理】\label{prop:1.6}
 设$A,D$分别为$r$阶与$s$阶的可逆矩阵,$B,C$分别是$r\times s$和$s\times r$矩阵,则
 \begin{multline}\label{eq:prop6}
 \text{rank} (D-CA^{-1}B)\\
@@ -237,11 +237,11 @@ $$
 \begin{align}
 \text{rank}\begin{pmatrix}
 A & C \\
-0 & B \\
+0 & B 
 \end{pmatrix}\geqslant \text{rank} A +\text{rank} B,\\
 \text{rank}\begin{pmatrix}
 A & 0 \\
-C & B \\
+C & B 
 \end{pmatrix}\geqslant \text{rank} A +\text{rank} B.
 \end{align}
 </blockquote>
@@ -268,8 +268,10 @@ M_1 & 0 \\
 设$A=(a_{ij})$为$m\times s$矩阵,$B=(b_{ij})$为$s\times n$矩阵, 则$\text{rank} (AB)\leqslant\min\{\text{rank} A,\text{rank} B\}.$
 </blockquote>
 
-<p><font color="red">【证明】</font><br>\textbf{证明1:} 将$A$表示为列向量组形式$(\alpha_1,\cdots,\alpha_s)$,<br>$$\begin{array}{lll}<br>AB &amp;=&amp; (\alpha_1,\cdots,\alpha_s)\begin{pmatrix}<br>b_{11} &amp; \cdots &amp; b_{1n} \<br>\vdots &amp;         &amp; \vdots \<br>b_{s1} &amp; \cdots    &amp; b_{sn} \<br>\end{pmatrix}\<br> &amp;=&amp; (\alpha_1 b_{11}+\cdots +\alpha_s b_{s1},\cdots,\alpha_1 b_{1n}+\cdots +\alpha_s b_{sn}).<br>\end{array}$$<br>上式说明$AB$的列向量组可以由$A$的列向量组线性表出, 故而$\text{rank} (AB)\leqslant\text{rank} A$,对$B$同理有$\text{rank} (AB)\leqslant\text{rank} B$.故而命题成立.</p>
-<p>\textbf{证明2:} 设$\text{rank}{A}=r_1,\text{rank}{B}=r_2$.由命题\ref{prop:1.1}以及初等变换的性质, 可知存在$m\times m$可逆矩阵$P$,与$s\times s$可逆矩阵$Q$,使得$PQA=\begin{pmatrix}<br>I_{r_1} &amp; 0\<br>0 &amp; 0\<br>\end{pmatrix}$.<br>注意到$$PAB=PAQQ^{-1}B=\begin{pmatrix}<br>I_{r_1} &amp; 0\<br>0 &amp; 0\<br>\end{pmatrix}Q^{-1}B.$$<br>令$B_1=Q^{-1}B$,这是一个$s\times n$矩阵,用$b’<em>{ij}$表示这个矩阵的元.显然有<br>$$\begin{pmatrix}<br>I</em>{r_1} &amp; 0\<br>0 &amp; 0\<br>\end{pmatrix}B_1 =<br>\begin{pmatrix}<br>b’<em>{11} &amp; \cdots &amp; b’</em>{1n}\<br>\vdots &amp; \cdots &amp; \vdots\<br>b’<em>{r_11} &amp; \cdots &amp; b’</em>{r_1n}\<br>0 &amp; \cdots &amp; 0\<br>\vdots &amp;  &amp; \vdots\<br>0 &amp; \cdots &amp; 0<br>\end{pmatrix}_{m\times n}=C.$$<br>这个矩阵$C$的行秩最多等于$r_1$, 而列秩则不超过$\text{rank} B_1 = \text{rank} B$.任意矩阵的行秩与列秩与秩都相等, 这就有了$\text{rank}(AB)=\text{rank}(PAB)\leqslant\min{\text{rank} A, \text{rank} B}$.</p>
+<p><font color="red">【证明】</font><br>\textbf{证明1:} 将$A$表示为列向量组形式$(\alpha_1,\cdots,\alpha_s)$,<br>$$\begin{array}{lll}<br>AB &amp;=&amp; (\alpha_1,\cdots,\alpha_s)\begin{pmatrix}<br>b_{11} &amp; \cdots &amp; b_{1n} \\<br>\vdots &amp;         &amp; \vdots \\<br>b_{s1} &amp; \cdots    &amp; b_{sn} \\<br>\end{pmatrix}\\<br> &amp;=&amp; (\alpha_1 b_{11}+\cdots +\alpha_s b_{s1},\cdots,\alpha_1 b_{1n}+\cdots +\alpha_s b_{sn}).<br>\end{array}$$<br>上式说明$AB$的列向量组可以由$A$的列向量组线性表出, 故而$\text{rank} (AB)\leqslant\text{rank} A$,对$B$同理有$\text{rank} (AB)\leqslant\text{rank} B$.故而命题成立.</p>
+<p>\textbf{证明2:} 设$\text{rank}{A}=r_1,\text{rank}{B}=r_2$.由命题\ref{prop:1.1}以及初等变换的性质, 可知存在 $m\times m$ 可逆矩阵 $P$, 与 $s\times s$ 可逆矩阵 $Q$, 使得<br>$$PQA=\begin{pmatrix}<br>I_{r_1} &amp; 0\\<br>0 &amp; 0\\<br>\end{pmatrix}.$$<br>注意到<br>$$PAB=PAQQ^{-1}B=\begin{pmatrix}<br>I_{r_1} &amp; 0\\<br>0 &amp; 0\\<br>\end{pmatrix}Q^{-1}B.$$</p>
+<p>令 $B_1=Q^{-1}B$, 这是一个 $s\times n$ 矩阵, 用 $ b’<em>{ij}$ 表示这个矩阵的元.显然有<br>$$\begin{pmatrix}<br>    I</em>{r_1} &amp; 0 \<br>    0 &amp; 0 \<br>\end{pmatrix} B_1 = \begin{pmatrix}<br>    b’<em>{11} &amp; \cdots &amp; b’</em>{1n}\<br>    \vdots &amp; \cdots &amp; \vdots\<br>    b’<em>{r_11} &amp; \cdots &amp; b’</em>{r_1n}\<br>    0 &amp; \cdots &amp; 0\<br>    \vdots &amp;  &amp; \vdots\<br>    0 &amp; \cdots &amp; 0<br>\end{pmatrix}_{m\times n} = C.$$</p>
+<p>这个矩阵$C$的行秩最多等于$r_1$, 而列秩则不超过$\text{rank} B_1 = \text{rank} B$.任意矩阵的行秩与列秩与秩都相等, 这就有了$\text{rank}(AB)=\text{rank}(PAB)\leqslant\min{\text{rank} A, \text{rank} B}$.</p>
 <blockquote>【命题】\label{prop:1.9}
 将两个同行（列）数矩阵$A,B$并排（竖直）连在一起,构成的新矩阵$(A,B)$（$\begin{pmatrix}
 A \\
@@ -281,35 +283,35 @@ B \\
 设$A,B$均为$m\times n$矩阵, 则$\text{rank} (A+B)\leqslant\text{rank} A +\text{rank} B$.
 </blockquote>
 
-<p><font color="red">【证明】</font>由广义初等线性变换不改变秩,有<br>$$\begin{pmatrix}<br>A &amp; 0 \<br>0 &amp; B \<br>\end{pmatrix}\rightarrow<br>\begin{pmatrix}<br>A &amp; 0 \<br>A &amp; B \<br>\end{pmatrix}\rightarrow<br>\begin{pmatrix}<br>A &amp; A \<br>A &amp; A+B \<br>\end{pmatrix}$$<br>$A+B$为最右边矩阵的子矩阵,显然命题成立.</p>
-<blockquote>【命题】[Sylvester不等式]\label{prop:1.11}
+<p><font color="red">【证明】</font>由广义初等线性变换不改变秩,有<br>$$\begin{pmatrix}<br>A &amp; 0 \\<br>0 &amp; B \\<br>\end{pmatrix}\rightarrow<br>\begin{pmatrix}<br>A &amp; 0 \\<br>A &amp; B \\<br>\end{pmatrix}\rightarrow<br>\begin{pmatrix}<br>A &amp; A \\<br>A &amp; A+B \\<br>\end{pmatrix}$$<br>$A+B$为最右边矩阵的子矩阵,显然命题成立.</p>
+<blockquote>【命题】【Sylvester不等式】\label{prop:1.11}
 设$A,B$分别是$m\times n$和$n\times s$矩阵,则$$\text{rank}{AB}\geqslant\text{rank}{A}+\text{rank}{B}-n.$$
 </blockquote>
 
-<p><font color="red">【证明】</font><br><strong>证明1:</strong> 由于$$C=\begin{pmatrix}<br>A &amp; 0 \<br>I &amp; B \<br>\end{pmatrix}\rightarrow<br>\begin{pmatrix}<br>0 &amp; -AB \<br>I &amp; B \<br>\end{pmatrix}\rightarrow<br>\begin{pmatrix}<br>0 &amp; -AB \<br>I &amp; 0 \<br>\end{pmatrix}$$<br>显然,我们有$$\begin{array}{ll}<br>\text{rank}{A}+\text{rank}{B}&amp;\leqslant\text{rank}{C}=\text{rank}{\begin{pmatrix}<br>0 &amp; -AB \<br>I &amp; 0 \<br>\end{pmatrix}}\<br>&amp;=\text{rank}{(AB)}+\text{rank}{I}.\end{array}.$$</p>
-<p><strong>证明2:</strong> 由秩的升阶公式(\ref{eq:prop5.2}),我们有<br>$$\begin{array}{ll}<br>\text{rank}(AB)&amp;=\text{rank} (0-AI^{-1}B)\<br>&amp;=\text{rank} \begin{pmatrix}<br>I_n &amp; B \<br>A &amp; 0 \<br>\end{pmatrix}-\text{rank} (I_n)\<br>&amp;\geqslant \text{rank}{A}+\text{rank}{B} - n.\end{array}$$.<br>这样就证明了这个命题.</p>
+<p><font color="red">【证明】</font><br><strong>证明1:</strong> 由于$$C=\begin{pmatrix}<br>A &amp; 0 \\<br>I &amp; B \\<br>\end{pmatrix}\rightarrow<br>\begin{pmatrix}<br>0 &amp; -AB \\<br>I &amp; B \\<br>\end{pmatrix}\rightarrow<br>\begin{pmatrix}<br>0 &amp; -AB \\<br>I &amp; 0 \\<br>\end{pmatrix}$$<br>显然,我们有$$\begin{array}{ll}<br>\text{rank}{A}+\text{rank}{B}&amp;\leqslant\text{rank}{C}=\text{rank}{\begin{pmatrix}<br>0 &amp; -AB \\<br>I &amp; 0 \\<br>\end{pmatrix}}\\<br>&amp;=\text{rank}{(AB)}+\text{rank}{I}.\end{array}.$$</p>
+<p><strong>证明2:</strong> 由秩的升阶公式(\ref{eq:prop5.2}),我们有<br>$$\begin{array}{ll}<br>\text{rank}(AB)&amp;=\text{rank} (0-AI^{-1}B)\\<br>&amp;=\text{rank} \begin{pmatrix}<br>I_n &amp; B \\<br>A &amp; 0 \\<br>\end{pmatrix}-\text{rank} (I_n)\\<br>&amp;\geqslant \text{rank}{A}+\text{rank}{B} - n.\end{array}$$.<br>这样就证明了这个命题.</p>
 <p>\paragraph{NOTEs:} Sylvester不等式应用非常广泛.另外,结合命题\ref{prop:1.8},我们还得到$$\text{rank}{A}+\text{rank}{B}-n\leqslant\text{rank} (AB)\leqslant\min{\text{rank} A,\text{rank} B}.$$</p>
 <p>借由Sylvester不等式, 还可以将命题\ref{prop:1.1}进一步一般化,得到如下推论:<br><strong>【推论】</strong>\label{col:1.11}<br>设$A$是$m\times n$矩阵, $P$是$l\times m$的列满秩矩阵,$Q$是$n\times s$的行满秩矩阵.那么有$$\text{rank}  A = \text{rank} (PA)= \text{rank} (AQ)= \text{rank} (PAQ).$$<br>\end{corollary}</p>
-<blockquote>【命题】**[Frobenius不等式]**\label{prop:1.12}
+<blockquote>【命题】**【Frobenius不等式】**\label{prop:1.12}
 $$\text{rank}(ABC)\geqslant\text{rank}(AB)+\text{rank}(BC)-\text{rank} B.$$
 </blockquote>
 
-<p><font color="red">【证明】</font><br>$$\begin{pmatrix}<br>ABC &amp; 0 \<br>0 &amp; B \<br>\end{pmatrix}\rightarrow<br>\begin{pmatrix}<br>ABC &amp; AB \<br>0 &amp; B \<br>\end{pmatrix}\rightarrow<br>\begin{pmatrix}<br>0 &amp; AB \<br>-BC &amp; B \<br>\end{pmatrix},$$<br>于是有$\text{rank}(ABC)+\text{rank} B=\begin{pmatrix}<br>0 &amp; AB \<br>-BC &amp; B \<br>\end{pmatrix}\geqslant\text{rank}(AB)+\text{rank}(BC)$.这就是本命题.</p>
+<p><font color="red">【证明】</font><br>$$\begin{pmatrix}<br>ABC &amp; 0 \\<br>0 &amp; B \\<br>\end{pmatrix}\rightarrow<br>\begin{pmatrix}<br>ABC &amp; AB \\<br>0 &amp; B \\<br>\end{pmatrix}\rightarrow<br>\begin{pmatrix}<br>0 &amp; AB \\<br>-BC &amp; B \\<br>\end{pmatrix},$$<br>于是有$\text{rank}(ABC)+\text{rank} B=\begin{pmatrix}<br>0 &amp; AB \\<br>-BC &amp; B \\<br>\end{pmatrix}\geqslant\text{rank}(AB)+\text{rank}(BC)$.这就是本命题.</p>
 <blockquote>【命题】\label{prop:1.13}
 设$A$为实矩阵,则$\text{rank}(AA^{T})=\text{rank} A=\text{rank} A^{T}$.
 </blockquote>
 
-<p>这个命题对于复矩阵是不成立的,一个简单的反例就是$\begin{pmatrix}<br>1 &amp; i \<br>-i &amp; 1 \<br>\end{pmatrix}$.请你自行验证.</p>
+<p>这个命题对于复矩阵是不成立的,一个简单的反例就是$\begin{pmatrix}<br>1 &amp; i \\<br>-i &amp; 1 \\<br>\end{pmatrix}$.请你自行验证.</p>
 <p>下面给出一些应用的例题,注意所使用的方法.</p>
 <p><font color="red">【例】</font><br>求证: $\text{rank}(AB-I)\leqslant\text{rank}(A-I)+\text{rank}(B-I)$.</p>
-<p><font color="red">【证明】</font><br>由(做初等变换)$$\begin{array}{ll}<br>\begin{pmatrix}<br>A-I &amp; 0 \<br>0 &amp; B-I \<br>\end{pmatrix}&amp;\xrightarrow[\text{加到第2列}]{\text{第1列右乘$B$}}\begin{pmatrix}<br>A-I &amp; AB-B \<br>0 &amp; B-I \<br>\end{pmatrix}\<br>&amp;\xrightarrow[\text{第2行}]{\text{第1行减掉}}<br>\begin{pmatrix}<br>A-I &amp; AB-I \<br>0 &amp; B-I \<br>\end{pmatrix}\end{array}$$<br>利用命题\ref{prop:1.4},以及矩阵秩的性质即可得到证明.</p>
+<p><font color="red">【证明】</font><br>由(做初等变换)$$\begin{array}{ll}<br>\begin{pmatrix}<br>A-I &amp; 0 \\<br>0 &amp; B-I \\<br>\end{pmatrix}&amp;\xrightarrow[\text{加到第2列}]{\text{第1列右乘$B$}}\begin{pmatrix}<br>A-I &amp; AB-B \\<br>0 &amp; B-I \\<br>\end{pmatrix}\\<br>&amp;\xrightarrow[\text{第2行}]{\text{第1行减掉}}<br>\begin{pmatrix}<br>A-I &amp; AB-I \\<br>0 &amp; B-I \\<br>\end{pmatrix}\end{array}$$<br>利用命题\ref{prop:1.4},以及矩阵秩的性质即可得到证明.</p>
 <p><font color="red">【例】</font><br>设$A,B\in F^{n\times n}$(即定义在域$F$上的$n\times n$矩阵), $ABA=B^{-1}$.求证: $$\text{rank}(I-AB)+\text{rank}(I+AB)=n.$$</p>
-<p><font color="red">【证明】</font><br>由$$\begin{array}{ll}<br>&amp;\begin{pmatrix}<br>I-AB &amp; 0 \<br>0 &amp; I+AB \<br>\end{pmatrix}\xrightarrow[\text{第1列}]{\text{第2列加上}}\begin{pmatrix}<br>I-AB &amp; I-AB \<br>0 &amp; I+AB \<br>\end{pmatrix}\<br>&amp;\xrightarrow[\text{加上第二行}]{\text{第1行}}<br>\begin{pmatrix}<br>I-AB &amp; 2I \<br>0 &amp; I+AB \<br>\end{pmatrix}\xrightarrow[ABA=B^{-1}]{\text{利用}}\begin{pmatrix}<br>0 &amp; 2I \<br>0 &amp; 0 \<br>\end{pmatrix}.\end{array}$$<br>至此,命题成立显而易见,因为右上角矩阵块的秩为$n$,而其他行列都是$0$.</p>
+<p><font color="red">【证明】</font><br>由$$\begin{array}{ll}<br>&amp;\begin{pmatrix}<br>I-AB &amp; 0 \\<br>0 &amp; I+AB \\<br>\end{pmatrix}\xrightarrow[\text{第1列}]{\text{第2列加上}}\begin{pmatrix}<br>I-AB &amp; I-AB \\<br>0 &amp; I+AB \\<br>\end{pmatrix}\\<br>&amp;\xrightarrow[\text{加上第二行}]{\text{第1行}}<br>\begin{pmatrix}<br>I-AB &amp; 2I \\<br>0 &amp; I+AB \\<br>\end{pmatrix}\xrightarrow[ABA=B^{-1}]{\text{利用}}\begin{pmatrix}<br>0 &amp; 2I \\<br>0 &amp; 0 \\<br>\end{pmatrix}.\end{array}$$<br>至此,命题成立显而易见,因为右上角矩阵块的秩为$n$,而其他行列都是$0$.</p>
 <p><font color="red">【例】</font><br>设$A$为$n$阶方阵.求证<br>$$A^2=A\Leftrightarrow \text{rank} A+\text{rank}(I-A)=n.$$</p>
 <p><font color="red">【证明】</font><br>由
-$$\begin{array}{ll}<br>&amp;\begin{pmatrix}<br>A &amp; 0 \<br>0 &amp; I-A \<br>\end{pmatrix}<br>\xrightarrow[\text{第1列}]{\text{第2列加上}}<br>\begin{pmatrix}<br>A &amp; A \<br>0 &amp; I-A \<br>\end{pmatrix}\xrightarrow[\text{第1行}]{\text{第2行加上}}\<br>&amp;\begin{pmatrix}<br>A &amp; A \<br>A &amp; I \<br>\end{pmatrix}\xrightarrow[\text{第2行乘$-A$(对列同理)}]{\text{第1行加上}}\begin{pmatrix}<br>A-A^2 &amp; 0 \<br>0 &amp; I \<br>\end{pmatrix}.\end{array}$$<br>于是有$$\text{rank} A+\text{rank}(I-A)=\text{rank}(A-A^2)+\text{rank} I.$$<br>$I$是单位矩阵, 秩当然为$n$. 至此结果了然.</p>
+$$\begin{array}{ll}<br>&amp;\begin{pmatrix}<br>A &amp; 0 \\<br>0 &amp; I-A \\<br>\end{pmatrix}<br>\xrightarrow[\text{第1列}]{\text{第2列加上}}<br>\begin{pmatrix}<br>A &amp; A \\<br>0 &amp; I-A \\<br>\end{pmatrix}\xrightarrow[\text{第1行}]{\text{第2行加上}}\\<br>&amp;\begin{pmatrix}<br>A &amp; A \\<br>A &amp; I \\<br>\end{pmatrix}\xrightarrow[\text{第2行乘$-A$(对列同理)}]{\text{第1行加上}}\begin{pmatrix}<br>A-A^2 &amp; 0 \\<br>0 &amp; I \\<br>\end{pmatrix}.\end{array}$$<br>于是有$$\text{rank} A+\text{rank}(I-A)=\text{rank}(A-A^2)+\text{rank} I.$$<br>$I$是单位矩阵, 秩当然为$n$. 至此结果了然.</p>
 <p><font color="red">【例】</font><br>若$t$个$n$阶方阵的积等于$0$,即$A_1A_2\cdots A_t=0$,则有<br>$$\text{rank} A_1+\text{rank} A_2+\cdots +\text{rank} A_t\leqslant(t-1)n.$$</p>
-<p><font color="red">【证明】</font><br>由Sylvester不等式(\ref{prop:1.11})可知:<br>$$\begin{array}{ll}<br>0&amp;=\text{rank}(A_1A_2\cdots A_t)\geqslant\text{rank} A_1+\text{rank}(A_2\cdots A_t)-n\<br> &amp;\geqslant\text{rank} A_1+\text{rank} A_2+\text{rank}(A_3\cdots A_t)-2n\<br> &amp;\cdots\<br> &amp;\geqslant\text{rank} A_1+\text{rank} A_2+\cdots +\text{rank} A_t-(t-1)n.<br>\end{array}$$<br>这就是我们所要证的结果.</p>
+<p><font color="red">【证明】</font><br>由Sylvester不等式(\ref{prop:1.11})可知:<br>$$\begin{array}{ll}<br>0&amp;=\text{rank}(A_1A_2\cdots A_t)\geqslant\text{rank} A_1+\text{rank}(A_2\cdots A_t)-n\\<br> &amp;\geqslant\text{rank} A_1+\text{rank} A_2+\text{rank}(A_3\cdots A_t)-2n\\<br> &amp;\cdots\\<br> &amp;\geqslant\text{rank} A_1+\text{rank} A_2+\cdots +\text{rank} A_t-(t-1)n.<br>\end{array}$$<br>这就是我们所要证的结果.</p>
 <p><font color="red">【例】</font><br>设$A$为$n$阶方阵.求证:存在正整数$m$,使得<br>$$\text{rank}(A^m)=\text{rank}(A^{m+1})=\cdots.$$</p>
 <p><font color="red">【证明】</font><br>首先指出一点显然的事实(若$A$可逆,那么全部等号成立,否则可以想想,矩阵自乘次数越多,秩会越小):<br>$$n\geqslant\text{rank} A\geqslant\text{rank}(A^2)\geqslant\cdots\geqslant\text{rank}(A^{n})\geqslant\cdots\geqslant0.$$<br>由于小于$n$的非负整数最多只有$n$个, 由鸽巢原理, 以上等式中必然存在相等的,由此,必然存在正整数$m,t~(m&lt;t)$,使得$\text{rank}(A^m)=\text{rank}(A^t)$.<br>又因为$$\text{rank}(A^t)\leqslant\text{rank}(A^{t-1})\leqslant\cdots\leqslant\text{rank}(A^{m+1})\leqslant\text{rank}(A^{m})$$<br>就得到了$\text{rank}(A^m)=\text{rank}(A^{m+1})$.接下来,利用数学归纳法以及Sylvester不等式(\ref{prop:1.11}),得到待证的结论.(请你自己补全.)</p>
 <p><strong>【NOTE】</strong>: <strong>鸽巢原理</strong>, 举个简单的例子说, 比如你有三个球,要放进两个盒子,你可以断定,肯定有一个盒子里会放入两个球.这是一条不正自明的原理.</p>
@@ -1930,20 +1932,29 @@ $$\begin{array}{ll}<br>&amp;\begin{pmatrix}<br>A &amp; 0 \<br>0 &amp; I-A \<br>\
 document.addEventListener('DOMContentLoaded', function () {
     MathJax.Hub.Config({
         'HTML-CSS': {
-            matchFontHeight: false
+            matchFontHeight: true
         },
         SVG: {
-            matchFontHeight: false
+            matchFontHeight: true
         },
         CommonHTML: {
-            matchFontHeight: false
+            matchFontHeight: true
         },
         tex2jax: {
             inlineMath: [
                 ['$','$'],
                 ['\\(','\\)']
-            ]
-        }
+            ],
+            displayMath: [ 
+                ['$$','$$'],
+                ['\[','\]'] 
+            ],
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
     });
 });
 </script>

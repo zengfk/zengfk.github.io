@@ -8,7 +8,7 @@
 
 
     <meta name="description" content="序列与极限这里我们快速的过一遍关于数列与级数的这一些基础的内容.这些内容在复数域 $\mathbb{C}$ 上都是成立的. 度量空间 $X$ 中的序列 $\{ x_n \}$ 称**收敛的**, 当 $\exists x \in X$, $\forall \varepsilon &amp;gt;0$, $\exists N\in \mathbb{N}_+ $, $d(x_n, x)">
-<meta name="keywords" content="Notes,重温 &amp; 新知,微积分,数列,级数">
+<meta name="keywords" content="重温 &amp; 新知,Notes,微积分,数列,级数">
 <meta property="og:type" content="article">
 <meta property="og:title" content="微积分之数列与级数">
 <meta property="og:url" content="https://zengfk.com.cn/2018/01/08/微积分之数列与级数/index.html">
@@ -16,7 +16,7 @@
 <meta property="og:description" content="序列与极限这里我们快速的过一遍关于数列与级数的这一些基础的内容.这些内容在复数域 $\mathbb{C}$ 上都是成立的. 度量空间 $X$ 中的序列 $\{ x_n \}$ 称**收敛的**, 当 $\exists x \in X$, $\forall \varepsilon &amp;gt;0$, $\exists N\in \mathbb{N}_+ $, $d(x_n, x)">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://zengfk.com.cn/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-14T07:52:13.350Z">
+<meta property="og:updated_time" content="2019-06-18T10:24:22.565Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微积分之数列与级数">
 <meta name="twitter:description" content="序列与极限这里我们快速的过一遍关于数列与级数的这一些基础的内容.这些内容在复数域 $\mathbb{C}$ 上都是成立的. 度量空间 $X$ 中的序列 $\{ x_n \}$ 称**收敛的**, 当 $\exists x \in X$, $\forall \varepsilon &amp;gt;0$, $\exists N\in \mathbb{N}_+ $, $d(x_n, x)">
@@ -223,7 +223,7 @@ $$\forall \varepsilon>0 , \exists N\in \mathbb{N}_+ , \forall n \geqslant m \geq
 <p><strong>对应于单调序列收敛性与有界性等价, 关于级数有结论: 各项非负的级数收敛, 当且仅当部分和序列 ${s_n}$ 有界</strong>.</p>
 <p>判断通项非负的级数收敛的判定, 我们有非常有用的<strong>“比较检验法”</strong>.定理叙述如下:</p>
 <ul>
-<li>若 $\exists N_0 \in \mathbb{N}<em>+$, $\forall n&gt;N_0$, $|a_n|\leqslant c_n$, 而级数 $\sum c_n$ 收敛, 则级数 $\sum a</em>{n}$收敛.</li>
+<li>若 $\exists N_0 \in \mathbb{N}<em>+$, $\forall n&gt;N_0$, $|a_n|\leqslant c_n$, 而级数 $\sum c_n$ 收敛, 则级数 $\sum a</em>{n}$ 收敛.</li>
 <li>若 $\exists N_0 \in \mathbb{N}<em>+$, $\forall n&gt;N_0$, $a_n \geqslant d_n$, 而级数 $\sum d_n$ 发散, 则级数 $\sum a</em>{n}$ 发散.</li>
 </ul>
 <p>所以当使用不同的比较级数的时候, 就进一步衍生出了不同的判别法. 往往比较级数收敛的”越慢”, 判别法就越”精密”, 但是也相应越复杂.这里仅例举最常用的两种判别法: </p>
@@ -1903,20 +1903,29 @@ $$\sum_{n=0}^{\infty}c_n =AB.$$
 document.addEventListener('DOMContentLoaded', function () {
     MathJax.Hub.Config({
         'HTML-CSS': {
-            matchFontHeight: false
+            matchFontHeight: true
         },
         SVG: {
-            matchFontHeight: false
+            matchFontHeight: true
         },
         CommonHTML: {
-            matchFontHeight: false
+            matchFontHeight: true
         },
         tex2jax: {
             inlineMath: [
                 ['$','$'],
                 ['\\(','\\)']
-            ]
-        }
+            ],
+            displayMath: [ 
+                ['$$','$$'],
+                ['\[','\]'] 
+            ],
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
     });
 });
 </script>

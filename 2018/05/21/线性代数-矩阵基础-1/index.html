@@ -8,7 +8,7 @@
 
 
     <meta name="description" content="从1858年 Cayley 建立起矩阵及其运算以来, 矩阵理论迅速的建立了起来. 矩阵论是数学中内容最丰富, 应用最广泛的部分之一. 矩阵是线性代数中最重要的工具, 贯穿于线性代数的始终. 矩阵论在航空航天, 军事, 信息处理, 人工智能, 金融, 生命科学, 社会科学等很多的领域都有非常重要的作用. 这一部分的笔记将对矩阵理论中的核心内容以及方法进行总结和复习. 假设本笔记的读者, 对于笔记中出">
-<meta name="keywords" content="Notes,重温 &amp; 新知,线性代数,矩阵">
+<meta name="keywords" content="重温 &amp; 新知,Notes,线性代数,矩阵">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线性代数-矩阵基础 1">
 <meta property="og:url" content="https://zengfk.com.cn/2018/05/21/线性代数-矩阵基础-1/index.html">
@@ -16,7 +16,7 @@
 <meta property="og:description" content="从1858年 Cayley 建立起矩阵及其运算以来, 矩阵理论迅速的建立了起来. 矩阵论是数学中内容最丰富, 应用最广泛的部分之一. 矩阵是线性代数中最重要的工具, 贯穿于线性代数的始终. 矩阵论在航空航天, 军事, 信息处理, 人工智能, 金融, 生命科学, 社会科学等很多的领域都有非常重要的作用. 这一部分的笔记将对矩阵理论中的核心内容以及方法进行总结和复习. 假设本笔记的读者, 对于笔记中出">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://zengfk.com.cn/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-18T06:54:04.888Z">
+<meta property="og:updated_time" content="2019-06-18T09:48:23.152Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性代数-矩阵基础 1">
 <meta name="twitter:description" content="从1858年 Cayley 建立起矩阵及其运算以来, 矩阵理论迅速的建立了起来. 矩阵论是数学中内容最丰富, 应用最广泛的部分之一. 矩阵是线性代数中最重要的工具, 贯穿于线性代数的始终. 矩阵论在航空航天, 军事, 信息处理, 人工智能, 金融, 生命科学, 社会科学等很多的领域都有非常重要的作用. 这一部分的笔记将对矩阵理论中的核心内容以及方法进行总结和复习. 假设本笔记的读者, 对于笔记中出">
@@ -188,7 +188,7 @@ $$e_i = \begin{pmatrix}
 \end{pmatrix}~i$$
 称为第$i$个**标准单位（列）向量**, 其中$j=1,\cdots,n$.
 
-<p>容易验证<br>$$e^T_i e_j=\begin{cases} 1,\quad i=j \ 0,\quad i\neq j \end{cases}\quad i,j=1,\cdots,n.$$</p>
+<p>容易验证<br>$$e^T_i e_j = \begin{cases} 1, \quad i=j \ 0, \quad i\neq j \end{cases}\quad i,j=1,\cdots,n.$$</p>
 </blockquote>
 
 <p>由定义和矩阵的运算,容易得到以下性质:</p>
@@ -202,8 +202,8 @@ e_i^TAe_j=a_{ij}\quad\text{（矩阵元素）}
 </blockquote>
 
 <p><strong>[NOTE:]</strong>利用标准单位向量,选择合适的矩阵分块方式, 可以使得矩阵的运算得到简化.</p>
-<p><font color="red">【例】</font><br>设$n$阶方阵如下, 求$A^n$<br>$$A=\begin{pmatrix}<br> 0 &amp; 1 &amp; ~ &amp; ~ \<br>~ &amp; 0 &amp; \ddots &amp; ~ \<br>~ &amp; ~ &amp; \ddots &amp; ~ \<br>~ &amp; ~ &amp; ~ &amp; 0 \<br>\end{pmatrix},$$</p>
-<p><font color="red">【解】</font><br>注意到矩阵的形式,我们利用矩阵的列向量表示法$A= (0,e_1,e_2,\cdots,e_{n-1})$.<br>故而<br>$$\begin{array}{lll}<br>    A^2&amp;=&amp;A(0,e_1,e_2,\cdots,e_{n-1})\<br>       &amp;=&amp;(0,Ae_1,Ae_2,\cdots,Ae_{n-1})\<br>       &amp;=&amp;(0,0,e_1,\cdots,e_{n-2})<br>\end{array}$$<br>以此类推,我们可以得知,$A^k=(0,0,\cdots,e_1,\cdots,e_{n-k}),(k=1,2,\cdots.n)$. 当$k=n$, 就有$A^n=0$.</p>
+<p><font color="red">【例】</font>设$n$阶方阵如下, 求$A^n$.<br>$$A=\begin{pmatrix}<br>    0 &amp; 1 &amp; ~ &amp; ~ \\<br>    ~ &amp; 0 &amp; \ddots &amp; ~ \\<br>    ~ &amp; ~ &amp; \ddots &amp; ~ \\<br>    ~ &amp; ~ &amp; ~ &amp; 0<br>\end{pmatrix},$$</p>
+<p><font color="red">【解】</font><br>注意到矩阵的形式,我们利用矩阵的列向量表示法$A= (0,e_1,e_2,\cdots,e_{n-1})$.<br>故而<br>$$\begin{array}{lll}<br>    A^2&amp;=&amp;A(0,e_1,e_2,\cdots,e_{n-1})\\<br>    &amp;=&amp;(0,Ae_1,Ae_2,\cdots,Ae_{n-1})\\<br>    &amp;=&amp;(0,0,e_1,\cdots,e_{n-2})<br>\end{array}$$<br>以此类推,我们可以得知,$A^k=(0,0,\cdots,e_1,\cdots,e_{n-k}),(k=1,2,\cdots.n)$. 当$k=n$, 就有$A^n=0$.</p>
 
         </div>
         
@@ -238,7 +238,7 @@ e_i^TAe_j=a_{ij}\quad\text{（矩阵元素）}
         
         <div class="level-end">
             <a class="level level-item has-link-grey  article-nav-next" href="/2018/01/22/分析之-一元微分学/">
-                <span class="level-item">分析之[一元微分学]</span>
+                <span class="level-item">分析之【一元微分学】</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -1821,20 +1821,29 @@ e_i^TAe_j=a_{ij}\quad\text{（矩阵元素）}
 document.addEventListener('DOMContentLoaded', function () {
     MathJax.Hub.Config({
         'HTML-CSS': {
-            matchFontHeight: false
+            matchFontHeight: true
         },
         SVG: {
-            matchFontHeight: false
+            matchFontHeight: true
         },
         CommonHTML: {
-            matchFontHeight: false
+            matchFontHeight: true
         },
         tex2jax: {
             inlineMath: [
                 ['$','$'],
                 ['\\(','\\)']
-            ]
-        }
+            ],
+            displayMath: [ 
+                ['$$','$$'],
+                ['\[','\]'] 
+            ],
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
     });
 });
 </script>

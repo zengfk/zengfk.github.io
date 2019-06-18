@@ -7,19 +7,19 @@
 
 
 
-    <meta name="description" content="继续线性代数矩阵部分的笔记。 矩阵的初等变换与分块运算**定义**[初等变换]     以下三种对矩阵的操作, 每一种都称为对矩阵的进行的一次 **初等变换**.     - 将矩阵的一行(列)与另一行(列)交换位置;     - 将矩阵的某一行乘以一个非零倍数;     - 将矩阵的一行(列)加到另一行(列)上去.   由单位矩阵经过一次初等变换得到的矩阵称为初等矩阵. 关于初等矩阵有以下性质:">
-<meta name="keywords" content="Notes,重温 &amp; 新知,线性代数,矩阵">
+    <meta name="description" content="继续线性代数矩阵部分的笔记。 矩阵的初等变换与分块运算**定义**【初等变换】     以下三种对矩阵的操作, 每一种都称为对矩阵的进行的一次 **初等变换**.     - 将矩阵的一行(列)与另一行(列)交换位置;     - 将矩阵的某一行乘以一个非零倍数;     - 将矩阵的一行(列)加到另一行(列)上去.   由单位矩阵经过一次初等变换得到的矩阵称为初等矩阵. 关于初等矩阵有以下性质:">
+<meta name="keywords" content="重温 &amp; 新知,Notes,线性代数,矩阵">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线性代数-矩阵基础 2">
 <meta property="og:url" content="https://zengfk.com.cn/2018/05/22/线性代数-矩阵基础-2/index.html">
 <meta property="og:site_name" content="虎头微分同学的Blog">
-<meta property="og:description" content="继续线性代数矩阵部分的笔记。 矩阵的初等变换与分块运算**定义**[初等变换]     以下三种对矩阵的操作, 每一种都称为对矩阵的进行的一次 **初等变换**.     - 将矩阵的一行(列)与另一行(列)交换位置;     - 将矩阵的某一行乘以一个非零倍数;     - 将矩阵的一行(列)加到另一行(列)上去.   由单位矩阵经过一次初等变换得到的矩阵称为初等矩阵. 关于初等矩阵有以下性质:">
+<meta property="og:description" content="继续线性代数矩阵部分的笔记。 矩阵的初等变换与分块运算**定义**【初等变换】     以下三种对矩阵的操作, 每一种都称为对矩阵的进行的一次 **初等变换**.     - 将矩阵的一行(列)与另一行(列)交换位置;     - 将矩阵的某一行乘以一个非零倍数;     - 将矩阵的一行(列)加到另一行(列)上去.   由单位矩阵经过一次初等变换得到的矩阵称为初等矩阵. 关于初等矩阵有以下性质:">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://zengfk.com.cn/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-14T07:54:48.994Z">
+<meta property="og:updated_time" content="2019-06-18T09:47:15.488Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性代数-矩阵基础 2">
-<meta name="twitter:description" content="继续线性代数矩阵部分的笔记。 矩阵的初等变换与分块运算**定义**[初等变换]     以下三种对矩阵的操作, 每一种都称为对矩阵的进行的一次 **初等变换**.     - 将矩阵的一行(列)与另一行(列)交换位置;     - 将矩阵的某一行乘以一个非零倍数;     - 将矩阵的一行(列)加到另一行(列)上去.   由单位矩阵经过一次初等变换得到的矩阵称为初等矩阵. 关于初等矩阵有以下性质:">
+<meta name="twitter:description" content="继续线性代数矩阵部分的笔记。 矩阵的初等变换与分块运算**定义**【初等变换】     以下三种对矩阵的操作, 每一种都称为对矩阵的进行的一次 **初等变换**.     - 将矩阵的一行(列)与另一行(列)交换位置;     - 将矩阵的某一行乘以一个非零倍数;     - 将矩阵的一行(列)加到另一行(列)上去.   由单位矩阵经过一次初等变换得到的矩阵称为初等矩阵. 关于初等矩阵有以下性质:">
 <meta name="twitter:image" content="https://zengfk.com.cn/images/og_image.png">
 
 
@@ -159,7 +159,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    9 分钟 读完 (大约 1396 个字)
+                    9 分钟 读完 (大约 1402 个字)
                 </span>
                 
                 
@@ -178,7 +178,7 @@
         </h1>
         <div class="content">
             <p>继续线性代数矩阵部分的笔记。</p>
-<h2 id="矩阵的初等变换与分块运算"><a href="#矩阵的初等变换与分块运算" class="headerlink" title="矩阵的初等变换与分块运算"></a>矩阵的初等变换与分块运算</h2><blockquote>**定义**[初等变换]
+<h2 id="矩阵的初等变换与分块运算"><a href="#矩阵的初等变换与分块运算" class="headerlink" title="矩阵的初等变换与分块运算"></a>矩阵的初等变换与分块运算</h2><blockquote>**定义**【初等变换】
     以下三种对矩阵的操作, 每一种都称为对矩阵的进行的一次 **初等变换**.
     - 将矩阵的一行(列)与另一行(列)交换位置;
     - 将矩阵的某一行乘以一个非零倍数;
@@ -243,10 +243,22 @@ D & I_n \\
 
 <p>广义初等矩阵具有与初等矩阵类似的性质:<br><br>1) 对于分块矩阵,左乘一个广义初等矩阵,相当于做一次初等行变换;右乘一个广义初等矩阵,相当于做一次初等列变换,而这样的行列变换就称为<strong>分块矩阵的初等变换</strong>;<br><br>2) 广义初等矩阵均可逆.</p>
 <p>分块矩阵的乘法与初等变换结合是矩阵运算中的重要方法.下面举几个例子:</p>
-<p><font color="red">【例】</font><br>利用分块矩阵证明: $|AB|=|A||B|$, 其中$A,B$均为$n$阶方阵.</p>
-<p><font color="red">【证明】</font><br>构造分块矩阵<br>$$\begin{pmatrix}<br>A &amp; 0 \<br>-I &amp; B \<br>\end{pmatrix}$$<br>这个分块矩阵做初等变换<br>$$\begin{pmatrix}<br>A &amp; 0 \<br>-I &amp; B \<br>\end{pmatrix}<br>\begin{pmatrix}<br>I &amp; B \<br>0 &amp; I \<br>\end{pmatrix}=<br>\begin{pmatrix}<br>A &amp; AB \<br>-I &amp; 0 \<br>\end{pmatrix}$$<br>而初等变换不改变行列式的值,利用行列式的 <em>Laplace</em> 定理展开就有<br>$|A||B|=|AB|(-1)^{1+2+\cdots+2n}|-I|=|AB|.$<br><br><strong>注:</strong> 再详细点说, 在分块矩阵处理中, 每个分块可以当成个”矩元素”来处理.上面左乘初等矩阵,其实和下面是一个意:<br>$$\begin{pmatrix}<br>A &amp; 0 \<br>-I &amp; B \<br>\end{pmatrix}<br>\xrightarrow[\text{加到第一行}]{\text{二行$A$}}<br>\begin{pmatrix}<br>A+(-A) &amp; AB \<br>-I &amp; B \<br>\end{pmatrix}=\begin{pmatrix}<br>0 &amp; AB \<br>-I &amp; 0 \<br>\end{pmatrix}.$$<br>然后利用行列式的Laplace定理(特殊的一个形式也就是代数余式开)展开得到一样的结果.<strong>但为什么这里要用乘一个初等阵的方式呢</strong>, 注意看前面的定义1.4, 这个题中特殊的一点是 $AB$ 恰好都是 $n$ 阶. 要知道, 同阶的情况下才可以做矩阵的加法,否则就不可以这样做了.</p>
-<p><font color="red">【例】</font><br>设$A,B,C,D$均为$n$阶方阵,且$AC=CA$. 求证<br>$$\left|\begin{matrix}<br>A &amp; B \<br>C &amp; D \<br>\end{matrix}\right|=|AD-CB|.$$</p>
-<p><font color="red">【证明】</font><br>分情况讨论. <br><br><strong>1)</strong> 若$A$为可逆矩阵,由$AC=CA$可得$CA{-1}=A{-1}C$. 那么<br>$$\begin{pmatrix}<br>I &amp; 0 \<br>-CA^{-1} &amp; I \<br>\end{pmatrix}<br>\begin{pmatrix}<br>A &amp; B \<br>C &amp; D \<br>\end{pmatrix}=<br>\begin{pmatrix}<br>A &amp; B \<br>0 &amp; D-CA^{-1}B \<br>\end{pmatrix}.$$<br>两边取行列式,可得原行列式等于$|A||D-CA^{-1}B|$,由上一题的果,就有$|AD-ACA^{-1}B|=|AD-CB|$.<br><br><strong>注:</strong> 这里也同上一题一样, 因为$A,B,C,D$是同阶的, 也以这写<br>$$\begin{pmatrix}<br>A &amp; B \<br>C &amp; D \<br>\end{pmatrix}\xrightarrow[\text{加到第2行}]{\text{1行左$-CA^{-1}$}}\begin{pmatrix}<br>A &amp; B \<br>0 &amp; D-CA^{-1}B \<br>\end{pmatrix}.$$<br><br><strong>2)</strong> 若$A$不可逆,我们利用这样一个结果:定义在域$F$上的阵$A$不可逆, 但在域 $F$ 中存在无穷多个 $\lambda$, 使 $\lambda I+A$ 可逆. 又由$AC=CA$ 可得 $C(\lambda I+A)^{-1}=(\lambda I+A)^{-1}C$. 利用1)的结果,得到<br>$$\left|\begin{matrix}<br>\lambda I+A &amp; B\<br>C &amp; D \<br>\end{matrix}\right|= |(\lambda I+A)D-CB|.$$<br>将$\lambda$替换为变量$x$,等式两边均为不超过$n$次的多式函数而它们在无穷多个点$\lambda$处相等,这说明两个多式函数在域$F$上相等(两者是同一个函数).那么我们取$x=0$得到了想要的结果.</p>
+<p><font color="red">【例】</font></p>
+<p>利用分块矩阵证明: $|AB|=|A||B|$, 其中$A,B$均为$n$阶方阵.</p>
+<p><font color="red">【证明】</font></p>
+<p>构造分块矩阵</p>
+<p>\begin{equation}<br>\begin{pmatrix}<br>A &amp; 0 \\<br>-I &amp; B<br>\end{pmatrix}<br>\end{equation}</p>
+<p>这个分块矩阵做初等变换</p>
+<p>$$\begin{pmatrix}<br>A &amp; 0 \\<br>-I &amp; B<br>\end{pmatrix}<br>\begin{pmatrix}<br>I &amp; B \\<br>0 &amp; I<br>\end{pmatrix}=<br>\begin{pmatrix}<br>A &amp; AB \\<br>-I &amp; 0<br>\end{pmatrix}$$</p>
+<p>而初等变换不改变行列式的值,利用行列式的 <em>Laplace</em> 定理展开就有</p>
+<p>$|A||B|=|AB|(-1)^{1+2+\cdots+2n}|-I|=|AB|.$</p>
+<p><strong>注:</strong> 再详细点说, 在分块矩阵处理中, 每个分块可以当成个”矩元素”来处理.上面左乘初等矩阵,其实和下面是一个意:</p>
+<p>$$\begin{pmatrix}<br>A &amp; 0 \\<br>-I &amp; B<br>\end{pmatrix}<br>\xrightarrow[\text{加到第一行}]{\text{二行$A$}}<br>\begin{pmatrix}<br>A+(-A) &amp; AB \\<br>-I &amp; B<br>\end{pmatrix}=\begin{pmatrix}<br>0 &amp; AB \\<br>-I &amp; 0<br>\end{pmatrix}.$$</p>
+<p>然后利用行列式的Laplace定理(特殊的一个形式也就是代数余式开)展开得到一样的结果.<strong>但为什么这里要用乘一个初等阵的方式呢</strong>, 注意看前面的定义1.4, 这个题中特殊的一点是 $AB$ 恰好都是 $n$ 阶. 要知道, 同阶的情况下才可以做矩阵的加法,否则就不可以这样做了.</p>
+<p><font color="red">【例】</font><br>设$A,B,C,D$均为$n$阶方阵,且$AC=CA$. 求证<br>$$\left|\begin{matrix}<br>A &amp; B \\<br>C &amp; D<br>\end{matrix}\right|=|AD-CB|.$$</p>
+<p><font color="red">【证明】</font><br>分情况讨论. <br><br><strong>1)</strong> 若$A$为可逆矩阵,由$AC=CA$可得$CA{-1}=A{-1}C$. 那么<br>$$\begin{pmatrix}<br>I &amp; 0 \\<br>-CA^{-1} &amp; I<br>\end{pmatrix}<br>\begin{pmatrix}<br>A &amp; B \\<br>C &amp; D<br>\end{pmatrix}=<br>\begin{pmatrix}<br>A &amp; B \\<br>0 &amp; D-CA^{-1}B<br>\end{pmatrix}.$$<br>两边取行列式,可得原行列式等于$|A||D-CA^{-1}B|$,由上一题的果,就有$|AD-ACA^{-1}B|=|AD-CB|$.<br><br><strong>注:</strong> 这里也同上一题一样, 因为$A,B,C,D$是同阶的, 也以这写<br>$$\begin{pmatrix}<br>A &amp; B \\<br>C &amp; D<br>\end{pmatrix}\xrightarrow[\text{加到第2行}]{\text{1行左$-CA^{-1}$}}\begin{pmatrix}<br>A &amp; B \\<br>0 &amp; D-CA^{-1}B<br>\end{pmatrix}.$$<br><br><strong>2)</strong> 若$A$不可逆,我们利用这样一个结果:定义在域$F$上的阵$A$不可逆, 但在域 $F$ 中存在无穷多个 $\lambda$, 使 $\lambda I+A$ 可逆. 又由$AC=CA$ 可得 $C(\lambda I+A)^{-1}=(\lambda I+A)^{-1}C$. 利用1)的结果,得到</p>
+<p>$$\left|\begin{matrix}<br>\lambda I+A &amp; B\\<br>C &amp; D<br>\end{matrix}\right|= |(\lambda I+A)D-CB|.$$</p>
+<p>将$\lambda$替换为变量$x$,等式两边均为不超过$n$次的多式函数而它们在无穷多个点$\lambda$处相等,这说明两个多式函数在域$F$上相等(两者是同一个函数).那么我们取$x=0$得到了想要的结果.</p>
 <p><strong>NOTE:</strong> 对于上面的例题中提到的几个结果,这里做出说明.设 $A$ 为定义在域 $F$ 上的 $n$ 阶方阵,显然 $|xI+A|$ 是域 $F$ 上的 $n$ 次多项式(一个矩阵的对应的行列式展开其实就是一个多项式). <strong>由代数学基本定理,域 $F$ 任意一个 $n$ 次多项式最多有 $n$ 个不同的根</strong>.对应于矩阵, 也就是说,最多有 $n$ 个值使得 $xI+A$不可逆. 这种<strong>将不可逆矩阵转化为可逆矩阵的思想</strong>, 在矩阵论和解题中常常用到.在后面也会反复提到.</p>
 
         </div>
@@ -1865,20 +1877,29 @@ D & I_n \\
 document.addEventListener('DOMContentLoaded', function () {
     MathJax.Hub.Config({
         'HTML-CSS': {
-            matchFontHeight: false
+            matchFontHeight: true
         },
         SVG: {
-            matchFontHeight: false
+            matchFontHeight: true
         },
         CommonHTML: {
-            matchFontHeight: false
+            matchFontHeight: true
         },
         tex2jax: {
             inlineMath: [
                 ['$','$'],
                 ['\\(','\\)']
-            ]
-        }
+            ],
+            displayMath: [ 
+                ['$$','$$'],
+                ['\[','\]'] 
+            ],
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
     });
 });
 </script>

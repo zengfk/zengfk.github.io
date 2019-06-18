@@ -171,7 +171,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    18 分钟 读完 (大约 2687 个字)
+                    18 分钟 读完 (大约 2695 个字)
                 </span>
                 
                 
@@ -226,7 +226,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    9 分钟 读完 (大约 1396 个字)
+                    9 分钟 读完 (大约 1402 个字)
                 </span>
                 
                 
@@ -240,7 +240,7 @@
         </h1>
         <div class="content">
             <p>继续线性代数矩阵部分的笔记。</p>
-<h2 id="矩阵的初等变换与分块运算"><a href="#矩阵的初等变换与分块运算" class="headerlink" title="矩阵的初等变换与分块运算"></a>矩阵的初等变换与分块运算</h2><blockquote>**定义**[初等变换]
+<h2 id="矩阵的初等变换与分块运算"><a href="#矩阵的初等变换与分块运算" class="headerlink" title="矩阵的初等变换与分块运算"></a>矩阵的初等变换与分块运算</h2><blockquote>**定义**【初等变换】
     以下三种对矩阵的操作, 每一种都称为对矩阵的进行的一次 **初等变换**.
     - 将矩阵的一行(列)与另一行(列)交换位置;
     - 将矩阵的某一行乘以一个非零倍数;
@@ -1927,20 +1927,29 @@
 document.addEventListener('DOMContentLoaded', function () {
     MathJax.Hub.Config({
         'HTML-CSS': {
-            matchFontHeight: false
+            matchFontHeight: true
         },
         SVG: {
-            matchFontHeight: false
+            matchFontHeight: true
         },
         CommonHTML: {
-            matchFontHeight: false
+            matchFontHeight: true
         },
         tex2jax: {
             inlineMath: [
                 ['$','$'],
                 ['\\(','\\)']
-            ]
-        }
+            ],
+            displayMath: [ 
+                ['$$','$$'],
+                ['\[','\]'] 
+            ],
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
     });
 });
 </script>

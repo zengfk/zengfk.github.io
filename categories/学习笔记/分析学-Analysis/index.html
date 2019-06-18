@@ -171,7 +171,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    26 分钟 读完 (大约 3967 个字)
+                    26 分钟 读完 (大约 3965 个字)
                 </span>
                 
                 
@@ -180,7 +180,7 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/01/22/分析之-一元微分学/">分析之[一元微分学]</a>
+                <a class="has-link-black-ter" href="/2018/01/22/分析之-一元微分学/">分析之【一元微分学】</a>
             
         </h1>
         <div class="content">
@@ -188,14 +188,14 @@
 <h2 id="导数定义与性质"><a href="#导数定义与性质" class="headerlink" title="导数定义与性质"></a>导数定义与性质</h2><p>在此先给出定义在$\mathbb{R}$的子集上的可微函数的定义, 并给出计算导数的基本法则.</p>
 <blockquote>[定义][导数]
 令$D\subset \mathbb{R}$,称函数$f:D\rightarrow \mathbb{R}$在点$x_0\in D$可微, 若满足:
-$$f'(x_0):= \lim_{\mbox{\tiny$\begin{array}{c}
+$$f'(x_0):= \lim_{\small\begin{array}{c}
 x \rightarrow x_0 \\
-x \in D\setminus \{x_0\}\end{array}$}}
+x \in D\setminus \{x_0\}\end{array}}
 \frac{f(x)-f(x_0)}{x-x_0}=
-\lim_{\mbox{\tiny$\begin{array}{c}
+\lim_{\small\begin{array}{c}
 h \rightarrow 0\\
 h \neq 0\\
-x_0 +h\in D\end{array}$}}
+x_0 +h\in D\end{array}}
 \frac{f(x_0 +h)-f(x_0)}{h}$$
 存在. 有时也用符号$\frac{df}{dx}(x_0)$替代$f'(x_0)$, 称为函数$f$在点$x_0$处的\textbf{导数(微商)}.
 若$\forall x \in D$, $f$皆可微, 则称函数$f$在$D$上是**可微的**.
@@ -1988,20 +1988,29 @@ x_0 +h\in D\end{array}$}}
 document.addEventListener('DOMContentLoaded', function () {
     MathJax.Hub.Config({
         'HTML-CSS': {
-            matchFontHeight: false
+            matchFontHeight: true
         },
         SVG: {
-            matchFontHeight: false
+            matchFontHeight: true
         },
         CommonHTML: {
-            matchFontHeight: false
+            matchFontHeight: true
         },
         tex2jax: {
             inlineMath: [
                 ['$','$'],
                 ['\\(','\\)']
-            ]
-        }
+            ],
+            displayMath: [ 
+                ['$$','$$'],
+                ['\[','\]'] 
+            ],
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
     });
 });
 </script>
