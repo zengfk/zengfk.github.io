@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
 <title>线性代数-矩阵基础-3 - 虎头微分同学的Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
     <meta name="description" content="矩阵的秩矩阵的秩,是用于描述矩阵的一个重要的性质,它由行(列)向量组的极大线性无关组中包含的向量的个数来定义, 描述了矩阵的行(列)向量空间的维数. 关于一个矩阵 $A$ 的秩,有一点重要基本的性质: **【定理】** 初等变换不改变矩阵的秩.进一步的,初等行(列)变换不改变矩阵任意列(行)之间的线性相关性.">
-<meta name="keywords" content="重温 &amp; 新知,Notes,线性代数,矩阵">
+<meta name="keywords" content="Notes,重温 &amp; 新知,线性代数,矩阵">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线性代数-矩阵基础-3">
 <meta property="og:url" content="https://zengfk.com.cn/2018/06/01/线性代数-矩阵基础-3/index.html">
@@ -16,7 +16,7 @@
 <meta property="og:description" content="矩阵的秩矩阵的秩,是用于描述矩阵的一个重要的性质,它由行(列)向量组的极大线性无关组中包含的向量的个数来定义, 描述了矩阵的行(列)向量空间的维数. 关于一个矩阵 $A$ 的秩,有一点重要基本的性质: **【定理】** 初等变换不改变矩阵的秩.进一步的,初等行(列)变换不改变矩阵任意列(行)之间的线性相关性.">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://zengfk.com.cn/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-18T10:14:53.556Z">
+<meta property="og:updated_time" content="2019-06-19T04:30:59.834Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性代数-矩阵基础-3">
 <meta name="twitter:description" content="矩阵的秩矩阵的秩,是用于描述矩阵的一个重要的性质,它由行(列)向量组的极大线性无关组中包含的向量的个数来定义, 描述了矩阵的行(列)向量空间的维数. 关于一个矩阵 $A$ 的秩,有一点重要基本的性质: **【定理】** 初等变换不改变矩阵的秩.进一步的,初等行(列)变换不改变矩阵任意列(行)之间的线性相关性.">
@@ -92,10 +92,10 @@
     
 
 
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 <body class="is-3-column">
-    <nav class="navbar navbar-main">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav class="navbar navbar-main">
     <div class="container">
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
@@ -159,7 +159,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    18 分钟 读完 (大约 2695 个字)
+                    18 分钟 读完 (大约 2719 个字)
                 </span>
                 
                 
@@ -184,12 +184,14 @@
 
 <a id="more"></a>
 <h3 id="矩阵秩的求法"><a href="#矩阵秩的求法" class="headerlink" title="矩阵秩的求法"></a>矩阵秩的求法</h3><p>根据矩阵秩的定义, 秩的唯一的求法就是通过初等行(列)变换,将举证化为阶梯型矩阵, 其中非零行的个数即为行秩. 由由于矩阵的行秩等于列秩,等于矩阵的秩, 这也就求出了矩阵的秩. 这里仅举一例作为参考.</p>
-<p><font color="red">【例】</font><br>求以下矩阵$A$的秩.<br>$$A=\begin{pmatrix}<br>3 &amp; 1 &amp; 1 &amp; 4 \\<br>\lambda &amp; 4 &amp; 10 &amp; 1 \\<br>1 &amp; 7 &amp; 17 &amp; 3 \\<br>2 &amp; 2 &amp; 4 &amp; 3 \\<br>\end{pmatrix}$$</p>
+<p><font color="red">【例】</font><br>求以下矩阵$A$的秩.<br>$$A=\begin{pmatrix}<br>3 &amp; 1 &amp; 1 &amp; 4 \\<br>\lambda &amp; 4 &amp; 10 &amp; 1 \\<br>1 &amp; 7 &amp; 17 &amp; 3 \\<br>2 &amp; 2 &amp; 4 &amp; 3<br>\end{pmatrix}$$</p>
 <p><font color="red">【解】</font><br>对矩阵施行初等行变换. 得到<br>$$A_1=\begin{pmatrix}<br>1 &amp; 7 &amp; 17 &amp; 3 \\<br>0 &amp; 4 &amp; 10 &amp; 1 \\<br>0 &amp; -7\lambda &amp; -17\lambda &amp; -3\lambda \\<br>0 &amp; 0 &amp; 0 &amp; 0 \\<br>\end{pmatrix}$$<br>可以看到, 若 $\lambda=0$, 则$\text{rank} A=2$; 若$\lambda\neq 0$, 对矩阵进一步化简, 容易得到 $\text{rank} A=3$.</p>
 <h3 id="关于秩的等式与不等式"><a href="#关于秩的等式与不等式" class="headerlink" title="关于秩的等式与不等式"></a>关于秩的等式与不等式</h3><p>以下命题的证明中, 将大量的使用分块矩阵的方法. 其实不难, 只要学会了, 解题就会变得很简单, 相比于一般课本上, 使用极大线性无关组叙述的冗长证明, 不仅简单, 而且易于掌握.</p>
 <blockquote>【命题】
 设$A$为$s\times n$矩阵. $P,Q$分别为$s$与$n$阶的可逆矩阵, 则
-$$\text{rank} A = \text{rank} (PA)= \text{rank} (AQ)=\text{rank} (PAQ).$$
+\begin{equation}
+\text{rank} A = \text{rank} (PA)= \text{rank} (AQ)=\text{rank} (PAQ).
+\end{equation}
 </blockquote>
 
 <p>所有可逆矩阵都可以通过单位矩阵经过有限步的初等变换得到, 所以其实矩阵 $A$ 乘上可逆矩阵, 就是做了有限次数的初等变换. 根据矩阵作初等变换秩不变的性质, 立即得到以上命题.</p>
@@ -214,23 +216,23 @@ A & 0 \\
 A & B \\
 C & D 
 \end{pmatrix}$是$m\times n$矩阵, 则
-$$\label{eq:prop5}
+\begin{equation}\label{eq:prop5}
 \text{rank} \begin{pmatrix}
 A & B \\
 C & D 
 \end{pmatrix}=\text{rank} A+\text{rank} (D-CA^{-1}B).
-$$
+\end{equation}
 </blockquote>
 
 <p><font color="red">【证明】</font><br>类似于例\ref{eg:1.3},我们有<br>$$\begin{array}{l}<br>\begin{pmatrix}<br>    I &amp; 0 \\<br>    -CA^{-1} &amp; I \\<br>\end{pmatrix}<br>\begin{pmatrix}<br>    A &amp; B \\<br>    C &amp; D \\<br>\end{pmatrix}<br>\begin{pmatrix}<br>    I &amp; -A^{-1}B \\<br>    0 &amp; I \\<br>\end{pmatrix}\\<br>=\begin{pmatrix}<br>    A &amp; 0 \\<br>    0 &amp; D-CA^{-1}B \\<br>\end{pmatrix}.<br>\end{array}$$<br>其中$\begin{pmatrix}<br>I &amp; 0 \\<br>-CA^{-1} &amp; I \\<br>\end{pmatrix}$和$\begin{pmatrix}<br>I &amp; -A^{-1}B \\<br>0 &amp; I \\<br>\end{pmatrix}$均为广义初等矩阵.自然有命题成立.</p>
 <p><strong>【NOTE】</strong>: 若$D$为可逆矩阵, 则也有类似公式. 亦称为第一降阶公式. 另外将以上命题中式(\ref{eq:prop5})改写为:<br>\begin{equation}\label{eq:prop5.2}<br>\text{rank} (D-CA^{-1}B)=\text{rank} \begin{pmatrix}<br>A &amp; B \\<br>C &amp; D \\<br>\end{pmatrix}-\text{rank} A.<br>\end{equation}<br>称为秩的<strong>升阶公式</strong>.</p>
 <p>应用命题\ref{prop:1.6}立刻得到下面命题.</p>
-<blockquote>【命题】【秩的第二降阶定理】\label{prop:1.6}
+<blockquote>【命题】【秩的第二降阶定理】
 设$A,D$分别为$r$阶与$s$阶的可逆矩阵,$B,C$分别是$r\times s$和$s\times r$矩阵,则
-\begin{multline}\label{eq:prop6}
+\begin{multline*}\label{eq:prop6}
 \text{rank} (D-CA^{-1}B)\\
 =\text{rank} D - \text{rank} A +\text{rank} (A-BD^{-1}C).
-\end{multline}
+\end{multline*}
 </blockquote>
 
 <blockquote>【命题】\label{prop:1.7}
@@ -264,14 +266,17 @@ M_1 & 0 \\
 * & M_2 \\
 \end{pmatrix}$,故而命题成立(矩阵子式的秩小于等于原矩阵的秩).
 
-<blockquote>【命题】\label{prop:1.8}
-设$A=(a_{ij})$为$m\times s$矩阵,$B=(b_{ij})$为$s\times n$矩阵, 则$\text{rank} (AB)\leqslant\min\{\text{rank} A,\text{rank} B\}.$
+<blockquote>【命题】
+设$A=(a_{ij})$为$m\times s$矩阵,$B=(b_{ij})$为$s\times n$矩阵, 则
+\begin{equation}\label{eq:1.8}
+\text{rank} (AB)\leqslant\min\{\text{rank} A,\text{rank} B\}.
+\end{equation}
 </blockquote>
 
 <p><font color="red">【证明】</font><br>\textbf{证明1:} 将$A$表示为列向量组形式$(\alpha_1,\cdots,\alpha_s)$,<br>$$\begin{array}{lll}<br>AB &amp;=&amp; (\alpha_1,\cdots,\alpha_s)\begin{pmatrix}<br>b_{11} &amp; \cdots &amp; b_{1n} \\<br>\vdots &amp;         &amp; \vdots \\<br>b_{s1} &amp; \cdots    &amp; b_{sn} \\<br>\end{pmatrix}\\<br> &amp;=&amp; (\alpha_1 b_{11}+\cdots +\alpha_s b_{s1},\cdots,\alpha_1 b_{1n}+\cdots +\alpha_s b_{sn}).<br>\end{array}$$<br>上式说明$AB$的列向量组可以由$A$的列向量组线性表出, 故而$\text{rank} (AB)\leqslant\text{rank} A$,对$B$同理有$\text{rank} (AB)\leqslant\text{rank} B$.故而命题成立.</p>
 <p>\textbf{证明2:} 设$\text{rank}{A}=r_1,\text{rank}{B}=r_2$.由命题\ref{prop:1.1}以及初等变换的性质, 可知存在 $m\times m$ 可逆矩阵 $P$, 与 $s\times s$ 可逆矩阵 $Q$, 使得<br>$$PQA=\begin{pmatrix}<br>I_{r_1} &amp; 0\\<br>0 &amp; 0\\<br>\end{pmatrix}.$$<br>注意到<br>$$PAB=PAQQ^{-1}B=\begin{pmatrix}<br>I_{r_1} &amp; 0\\<br>0 &amp; 0\\<br>\end{pmatrix}Q^{-1}B.$$</p>
-<p>令 $B_1=Q^{-1}B$, 这是一个 $s\times n$ 矩阵, 用 $ b’<em>{ij}$ 表示这个矩阵的元.显然有<br>$$\begin{pmatrix}<br>    I</em>{r_1} &amp; 0 \<br>    0 &amp; 0 \<br>\end{pmatrix} B_1 = \begin{pmatrix}<br>    b’<em>{11} &amp; \cdots &amp; b’</em>{1n}\<br>    \vdots &amp; \cdots &amp; \vdots\<br>    b’<em>{r_11} &amp; \cdots &amp; b’</em>{r_1n}\<br>    0 &amp; \cdots &amp; 0\<br>    \vdots &amp;  &amp; \vdots\<br>    0 &amp; \cdots &amp; 0<br>\end{pmatrix}_{m\times n} = C.$$</p>
-<p>这个矩阵$C$的行秩最多等于$r_1$, 而列秩则不超过$\text{rank} B_1 = \text{rank} B$.任意矩阵的行秩与列秩与秩都相等, 这就有了$\text{rank}(AB)=\text{rank}(PAB)\leqslant\min{\text{rank} A, \text{rank} B}$.</p>
+<p>令 $B_1=Q^{-1}B$, 这是一个 $s\times n$ 矩阵, 用 $ b’_{ij}$ 表示这个矩阵的元, 显然有<br>$$\begin{pmatrix}<br>I_{r_1} &amp; 0 \\<br>0 &amp; 0<br>\end{pmatrix} B_1 = \begin{pmatrix}<br>b’_{11} &amp; \cdots &amp; b’_{1n} \\<br>\vdots &amp; \cdots &amp; \vdots \\<br>b’_{r_{11} &amp; \cdots &amp; b’_{r_{1n} \\<br>0 &amp; \cdots &amp; 0 \\<br>\vdots &amp;  &amp; \vdots \\<br>0 &amp; \cdots &amp; 0<br>\end{pmatrix}_{m\times n} = C.$$</p>
+<p>这个矩阵$C$的行秩最多等于$r_1$, 而列秩则不超过$\text{rank} B_1 = \text{rank} B$.任意矩阵的行秩与列秩与秩都相等, 这就有了$\text{rank}(AB)=\text{rank}(PAB)\leqslant\min\{\text{rank} A, \text{rank} B\}$.</p>
 <blockquote>【命题】\label{prop:1.9}
 将两个同行（列）数矩阵$A,B$并排（竖直）连在一起,构成的新矩阵$(A,B)$（$\begin{pmatrix}
 A \\
@@ -284,16 +289,22 @@ B \\
 </blockquote>
 
 <p><font color="red">【证明】</font>由广义初等线性变换不改变秩,有<br>$$\begin{pmatrix}<br>A &amp; 0 \\<br>0 &amp; B \\<br>\end{pmatrix}\rightarrow<br>\begin{pmatrix}<br>A &amp; 0 \\<br>A &amp; B \\<br>\end{pmatrix}\rightarrow<br>\begin{pmatrix}<br>A &amp; A \\<br>A &amp; A+B \\<br>\end{pmatrix}$$<br>$A+B$为最右边矩阵的子矩阵,显然命题成立.</p>
-<blockquote>【命题】【Sylvester不等式】\label{prop:1.11}
-设$A,B$分别是$m\times n$和$n\times s$矩阵,则$$\text{rank}{AB}\geqslant\text{rank}{A}+\text{rank}{B}-n.$$
+<blockquote>【命题】【Sylvester不等式】
+设$A,B$分别是$m\times n$和$n\times s$矩阵,则
+\begin{equation}\label{prop:1.11}
+\text{rank}{AB}\geqslant\text{rank}{A}+\text{rank}{B}-n.
+\end{equation}
 </blockquote>
 
 <p><font color="red">【证明】</font><br><strong>证明1:</strong> 由于$$C=\begin{pmatrix}<br>A &amp; 0 \\<br>I &amp; B \\<br>\end{pmatrix}\rightarrow<br>\begin{pmatrix}<br>0 &amp; -AB \\<br>I &amp; B \\<br>\end{pmatrix}\rightarrow<br>\begin{pmatrix}<br>0 &amp; -AB \\<br>I &amp; 0 \\<br>\end{pmatrix}$$<br>显然,我们有$$\begin{array}{ll}<br>\text{rank}{A}+\text{rank}{B}&amp;\leqslant\text{rank}{C}=\text{rank}{\begin{pmatrix}<br>0 &amp; -AB \\<br>I &amp; 0 \\<br>\end{pmatrix}}\\<br>&amp;=\text{rank}{(AB)}+\text{rank}{I}.\end{array}.$$</p>
 <p><strong>证明2:</strong> 由秩的升阶公式(\ref{eq:prop5.2}),我们有<br>$$\begin{array}{ll}<br>\text{rank}(AB)&amp;=\text{rank} (0-AI^{-1}B)\\<br>&amp;=\text{rank} \begin{pmatrix}<br>I_n &amp; B \\<br>A &amp; 0 \\<br>\end{pmatrix}-\text{rank} (I_n)\\<br>&amp;\geqslant \text{rank}{A}+\text{rank}{B} - n.\end{array}$$.<br>这样就证明了这个命题.</p>
-<p>\paragraph{NOTEs:} Sylvester不等式应用非常广泛.另外,结合命题\ref{prop:1.8},我们还得到$$\text{rank}{A}+\text{rank}{B}-n\leqslant\text{rank} (AB)\leqslant\min{\text{rank} A,\text{rank} B}.$$</p>
-<p>借由Sylvester不等式, 还可以将命题\ref{prop:1.1}进一步一般化,得到如下推论:<br><strong>【推论】</strong>\label{col:1.11}<br>设$A$是$m\times n$矩阵, $P$是$l\times m$的列满秩矩阵,$Q$是$n\times s$的行满秩矩阵.那么有$$\text{rank}  A = \text{rank} (PA)= \text{rank} (AQ)= \text{rank} (PAQ).$$<br>\end{corollary}</p>
+<p>\paragraph{NOTEs:} Sylvester不等式应用非常广泛.另外,结合命题\ref{eq:1.8},我们还得到<br>\begin{equation}<br>\text{rank}{A}+\text{rank}{B}-n\leqslant\text{rank} (AB)\leqslant\min{\text{rank} A,\text{rank} B}.
+\end{equation}</p>
+<p>借由Sylvester不等式, 还可以将命题\ref{prop:1.1}进一步一般化,得到如下推论:<br><strong>【推论】</strong>\label{col:1.11}<br>设$A$是$m\times n$矩阵, $P$是$l\times m$的列满秩矩阵,$Q$是$n\times s$的行满秩矩阵.那么有<br>\begin{equation}<br>\text{rank}  A = \text{rank} (PA)= \text{rank} (AQ)= \text{rank} (PAQ).<br>\end{equation}</p>
 <blockquote>【命题】**【Frobenius不等式】**\label{prop:1.12}
-$$\text{rank}(ABC)\geqslant\text{rank}(AB)+\text{rank}(BC)-\text{rank} B.$$
+\begin{equation}
+\text{rank}(ABC)\geqslant\text{rank}(AB)+\text{rank}(BC)-\text{rank} B.
+\end{equation}
 </blockquote>
 
 <p><font color="red">【证明】</font><br>$$\begin{pmatrix}<br>ABC &amp; 0 \\<br>0 &amp; B \\<br>\end{pmatrix}\rightarrow<br>\begin{pmatrix}<br>ABC &amp; AB \\<br>0 &amp; B \\<br>\end{pmatrix}\rightarrow<br>\begin{pmatrix}<br>0 &amp; AB \\<br>-BC &amp; B \\<br>\end{pmatrix},$$<br>于是有$\text{rank}(ABC)+\text{rank} B=\begin{pmatrix}<br>0 &amp; AB \\<br>-BC &amp; B \\<br>\end{pmatrix}\geqslant\text{rank}(AB)+\text{rank}(BC)$.这就是本命题.</p>
@@ -424,7 +435,7 @@ $$\begin{array}{ll}<br>&amp;\begin{pmatrix}<br>A &amp; 0 \\<br>0 &amp; I-A \\<br
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        33
+                        34
                     </p>
                 </div>
             </div>
@@ -444,7 +455,7 @@ $$\begin{array}{ll}<br>&amp;\begin{pmatrix}<br>A &amp; 0 \\<br>0 &amp; I-A \\<br
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        37
+                        38
                     </p>
                 </div>
             </div>
@@ -737,7 +748,7 @@ $$\begin{array}{ll}<br>&amp;\begin{pmatrix}<br>A &amp; 0 \\<br>0 &amp; I-A \\<br
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/MY-LIFE/" style="font-size: 14px;">MY LIFE</a> <a href="/tags/Notes/" style="font-size: 20px;">Notes</a> <a href="/tags/Star-Trek/" style="font-size: 10px;">Star Trek</a> <a href="/tags/introduction/" style="font-size: 10px;">introduction</a> <a href="/tags/一般拓扑/" style="font-size: 12px;">一般拓扑</a> <a href="/tags/个人成长/" style="font-size: 10px;">个人成长</a> <a href="/tags/习题集/" style="font-size: 10px;">习题集</a> <a href="/tags/军事/" style="font-size: 10px;">军事</a> <a href="/tags/华罗庚/" style="font-size: 10px;">华罗庚</a> <a href="/tags/备忘/" style="font-size: 16px;">备忘</a> <a href="/tags/学界新闻/" style="font-size: 10px;">学界新闻</a> <a href="/tags/小平邦彦/" style="font-size: 10px;">小平邦彦</a> <a href="/tags/建军90周年/" style="font-size: 12px;">建军90周年</a> <a href="/tags/微积分/" style="font-size: 10px;">微积分</a> <a href="/tags/心理/" style="font-size: 10px;">心理</a> <a href="/tags/惰者集/" style="font-size: 10px;">惰者集</a> <a href="/tags/数列/" style="font-size: 10px;">数列</a> <a href="/tags/数学分析/" style="font-size: 10px;">数学分析</a> <a href="/tags/数学史/" style="font-size: 12px;">数学史</a> <a href="/tags/数学应用/" style="font-size: 10px;">数学应用</a> <a href="/tags/方法论/" style="font-size: 12px;">方法论</a> <a href="/tags/旅行/" style="font-size: 12px;">旅行</a> <a href="/tags/时间管理/" style="font-size: 10px;">时间管理</a> <a href="/tags/杂感/" style="font-size: 14px;">杂感</a> <a href="/tags/毅力/" style="font-size: 10px;">毅力</a> <a href="/tags/演讲/" style="font-size: 10px;">演讲</a> <a href="/tags/电视节目/" style="font-size: 10px;">电视节目</a> <a href="/tags/矩阵/" style="font-size: 14px;">矩阵</a> <a href="/tags/絮语微言/" style="font-size: 10px;">絮语微言</a> <a href="/tags/级数/" style="font-size: 10px;">级数</a> <a href="/tags/线性代数/" style="font-size: 14px;">线性代数</a> <a href="/tags/自律/" style="font-size: 10px;">自律</a> <a href="/tags/读史/" style="font-size: 10px;">读史</a> <a href="/tags/趣图/" style="font-size: 10px;">趣图</a> <a href="/tags/逻辑学/" style="font-size: 10px;">逻辑学</a> <a href="/tags/重温-新知/" style="font-size: 18px;">重温 & 新知</a> <a href="/tags/黎曼猜想/" style="font-size: 14px;">黎曼猜想</a>
+        <a href="/tags/MY-LIFE/" style="font-size: 14px;">MY LIFE</a> <a href="/tags/MathJax/" style="font-size: 10px;">MathJax</a> <a href="/tags/Notes/" style="font-size: 20px;">Notes</a> <a href="/tags/Star-Trek/" style="font-size: 10px;">Star Trek</a> <a href="/tags/introduction/" style="font-size: 10px;">introduction</a> <a href="/tags/一般拓扑/" style="font-size: 12px;">一般拓扑</a> <a href="/tags/个人成长/" style="font-size: 10px;">个人成长</a> <a href="/tags/习题集/" style="font-size: 10px;">习题集</a> <a href="/tags/军事/" style="font-size: 10px;">军事</a> <a href="/tags/华罗庚/" style="font-size: 10px;">华罗庚</a> <a href="/tags/备忘/" style="font-size: 16px;">备忘</a> <a href="/tags/学界新闻/" style="font-size: 10px;">学界新闻</a> <a href="/tags/小平邦彦/" style="font-size: 10px;">小平邦彦</a> <a href="/tags/建军90周年/" style="font-size: 12px;">建军90周年</a> <a href="/tags/微积分/" style="font-size: 10px;">微积分</a> <a href="/tags/心理/" style="font-size: 10px;">心理</a> <a href="/tags/惰者集/" style="font-size: 10px;">惰者集</a> <a href="/tags/数列/" style="font-size: 10px;">数列</a> <a href="/tags/数学分析/" style="font-size: 10px;">数学分析</a> <a href="/tags/数学史/" style="font-size: 12px;">数学史</a> <a href="/tags/数学应用/" style="font-size: 10px;">数学应用</a> <a href="/tags/方法论/" style="font-size: 12px;">方法论</a> <a href="/tags/旅行/" style="font-size: 12px;">旅行</a> <a href="/tags/时间管理/" style="font-size: 10px;">时间管理</a> <a href="/tags/杂感/" style="font-size: 14px;">杂感</a> <a href="/tags/毅力/" style="font-size: 10px;">毅力</a> <a href="/tags/演讲/" style="font-size: 10px;">演讲</a> <a href="/tags/电视节目/" style="font-size: 10px;">电视节目</a> <a href="/tags/矩阵/" style="font-size: 14px;">矩阵</a> <a href="/tags/絮语微言/" style="font-size: 10px;">絮语微言</a> <a href="/tags/级数/" style="font-size: 10px;">级数</a> <a href="/tags/线性代数/" style="font-size: 14px;">线性代数</a> <a href="/tags/自律/" style="font-size: 10px;">自律</a> <a href="/tags/读史/" style="font-size: 10px;">读史</a> <a href="/tags/趣图/" style="font-size: 10px;">趣图</a> <a href="/tags/逻辑学/" style="font-size: 10px;">逻辑学</a> <a href="/tags/重温-新知/" style="font-size: 18px;">重温 & 新知</a> <a href="/tags/黎曼猜想/" style="font-size: 14px;">黎曼猜想</a>
     </div>
 </div>
 
@@ -751,6 +762,25 @@ $$\begin{array}{ll}<br>&amp;\begin{pmatrix}<br>A &amp; 0 \\<br>0 &amp; I-A \\<br
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/06/19/静态网页的-MathJax-加载与配置/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://www.mathjax.org/badge/mj-logo.svg" alt="静态网页的 MathJax 加载与配置">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-19T09:47:35.000Z">2019-06-19</time></div>
+                    <a href="/2019/06/19/静态网页的-MathJax-加载与配置/" class="has-link-black-ter is-size-6">静态网页的 MathJax 加载与配置</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -828,25 +858,6 @@ $$\begin{array}{ll}<br>&amp;\begin{pmatrix}<br>A &amp; 0 \\<br>0 &amp; I-A \\<br
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2018/10/05/黎曼猜想百年征途-中/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://i.loli.net/2019/06/18/5d0883e6b51ff13733.jpg" alt="黎曼猜想百年征途(中)">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-10-05T13:41:13.000Z">2018-10-05</time></div>
-                    <a href="/2018/10/05/黎曼猜想百年征途-中/" class="has-link-black-ter is-size-6">黎曼猜想百年征途(中)</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/随笔/">随笔</a> / <a class="has-link-grey -link" href="/categories/随笔/数学轶事/">数学轶事</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -865,7 +876,7 @@ $$\begin{array}{ll}<br>&amp;\begin{pmatrix}<br>A &amp; 0 \\<br>0 &amp; I-A \\<br
                     <span class="level-item">六月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -1023,9 +1034,16 @@ $$\begin{array}{ll}<br>&amp;\begin{pmatrix}<br>A &amp; 0 \\<br>0 &amp; I-A \\<br
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/MathJax/">
+                        <span class="tag">MathJax</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/Notes/">
                         <span class="tag">Notes</span>
-                        <span class="tag is-grey">14</span>
+                        <span class="tag is-grey">15</span>
                     </a>
                 </div>
                 
@@ -1299,6 +1317,25 @@ $$\begin{array}{ll}<br>&amp;\begin{pmatrix}<br>A &amp; 0 \\<br>0 &amp; I-A \\<br
         
         <article class="media">
             
+            <a href="/2019/06/19/静态网页的-MathJax-加载与配置/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://www.mathjax.org/badge/mj-logo.svg" alt="静态网页的 MathJax 加载与配置">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-19T09:47:35.000Z">2019-06-19</time></div>
+                    <a href="/2019/06/19/静态网页的-MathJax-加载与配置/" class="has-link-black-ter is-size-6">静态网页的 MathJax 加载与配置</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/06/13/读数学书的感受/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="https://i.loli.net/2019/06/18/5d08842ccb16a78030.jpg" alt="读数学书的感受">
@@ -1373,25 +1410,6 @@ $$\begin{array}{ll}<br>&amp;\begin{pmatrix}<br>A &amp; 0 \\<br>0 &amp; I-A \\<br
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2018/10/05/黎曼猜想百年征途-中/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://i.loli.net/2019/06/18/5d0883e6b51ff13733.jpg" alt="黎曼猜想百年征途(中)">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-10-05T13:41:13.000Z">2018-10-05</time></div>
-                    <a href="/2018/10/05/黎曼猜想百年征途-中/" class="has-link-black-ter is-size-6">黎曼猜想百年征途(中)</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/随笔/">随笔</a> / <a class="has-link-grey -link" href="/categories/随笔/数学轶事/">数学轶事</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1410,7 +1428,7 @@ $$\begin{array}{ll}<br>&amp;\begin{pmatrix}<br>A &amp; 0 \\<br>0 &amp; I-A \\<br
                     <span class="level-item">六月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -1568,9 +1586,16 @@ $$\begin{array}{ll}<br>&amp;\begin{pmatrix}<br>A &amp; 0 \\<br>0 &amp; I-A \\<br
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/MathJax/">
+                        <span class="tag">MathJax</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/Notes/">
                         <span class="tag">Notes</span>
-                        <span class="tag is-grey">14</span>
+                        <span class="tag is-grey">15</span>
                     </a>
                 </div>
                 
@@ -1927,12 +1952,13 @@ $$\begin{array}{ll}<br>&amp;\begin{pmatrix}<br>A &amp; 0 \\<br>0 &amp; I-A \\<br
 
     
     
-<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@latest/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     MathJax.Hub.Config({
         'HTML-CSS': {
-            matchFontHeight: true
+            matchFontHeight: true,
+            showMathMenu: true
         },
         SVG: {
             matchFontHeight: true
@@ -1940,21 +1966,31 @@ document.addEventListener('DOMContentLoaded', function () {
         CommonHTML: {
             matchFontHeight: true
         },
+        preRemoveClass: "MathJax_Preview",
         tex2jax: {
             inlineMath: [
-                ['$','$'],
-                ['\\(','\\)']
+                ['$','$']
             ],
             displayMath: [ 
                 ['$$','$$'],
-                ['\[','\]'] 
+                ['\\[','\\]'] 
             ],
-            processEscapes: false,
+            processEscapes: true,
             processRefs: true,
             processEnvironments: true,
-            preview: "TeX"
+            preview: "TeX",
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code']
         },
-        TeX: { equationNumbers: { autoNumber: "AMS" } }
+        TeX: { 
+            extensions: ["AMSmath.js", "AMSsymbols.js"],
+            equationNumbers: { 
+                autoNumber: "AMS",
+                useLabelIds: true
+            },
+            Macros: {},
+            MAXMACROS: 10000,
+            MAXBUFFER: 5*1024
+        },
     });
 });
 </script>
@@ -2023,7 +2059,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 <script src="/js/insight.js" defer></script>
 <link rel="stylesheet" href="/css/search.css">
-<link rel="stylesheet" href="/css/insight.css">
+<link rel="stylesheet" href="/css/insight.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 </body>
 </html>
