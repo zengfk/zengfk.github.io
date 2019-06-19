@@ -16,7 +16,7 @@
 <meta property="og:description" content="这段时间用 Hexo 在重建自己的个人博客，发现文章中的公式一片狼藉，显然是换主题以后 MathJax 配置的锅。于是一不做二不休， 干脆去 MathJax 网站上仔细的看了一遍加载配置文档， 按着自己的需求配置了一遍 MathJax。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://www.mathjax.org/badge/mj-logo.svg">
-<meta property="og:updated_time" content="2019-06-19T12:08:25.513Z">
+<meta property="og:updated_time" content="2019-06-19T12:13:38.180Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="静态网页的 MathJax 加载与配置">
 <meta name="twitter:description" content="这段时间用 Hexo 在重建自己的个人博客，发现文章中的公式一片狼藉，显然是换主题以后 MathJax 配置的锅。于是一不做二不休， 干脆去 MathJax 网站上仔细的看了一遍加载配置文档， 按着自己的需求配置了一遍 MathJax。">
@@ -157,11 +157,15 @@
             <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-06-19T09:47:35.000Z">2019-06-19</time>
                 
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/编程/">编程</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/编程/JavaScript/">JavaScript</a>
+                </div>
+                
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    9 分钟 读完 (大约 1396 个字)
+                    9 分钟 读完 (大约 1408 个字)
                 </span>
                 
                 
@@ -183,7 +187,7 @@
 <a id="more"></a>
 
 <h2 id="MathJax-加载方式"><a href="#MathJax-加载方式" class="headerlink" title="MathJax 加载方式"></a>MathJax 加载方式</h2><p>MathJax 有两种加载方式，一种是在本地安装，一种是通过 CDN 加载的方式使用， 这也是最简单的方式。这里采用 CDN 加载方式。</p>
-<h2 id="配置文件位置"><a href="#配置文件位置" class="headerlink" title="配置文件位置"></a>配置文件位置</h2><p>不同的 Hexo 模板关于 MathJax 的 CDN 加载配置文件都可能以不同名字在不同的地方放着，但大体上都应该是一个 <code>.ejs</code> 文件。 对相应的 <code>.ejs</code> 做修改就好。当然，有些也有其他的配置方式，但 CDN 加载的网址都是一样的。</p>
+<h2 id="配置文件位置"><a href="#配置文件位置" class="headerlink" title="配置文件位置"></a>配置文件位置</h2><p>不同的 Hexo 模板关于 MathJax 的 CDN 加载配置文件都可能以不同名字在不同的地方放着，但大体上都应该是一个 <code>.ejs</code> 文件。 对相应的 <code>.ejs</code> 做修改就好。当然，有些也有其他的配置方式(通过加载本地配置文件<code>local.js</code>)，但 CDN 加载的网址都是一样的。</p>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js   # 指定使用 2.7.5 版本的 Mathjax</span><br><span class="line"></span><br><span class="line">https://cdnjs.cloudflare.com/ajax/libs/mathjax/latest/MathJax.js   # 每次都自动加载最新版本的 Mathjax</span><br></pre></td></tr></table></figure>
 
 <h2 id="配置选项"><a href="#配置选项" class="headerlink" title="配置选项"></a>配置选项</h2><p>现在进入主题，关于 Mathjax 的配置选项。 我个人使用的是 <code>in-line configuration</code> 方式，感觉这样方便点（也可以自己写本地配置文件，通过完整的引用路径加载。）</p>
@@ -364,7 +368,7 @@
                         分类
                     </p>
                     <p class="title has-text-weight-normal">
-                        21
+                        22
                     </p>
                 </div>
             </div>
@@ -597,9 +601,17 @@
                 <span class="level-item">编程</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">2</span>
+                <span class="level-item tag">3</span>
             </span>
         </a><ul><li>
+        <a class="level is-marginless" href="/categories/编程/JavaScript/">
+            <span class="level-start">
+                <span class="level-item">JavaScript</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
         <a class="level is-marginless" href="/categories/编程/Mathematica/">
             <span class="level-start">
                 <span class="level-item">Mathematica</span>
@@ -695,7 +707,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-19T09:47:35.000Z">2019-06-19</time></div>
                     <a href="/2019/06/19/静态网页的-MathJax-加载与配置/" class="has-link-black-ter is-size-6">静态网页的 MathJax 加载与配置</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/编程/">编程</a> / <a class="has-link-grey -link" href="/categories/编程/JavaScript/">JavaScript</a>
                     </p>
                 </div>
             </div>
@@ -1247,7 +1259,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-19T09:47:35.000Z">2019-06-19</time></div>
                     <a href="/2019/06/19/静态网页的-MathJax-加载与配置/" class="has-link-black-ter is-size-6">静态网页的 MathJax 加载与配置</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/编程/">编程</a> / <a class="has-link-grey -link" href="/categories/编程/JavaScript/">JavaScript</a>
                     </p>
                 </div>
             </div>
