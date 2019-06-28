@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zengfk.com.cn/"/>
-  <updated>2019-06-28T08:27:23.265Z</updated>
+  <updated>2019-06-28T08:50:39.626Z</updated>
   <id>https://zengfk.com.cn/</id>
   
   <author>
@@ -21,11 +21,11 @@
     <link href="https://zengfk.com.cn/2019/06/27/How-to-discover-proofs/"/>
     <id>https://zengfk.com.cn/2019/06/27/How-to-discover-proofs/</id>
     <published>2019-06-27T04:57:56.000Z</published>
-    <updated>2019-06-28T08:27:23.265Z</updated>
+    <updated>2019-06-28T08:50:39.626Z</updated>
     
     <summary type="html">
     
-      &lt;blockquote&gt;本文节选自 Robert S.Strichartz《分析方法》（ _The Way of Analysis_ ），由英文原版翻译而来。&lt;/blockquote&gt;
+      &lt;blockquote&gt;本文节选自 Robert S.Strichartz《分析方法》（ *The Way of Analysis* ），由虎头微分同学从英文原版翻译而来。&lt;/blockquote&gt;
 
 &lt;p&gt;这一节主要谈谈“证明”。 不仅仅是你在课本中读到的证明，还有在习题中， 你被要求做的“证明”练习。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;什么是证明？你又应该如何去寻找一个证明？你应该如何书写证明？&lt;/strong&gt; 如果你在开始数学学习之旅前已经想过这些问题的话，那么你一定发现了，关于这些问题并没有简单的答案。虽然在数学界就此在一定程度上达成了某种共识，，但在关于“哪些才是重点”这件事上，不同的意见依然存在。&lt;/p&gt;
