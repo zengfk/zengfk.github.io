@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zengfk.com.cn/"/>
-  <updated>2019-06-19T12:13:38.180Z</updated>
+  <updated>2019-06-28T08:27:23.265Z</updated>
   <id>https://zengfk.com.cn/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>How to discover proofs?</title>
+    <link href="https://zengfk.com.cn/2019/06/27/How-to-discover-proofs/"/>
+    <id>https://zengfk.com.cn/2019/06/27/How-to-discover-proofs/</id>
+    <published>2019-06-27T04:57:56.000Z</published>
+    <updated>2019-06-28T08:27:23.265Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;本文节选自 Robert S.Strichartz《分析方法》（ _The Way of Analysis_ ），由英文原版翻译而来。&lt;/blockquote&gt;
+
+&lt;p&gt;这一节主要谈谈“证明”。 不仅仅是你在课本中读到的证明，还有在习题中， 你被要求做的“证明”练习。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什么是证明？你又应该如何去寻找一个证明？你应该如何书写证明？&lt;/strong&gt; 如果你在开始数学学习之旅前已经想过这些问题的话，那么你一定发现了，关于这些问题并没有简单的答案。虽然在数学界就此在一定程度上达成了某种共识，，但在关于“哪些才是重点”这件事上，不同的意见依然存在。&lt;/p&gt;
+&lt;h3 id=&quot;什么是“证明”？&quot;&gt;&lt;a href=&quot;#什么是“证明”？&quot; class=&quot;headerlink&quot; title=&quot;什么是“证明”？&quot;&gt;&lt;/a&gt;什么是“证明”？&lt;/h3&gt;&lt;p&gt;原则上，&lt;strong&gt;“证明”是从假设到待证明命题的系列逻辑推理&lt;/strong&gt;。而命题通常是一个蕴含式：“$P$ 和 $Q$ 蕴含（推出） $R$。” 此时，我们有两个假设 $P$ 和 $Q$，以及一个结论 $R$。所有在表达式 $P$，$Q$，$R$ 中出现的对象，都必须是事先定义好的。所以，阅读（或寻找）一个证明的第一步，就是&lt;strong&gt;确保你完全理解了假设和结论，并记住了其中所有对象的定义&lt;/strong&gt;。在书本中，有些前提假设可能被隐藏在细节条文中，务必一字一句仔细阅读。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="书摘" scheme="https://zengfk.com.cn/categories/%E4%B9%A6%E6%91%98/"/>
+    
+      <category term="数学与数学家" scheme="https://zengfk.com.cn/categories/%E4%B9%A6%E6%91%98/%E6%95%B0%E5%AD%A6%E4%B8%8E%E6%95%B0%E5%AD%A6%E5%AE%B6/"/>
+    
+    
+      <category term="Notes" scheme="https://zengfk.com.cn/tags/Notes/"/>
+    
+      <category term="方法论" scheme="https://zengfk.com.cn/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>静态网页的 MathJax 加载与配置</title>
@@ -252,37 +280,6 @@
     
     
       <category term="时间管理" scheme="https://zengfk.com.cn/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于毅力和自律的15个点</title>
-    <link href="https://zengfk.com.cn/2018/09/15/%E5%85%B3%E4%BA%8E%E6%AF%85%E5%8A%9B%E5%92%8C%E8%87%AA%E5%BE%8B%E7%9A%8415%E4%B8%AA%E7%82%B9/"/>
-    <id>https://zengfk.com.cn/2018/09/15/关于毅力和自律的15个点/</id>
-    <published>2018-09-15T13:48:20.000Z</published>
-    <updated>2019-06-14T07:44:59.138Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;1-确信全身心的投入&quot;&gt;&lt;a href=&quot;#1-确信全身心的投入&quot; class=&quot;headerlink&quot; title=&quot;1. 确信全身心的投入&quot;&gt;&lt;/a&gt;1. 确信全身心的投入&lt;/h2&gt;&lt;p&gt;真正“下定了决心”的人必然会尽其所能。很多人认为自己为实现目标做出了真诚的承诺，但是他们却并不郑重其事的对待。&lt;strong&gt;一个人所拥有的毅力的强弱，取决于自己对目标作出的承诺，以及自己给目标赋予的价值。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;我们必须对一件事拥有强大的内在动力。&lt;/p&gt;
-&lt;h2 id=&quot;2-准备好为目标进行艰难的跋涉&quot;&gt;&lt;a href=&quot;#2-准备好为目标进行艰难的跋涉&quot; class=&quot;headerlink&quot; title=&quot;2. 准备好为目标进行艰难的跋涉&quot;&gt;&lt;/a&gt;2. 准备好为目标进行艰难的跋涉&lt;/h2&gt;&lt;p&gt;希望快速的，轻而易举获得成功的人往往容易栽跟头。&lt;/p&gt;
-&lt;blockquote&gt;
-有些人尽管拥有难以置信的伟大想法，但衣单食缺不如想象的顺利，就马上放弃了。一定要记住，值得去追的东西从来就不会是轻易到手的。——罗素·西蒙斯《Do you!》
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="书摘" scheme="https://zengfk.com.cn/categories/%E4%B9%A6%E6%91%98/"/>
-    
-      <category term="生活" scheme="https://zengfk.com.cn/categories/%E4%B9%A6%E6%91%98/%E7%94%9F%E6%B4%BB/"/>
-    
-    
-      <category term="个人成长" scheme="https://zengfk.com.cn/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/"/>
-    
-      <category term="自律" scheme="https://zengfk.com.cn/tags/%E8%87%AA%E5%BE%8B/"/>
-    
-      <category term="毅力" scheme="https://zengfk.com.cn/tags/%E6%AF%85%E5%8A%9B/"/>
     
   </entry>
   
