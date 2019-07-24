@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zengfk.com.cn/"/>
-  <updated>2019-07-24T08:22:24.219Z</updated>
+  <updated>2019-07-24T08:29:25.390Z</updated>
   <id>https://zengfk.com.cn/</id>
   
   <author>
@@ -21,22 +21,19 @@
     <link href="https://zengfk.com.cn/2019/07/24/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E4%B9%A0%E9%A2%98%E8%A7%A3-%E5%BA%8F%E5%88%97%E6%9E%81%E9%99%90-2-%E8%BF%9E%E5%88%86%E6%95%B0/"/>
     <id>https://zengfk.com.cn/2019/07/24/数学分析习题解-序列极限-2-连分数/</id>
     <published>2019-07-24T08:21:18.000Z</published>
-    <updated>2019-07-24T08:22:24.219Z</updated>
+    <updated>2019-07-24T08:29:25.390Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;blockquote&gt;
+      &lt;blockquote&gt;
 &lt;p&gt;【习题来源】数学分析：第七版.（俄罗斯）卓里奇著；李植译. 北京：高等教育出版社，2019.2&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;ol start=&quot;4&quot;&gt;
-&lt;li&gt;表达式 $$n_1 + \frac{1}{n_2
-        
-      
+&lt;li&gt;表达式 $$n_1 + \frac{1}{n_2 + \frac{1}{\begin{matrix} n_3 + \ddots &amp;amp; \\ &amp;amp; \frac{1}{n_{k-1}+\frac{1}{n_k}}\end{matrix}}},$$其中 $n_i\in\mathbb{N}$, 称为&lt;strong&gt;链式分数&lt;/strong&gt;或有限&lt;strong&gt;连分数&lt;/strong&gt;, 而表达式 $$n_1 + \frac{1}{n_2 + \frac{1}{n_3 + \ddots}}$$称为无穷连分数. 在一个连分数中去掉某个链开始的所有分数, 所得分数称为这个连分数的&lt;strong&gt;渐进分数&lt;/strong&gt;. 无穷连分数的渐进分数序列极限是该无穷连分数的值.&lt;br&gt;关于连分数的基本性质, 参考 &lt;a href=&quot;https://www.encyclopediaofmath.org/index.php/Continued_fraction&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Continued Fraction&lt;/a&gt;.
+请证明:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
     
     </summary>
     

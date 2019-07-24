@@ -187,7 +187,7 @@ var _hmt = _hmt || [];
                 <span class="level-item has-text-grey">
                     
                     
-                    6 分钟 读完 (大约 864 个字)
+                    6 分钟 读完 (大约 865 个字)
                 </span>
                 
                 
@@ -209,37 +209,16 @@ var _hmt = _hmt || [];
 请证明:</li>
 </ol>
 </blockquote>
-<blockquote>
-<ul>
-<li>a) 每个有理数 $m/l$, 其中 $m,l \in \mathbb{N}$, 能唯一的展开为有限连分数:$$\frac{m}{l} = q_1 + \frac{1}{q_2 + \frac{1}{\begin{matrix} q_3 + \ddots &amp; \\ &amp; \frac{1}{q_{n-1}+\frac{1}{q_n}}\end{matrix}}}$$这里认为, 当 $l&gt;1$时, $q_n\neq 1$.</li>
-</ul>
-</blockquote>
-<p><font color="red">【证明】</font> 由辗转相除法, 我们有<br>\begin{array}{c}<br>m = lq_1 + r_1 \\<br>l = r_1q_2 + r_2 \\<br>\cdots<br>\end{array}<br>由于 $m,l\in\mathbb{N}$, 以上做法是有限的(整数系有下界), 即最终有<br>\begin{array}{c}<br>\cdots \\<br>r_{n-3} = r_{n-2}q_{n-1} + 1 \\<br>r_{n-2} = q_n<br>\end{array}<br>于是<br>\begin{array}{l}<br> \frac{m}{l} &amp;=&amp; q_1 + \frac{1}{l/r_1} \\<br> &amp;=&amp; q_1 + \frac{1}{q_2 + \frac{1}{r_1/r_2}} \\<br> &amp;=&amp; \cdots \\<br> &amp;=&amp; q_1 + \frac{1}{q_2 + \frac{1}{\begin{matrix} q_3 + \ddots &amp; \\ &amp; \frac{1}{q_{n-1}+\frac{1}{q_n}}\end{matrix}}} .<br>\end{array}<br>然后, 通过反证法, 我们可以证明这个展开具有唯一性. Q.E.D.</p>
-<blockquote>
-<ul>
-<li>b) 渐进分数 $R_0 = q_0, R_1 = q_0 + \frac{1}{q_1}, \cdots$ 满足不等式<br>$$R_0&lt;R_2&lt;\cdots&lt;R_{2k}&lt;R_{2k-1}&lt;R_{2k-3}&lt;\cdots&lt;R_1.$$</li>
-</ul>
-</blockquote>
-<p><font color="red">【证明】</font> 递归的定义如下两个序列 $$P_n = q_n P_{n-1} + P_{n-2},$$ $$Q_n = a_n Q_{n-1} + Q_{n-2}.$$ 其初始值 $P_{-1} = 1, P_{-2} = 0, Q_{-1} = 0, Q_{-2} = 1$. 显然 $$\frac{P_n}{Q_n} = q_0 + \frac{1}{q_1 + \frac{1}{\begin{matrix} q_2 + \ddots &amp; \\ &amp; \frac{1}{q_{n-1}+\frac{1}{q_n}}\end{matrix}}}.$$</p>
-<p>下面证明序列 $\left\{\frac{P_{2k-1}}{Q_{2k-1}}\right\}$ 为单调减有下界的序列, 而 $\left\{\frac{P_{2k}}{Q_{2k}}\right\}$ 为单调增有上界的序列. 为此我们需要考察<br> \begin{equation}\frac{P_{2k}}{Q_{2k}}-\frac{P_{2k-2}}{Q_{2k-2}}, \frac{P_{2k+1}}{Q_{2k+1}}-\frac{P_{2k-1}}{Q_{2k-1}} \end{equation}</p>
-<p>在此先提出关于连分数的两个性质:</p>
-<ul>
-<li>对于 $n\geqslant 2$, \begin{equation}\label{eq:2}P_{n}Q_{n-2} - P_{n-2}Q_{n} = (-1)^nq_{n}.\end{equation} </li>
-<li>相邻渐进分数之差满足公式 \begin{equation}\label{eq:3}P_{n}Q_{n} - P_{n-1}Q_{n-1} = \frac{(-1)^n}{Q_{n}Q_{n-1}}(n\geqslant 1).\end{equation}<br>使用数学归纳法很容易得到(\ref{eq:2}), (\ref{eq:3})式. (提示: $n=2$ 时,可直接验证得命题成立. 假设 $n=k$ 时, 以上等式成立, 即 $P_{k}Q_{k-2} - P_{k-2}Q_{k} = (-1)^kq_{k}$ 成立, 考察 $P_{k+1}Q_{k-1} - P_{k-1}Q_{k+1}$. 按照其递归定义, 将式子展开后化简即得 (\ref{eq:2}).)</li>
-</ul>
-<p>利用这两个性质考察(2)式, 容易得到结论 $$\frac{P_{2k}}{Q_{2k}}-\frac{P_{2k-2}}{Q_{2k-2}}&gt;0, \frac{P_{2k+1}}{Q_{2k+1}}-\frac{P_{2k-1}}{Q_{2k-1}}&lt;0$$, 以及其相邻两项之大小 $$\frac{P_{2k}}{Q_{2k}}-\frac{P_{2k-1}}{Q_{2k-1}} &gt;0.$$</p>
-<p>综上,待证不等式成立.</p>
-<p>同时可知, 待证命题中的序列 $\{R_{2k}\}$ 单调递增由上界, $\{R_{2k-1}\}$ 为单调递减有下界.所以由单调有界必有极限, 我们还可以得到结论, <strong>每个无穷连分数都有唯一确定的值.</strong>.</p>
-<p>同时, 由 a) 还可以知道 <strong>每一个无穷连分数必然是无理数</strong>. 假若一个无穷连分数是有理数, 由 a) 可知, 则其能唯一的展开为有限连分数.</p>
-<blockquote>
-<ul>
-<li>c) 证明 $$\frac{1+\sqrt{5}}{2} = 1+\frac{1}{1+\frac{1}{1+\ddots}}.$$</li>
-</ul>
-</blockquote>
-<p><font color="red">【证明】</font></p>
-
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/07/24/数学分析习题解-序列极限-2-连分数/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>
