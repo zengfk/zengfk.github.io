@@ -8,7 +8,7 @@
 
 
     <meta name="description" content="【习题来源】数学分析：第七版.（俄罗斯）卓里奇著；李植译. 北京：高等教育出版社，2019.2    表达式 $$n_1 + \frac{1}{n_2 + \frac{1}{\begin{matrix} n_3 + \ddots &amp;amp; \\ &amp;amp; \frac{1}{n_{k-1}+\frac{1}{n_k}}\end{matrix}}},$$其中 $n_i\in\mathbb{N}$">
-<meta name="keywords" content="习题集,数列极限,连分数">
+<meta name="keywords" content="习题集,数列极限,连分数,丢番图逼近">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数学分析习题解-序列极限(2):连分数">
 <meta property="og:url" content="https://zengfk.com.cn/2019/07/24/数学分析习题解-序列极限-2-连分数/index.html">
@@ -16,7 +16,7 @@
 <meta property="og:description" content="【习题来源】数学分析：第七版.（俄罗斯）卓里奇著；李植译. 北京：高等教育出版社，2019.2    表达式 $$n_1 + \frac{1}{n_2 + \frac{1}{\begin{matrix} n_3 + \ddots &amp;amp; \\ &amp;amp; \frac{1}{n_{k-1}+\frac{1}{n_k}}\end{matrix}}},$$其中 $n_i\in\mathbb{N}$">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://zengfk.com.cn/images/og_image.png">
-<meta property="og:updated_time" content="2019-07-24T09:32:55.673Z">
+<meta property="og:updated_time" content="2019-07-24T10:30:36.516Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数学分析习题解-序列极限(2):连分数">
 <meta name="twitter:description" content="【习题来源】数学分析：第七版.（俄罗斯）卓里奇著；李植译. 北京：高等教育出版社，2019.2    表达式 $$n_1 + \frac{1}{n_2 + \frac{1}{\begin{matrix} n_3 + \ddots &amp;amp; \\ &amp;amp; \frac{1}{n_{k-1}+\frac{1}{n_k}}\end{matrix}}},$$其中 $n_i\in\mathbb{N}$">
@@ -178,7 +178,7 @@ var _hmt = _hmt || [];
                 <span class="level-item has-text-grey">
                     
                     
-                    7 分钟 读完 (大约 988 个字)
+                    7 分钟 读完 (大约 1068 个字)
                 </span>
                 
                 
@@ -223,11 +223,11 @@ var _hmt = _hmt || [];
 <p>在此先提出关于连分数的两个性质:</p>
 <ul>
 <li>对于 $n\geqslant 2$, \begin{equation}\label{eq:2}P_{n}Q_{n-2} - P_{n-2}Q_{n} = (-1)^nq_{n}.\end{equation} </li>
-<li>相邻渐进分数之差满足公式 \begin{equation}\label{eq:3}P_{n}Q_{n} - P_{n-1}Q_{n-1} = \frac{(-1)^n}{Q_{n}Q_{n-1}}(n\geqslant 1).\end{equation}<br>使用数学归纳法很容易得到(\ref{eq:2}), (\ref{eq:3})式. (提示: $n=2$ 时,可直接验证得命题成立. 假设 $n=k$ 时, 以上等式成立, 即 $P_{k}Q_{k-2} - P_{k-2}Q_{k} = (-1)^kq_{k}$ 成立, 考察 $P_{k+1}Q_{k-1} - P_{k-1}Q_{k+1}$. 按照其递归定义, 将式子展开后化简即得 (\ref{eq:2}).)</li>
+<li>相邻渐进分数之差满足公式 \begin{equation}\label{eq:3}\frac{P_{n}}{Q_{n}} - \frac{P_{n-1}}{Q_{n-1}} = \frac{(-1)^n}{Q_{n}Q_{n-1}}(n\geqslant 1).\end{equation}<br>使用数学归纳法很容易得到(\ref{eq:2}), (\ref{eq:3})式. (提示: $n=2$ 时,可直接验证得命题成立. 假设 $n=k$ 时, 以上等式成立, 即 $P_{k}Q_{k-2} - P_{k-2}Q_{k} = (-1)^kq_{k}$ 成立, 考察 $P_{k+1}Q_{k-1} - P_{k-1}Q_{k+1}$. 按照其递归定义, 将式子展开后化简即得 (\ref{eq:2}).)</li>
 </ul>
 <p>利用这两个性质考察(2)式, 容易得到结论 $$\frac{P_{2k}}{Q_{2k}}-\frac{P_{2k-2}}{Q_{2k-2}}&gt;0, \frac{P_{2k+1}}{Q_{2k+1}}-\frac{P_{2k-1}}{Q_{2k-1}}&lt;0$$, 以及其相邻两项之大小 $$\frac{P_{2k}}{Q_{2k}}-\frac{P_{2k-1}}{Q_{2k-1}} &gt;0.$$</p>
 <p>综上,待证不等式成立.</p>
-<p>同时可知, 待证命题中的序列 $\{R_{2k}\}$ 单调递增由上界, $\{R_{2k-1}\}$ 为单调递减有下界.所以由单调有界必有极限, 我们还可以得到结论, <strong>每个无穷连分数都有唯一确定的值.</strong>.</p>
+<p>同时可知, 待证命题中的序列 $\{R_{2k}\}$ 单调递增有上界, $\{R_{2k-1}\}$ 为单调递减有下界.所以由单调有界必有极限, 我们还可以得到结论, <strong>每个无穷连分数都有唯一确定的值.</strong>.</p>
 <p>同时, 由 a) 还可以知道 <strong>每一个无穷连分数必然是无理数</strong>. 假若一个无穷连分数是有理数, 由 a) 可知, 则其能唯一的展开为有限连分数.</p>
 <blockquote>
 <ul>
@@ -240,6 +240,12 @@ var _hmt = _hmt || [];
 <li>d) 由以上连分数的渐进分数的分母可以得到斐波那契数列 ${1,1,2,3,5,\cdots}$. 而这些数可以由以下公式给出$$u_n = \frac{1}{\sqrt{5}}\left[ \left(\frac{1+\sqrt{5}}{2}\right)^n - \left(\frac{1-\sqrt{5}}{2}\right)^n \right].$$</li>
 </ul>
 </blockquote>
+<p><font color="red">【证明】</font> 直接按照斐波那契数列的定义来验证即得. Q.E.D.</p>
+<blockquote>
+<ul>
+<li>e) 以上连分数的渐进分数 $R_k = P_k/Q_k$, 其满足 $$\left|\frac{1+\sqrt{5}}{2} - \frac{P_k}{Q_k}\right|&gt;\frac{1}{Q_k^2\sqrt{5}}.$$(这是<a href="https://www.encyclopediaofmath.org/index.php/Diophantine_approximations" target="_blank" rel="noopener">丢番图逼近</a>的一个结论.)</li>
+</ul>
+</blockquote>
 
         </div>
         
@@ -247,7 +253,7 @@ var _hmt = _hmt || [];
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/习题集/">习题集</a>, <a class="has-link-grey -link" href="/tags/数列极限/">数列极限</a>, <a class="has-link-grey -link" href="/tags/连分数/">连分数</a>
+                    <a class="has-link-grey -link" href="/tags/丢番图逼近/">丢番图逼近</a>, <a class="has-link-grey -link" href="/tags/习题集/">习题集</a>, <a class="has-link-grey -link" href="/tags/数列极限/">数列极限</a>, <a class="has-link-grey -link" href="/tags/连分数/">连分数</a>
                 </div>
             </div>
         </div>
@@ -362,7 +368,7 @@ var _hmt = _hmt || [];
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        41
+                        42
                     </p>
                 </div>
             </div>
@@ -663,7 +669,7 @@ var _hmt = _hmt || [];
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/MY-LIFE/" style="font-size: 14px;">MY LIFE</a> <a href="/tags/MathJax/" style="font-size: 10px;">MathJax</a> <a href="/tags/Notes/" style="font-size: 20px;">Notes</a> <a href="/tags/Star-Trek/" style="font-size: 10px;">Star Trek</a> <a href="/tags/introduction/" style="font-size: 10px;">introduction</a> <a href="/tags/一般拓扑/" style="font-size: 12px;">一般拓扑</a> <a href="/tags/个人成长/" style="font-size: 10px;">个人成长</a> <a href="/tags/习题集/" style="font-size: 14px;">习题集</a> <a href="/tags/军事/" style="font-size: 10px;">军事</a> <a href="/tags/华罗庚/" style="font-size: 10px;">华罗庚</a> <a href="/tags/备忘/" style="font-size: 16px;">备忘</a> <a href="/tags/学界新闻/" style="font-size: 10px;">学界新闻</a> <a href="/tags/小平邦彦/" style="font-size: 10px;">小平邦彦</a> <a href="/tags/建军90周年/" style="font-size: 12px;">建军90周年</a> <a href="/tags/微积分/" style="font-size: 10px;">微积分</a> <a href="/tags/心理/" style="font-size: 10px;">心理</a> <a href="/tags/惰者集/" style="font-size: 10px;">惰者集</a> <a href="/tags/数列/" style="font-size: 10px;">数列</a> <a href="/tags/数列极限/" style="font-size: 12px;">数列极限</a> <a href="/tags/数学分析/" style="font-size: 10px;">数学分析</a> <a href="/tags/数学史/" style="font-size: 12px;">数学史</a> <a href="/tags/数学应用/" style="font-size: 10px;">数学应用</a> <a href="/tags/方法论/" style="font-size: 16px;">方法论</a> <a href="/tags/旅行/" style="font-size: 12px;">旅行</a> <a href="/tags/时间管理/" style="font-size: 10px;">时间管理</a> <a href="/tags/有理逼近/" style="font-size: 10px;">有理逼近</a> <a href="/tags/杂感/" style="font-size: 14px;">杂感</a> <a href="/tags/毅力/" style="font-size: 10px;">毅力</a> <a href="/tags/演讲/" style="font-size: 10px;">演讲</a> <a href="/tags/电视节目/" style="font-size: 10px;">电视节目</a> <a href="/tags/矩阵/" style="font-size: 14px;">矩阵</a> <a href="/tags/絮语微言/" style="font-size: 10px;">絮语微言</a> <a href="/tags/级数/" style="font-size: 10px;">级数</a> <a href="/tags/线性代数/" style="font-size: 14px;">线性代数</a> <a href="/tags/自律/" style="font-size: 10px;">自律</a> <a href="/tags/读史/" style="font-size: 10px;">读史</a> <a href="/tags/趣图/" style="font-size: 10px;">趣图</a> <a href="/tags/连分数/" style="font-size: 10px;">连分数</a> <a href="/tags/逻辑学/" style="font-size: 10px;">逻辑学</a> <a href="/tags/重温-新知/" style="font-size: 18px;">重温 & 新知</a> <a href="/tags/黎曼猜想/" style="font-size: 14px;">黎曼猜想</a>
+        <a href="/tags/MY-LIFE/" style="font-size: 14px;">MY LIFE</a> <a href="/tags/MathJax/" style="font-size: 10px;">MathJax</a> <a href="/tags/Notes/" style="font-size: 20px;">Notes</a> <a href="/tags/Star-Trek/" style="font-size: 10px;">Star Trek</a> <a href="/tags/introduction/" style="font-size: 10px;">introduction</a> <a href="/tags/一般拓扑/" style="font-size: 12px;">一般拓扑</a> <a href="/tags/丢番图逼近/" style="font-size: 10px;">丢番图逼近</a> <a href="/tags/个人成长/" style="font-size: 10px;">个人成长</a> <a href="/tags/习题集/" style="font-size: 14px;">习题集</a> <a href="/tags/军事/" style="font-size: 10px;">军事</a> <a href="/tags/华罗庚/" style="font-size: 10px;">华罗庚</a> <a href="/tags/备忘/" style="font-size: 16px;">备忘</a> <a href="/tags/学界新闻/" style="font-size: 10px;">学界新闻</a> <a href="/tags/小平邦彦/" style="font-size: 10px;">小平邦彦</a> <a href="/tags/建军90周年/" style="font-size: 12px;">建军90周年</a> <a href="/tags/微积分/" style="font-size: 10px;">微积分</a> <a href="/tags/心理/" style="font-size: 10px;">心理</a> <a href="/tags/惰者集/" style="font-size: 10px;">惰者集</a> <a href="/tags/数列/" style="font-size: 10px;">数列</a> <a href="/tags/数列极限/" style="font-size: 12px;">数列极限</a> <a href="/tags/数学分析/" style="font-size: 10px;">数学分析</a> <a href="/tags/数学史/" style="font-size: 12px;">数学史</a> <a href="/tags/数学应用/" style="font-size: 10px;">数学应用</a> <a href="/tags/方法论/" style="font-size: 16px;">方法论</a> <a href="/tags/旅行/" style="font-size: 12px;">旅行</a> <a href="/tags/时间管理/" style="font-size: 10px;">时间管理</a> <a href="/tags/有理逼近/" style="font-size: 10px;">有理逼近</a> <a href="/tags/杂感/" style="font-size: 14px;">杂感</a> <a href="/tags/毅力/" style="font-size: 10px;">毅力</a> <a href="/tags/演讲/" style="font-size: 10px;">演讲</a> <a href="/tags/电视节目/" style="font-size: 10px;">电视节目</a> <a href="/tags/矩阵/" style="font-size: 14px;">矩阵</a> <a href="/tags/絮语微言/" style="font-size: 10px;">絮语微言</a> <a href="/tags/级数/" style="font-size: 10px;">级数</a> <a href="/tags/线性代数/" style="font-size: 14px;">线性代数</a> <a href="/tags/自律/" style="font-size: 10px;">自律</a> <a href="/tags/读史/" style="font-size: 10px;">读史</a> <a href="/tags/趣图/" style="font-size: 10px;">趣图</a> <a href="/tags/连分数/" style="font-size: 10px;">连分数</a> <a href="/tags/逻辑学/" style="font-size: 10px;">逻辑学</a> <a href="/tags/重温-新知/" style="font-size: 18px;">重温 & 新知</a> <a href="/tags/黎曼猜想/" style="font-size: 14px;">黎曼猜想</a>
     </div>
 </div>
 
@@ -991,6 +997,13 @@ var _hmt = _hmt || [];
                     <a class="tags has-addons" href="/tags/一般拓扑/">
                         <span class="tag">一般拓扑</span>
                         <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/丢番图逼近/">
+                        <span class="tag">丢番图逼近</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
@@ -1575,6 +1588,13 @@ var _hmt = _hmt || [];
                     <a class="tags has-addons" href="/tags/一般拓扑/">
                         <span class="tag">一般拓扑</span>
                         <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/丢番图逼近/">
+                        <span class="tag">丢番图逼近</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
