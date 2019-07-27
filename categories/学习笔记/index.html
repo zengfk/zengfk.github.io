@@ -210,9 +210,9 @@ var _hmt = _hmt || [];
             <p>这里, 我们利用实数理论以及极限理论来完整的定义指数函数, 对数函数以及幂函数的定义.</p>
 <h1 id="指数函数-a-x"><a href="#指数函数-a-x" class="headerlink" title="指数函数 $a^x$"></a>指数函数 $a^x$</h1><p>设 $a&gt;1$.</p>
 <ol>
-<li>对于 $n\in \mathbb{N}$, 归纳的定义 $a^1 = a, a^{n+1}=a^n +1$, 这样我们就在 $\mathbb{N}$ 上定义了函数 $a^n$, 同时可以看出, 函数具有性质$a^m-a^n = a^{m-n}(m,n\in \mathbb{N}, m&gt;n)$.</li>
+<li>对于 $n\in \mathbb{N}$, 归纳的定义 $a^1 = a, a^{n+1}=a^n +1$, 这样我们就在 $\mathbb{N}$ 上定义了函数 $a^n$, 同时可以看出, 函数具有性质$a^m/a^n = a^{m-n}(m,n\in \mathbb{N}, m&gt;n)$.</li>
 <li>由上面这个性质, 我们可以自然的定义 $a^0: = 1, a^{-n} = 1/a^n $. 于是, $a^n$ 的定义自然的拓展到了整数集 $\mathbb{Z}$ 上. $\forall n,m\in \mathbb{Z}, a^n\cdot a^m = a^{n+m}$.</li>
-<li>由实数理论, 我们知道 $\forall a&gt; 0, n\in\mathbb{N},\exists \text{唯一的}x&gt;0 (x^n = a)$. 用 $x = a^{1/x}$ 表示数 $a$ 的 $n$ 次方根. 这一记法保留了指数的加法规则. 于是我们可以进一步定义 $a^{m/n}(m,n\in\mathbb{N})$. 即对于 $r\in\mathbb{Q}$ 定义了 $a^r$.</li>
+<li>由实数理论, 我们知道 $\forall a&gt; 0, n\in\mathbb{N},\exists \text{唯一的}x&gt;0 (x^n = a)$. 用 $x = a^{1/n}$ 表示数 $a$ 的 $n$ 次方根. 这一记法保留了指数的加法规则. 于是我们可以进一步定义 $a^{m/n}(m,n\in\mathbb{N})$. 即对于 $r\in\mathbb{Q}$ 定义了 $a^r$.</li>
 <li>由归纳原理, 可以验证 $\forall x&gt;0, y&gt;0, n\in\mathbb{N}$ 时有 $(x&lt; y)\Leftrightarrow(x^n&lt; y^n)$ 和 $(x= y)\Leftrightarrow(x^n= y^n)$.</li>
 <li>由此我们可以证明有理指数的运算法则, 并得到 $\forall r_1,r_2\in \mathbb{Q}, a^{r_1}\cdot a^{r^2} = a^{r_1+r_2}$.</li>
 <li>由 4. 知 $r_1,r_2\in \mathbb{Q}, (r_1&lt;r_2)\Leftrightarrow (a^{r_1}&lt; a^{r^2})$.</li></ol>
