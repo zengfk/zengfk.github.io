@@ -16,7 +16,7 @@
 <meta property="og:description" content="这里, 我们利用实数理论以及极限理论来完整的定义指数函数, 对数函数以及幂函数的定义. 指数函数 $a^x$设 $a&amp;gt;1$.  对于 $n\in \mathbb{N}$, 归纳的定义 $a^1 = a, a^{n+1}=a^n +1$, 这样我们就在 $\mathbb{N}$ 上定义了函数 $a^n$, 同时可以看出, 函数具有性质$a^m-a^n = a^{m-n}(m,n\in \mat">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2019/07/27/5d3bc458a42a378899.png">
-<meta property="og:updated_time" content="2019-07-27T09:19:44.757Z">
+<meta property="og:updated_time" content="2019-07-27T09:52:08.484Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="指数函数, 对数函数以及幂函数的定义">
 <meta name="twitter:description" content="这里, 我们利用实数理论以及极限理论来完整的定义指数函数, 对数函数以及幂函数的定义. 指数函数 $a^x$设 $a&amp;gt;1$.  对于 $n\in \mathbb{N}$, 归纳的定义 $a^1 = a, a^{n+1}=a^n +1$, 这样我们就在 $\mathbb{N}$ 上定义了函数 $a^n$, 同时可以看出, 函数具有性质$a^m-a^n = a^{m-n}(m,n\in \mat">
@@ -227,7 +227,7 @@ var _hmt = _hmt || [];
 <li>可以证明, 这个推广的定义继承了前面定义中所有的性质.<blockquote class="pullquote [完备性公理]"><p>【<strong>完备性公理</strong>】如果 $X$ 与 $Y$ 是 $\mathbb{R}$ 的非空子集, 且 $\forall x\in X, y\in Y$ 有 $x\leqslant y$, 则 $\exists c\in\mathbb{R}$ 使得 $\forall x\in X, y\in Y$, 有 $x\leqslant c\leqslant y$. </p>
 </blockquote></li>
 <li>最后, 我们指出, 函数 $x\mapsto a^x$ 的值域是 $\mathbb{R_+}$. <br>事实上, $\forall y_0 \in \mathbb{R_+}$, 可以将定义域 $\mathbb{R}$ 分成两个集合: $A:=\{x\in\mathbb{R}|a^x&lt;y_0\}$, $B:=\{x\in\mathbb{R}|a^x&gt;y_0\}$. 显然 $A,B$ 都不是空集, 而由前述性质, (因$a&gt;1$)有 $\forall x_1\in A, x_2\in B\Rightarrow (a^{x_1}&lt; a^{x^2})$. 依据完备性公理, 存在 $x_0$ 使得 $\forall x_1\in A, x_2\in B$, 有 $x_1\leqslant x_0 \leqslant x_2$. 而利用反证法, 容易说明, $a^{x_0}= y_0$.</li>
-<li>前面我们均设 $a&gt;1$, 而实际上对于 $0&lt;a&lt;1$, 可以重复类似过程, 只需注意 $r&gt;0$ 时 $(r_1&lt;r_2)\Leftrightarrow (a^{r_1}&gt; a^{r^2})$. 于是在 $a&gt;0, a\neq 1, 我们在实数集上构造了函数 $x\mapsto a^x$, 其满足以下性质:<ul>
+<li>前面我们均设 $a&gt;1$, 而实际上对于 $0&lt;a&lt;1$, 可以重复类似过程, 只需注意 $r&gt;0$ 时 $(r_1&lt;r_2)\Leftrightarrow (a^{r_1}&gt; a^{r^2})$. 于是在 $a&gt;0, a\neq 1$, 我们在实数集上构造了函数 $x\mapsto a^x$, 其满足以下性质:<ul>
 <li>$a^1 = a&gt;1$;</li>
 <li>$a^{x_1}\cdot a^{x^2} = a^{x_1+x_2}$;</li>
 <li>$a&gt;1$ 时, $(x_1&lt;x_2)\Leftrightarrow (a^{x_1}&lt; a^{x^2})$; <br>$0&lt;a&lt;1$ 时, $(x_1&lt;x_2)\Leftrightarrow (a^{x_1}&lt; a^{x^2})$;</li>
