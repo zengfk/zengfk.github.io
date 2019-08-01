@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zengfk.com.cn/"/>
-  <updated>2019-07-27T10:17:34.862Z</updated>
+  <updated>2019-08-01T07:05:39.135Z</updated>
   <id>https://zengfk.com.cn/</id>
   
   <author>
@@ -17,11 +17,46 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>数学分析习题解-函数极限(1)</title>
+    <link href="https://zengfk.com.cn/2019/07/31/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E4%B9%A0%E9%A2%98%E8%A7%A3-%E5%87%BD%E6%95%B0%E6%9E%81%E9%99%90-1/"/>
+    <id>https://zengfk.com.cn/2019/07/31/数学分析习题解-函数极限-1/</id>
+    <published>2019-07-31T03:12:15.000Z</published>
+    <updated>2019-08-01T07:05:39.135Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;【习题来源】数学分析：第七版.（俄罗斯）卓里奇著；李植译. 北京：高等教育出版社，2019.2&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;习题&quot;&gt;&lt;a href=&quot;#习题&quot; class=&quot;headerlink&quot; title=&quot;习题&quot;&gt;&lt;/a&gt;习题&lt;/h4&gt;&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;a) 请证明: 在 $\mathbb{R}$ 上定义且满足以下要求的函数存在并且是唯一的:&lt;br&gt;\begin{array}{c}&lt;br&gt;f(1)=a\quad(a&amp;gt;0, a\neq 1),\\&lt;br&gt;f(x_1)\cdot f(x_2)=f(x_1+x_2),\\&lt;br&gt;x\rightarrow x_0, f(x)\rightarrow f(x_0).&lt;br&gt;\end{array}&lt;br&gt;b) 请证明: 在 $\mathbb{R_+}$ 上定义且满足以下要求的函数存在并且是唯一的:&lt;br&gt;\begin{array}{c}&lt;br&gt;f(1)=a\quad(a&amp;gt;0, a\neq 1),\\&lt;br&gt;f(x_1)\cdot f(x_2)=f(x_1+x_2),\\&lt;br&gt;x_0\in \mathbb{R_+}, \mathbb{R_+}\ni x\rightarrow x_0, f(x)\rightarrow f(x_0).&lt;br&gt;\end{array}&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="https://zengfk.com.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="分析学/Analysis" scheme="https://zengfk.com.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%88%86%E6%9E%90%E5%AD%A6-Analysis/"/>
+    
+    
+      <category term="习题集" scheme="https://zengfk.com.cn/tags/%E4%B9%A0%E9%A2%98%E9%9B%86/"/>
+    
+      <category term="函数极限" scheme="https://zengfk.com.cn/tags/%E5%87%BD%E6%95%B0%E6%9E%81%E9%99%90/"/>
+    
+      <category term="数项级数" scheme="https://zengfk.com.cn/tags/%E6%95%B0%E9%A1%B9%E7%BA%A7%E6%95%B0/"/>
+    
+      <category term="乘积级数" scheme="https://zengfk.com.cn/tags/%E4%B9%98%E7%A7%AF%E7%BA%A7%E6%95%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>指数函数, 对数函数以及幂函数的定义</title>
     <link href="https://zengfk.com.cn/2019/07/26/%E6%8C%87%E6%95%B0%E5%87%BD%E6%95%B0-%E5%AF%B9%E6%95%B0%E5%87%BD%E6%95%B0%E4%BB%A5%E5%8F%8A%E5%B9%82%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89/"/>
     <id>https://zengfk.com.cn/2019/07/26/指数函数-对数函数以及幂函数的定义/</id>
     <published>2019-07-26T08:26:06.000Z</published>
-    <updated>2019-07-27T10:17:34.862Z</updated>
+    <updated>2019-07-31T10:31:30.920Z</updated>
     
     <summary type="html">
     
@@ -293,32 +328,6 @@
       <category term="Notes" scheme="https://zengfk.com.cn/tags/Notes/"/>
     
       <category term="逻辑学" scheme="https://zengfk.com.cn/tags/%E9%80%BB%E8%BE%91%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>絮语微言集 - 11月</title>
-    <link href="https://zengfk.com.cn/2018/11/30/%E7%B5%AE%E8%AF%AD%E5%BE%AE%E8%A8%80%E9%9B%86-11%E6%9C%88/"/>
-    <id>https://zengfk.com.cn/2018/11/30/絮语微言集-11月/</id>
-    <published>2018-11-30T11:42:18.000Z</published>
-    <updated>2019-06-15T00:30:23.689Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;11-月-1-日&quot;&gt;&lt;a href=&quot;#11-月-1-日&quot; class=&quot;headerlink&quot; title=&quot;11 月 1 日&quot;&gt;&lt;/a&gt;&lt;strong&gt;11 月 1 日&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;今日读到王小波的一些只言片语, 觉着, 他把科学的乐趣说的真是明白:&lt;/p&gt;
-&lt;blockquote&gt;不断地学习和追求, 这可是人生在世最有趣的乐事啊, 要把这件趣事从生活中去掉, 倒不如把我阉了.
-&lt;/blockquote&gt;
-
-&lt;h4 id=&quot;11-月-2-日&quot;&gt;&lt;a href=&quot;#11-月-2-日&quot; class=&quot;headerlink&quot; title=&quot;11 月 2 日&quot;&gt;&lt;/a&gt;&lt;strong&gt;11 月 2 日&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;一直有人问我, 数学究竟有什么好的, 值得我这么陶醉. 恩, 说起来, 我不是天才也未见天赋, 能不能有学术成就不知道, 可我知道一件事: &lt;strong&gt;每一个真正热爱科学的人, 坚持学习探索的动机, 是希望能够理解我们的来源, 能够窥探世界的变化规律.&lt;/strong&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="随笔" scheme="https://zengfk.com.cn/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-      <category term="生活" scheme="https://zengfk.com.cn/categories/%E9%9A%8F%E7%AC%94/%E7%94%9F%E6%B4%BB/"/>
-    
-    
-      <category term="絮语微言" scheme="https://zengfk.com.cn/tags/%E7%B5%AE%E8%AF%AD%E5%BE%AE%E8%A8%80/"/>
     
   </entry>
   

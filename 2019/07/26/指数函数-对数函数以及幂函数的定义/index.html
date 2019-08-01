@@ -16,7 +16,7 @@
 <meta property="og:description" content="这里, 我们利用实数理论以及极限理论来完整的定义指数函数, 对数函数以及幂函数的定义. 指数函数 $a^x$设 $a&amp;gt;1$.  对于 $n\in \mathbb{N}$, 归纳的定义 $a^1 = a, a^{n+1}=a^n\cdot a^1$, 这样我们就在 $\mathbb{N}$ 上定义了函数 $a^n$, 同时可以看出, 函数具有性质$a^m/a^n = a^{m-n}(m,n\i">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2019/07/27/5d3bc458a42a378899.png">
-<meta property="og:updated_time" content="2019-07-27T10:17:34.862Z">
+<meta property="og:updated_time" content="2019-07-31T10:31:30.920Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="指数函数, 对数函数以及幂函数的定义">
 <meta name="twitter:description" content="这里, 我们利用实数理论以及极限理论来完整的定义指数函数, 对数函数以及幂函数的定义. 指数函数 $a^x$设 $a&amp;gt;1$.  对于 $n\in \mathbb{N}$, 归纳的定义 $a^1 = a, a^{n+1}=a^n\cdot a^1$, 这样我们就在 $\mathbb{N}$ 上定义了函数 $a^n$, 同时可以看出, 函数具有性质$a^m/a^n = a^{m-n}(m,n\i">
@@ -227,10 +227,10 @@ var _hmt = _hmt || [];
 <li>可以证明, 这个推广的定义继承了前面定义中所有的性质.<blockquote class="pullquote [完备性公理]"><p>【<strong>完备性公理</strong>】如果 $X$ 与 $Y$ 是 $\mathbb{R}$ 的非空子集, 且 $\forall x\in X, y\in Y$ 有 $x\leqslant y$, 则 $\exists c\in\mathbb{R}$ 使得 $\forall x\in X, y\in Y$, 有 $x\leqslant c\leqslant y$. </p>
 </blockquote></li>
 <li>最后, 我们指出, 函数 $x\mapsto a^x$ 的值域是 $\mathbb{R_+}$. <br>事实上, $\forall y_0 \in \mathbb{R_+}$, 可以将定义域 $\mathbb{R}$ 分成两个集合: $A:=\{x\in\mathbb{R}|a^x&lt;y_0\}$, $B:=\{x\in\mathbb{R}|a^x&gt;y_0\}$. 显然 $A,B$ 都不是空集, 而由前述性质, (因$a&gt;1$)有 $\forall x_1\in A, x_2\in B\Rightarrow (a^{x_1}&lt; a^{x^2})$. 依据完备性公理, 存在 $x_0$ 使得 $\forall x_1\in A, x_2\in B$, 有 $x_1\leqslant x_0 \leqslant x_2$. 而利用反证法, 容易说明, $a^{x_0}= y_0$.</li>
-<li>前面我们均设 $a&gt;1$, 而实际上对于 $0&lt;a&lt;1$, 可以重复类似过程, 只需注意 $r&gt;0$ 时 $(r_1&lt;r_2)\Leftrightarrow (a^{r_1}&gt; a^{r^2})$. 于是在 $a&gt;0, a\neq 1$, 我们在实数集上构造了函数 $x\mapsto a^x$, 其满足以下性质:<ul>
+<li>前面我们均设 $a&gt;1$, 而实际上对于 $0&lt;a&lt;1$, 可以重复类似过程, 只需注意 $r&gt;0$ 时 $(r_1&lt;r_2)\Leftrightarrow (a^{r_1}&gt; a^{r_2})$. 于是在 $a&gt;0, a\neq 1$, 我们在实数集上构造了函数 $x\mapsto a^x$, 其满足以下性质:<ul>
 <li>$a^1 = a&gt;1$;</li>
 <li>$a^{x_1}\cdot a^{x^2} = a^{x_1+x_2}$;</li>
-<li>$a&gt;1$ 时, $(x_1&lt;x_2)\Leftrightarrow (a^{x_1}&lt; a^{x^2})$; <br>$0&lt;a&lt;1$ 时, $(x_1&lt;x_2)\Leftrightarrow (a^{x_1}&lt; a^{x^2})$;</li>
+<li>$a&gt;1$ 时, $(x_1&lt;x_2)\Leftrightarrow (a^{x_1}&lt; a^{x_2})$; <br>$0&lt;a&lt;1$ 时, $(x_1&lt;x_2)\Leftrightarrow (a^{x_1}&lt; a^{x_2})$;</li>
 <li>函数 $x\mapsto a^x$ 的值域是 $\mathbb{R_+}$.</li>
 </ul>
 </li>
@@ -288,6 +288,13 @@ var _hmt = _hmt || [];
 
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/07/31/数学分析习题解-函数极限-1/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">数学分析习题解-函数极限(1)</span>
+            </a>
+        </div>
         
         
         <div class="level-end">
@@ -367,7 +374,7 @@ var _hmt = _hmt || [];
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        40
+                        41
                     </p>
                 </div>
             </div>
@@ -387,7 +394,7 @@ var _hmt = _hmt || [];
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        46
+                        49
                     </p>
                 </div>
             </div>
@@ -593,7 +600,7 @@ var _hmt = _hmt || [];
                 <span class="level-item">学习笔记</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">16</span>
+                <span class="level-item tag">17</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/学习笔记/代数学-Algebra/">
@@ -609,7 +616,7 @@ var _hmt = _hmt || [];
                 <span class="level-item">分析学/Analysis</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">9</span>
+                <span class="level-item tag">10</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/学习笔记/备忘/">
@@ -711,7 +718,7 @@ var _hmt = _hmt || [];
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/MY-LIFE/" style="font-size: 14px;">MY LIFE</a> <a href="/tags/MathJax/" style="font-size: 10px;">MathJax</a> <a href="/tags/Notes/" style="font-size: 20px;">Notes</a> <a href="/tags/Star-Trek/" style="font-size: 10px;">Star Trek</a> <a href="/tags/introduction/" style="font-size: 10px;">introduction</a> <a href="/tags/一般拓扑/" style="font-size: 12px;">一般拓扑</a> <a href="/tags/丢番图逼近/" style="font-size: 10px;">丢番图逼近</a> <a href="/tags/个人成长/" style="font-size: 10px;">个人成长</a> <a href="/tags/习题集/" style="font-size: 16px;">习题集</a> <a href="/tags/军事/" style="font-size: 10px;">军事</a> <a href="/tags/华罗庚/" style="font-size: 10px;">华罗庚</a> <a href="/tags/备忘/" style="font-size: 16px;">备忘</a> <a href="/tags/学界新闻/" style="font-size: 10px;">学界新闻</a> <a href="/tags/对数函数/" style="font-size: 10px;">对数函数</a> <a href="/tags/小平邦彦/" style="font-size: 10px;">小平邦彦</a> <a href="/tags/幂函数/" style="font-size: 10px;">幂函数</a> <a href="/tags/建军90周年/" style="font-size: 12px;">建军90周年</a> <a href="/tags/微积分/" style="font-size: 10px;">微积分</a> <a href="/tags/心理/" style="font-size: 10px;">心理</a> <a href="/tags/惰者集/" style="font-size: 10px;">惰者集</a> <a href="/tags/指数函数/" style="font-size: 10px;">指数函数</a> <a href="/tags/数列/" style="font-size: 10px;">数列</a> <a href="/tags/数列极限/" style="font-size: 14px;">数列极限</a> <a href="/tags/数学分析/" style="font-size: 10px;">数学分析</a> <a href="/tags/数学史/" style="font-size: 12px;">数学史</a> <a href="/tags/数学应用/" style="font-size: 10px;">数学应用</a> <a href="/tags/方法论/" style="font-size: 16px;">方法论</a> <a href="/tags/旅行/" style="font-size: 12px;">旅行</a> <a href="/tags/时间管理/" style="font-size: 10px;">时间管理</a> <a href="/tags/有理逼近/" style="font-size: 10px;">有理逼近</a> <a href="/tags/杂感/" style="font-size: 14px;">杂感</a> <a href="/tags/极限/" style="font-size: 10px;">极限</a> <a href="/tags/毅力/" style="font-size: 10px;">毅力</a> <a href="/tags/演讲/" style="font-size: 10px;">演讲</a> <a href="/tags/电视节目/" style="font-size: 10px;">电视节目</a> <a href="/tags/矩阵/" style="font-size: 14px;">矩阵</a> <a href="/tags/絮语微言/" style="font-size: 10px;">絮语微言</a> <a href="/tags/级数/" style="font-size: 10px;">级数</a> <a href="/tags/线性代数/" style="font-size: 14px;">线性代数</a> <a href="/tags/自律/" style="font-size: 10px;">自律</a> <a href="/tags/读史/" style="font-size: 10px;">读史</a> <a href="/tags/趣图/" style="font-size: 10px;">趣图</a> <a href="/tags/连分数/" style="font-size: 10px;">连分数</a> <a href="/tags/逻辑学/" style="font-size: 10px;">逻辑学</a> <a href="/tags/重温-新知/" style="font-size: 18px;">重温 & 新知</a> <a href="/tags/黎曼猜想/" style="font-size: 14px;">黎曼猜想</a>
+        <a href="/tags/MY-LIFE/" style="font-size: 13.33px;">MY LIFE</a> <a href="/tags/MathJax/" style="font-size: 10px;">MathJax</a> <a href="/tags/Notes/" style="font-size: 20px;">Notes</a> <a href="/tags/Star-Trek/" style="font-size: 10px;">Star Trek</a> <a href="/tags/introduction/" style="font-size: 10px;">introduction</a> <a href="/tags/一般拓扑/" style="font-size: 11.67px;">一般拓扑</a> <a href="/tags/丢番图逼近/" style="font-size: 10px;">丢番图逼近</a> <a href="/tags/个人成长/" style="font-size: 10px;">个人成长</a> <a href="/tags/乘积级数/" style="font-size: 10px;">乘积级数</a> <a href="/tags/习题集/" style="font-size: 16.67px;">习题集</a> <a href="/tags/军事/" style="font-size: 10px;">军事</a> <a href="/tags/函数极限/" style="font-size: 10px;">函数极限</a> <a href="/tags/华罗庚/" style="font-size: 10px;">华罗庚</a> <a href="/tags/备忘/" style="font-size: 15px;">备忘</a> <a href="/tags/学界新闻/" style="font-size: 10px;">学界新闻</a> <a href="/tags/对数函数/" style="font-size: 10px;">对数函数</a> <a href="/tags/小平邦彦/" style="font-size: 10px;">小平邦彦</a> <a href="/tags/幂函数/" style="font-size: 10px;">幂函数</a> <a href="/tags/建军90周年/" style="font-size: 11.67px;">建军90周年</a> <a href="/tags/微积分/" style="font-size: 10px;">微积分</a> <a href="/tags/心理/" style="font-size: 10px;">心理</a> <a href="/tags/惰者集/" style="font-size: 10px;">惰者集</a> <a href="/tags/指数函数/" style="font-size: 10px;">指数函数</a> <a href="/tags/数列/" style="font-size: 10px;">数列</a> <a href="/tags/数列极限/" style="font-size: 13.33px;">数列极限</a> <a href="/tags/数学分析/" style="font-size: 10px;">数学分析</a> <a href="/tags/数学史/" style="font-size: 11.67px;">数学史</a> <a href="/tags/数学应用/" style="font-size: 10px;">数学应用</a> <a href="/tags/数项级数/" style="font-size: 10px;">数项级数</a> <a href="/tags/方法论/" style="font-size: 15px;">方法论</a> <a href="/tags/旅行/" style="font-size: 11.67px;">旅行</a> <a href="/tags/时间管理/" style="font-size: 10px;">时间管理</a> <a href="/tags/有理逼近/" style="font-size: 10px;">有理逼近</a> <a href="/tags/杂感/" style="font-size: 13.33px;">杂感</a> <a href="/tags/极限/" style="font-size: 10px;">极限</a> <a href="/tags/毅力/" style="font-size: 10px;">毅力</a> <a href="/tags/演讲/" style="font-size: 10px;">演讲</a> <a href="/tags/电视节目/" style="font-size: 10px;">电视节目</a> <a href="/tags/矩阵/" style="font-size: 13.33px;">矩阵</a> <a href="/tags/絮语微言/" style="font-size: 10px;">絮语微言</a> <a href="/tags/级数/" style="font-size: 10px;">级数</a> <a href="/tags/线性代数/" style="font-size: 13.33px;">线性代数</a> <a href="/tags/自律/" style="font-size: 10px;">自律</a> <a href="/tags/读史/" style="font-size: 10px;">读史</a> <a href="/tags/趣图/" style="font-size: 10px;">趣图</a> <a href="/tags/连分数/" style="font-size: 10px;">连分数</a> <a href="/tags/逻辑学/" style="font-size: 10px;">逻辑学</a> <a href="/tags/重温-新知/" style="font-size: 18.33px;">重温 & 新知</a> <a href="/tags/黎曼猜想/" style="font-size: 13.33px;">黎曼猜想</a>
     </div>
 </div>
 
@@ -725,6 +732,25 @@ var _hmt = _hmt || [];
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/07/31/数学分析习题解-函数极限-1/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://i.loli.net/2019/07/22/5d35a35bd963987309.jpg" alt="数学分析习题解-函数极限(1)">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-07-31T03:12:15.000Z">2019-07-31</time></div>
+                    <a href="/2019/07/31/数学分析习题解-函数极限-1/" class="has-link-black-ter is-size-6">数学分析习题解-函数极限(1)</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/学习笔记/">学习笔记</a> / <a class="has-link-grey -link" href="/categories/学习笔记/分析学-Analysis/">分析学/Analysis</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -802,25 +828,6 @@ var _hmt = _hmt || [];
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/06/29/How-to-understand-proofs/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="How to understand proofs?">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-29T14:03:35.000Z">2019-06-29</time></div>
-                    <a href="/2019/06/29/How-to-understand-proofs/" class="has-link-black-ter is-size-6">How to understand proofs?</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/书摘/">书摘</a> / <a class="has-link-grey -link" href="/categories/书摘/数学与数学家/">数学与数学家</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -839,7 +846,7 @@ var _hmt = _hmt || [];
                     <span class="level-item">七月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -1057,15 +1064,29 @@ var _hmt = _hmt || [];
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/乘积级数/">
+                        <span class="tag">乘积级数</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/习题集/">
                         <span class="tag">习题集</span>
-                        <span class="tag is-grey">4</span>
+                        <span class="tag is-grey">5</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/军事/">
                         <span class="tag">军事</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/函数极限/">
+                        <span class="tag">函数极限</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -1178,6 +1199,13 @@ var _hmt = _hmt || [];
                 <div class="control">
                     <a class="tags has-addons" href="/tags/数学应用/">
                         <span class="tag">数学应用</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/数项级数/">
+                        <span class="tag">数项级数</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -1347,6 +1375,25 @@ var _hmt = _hmt || [];
         
         <article class="media">
             
+            <a href="/2019/07/31/数学分析习题解-函数极限-1/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://i.loli.net/2019/07/22/5d35a35bd963987309.jpg" alt="数学分析习题解-函数极限(1)">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-07-31T03:12:15.000Z">2019-07-31</time></div>
+                    <a href="/2019/07/31/数学分析习题解-函数极限-1/" class="has-link-black-ter is-size-6">数学分析习题解-函数极限(1)</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/学习笔记/">学习笔记</a> / <a class="has-link-grey -link" href="/categories/学习笔记/分析学-Analysis/">分析学/Analysis</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/07/26/指数函数-对数函数以及幂函数的定义/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="https://i.loli.net/2019/07/27/5d3bc458a42a378899.png" alt="指数函数, 对数函数以及幂函数的定义">
@@ -1421,25 +1468,6 @@ var _hmt = _hmt || [];
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/06/29/How-to-understand-proofs/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="How to understand proofs?">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-29T14:03:35.000Z">2019-06-29</time></div>
-                    <a href="/2019/06/29/How-to-understand-proofs/" class="has-link-black-ter is-size-6">How to understand proofs?</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/书摘/">书摘</a> / <a class="has-link-grey -link" href="/categories/书摘/数学与数学家/">数学与数学家</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1458,7 +1486,7 @@ var _hmt = _hmt || [];
                     <span class="level-item">七月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -1676,15 +1704,29 @@ var _hmt = _hmt || [];
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/乘积级数/">
+                        <span class="tag">乘积级数</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/习题集/">
                         <span class="tag">习题集</span>
-                        <span class="tag is-grey">4</span>
+                        <span class="tag is-grey">5</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/军事/">
                         <span class="tag">军事</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/函数极限/">
+                        <span class="tag">函数极限</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -1797,6 +1839,13 @@ var _hmt = _hmt || [];
                 <div class="control">
                     <a class="tags has-addons" href="/tags/数学应用/">
                         <span class="tag">数学应用</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/数项级数/">
+                        <span class="tag">数项级数</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
