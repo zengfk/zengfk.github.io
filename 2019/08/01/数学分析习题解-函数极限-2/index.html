@@ -16,7 +16,7 @@
 <meta property="og:description" content="续上一篇 数学分析习题解-函数极限(1). 这一部分习题主要涉及无穷乘积.   请证明:a) 级数 $\sum_{n=1}^{\infty}\ln a_n$ (其中 $a_n&amp;gt;0, n\in\mathbb{N}$) 收敛的充要条件是数列 $\{\prod_{n} = a_1\cdots a_n\}$ 有非零极限.b) 级数 $\sum_{n=1}^{\infty}\ln(1+a_n)$ (其">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://zengfk.com.cn/images/og_image.png">
-<meta property="og:updated_time" content="2019-08-01T12:32:03.835Z">
+<meta property="og:updated_time" content="2019-08-03T05:41:28.592Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数学分析习题解-函数极限(2)">
 <meta name="twitter:description" content="续上一篇 数学分析习题解-函数极限(1). 这一部分习题主要涉及无穷乘积.   请证明:a) 级数 $\sum_{n=1}^{\infty}\ln a_n$ (其中 $a_n&amp;gt;0, n\in\mathbb{N}$) 收敛的充要条件是数列 $\{\prod_{n} = a_1\cdots a_n\}$ 有非零极限.b) 级数 $\sum_{n=1}^{\infty}\ln(1+a_n)$ (其">
@@ -178,7 +178,7 @@ var _hmt = _hmt || [];
                 <span class="level-item has-text-grey">
                     
                     
-                    9 分钟 读完 (大约 1360 个字)
+                    11 分钟 读完 (大约 1607 个字)
                 </span>
                 
                 
@@ -226,10 +226,11 @@ var _hmt = _hmt || [];
 <p><strong>【Note】</strong> <u>用 $\sum 1/n^p$ 作为比较级数得到的就是<strong>拉比(Raabe)检验法</strong>, 而高斯检验法可以视为是拉比检验法的一个特例.</u> <u>高斯判别法其实是将级数相邻项的比</u> ${\frac {a_{n}}{a_{n+1}}}$ <u>写成</u> $\frac {1}{n}$ <u>的线性函数和余项(最多乘上一个有界量)之和，通过分析各系数来判断级数的敛散情况.</u> 参考 <a href="https://www.encyclopediaofmath.org/index.php/Gauss_criterion" target="_blank" rel="noopener">Gauss criterion</a>.</p>
 <blockquote>
 <ol start="11">
-<li>请证明: 对于任何正项序列 $\{a_n\}$,<br>$$\overline{\lim_{n\rightarrow\infty}}\left(\frac{1+a_n}{a_n}\right)^n \geqslant e,$$<br>并且这个估计是最好的.</li>
+<li>请证明: 对于任何正项序列 $\{a_n\}$,<br>$$\overline{\lim_{n\rightarrow\infty}}\left(\frac{1+a_{n+1}}{a_n}\right)^n \geqslant e,$$<br>并且这个估计是最好的.</li>
 </ol>
 </blockquote>
-<p><font color="red">【证明】</font></p>
+<p><font color="red">【证明】</font> 为证明这一结论, 我们只需考虑正项序列的子序列 ${a_{n_k}}$, 有以下不等式:<br>$$\left(\frac{1+a_{n_k+1}}{a_{n_k}}\right)^{n_k} \geqslant \left(\frac{1+n_k}{n_k}\right)^{n_k}.$$<br>也就是<br>$$ \left(\frac{n_k(1+a_{n_k+1})}{(1+n_k)a_{n_k}}\right)^{n_k} \geqslant 1.$$<br>若以上不等式不成立, 则存在 $N$, 使得 $\forall n&gt;N$ 时<br>\begin{array}{c}<br>\left(\frac{n(1+a_{n+1})}{(1+n)a_{n}}\right)^{n} = \frac{n}{a_n}\left(\frac{1}{1+n} +\frac{a_{n+1}}{1+n}\right) &lt; 1 \\<br>\Rightarrow \frac{1}{1+n} &lt; \frac{a_n}{n} - \frac{a_{n+1}}{1+n} \\<br>\end{array}<br>从 $N$ 到 $n$ 可以写下若干个上面这样的不等式, 将它们加在一起得到:<br>$$\left( \frac{1}{N+1} + \frac{1}{N+2} + \cdots + \frac{1}{n} \right) &lt; -\frac{a_n}{n}.$$<br>对上式两边取极限, 由于 $\sum 1/n$ 发散, 得到 $a_n &lt; -\infty$, 这与 $a_n$ 为正项数列矛盾. </p>
+<p>【Note】 此题的结论还可以进一步推广: 对于任何正项序列 $\{a_n\}$, 有以下估计:<br>$$\overline{\lim_{n\rightarrow\infty}}\left(\frac{a_1+a_{n+p}}{a_n}\right)^n \geqslant e^p.$$</p>
 
         </div>
         
