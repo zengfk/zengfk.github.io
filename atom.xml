@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zengfk.com.cn/"/>
-  <updated>2019-08-03T05:41:28.592Z</updated>
+  <updated>2019-08-04T09:57:50.890Z</updated>
   <id>https://zengfk.com.cn/</id>
   
   <author>
@@ -15,6 +15,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数学分析习题解-连续函数(1)</title>
+    <link href="https://zengfk.com.cn/2019/08/03/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E4%B9%A0%E9%A2%98%E8%A7%A3-%E8%BF%9E%E7%BB%AD%E5%87%BD%E6%95%B0-1/"/>
+    <id>https://zengfk.com.cn/2019/08/03/数学分析习题解-连续函数-1/</id>
+    <published>2019-08-03T05:45:06.000Z</published>
+    <updated>2019-08-04T09:57:50.890Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;【习题来源】数学分析：第七版.（俄罗斯）卓里奇著；李植译. 北京：高等教育出版社，2019.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;请证明:&lt;br&gt;a) 如果 $f\in C(A)$ 且 $B \subset A$, 则 $f|_ B = C(B)$.&lt;br&gt;&lt;br&gt;b) 如果函数 $f: E_{1} \cup E_2 \rightarrow \mathbb{R}$, 满足 $f|_ {E_i} \in C(E_i), i = 1,2$, 则未必 $f\in C(E_1\cup E_2)$.&lt;br&gt;&lt;br&gt;c) 黎曼函数 $\mathscr{R}$ 以及它在有理数集上的限制 $\mathscr{R}|_ {\mathbb{Q}}$ 在集合 $\mathbb{Q}$ 的每一个非零的点间断, 并且所有的间断点都是可去间断点.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="https://zengfk.com.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="分析学/Analysis" scheme="https://zengfk.com.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%88%86%E6%9E%90%E5%AD%A6-Analysis/"/>
+    
+    
+      <category term="习题集" scheme="https://zengfk.com.cn/tags/%E4%B9%A0%E9%A2%98%E9%9B%86/"/>
+    
+      <category term="连续函数" scheme="https://zengfk.com.cn/tags/%E8%BF%9E%E7%BB%AD%E5%87%BD%E6%95%B0/"/>
+    
+      <category term="介值性" scheme="https://zengfk.com.cn/tags/%E4%BB%8B%E5%80%BC%E6%80%A7/"/>
+    
+      <category term="间断点" scheme="https://zengfk.com.cn/tags/%E9%97%B4%E6%96%AD%E7%82%B9/"/>
+    
+      <category term="不动点" scheme="https://zengfk.com.cn/tags/%E4%B8%8D%E5%8A%A8%E7%82%B9/"/>
+    
+  </entry>
   
   <entry>
     <title>数学分析习题解-函数极限(2)</title>
@@ -303,39 +340,6 @@
       <category term="Notes" scheme="https://zengfk.com.cn/tags/Notes/"/>
     
       <category term="MathJax" scheme="https://zengfk.com.cn/tags/MathJax/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>读数学书的感受</title>
-    <link href="https://zengfk.com.cn/2019/06/13/%E8%AF%BB%E6%95%B0%E5%AD%A6%E4%B9%A6%E7%9A%84%E6%84%9F%E5%8F%97/"/>
-    <id>https://zengfk.com.cn/2019/06/13/读数学书的感受/</id>
-    <published>2019-06-13T11:37:21.000Z</published>
-    <updated>2019-06-18T06:27:20.302Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/06/18/5d08842ccb16a78030.jpg&quot; width=&quot;36%&quot; align=&quot;right&quot; title=&quot;惰者集&quot;&gt;&lt;blockquote&gt;在我看来, 数学书籍(包括论文)是最晦涩难懂的读物.&lt;/blockquote&gt;&lt;/p&gt;
-
-小平邦彦在他的《数学笔记》一文中说到:
-
-&lt;blockquote&gt;数学这种东西, 一旦理解则非常简单明了,所以我读数学书的时候, 一般只看定理, 努力去理解定理, 然后自己独立思考数学证明. 不过大多数情况下都是百思不得其解, 最终只好参考书中的证明. 然而, 有些时候反复阅读证明过程也难解其意, 这种情况下, 便会尝试在笔记本中抄写这些数学证明.
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="书摘" scheme="https://zengfk.com.cn/categories/%E4%B9%A6%E6%91%98/"/>
-    
-      <category term="数学与数学家" scheme="https://zengfk.com.cn/categories/%E4%B9%A6%E6%91%98/%E6%95%B0%E5%AD%A6%E4%B8%8E%E6%95%B0%E5%AD%A6%E5%AE%B6/"/>
-    
-    
-      <category term="Notes" scheme="https://zengfk.com.cn/tags/Notes/"/>
-    
-      <category term="方法论" scheme="https://zengfk.com.cn/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
-    
-      <category term="惰者集" scheme="https://zengfk.com.cn/tags/%E6%83%B0%E8%80%85%E9%9B%86/"/>
-    
-      <category term="小平邦彦" scheme="https://zengfk.com.cn/tags/%E5%B0%8F%E5%B9%B3%E9%82%A6%E5%BD%A6/"/>
     
   </entry>
   
