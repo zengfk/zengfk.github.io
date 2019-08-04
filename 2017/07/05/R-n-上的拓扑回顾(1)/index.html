@@ -16,7 +16,7 @@
 <meta property="og:description" content="这篇笔记主要内容是回顾 $\mathbb{R}^n$ 上的拓扑. 事实上,这里是要对由度量诱导的 $\mathbb{R}^n$ 的度量空间上的拓扑进行总结. 对于一般的拓扑空间(不依赖特定度量的性质)的拓扑性质, 更为详细的内容, 可以参考任意一本《点集拓扑学》或《一般拓扑学》之类的讲义. 事实上, 度量空间上的极限, 连续性, 和紧性都是空间拓扑性质的例子.">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://zengfk.com.cn/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-18T06:30:02.106Z">
+<meta property="og:updated_time" content="2019-08-04T13:40:03.754Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Review - $\mathbb{R}^n$ 上的拓扑(1)">
 <meta name="twitter:description" content="这篇笔记主要内容是回顾 $\mathbb{R}^n$ 上的拓扑. 事实上,这里是要对由度量诱导的 $\mathbb{R}^n$ 的度量空间上的拓扑进行总结. 对于一般的拓扑空间(不依赖特定度量的性质)的拓扑性质, 更为详细的内容, 可以参考任意一本《点集拓扑学》或《一般拓扑学》之类的讲义. 事实上, 度量空间上的极限, 连续性, 和紧性都是空间拓扑性质的例子.">
@@ -199,38 +199,32 @@ var _hmt = _hmt || [];
             <p><img src="https://i.loli.net/2019/06/18/5d0884970a69927224.jpg" width="36%" align="right" title="聚点">这篇笔记主要内容是回顾 $\mathbb{R}^n$ 上的拓扑. 事实上,这里是要对由度量诱导的 $\mathbb{R}^n$ 的度量空间上的拓扑进行总结. 对于一般的拓扑空间(不依赖特定度量的性质)的拓扑性质, 更为详细的内容, 可以参考任意一本《点集拓扑学》或《一般拓扑学》之类的讲义. 事实上, 度量空间上的极限, 连续性, 和紧性都是空间拓扑性质的例子.</p>
 <a id="more"></a>
 
-<h2 id="度量空间"><a href="#度量空间" class="headerlink" title="度量空间"></a>度量空间</h2><p>首先给出度量空间的定义.</p>
+<h1 id="度量空间"><a href="#度量空间" class="headerlink" title="度量空间"></a>度量空间</h1><p>首先给出度量空间的定义.</p>
 <blockquote>
 给定一个集合 $X$, 定义其上的度量为一个映射 $d: X\times X \rightarrow \mathbb{R}$, $\forall x, y, z \in X$, 满足:
-
-<ul>
-<li>$d(x, y)=d(y, x)$.</li>
-<li>$d(x, y)\geq 0$, 等号成立 iff $x=y$.</li>
-<li>$d(x, z)\leq d(x,y) +d(y,z)$.</li>
-</ul>
-<p>集合 $X$ 连同其上的度量 $d$ 一起构成了一个<font color="black"><strong>度量空间</strong></font>. 可以看到, 对于度量空间 $X$ 的子集 $Y$, 度量 $d$ 在 $Y\times Y$ 上的限制也是 $Y$ 的度量. 即 $Y$ 也构成一个度量空间.</p>
+- $d(x, y)=d(y, x)$.
+- $d(x, y)\geq 0$, 等号成立 iff $x=y$.
+- $d(x, z)\leq d(x,y) +d(y,z)$.
+集合 $X$ 连同其上的度量 $d$ 一起构成了一个<font color="black">**度量空间**</font>. 可以看到, 对于度量空间 $X$ 的子集 $Y$, 度量 $d$ 在 $Y\times Y$ 上的限制也是 $Y$ 的度量. 即 $Y$ 也构成一个度量空间.
 </blockquote>
 
-<h4 id="两种常用度量"><a href="#两种常用度量" class="headerlink" title="[两种常用度量]"></a>[两种常用度量]</h4><p>在 $\mathbb{R}^n$ 上常用的度量有两个:<br>$$d(\mathbf{x,y})=\Vert \mathbf{x-y} \Vert;$$<br>$$d(\mathbf{x,y})=\vert \mathbf{x-y} \vert.$$<br>这两者分别称为 <strong>Euclid 度量</strong>和<strong>确界度量</strong>.</p>
+<h2 id="两种常用度量"><a href="#两种常用度量" class="headerlink" title="[两种常用度量]"></a>[两种常用度量]</h2><p>在 $\mathbb{R}^n$ 上常用的度量有两个:<br>$$d(\mathbf{x,y})=\Vert \mathbf{x-y} \Vert;$$<br>$$d(\mathbf{x,y})=\vert \mathbf{x-y} \vert.$$<br>这两者分别称为 <strong>Euclid 度量</strong>和<strong>确界度量</strong>.</p>
 <p>$\mathbb{R}^{n}$ 上由 Euclid 度量诱导的拓扑, 形成的拓扑空间称为<strong>欧氏空间</strong>. </p>
-<h2 id="邻域-开集-闭集"><a href="#邻域-开集-闭集" class="headerlink" title="邻域, 开集, 闭集"></a>邻域, 开集, 闭集</h2><p>设 $X$ 是带度量 $d$ 的度量空间. 给定 $x_{0}\in X$ 以及任意的 $\varepsilon &gt;0$, 称集合<br>$$U(x_{0}, \varepsilon)=\{ x\mid d(x,x_{0})&lt;{\varepsilon} \}$$<br>为 $x_{0}$ 的 $\varepsilon$ <strong>邻域</strong>.</p>
+<h1 id="邻域-开集-闭集"><a href="#邻域-开集-闭集" class="headerlink" title="邻域, 开集, 闭集"></a>邻域, 开集, 闭集</h1><p>设 $X$ 是带度量 $d$ 的度量空间. 给定 $x_{0}\in X$ 以及任意的 $\varepsilon &gt;0$, 称集合<br>$$U(x_{0}, \varepsilon)=\{ x\mid d(x,x_{0})&lt;{\varepsilon} \}$$<br>为 $x_{0}$ 的 $\varepsilon$ <strong>邻域</strong>.</p>
 <p>若对于 $X$ 的子集 $U$, $\forall x_{0}\in U$, $\exists \varepsilon&gt;0$, 使得 $U(x_{0},\varepsilon)\subset U$, 那么, 称 $U$ 为 $X$ 上的<strong>开集</strong>, 其余集 $X-U$ 则称为<strong>闭集</strong>. 若 $U$ 是包含 $x_{0}$ 的任意开集, 则直接称 $U$ 为 $x_{0}$ 的邻域.</p>
 <p>在 $\mathbb{R}^{n}$ 中, 按照 Euclid 度量, 对于 $\mathbf{a}\in \mathbb{R}^{n}$的 $\varepsilon$ 邻域, 称为以 $\mathbf{a}$ 为中心, $\varepsilon$ 为半径的开球, 记为 $B(\mathbf{a},\varepsilon)$; 按照确界度量, 则称为以 $\mathbf{a}$ 为中心 $\varepsilon$ 为半径的开立方体, 记为 $C(\mathbf{a},\varepsilon)$.</p>
 <p>关于度量空间上的开集和闭集, 有几个常见的性质:</p>
 <blockquote>**定理 1**  $(X,d)$ 为一个度量空间, 则 $X$ 中的开集的**有限交**与**任意并**, 都是 $X$ 中的开集. Likewise, $X$ 中的开闭集的**任意交**与**有限并**, 都是 $X$ 中的闭集.
 </blockquote>
-<font color="red"> **注:** 开集的**任意交**不一定是开集, 闭集的**任意并**也不一定是闭集, 例如:
-$$\bigcap_{n=1}^{\infty}{\left( -\frac{1}{n}, \frac{n+1}{n} \right)}=[0,1];$$
-$$\quad \bigcup_{n=1}^{\infty}{\left[ \frac{1}{n}, 1-\frac{1}{n} \right]}=(0,1).$$
-</font>
 
+<p><font color="red"> <strong>注:</strong> 开集的<strong>任意交</strong>不一定是开集, 闭集的<strong>任意并</strong>也不一定是闭集, 例如:<br>$$\bigcap_{n=1}^{\infty}{\left( -\frac{1}{n}, \frac{n+1}{n} \right)}=[0,1];$$<br>$$\quad \bigcup_{n=1}^{\infty}{\left[ \frac{1}{n}, 1-\frac{1}{n} \right]}=(0,1).$$<br></font></p>
 <p>我们在一个度量空间 $X$ 上定义了开集, 同样的可以在其子空间 $Y$ 上同样的定义开集. 这两者之间有如下这样的简单的关系.</p>
 <blockquote>
 <p><strong>定理 2</strong>  $X$ 是一个度量空间, 而 $Y$ 是 $X$ 的一个子空间.则 $Y$ 的一个子集 $A$ 是开集, 当 $A=U\cap Y$, 其中 $U$ 是 $X$ 中的开集; $A$ 是闭集, 当 $A=C\cap Y$, 其中 $C$ 是 $X$ 中的闭集.</p>
 </blockquote>
 <p>值得注意的一点, 集合的包含关系上看, $A\subset Y\subset X$, 但是 $A$ 作为 $Y$ 上的开集, 可以不是 $X$ 上的开集; 同样 $A$ 可以是 $Y$ 上的闭集, 但不是 $X$ 上的闭集.</p>
 <p><font color="red">【两个例子】 1) 在定义了欧氏度量的 $\mathbb{R}^{2}$ 空间上, 任取一点 $O$ 为原点, 建立直角坐标系. 其子空间 $\mathbb{R}$ 上的开区间 $(a,b)$. 显然$(a,b)$ 是 $\mathbb{R}$ 上的开集, 但不是 $\mathbb{R}^{2}$ 上的开集.<br><br>2) 同样在定义了欧氏度量的 $\mathbb{R}^{2}$ 空间上, 在去掉原点后的部分, 即 $\mathbb{R}^{2}\O$ 是 $\mathbb{R}^{2}$ 的一个子空间, 以 $x$ 轴为分界线, 取包括x轴在内的下半平面, 记为 $S$, 显然 $S$ 是 $\mathbb{R}^{2}\O$ 上的闭集, 但不是 $\mathbb{R}^{2}$ 上的闭集.</font></p>
-<h2 id="聚点-极限点-与闭包"><a href="#聚点-极限点-与闭包" class="headerlink" title="聚点(极限点)与闭包"></a>聚点(极限点)与闭包</h2><p>设 $X$ 为一个度量空间, 对于 $x_{0}\in X, A\subset X$, 若 $\forall \varepsilon&gt;0$, $U(x_{0},\varepsilon)\cap A\neq \varnothing$, 则称 $x_0$ 为 $A$ 的<strong>极限点(聚点)</strong>.</p>
+<h1 id="聚点-极限点-与闭包"><a href="#聚点-极限点-与闭包" class="headerlink" title="聚点(极限点)与闭包"></a>聚点(极限点)与闭包</h1><p>设 $X$ 为一个度量空间, 对于 $x_{0}\in X, A\subset X$, 若 $\forall \varepsilon&gt;0$, $U(x_{0},\varepsilon)\cap A\neq \varnothing$, 则称 $x_0$ 为 $A$ 的<strong>极限点(聚点)</strong>.</p>
 <blockquote>
 <p><strong>定理 3</strong> 设 $A$ 是 $X$ 的子集, 那么包含 $A$ 以及其所有极限点的集合 $\overline{A}$ 是 $X$ 上的闭集.</p>
 </blockquote>
@@ -239,14 +233,17 @@ $$\quad \bigcup_{n=1}^{\infty}{\left[ \frac{1}{n}, 1-\frac{1}{n} \right]}=(0,1).
 <blockquote>
 <p>$X$ 的一个子集是闭的当且仅当 $A=\overline{A}$.</p>
 </blockquote>
-<h2 id="内部和边界"><a href="#内部和边界" class="headerlink" title="内部和边界"></a>内部和边界</h2><p>内部和边界的概念, 对于任意的拓扑空间都是有意义的, 可以直接应用到 $\mathbb{R}^{n}$ 上. 并且这一概念与闭包有着密切的联系.</p>
+<h1 id="内部和边界"><a href="#内部和边界" class="headerlink" title="内部和边界"></a>内部和边界</h1><p>内部和边界的概念, 对于任意的拓扑空间都是有意义的, 可以直接应用到 $\mathbb{R}^{n}$ 上. 并且这一概念与闭包有着密切的联系.</p>
 <p>我们称拓扑空间的子集 $A$ 的点 $x$ 为 $A$ 的<strong>内点</strong>, 如果 $A$ 是 $x$ 的邻域. 集合 $A$ 的所有内点组成的集合称为 $A$ 的<strong>内部</strong>, 记作 $A^{0}$ 或 $\text{Int} A$.</p>
 <blockquote>
 <p><strong>定理 4</strong> 设 $A$ 为拓扑空间 $X$ 的子集, 则 $A$ 的内部 $A^{0}$ 是开集, 且是 $A$ 的最大开子集; $A$ 为开集 iff $A=A^{0}$; $A$ 中所有不是 $X\sim A$ 的聚点的点所构成的集合恰是 $A^{0}$; $X\sim A$ 的闭包是 $X\sim A^{0}$.</p>
 </blockquote>
 <p>拓扑空间的子集 $A$ 的<strong>边界</strong>, 指所有既不属于 $A$ 也不属于 $X\sim A$ 的点构成的集合. 记为 $\text{Bd}A$.</p>
 <p>显然, 对于在 $x\in \text{Bd}A$, 对于所有包含 $x$ 的开集, 同时与 $A$ 和 其余集 $X\sim A$ 相交.</p>
-<h3 id="Next-Part-极限与连续性"><a href="#Next-Part-极限与连续性" class="headerlink" title="Next Part: 极限与连续性"></a>Next Part: 极限与连续性</h3>
+<blockquote>
+<p>Next Part: 极限与连续性</p>
+</blockquote>
+
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -355,7 +352,7 @@ $$\quad \bigcup_{n=1}^{\infty}{\left[ \frac{1}{n}, 1-\frac{1}{n} \right]}=(0,1).
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        45
+                        44
                     </p>
                 </div>
             </div>
@@ -558,7 +555,7 @@ $$\quad \bigcup_{n=1}^{\infty}{\left[ \frac{1}{n}, 1-\frac{1}{n} \right]}=(0,1).
                 <span class="level-item">学习笔记</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">20</span>
+                <span class="level-item tag">19</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/学习笔记/代数学-Algebra/">
@@ -574,7 +571,7 @@ $$\quad \bigcup_{n=1}^{\infty}{\left[ \frac{1}{n}, 1-\frac{1}{n} \right]}=(0,1).
                 <span class="level-item">分析学/Analysis</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">13</span>
+                <span class="level-item tag">12</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/学习笔记/备忘/">
@@ -676,7 +673,7 @@ $$\quad \bigcup_{n=1}^{\infty}{\left[ \frac{1}{n}, 1-\frac{1}{n} \right]}=(0,1).
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/MY-LIFE/" style="font-size: 14px;">MY LIFE</a> <a href="/tags/MathJax/" style="font-size: 10px;">MathJax</a> <a href="/tags/Notes/" style="font-size: 20px;">Notes</a> <a href="/tags/Star-Trek/" style="font-size: 10px;">Star Trek</a> <a href="/tags/introduction/" style="font-size: 10px;">introduction</a> <a href="/tags/一般拓扑/" style="font-size: 12px;">一般拓扑</a> <a href="/tags/不动点/" style="font-size: 10px;">不动点</a> <a href="/tags/丢番图逼近/" style="font-size: 10px;">丢番图逼近</a> <a href="/tags/个人成长/" style="font-size: 10px;">个人成长</a> <a href="/tags/乘积级数/" style="font-size: 12px;">乘积级数</a> <a href="/tags/习题集/" style="font-size: 18px;">习题集</a> <a href="/tags/介值性/" style="font-size: 10px;">介值性</a> <a href="/tags/军事/" style="font-size: 10px;">军事</a> <a href="/tags/函数极限/" style="font-size: 12px;">函数极限</a> <a href="/tags/华罗庚/" style="font-size: 10px;">华罗庚</a> <a href="/tags/备忘/" style="font-size: 16px;">备忘</a> <a href="/tags/学界新闻/" style="font-size: 10px;">学界新闻</a> <a href="/tags/对数函数/" style="font-size: 10px;">对数函数</a> <a href="/tags/小平邦彦/" style="font-size: 10px;">小平邦彦</a> <a href="/tags/幂函数/" style="font-size: 10px;">幂函数</a> <a href="/tags/建军90周年/" style="font-size: 12px;">建军90周年</a> <a href="/tags/微积分/" style="font-size: 10px;">微积分</a> <a href="/tags/德语/" style="font-size: 10px;">德语</a> <a href="/tags/心理/" style="font-size: 10px;">心理</a> <a href="/tags/惰者集/" style="font-size: 10px;">惰者集</a> <a href="/tags/指数函数/" style="font-size: 10px;">指数函数</a> <a href="/tags/数列/" style="font-size: 10px;">数列</a> <a href="/tags/数列极限/" style="font-size: 14px;">数列极限</a> <a href="/tags/数学分析/" style="font-size: 10px;">数学分析</a> <a href="/tags/数学史/" style="font-size: 12px;">数学史</a> <a href="/tags/数学应用/" style="font-size: 10px;">数学应用</a> <a href="/tags/数项级数/" style="font-size: 12px;">数项级数</a> <a href="/tags/方法论/" style="font-size: 16px;">方法论</a> <a href="/tags/旅行/" style="font-size: 12px;">旅行</a> <a href="/tags/时间管理/" style="font-size: 10px;">时间管理</a> <a href="/tags/有理逼近/" style="font-size: 10px;">有理逼近</a> <a href="/tags/杂感/" style="font-size: 14px;">杂感</a> <a href="/tags/极限/" style="font-size: 10px;">极限</a> <a href="/tags/毅力/" style="font-size: 10px;">毅力</a> <a href="/tags/演讲/" style="font-size: 10px;">演讲</a> <a href="/tags/电视节目/" style="font-size: 10px;">电视节目</a> <a href="/tags/矩阵/" style="font-size: 14px;">矩阵</a> <a href="/tags/絮语微言/" style="font-size: 10px;">絮语微言</a> <a href="/tags/级数/" style="font-size: 10px;">级数</a> <a href="/tags/线性代数/" style="font-size: 14px;">线性代数</a> <a href="/tags/自律/" style="font-size: 10px;">自律</a> <a href="/tags/读史/" style="font-size: 10px;">读史</a> <a href="/tags/趣图/" style="font-size: 10px;">趣图</a> <a href="/tags/连分数/" style="font-size: 10px;">连分数</a> <a href="/tags/连续函数/" style="font-size: 12px;">连续函数</a> <a href="/tags/逻辑学/" style="font-size: 10px;">逻辑学</a> <a href="/tags/重温-新知/" style="font-size: 18px;">重温 & 新知</a> <a href="/tags/间断点/" style="font-size: 10px;">间断点</a> <a href="/tags/黎曼猜想/" style="font-size: 14px;">黎曼猜想</a>
+        <a href="/tags/MY-LIFE/" style="font-size: 13.33px;">MY LIFE</a> <a href="/tags/MathJax/" style="font-size: 10px;">MathJax</a> <a href="/tags/Notes/" style="font-size: 20px;">Notes</a> <a href="/tags/Star-Trek/" style="font-size: 10px;">Star Trek</a> <a href="/tags/introduction/" style="font-size: 10px;">introduction</a> <a href="/tags/一般拓扑/" style="font-size: 11.67px;">一般拓扑</a> <a href="/tags/不动点/" style="font-size: 10px;">不动点</a> <a href="/tags/丢番图逼近/" style="font-size: 10px;">丢番图逼近</a> <a href="/tags/个人成长/" style="font-size: 10px;">个人成长</a> <a href="/tags/乘积级数/" style="font-size: 11.67px;">乘积级数</a> <a href="/tags/习题集/" style="font-size: 16.67px;">习题集</a> <a href="/tags/介值性/" style="font-size: 10px;">介值性</a> <a href="/tags/军事/" style="font-size: 10px;">军事</a> <a href="/tags/函数极限/" style="font-size: 11.67px;">函数极限</a> <a href="/tags/华罗庚/" style="font-size: 10px;">华罗庚</a> <a href="/tags/备忘/" style="font-size: 15px;">备忘</a> <a href="/tags/学界新闻/" style="font-size: 10px;">学界新闻</a> <a href="/tags/对数函数/" style="font-size: 10px;">对数函数</a> <a href="/tags/小平邦彦/" style="font-size: 10px;">小平邦彦</a> <a href="/tags/幂函数/" style="font-size: 10px;">幂函数</a> <a href="/tags/建军90周年/" style="font-size: 11.67px;">建军90周年</a> <a href="/tags/微积分/" style="font-size: 10px;">微积分</a> <a href="/tags/德语/" style="font-size: 10px;">德语</a> <a href="/tags/心理/" style="font-size: 10px;">心理</a> <a href="/tags/惰者集/" style="font-size: 10px;">惰者集</a> <a href="/tags/指数函数/" style="font-size: 10px;">指数函数</a> <a href="/tags/数列/" style="font-size: 10px;">数列</a> <a href="/tags/数列极限/" style="font-size: 13.33px;">数列极限</a> <a href="/tags/数学分析/" style="font-size: 10px;">数学分析</a> <a href="/tags/数学史/" style="font-size: 11.67px;">数学史</a> <a href="/tags/数学应用/" style="font-size: 10px;">数学应用</a> <a href="/tags/数项级数/" style="font-size: 11.67px;">数项级数</a> <a href="/tags/方法论/" style="font-size: 15px;">方法论</a> <a href="/tags/旅行/" style="font-size: 11.67px;">旅行</a> <a href="/tags/时间管理/" style="font-size: 10px;">时间管理</a> <a href="/tags/有理逼近/" style="font-size: 10px;">有理逼近</a> <a href="/tags/杂感/" style="font-size: 13.33px;">杂感</a> <a href="/tags/极限/" style="font-size: 10px;">极限</a> <a href="/tags/毅力/" style="font-size: 10px;">毅力</a> <a href="/tags/演讲/" style="font-size: 10px;">演讲</a> <a href="/tags/电视节目/" style="font-size: 10px;">电视节目</a> <a href="/tags/矩阵/" style="font-size: 13.33px;">矩阵</a> <a href="/tags/絮语微言/" style="font-size: 10px;">絮语微言</a> <a href="/tags/级数/" style="font-size: 10px;">级数</a> <a href="/tags/线性代数/" style="font-size: 13.33px;">线性代数</a> <a href="/tags/自律/" style="font-size: 10px;">自律</a> <a href="/tags/读史/" style="font-size: 10px;">读史</a> <a href="/tags/趣图/" style="font-size: 10px;">趣图</a> <a href="/tags/连分数/" style="font-size: 10px;">连分数</a> <a href="/tags/连续函数/" style="font-size: 10px;">连续函数</a> <a href="/tags/逻辑学/" style="font-size: 10px;">逻辑学</a> <a href="/tags/重温-新知/" style="font-size: 18.33px;">重温 & 新知</a> <a href="/tags/间断点/" style="font-size: 10px;">间断点</a> <a href="/tags/黎曼猜想/" style="font-size: 13.33px;">黎曼猜想</a>
     </div>
 </div>
 
@@ -705,25 +702,6 @@ $$\quad \bigcup_{n=1}^{\infty}{\left[ \frac{1}{n}, 1-\frac{1}{n} \right]}=(0,1).
                     <a href="/2019/08/04/一些令我怦然心动的德语句子/" class="has-link-black-ter is-size-6">一些令我怦然心动的德语句子</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/书摘/">书摘</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/04/数学分析习题解-连续函数-2/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="数学分析习题解-连续函数(2)">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-04T10:03:11.000Z">2019-08-04</time></div>
-                    <a href="/2019/08/04/数学分析习题解-连续函数-2/" class="has-link-black-ter is-size-6">数学分析习题解-连续函数(2)</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/学习笔记/">学习笔记</a> / <a class="has-link-grey -link" href="/categories/学习笔记/分析学-Analysis/">分析学/Analysis</a>
                     </p>
                 </div>
             </div>
@@ -786,6 +764,25 @@ $$\quad \bigcup_{n=1}^{\infty}{\left[ \frac{1}{n}, 1-\frac{1}{n} \right]}=(0,1).
             </div>
         </article>
         
+        <article class="media">
+            
+            <a href="/2019/07/26/指数函数-对数函数以及幂函数的定义/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://i.loli.net/2019/07/27/5d3bc458a42a378899.png" alt="指数函数, 对数函数以及幂函数的定义">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-07-26T08:26:06.000Z">2019-07-26</time></div>
+                    <a href="/2019/07/26/指数函数-对数函数以及幂函数的定义/" class="has-link-black-ter is-size-6">指数函数, 对数函数以及幂函数的定义</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/学习笔记/">学习笔记</a> / <a class="has-link-grey -link" href="/categories/学习笔记/分析学-Analysis/">分析学/Analysis</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
     </div>
 </div>
 
@@ -804,7 +801,7 @@ $$\quad \bigcup_{n=1}^{\infty}{\left[ \frac{1}{n}, 1-\frac{1}{n} \right]}=(0,1).
                     <span class="level-item">八月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -1049,7 +1046,7 @@ $$\quad \bigcup_{n=1}^{\infty}{\left[ \frac{1}{n}, 1-\frac{1}{n} \right]}=(0,1).
                 <div class="control">
                     <a class="tags has-addons" href="/tags/习题集/">
                         <span class="tag">习题集</span>
-                        <span class="tag is-grey">8</span>
+                        <span class="tag is-grey">7</span>
                     </a>
                 </div>
                 
@@ -1322,7 +1319,7 @@ $$\quad \bigcup_{n=1}^{\infty}{\left[ \frac{1}{n}, 1-\frac{1}{n} \right]}=(0,1).
                 <div class="control">
                     <a class="tags has-addons" href="/tags/连续函数/">
                         <span class="tag">连续函数</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
@@ -1398,25 +1395,6 @@ $$\quad \bigcup_{n=1}^{\infty}{\left[ \frac{1}{n}, 1-\frac{1}{n} \right]}=(0,1).
         
         <article class="media">
             
-            <a href="/2019/08/04/数学分析习题解-连续函数-2/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="数学分析习题解-连续函数(2)">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-04T10:03:11.000Z">2019-08-04</time></div>
-                    <a href="/2019/08/04/数学分析习题解-连续函数-2/" class="has-link-black-ter is-size-6">数学分析习题解-连续函数(2)</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/学习笔记/">学习笔记</a> / <a class="has-link-grey -link" href="/categories/学习笔记/分析学-Analysis/">分析学/Analysis</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
             <a href="/2019/08/03/数学分析习题解-连续函数-1/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="https://i.loli.net/2019/08/03/p7TRvEZth9asYxM.jpg" alt="数学分析习题解-连续函数(1)">
@@ -1472,6 +1450,25 @@ $$\quad \bigcup_{n=1}^{\infty}{\left[ \frac{1}{n}, 1-\frac{1}{n} \right]}=(0,1).
             </div>
         </article>
         
+        <article class="media">
+            
+            <a href="/2019/07/26/指数函数-对数函数以及幂函数的定义/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://i.loli.net/2019/07/27/5d3bc458a42a378899.png" alt="指数函数, 对数函数以及幂函数的定义">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-07-26T08:26:06.000Z">2019-07-26</time></div>
+                    <a href="/2019/07/26/指数函数-对数函数以及幂函数的定义/" class="has-link-black-ter is-size-6">指数函数, 对数函数以及幂函数的定义</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/学习笔记/">学习笔记</a> / <a class="has-link-grey -link" href="/categories/学习笔记/分析学-Analysis/">分析学/Analysis</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
     </div>
 </div>
 
@@ -1490,7 +1487,7 @@ $$\quad \bigcup_{n=1}^{\infty}{\left[ \frac{1}{n}, 1-\frac{1}{n} \right]}=(0,1).
                     <span class="level-item">八月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -1735,7 +1732,7 @@ $$\quad \bigcup_{n=1}^{\infty}{\left[ \frac{1}{n}, 1-\frac{1}{n} \right]}=(0,1).
                 <div class="control">
                     <a class="tags has-addons" href="/tags/习题集/">
                         <span class="tag">习题集</span>
-                        <span class="tag is-grey">8</span>
+                        <span class="tag is-grey">7</span>
                     </a>
                 </div>
                 
@@ -2008,7 +2005,7 @@ $$\quad \bigcup_{n=1}^{\infty}{\left[ \frac{1}{n}, 1-\frac{1}{n} \right]}=(0,1).
                 <div class="control">
                     <a class="tags has-addons" href="/tags/连续函数/">
                         <span class="tag">连续函数</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
