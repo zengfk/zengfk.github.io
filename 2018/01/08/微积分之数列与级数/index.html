@@ -7,19 +7,19 @@
 
 
 
-    <meta name="description" content="序列与极限这里我们快速的过一遍关于数列与级数的这一些基础的内容.这些内容在复数域 $\mathbb{C}$ 上都是成立的. 度量空间 $X$ 中的序列 $\{ x_n \}$ 称**收敛的**, 当 $\exists x \in X$, $\forall \varepsilon &amp;gt;0$, $\exists N\in \mathbb{N}_+ $, $d(x_n, x)">
+    <meta name="description" content="序列与极限这里我们快速的过一遍关于数列与级数的这一些基础的内容.这些内容在复数域 $\mathbb{C}$ 上都是成立的.  度量空间 $X$ 中的序列 ${ x_n }$ 称收敛的, 当 $\exists x \in X$, $\forall \varepsilon &amp;gt;0$, $\exists N\in \mathbb{N}+ $, $d(x_n, x)&amp;lt;\varepsilon$.">
 <meta name="keywords" content="Notes,重温 &amp; 新知,微积分,数列,级数">
 <meta property="og:type" content="article">
 <meta property="og:title" content="微积分之数列与级数">
 <meta property="og:url" content="https://zengfk.com.cn/2018/01/08/微积分之数列与级数/index.html">
 <meta property="og:site_name" content="虎头微分同学的Blog">
-<meta property="og:description" content="序列与极限这里我们快速的过一遍关于数列与级数的这一些基础的内容.这些内容在复数域 $\mathbb{C}$ 上都是成立的. 度量空间 $X$ 中的序列 $\{ x_n \}$ 称**收敛的**, 当 $\exists x \in X$, $\forall \varepsilon &amp;gt;0$, $\exists N\in \mathbb{N}_+ $, $d(x_n, x)">
+<meta property="og:description" content="序列与极限这里我们快速的过一遍关于数列与级数的这一些基础的内容.这些内容在复数域 $\mathbb{C}$ 上都是成立的.  度量空间 $X$ 中的序列 ${ x_n }$ 称收敛的, 当 $\exists x \in X$, $\forall \varepsilon &amp;gt;0$, $\exists N\in \mathbb{N}+ $, $d(x_n, x)&amp;lt;\varepsilon$.">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://zengfk.com.cn/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-19T00:22:31.231Z">
+<meta property="og:updated_time" content="2019-08-04T14:14:30.242Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微积分之数列与级数">
-<meta name="twitter:description" content="序列与极限这里我们快速的过一遍关于数列与级数的这一些基础的内容.这些内容在复数域 $\mathbb{C}$ 上都是成立的. 度量空间 $X$ 中的序列 $\{ x_n \}$ 称**收敛的**, 当 $\exists x \in X$, $\forall \varepsilon &amp;gt;0$, $\exists N\in \mathbb{N}_+ $, $d(x_n, x)">
+<meta name="twitter:description" content="序列与极限这里我们快速的过一遍关于数列与级数的这一些基础的内容.这些内容在复数域 $\mathbb{C}$ 上都是成立的.  度量空间 $X$ 中的序列 ${ x_n }$ 称收敛的, 当 $\exists x \in X$, $\forall \varepsilon &amp;gt;0$, $\exists N\in \mathbb{N}+ $, $d(x_n, x)&amp;lt;\varepsilon$.">
 <meta name="twitter:image" content="https://zengfk.com.cn/images/og_image.png">
 
 
@@ -149,6 +149,10 @@ var _hmt = _hmt || [];
                     
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -197,9 +201,9 @@ var _hmt = _hmt || [];
         </h1>
         <div class="content">
             <h2 id="序列与极限"><a href="#序列与极限" class="headerlink" title="序列与极限"></a>序列与极限</h2><p>这里我们快速的过一遍关于数列与级数的这一些基础的内容.这些内容在复数域 $\mathbb{C}$ 上都是成立的.</p>
-<blockquote>度量空间 $X$ 中的序列 $\{ x_n \}$ 称**收敛的**, 当 $\exists x \in X$, $\forall \varepsilon >0$, $\exists N\in \mathbb{N}_+ $, $d(x_n, x)<\varepsilon$. 我们说序列 $\{ x_n \}$ 收敛于 $x$.记为 $$\lim_{n\rightarrow\infty}x_{n}="x.$$" 如果序列不收敛, 我们称其为发散的. < blockquote>
-<a id="more"></a>
-
+<blockquote>
+<p>度量空间 $X$ 中的序列 ${ x_n }$ 称<strong>收敛的</strong>, 当 $\exists x \in X$, $\forall \varepsilon &gt;0$, $\exists N\in \mathbb{N}<em>+ $, $d(x_n, x)&lt;\varepsilon$. 我们说序列 ${ x_n }$ 收敛于 $x$.记为<br>$$\lim</em>{n\rightarrow\infty}x_{n} = x.$$<br>如果序列不收敛, 我们称其为发散的. <a id="more"></a></p>
+</blockquote>
 <p>收敛序列具有以下一些性质:</p>
 <ul>
 <li>序列 ${ x_n }$收敛于 $x\in X$, 则在 $x$ 的任意邻域中均包含序列中的无限项.</li>
@@ -208,21 +212,14 @@ var _hmt = _hmt || [];
 <li>若 $E\subset X$, $x$是 $E$ 的聚点, 则 $E$ 中存在收敛于 $x$ 的序列.</li>
 </ul>
 <p>由定义容易验证, 序列的四则运算:</p>
-<blockquote>对序列 $\{s_{n}\}, \{t_{n}\}$, 有 $\lim_{n\rightarrow \infty}s_{n}=s$, $\lim_{n\rightarrow \infty}t_{n}=t$. 那么
-
-<ul>
-<li>$\lim_{n\rightarrow \infty}(s_{n}+t_{n})=s+t$;</li>
-<li>对于任意的数$c$, 有$\lim_{n\rightarrow \infty}cs_{n}=cs$, $\lim_{n\rightarrow \infty}(c+s_{n})=c+s$;</li>
-<li>$\lim_{n\rightarrow \infty}s_{n}t_{n}=st$;</li>
-<li>若$\forall n, s_n \neq 0$, 且$s\neq 0$, 则$\lim_{n\rightarrow \infty}1/s_{n}=1/s$.</li></ul></blockquote>
-
-
-
+<blockquote>
+<p>对序列 ${s_{n}}, {t_{n}}$, 有 $\lim_{n\rightarrow \infty}s_{n}=s$, $\lim_{n\rightarrow \infty}t_{n}=t$. 那么<br>    - $\lim_{n\rightarrow \infty}(s_{n}+t_{n})=s+t$;<br>    - 对于任意的数$c$, 有$\lim_{n\rightarrow \infty}cs_{n}=cs$, $\lim_{n\rightarrow \infty}(c+s_{n})=c+s$;<br>    - $\lim_{n\rightarrow \infty}s_{n}t_{n}=st$;<br>    - 若$\forall n, s_n \neq 0$, 且$s\neq 0$, 则$\lim_{n\rightarrow \infty}1/s_{n}=1/s$.</p>
+</blockquote>
 <p><font color="red">Note: 对于 $\mathbb{R}^{n}$(或$\mathbb{C}^{n}$)上的序列, 以上定义和结论均适用.</font></p>
 <p>回顾一下柯西(Cauchy)序列的概念.</p>
-<blockquote>**[Cauchy 序列]**<br>
-度量空间中的序列 $\{ x_{n} \}$ 称为 Cauchy 序列, 当其满足$\forall \varepsilon >0$, $\exists N\in \mathbb{N}_+$, $\forall n>N, m>N$, 有$d(x_n, x_m)<\varepsilon$. < blockquote>
-
+<blockquote>
+<p><strong>[Cauchy 序列]</strong><br><br>度量空间中的序列 ${ x_{n} }$ 称为 Cauchy 序列, 当其满足$\forall \varepsilon &gt;0$, $\exists N\in \mathbb{N}_+$, $\forall n&gt;N, m&gt;N$, 有$d(x_n, x_m)&lt;\varepsilon$.</p>
+</blockquote>
 <p>如果度量空间 $X$ 中的每个 Cauchy 序列在在度量空间 $X$ 中收敛, 就称它是<strong>完备的</strong>. 在此我们指出关于 $\mathbb{R}^k$ 的完备性的两个个等价的描述:</p>
 <ul>
 <li>$\mathbb{R}^k$中的每一个柯西列均有极限点.</li>
@@ -233,11 +230,9 @@ var _hmt = _hmt || [];
 <p>对于有如下形式的序列 ${S_{n}}$:<br>$$S_{n}=\sum_{i=1}^{n}a_{n},$$<br>符号 $\sum_{i=1}^{\infty}a_{n}$ 称为无穷级数, 若$n\rightarrow \infty$ 时, $S_{n}$ 收敛于某一 $S\in \mathbb{R}^k$, 则说无穷级数收敛.写成<br>$$S=\lim_{n\rightarrow\infty}S_{n}=\sum_{i=1}^{\infty}a_{n}.$$</p>
 <p>我们说以上级数绝对收敛, 当级数<br>$$\sum_{i=1}^{\infty}|a_{n}|$$<br>收敛.</p>
 <p>Cauchy 收敛准则重新叙述如下:</p>
-<blockquote>**[级数的 Cauchy 收敛准则]**<br>
-级数 $\sum a_{n}$ 收敛, 当且仅当
-$$\forall \varepsilon>0 , \exists N\in \mathbb{N}_+ , \forall n \geqslant m \geqslant N : \left| \sum_{i=n}^{m}a_i \right|\leqslant\varepsilon.$$
+<blockquote>
+<p><strong>[级数的 Cauchy 收敛准则]</strong><br><br>级数 $\sum a_{n}$ 收敛, 当且仅当<br>$$\forall \varepsilon&gt;0 , \exists N\in \mathbb{N}<em>+ , \forall n \geqslant m \geqslant N : \left| \sum</em>{i=n}^{m}a_i \right|\leqslant\varepsilon.$$</p>
 </blockquote>
-
 <p>由此可以直接得到结论: 若级数级数 $\sum a_{n}$ 收敛, 则$\lim_{n\rightarrow \infty}a_n =0$.(这是级数收敛的必要但不充分条件.)</p>
 <p><strong>对应于单调序列收敛性与有界性等价, 关于级数有结论: 各项非负的级数收敛, 当且仅当部分和序列 ${s_n}$ 有界</strong>.</p>
 <p>判断通项非负的级数收敛的判定, 我们有非常有用的<strong>“比较检验法”</strong>.定理叙述如下:</p>
@@ -249,63 +244,47 @@ $$\forall \varepsilon>0 , \exists N\in \mathbb{N}_+ , \forall n \geqslant m \geq
 <ul>
 <li>几何级数:若 $0&lt;|q|&lt;1$, 那么$$\sum_{i=1}^{\infty}q^n =\frac{q}{1-q}.$$<br>以几何级数为比较级数可以得到<strong>比率验敛法</strong>.</li>
 </ul>
-<blockquote>**[比率验敛法]**
-
-<p>对于级数 $\sum{a_{n}}$, 若<br>$$\limsup_{n \rightarrow \infty}{ \left| \frac{a_{n+1}}{ a_n } \right| } &lt; 1,$$<br>则级数收敛; 若 $\exists n_0 \in \mathbb{N}<em>+$, 当 $n\geqslant n_0$,<br>$$\left|\frac{a</em>{n+1}}{a_{n}}\right|\geqslant 1,$$<br>则级数发散.</p>
+<blockquote>
+<p><strong>[比率验敛法]</strong></p>
 </blockquote>
-
+<p>对于级数 $\sum{a_{n}}$, 若<br>$$\limsup_{n \rightarrow \infty}{ \left| \frac{a_{n+1}}{ a_n } \right| } &lt; 1,$$<br>则级数收敛; 若 $\exists n_0 \in \mathbb{N}<em>+$, 当 $n\geqslant n_0$,<br>$$\left|\frac{a</em>{n+1}}{a_{n}}\right|\geqslant 1,$$<br>则级数发散.</p>
 <ul>
 <li>p 级数:若 $p&gt;1$, $$\sum_{i=1}^{\infty} \frac{1}{n^p}$$<br>收敛,否则发散.以 p 级数为比较级数可以得到<strong>根值验敛法</strong>.</li>
 </ul>
-<blockquote>**[根值验敛法]**
-
+<blockquote>
+<p><strong>[根值验敛法]</strong></p>
+</blockquote>
 <p>对于级数$\sum a_n$, 令<br>$$\alpha = \limsup_{n\rightarrow \infty}\sqrt[n]{|a_n |}$$<br>则$\alpha&lt;1$时, 级数收敛; $\alpha&gt;1$时, 级数发散; $\alpha =1$时本判别法无法判定.</p>
-</blockquote>
-
 <h3 id="Abel-方法–关于一般项级数的收敛"><a href="#Abel-方法–关于一般项级数的收敛" class="headerlink" title="Abel 方法–关于一般项级数的收敛"></a>Abel 方法–关于一般项级数的收敛</h3><p><strong>阿贝尔(Abel)方法</strong>是一种很有用的古典分析技巧, 在级数的收敛性理论还有有关积分计算中常常用到.阿贝尔方法的基础就是以下称为<strong>分部求和公式</strong>(又叫<strong>和差变换公式</strong>)的恒等式, 相当于积分中的分部积分法. 由这个式子出发, 可以得到<strong>阿贝尔引理</strong>, 进而导出<strong>一般级数</strong>的<strong>阿贝尔判别法</strong>与<strong>狄利克雷判别法</strong>, 以及之后给出的<strong>级数乘法定理</strong>. </p>
-<blockquote>**[分部求和公式]**<br>
-设有两个序列 $a_n$,$b_n$, 当 $n\geqslant0$ 时, 令
-$$A_{n}=\sum_{k=0}^{n}a_{k},$$ 
-令$A_{-1}=0$, 那么, 当 $0\leqslant p\leqslant q$ 时, 有
-$$\sum_{n=p}^{q}{a_n b_n}=\sum_{n=p}^{q-1}{A_{n}(b_n - b_{n+1})}+A_q b_p - A_{p-1} b_p.$$
+<blockquote>
+<p><strong>[分部求和公式]</strong><br><br>设有两个序列 $a_n$,$b_n$, 当 $n\geqslant0$ 时, 令<br>$$A_{n}=\sum_{k=0}^{n}a_{k},$$<br>令$A_{-1}=0$, 那么, 当 $0\leqslant p\leqslant q$ 时, 有<br>$$\sum_{n=p}^{q}{a_n b_n}=\sum_{n=p}^{q-1}{A_{n}(b_n - b_{n+1})}+A_q b_p - A_{p-1} b_p.$$</p>
 </blockquote>
-
-<blockquote>**[Abel 收敛判别法]**<br>
-若序列$\{a_n\}$单调有界, 级数$\sum b_n$收敛, 则$\sum_{n}^{\infty}a_n b_n$收敛.
+<blockquote>
+<p><strong>[Abel 收敛判别法]</strong><br><br>若序列${a_n}$单调有界, 级数$\sum b_n$收敛, 则$\sum_{n}^{\infty}a_n b_n$收敛.</p>
 </blockquote>
-
-<blockquote>**[Dirichlet 收敛判别法]**<br>
-若级数 $\sum a_{n}$ 的部分和 $A_n$ 构成有界序列, $b_n$单调递减趋于 $0$,则 $\sum_{n}^{\infty}a_n b_n$ 收敛.
+<blockquote>
+<p><strong>[Dirichlet 收敛判别法]</strong><br><br>若级数 $\sum a_{n}$ 的部分和 $A_n$ 构成有界序列, $b_n$单调递减趋于 $0$,则 $\sum_{n}^{\infty}a_n b_n$ 收敛.</p>
 </blockquote>
-
 <p>最后给出莱布尼茨(Leibnitz)关于交错级数收敛的判别法.</p>
-<blockquote>[Leibnitz]<br>
-设$a_n$单调递减趋于$0$, 则交错级数$\sum_{n}^{\infty}(-1)^{n-1}a_n$收敛.
+<blockquote>
+<p>[Leibnitz]<br><br>设$a_n$单调递减趋于$0$, 则交错级数$\sum_{n}^{\infty}(-1)^{n-1}a_n$收敛.</p>
 </blockquote>
-
-<h3 id="级数的加法与乘法"><a href="#级数的加法与乘法" class="headerlink" title="级数的加法与乘法"></a>级数的加法与乘法</h3><blockquote>**[级数加法]**
-如果$\sum a_n =A$, $\sum b_n = B$, 那么$\sum(a_n +b_n) = A+B$, 而且对于任意常数$c$, $c\sum a_n =cA$.
+<h3 id="级数的加法与乘法"><a href="#级数的加法与乘法" class="headerlink" title="级数的加法与乘法"></a>级数的加法与乘法</h3><blockquote>
+<p><strong>[级数加法]</strong><br>如果$\sum a_n =A$, $\sum b_n = B$, 那么$\sum(a_n +b_n) = A+B$, 而且对于任意常数$c$, $c\sum a_n =cA$.</p>
 </blockquote>
-
 <p>关于级数的乘法相对复杂, 这里仅讨论”Cauchy 乘积”.</p>
-<blockquote>**[Cauchy 乘积]**<br>
-设有 $\sum a_n =A$, $\sum b_n = B$.令
-$$c_n = \sum_{k=0}^{n}{a_k b_{n-k}}\quad(n=0,1,2,\cdots)$$
-称级数$\sum c_n$为所给的两个级数的积.
+<blockquote>
+<p><strong>[Cauchy 乘积]</strong><br><br>设有 $\sum a_n =A$, $\sum b_n = B$.令<br>$$c_n = \sum_{k=0}^{n}{a_k b_{n-k}}\quad(n=0,1,2,\cdots)$$<br>称级数$\sum c_n$为所给的两个级数的积.</p>
 </blockquote>
-
 <p>级数的积和级数之间的以来关系是很复杂的, 级数 $\sum a_n$, $\sum b_n$ 收敛并不保证它们的乘积级数是收敛的. 关于级数乘积有定理</p>
-<blockquote>[Mertens]<br>
-若级数 $\sum a_{n}$ 绝对收敛, $\sum a_n =A$, $\sum b_n = B$, $c_n = \sum_{k=0}^{n}{a_k b_{n-k}}~(n=0,1,2,\cdots)$, 则
-$$\sum_{n=0}^{\infty}c_n =AB.$$
+<blockquote>
+<p>[Mertens]<br><br>若级数 $\sum a_{n}$ 绝对收敛, $\sum a_n =A$, $\sum b_n = B$, $c_n = \sum_{k=0}^{n}{a_k b_{n-k}}~(n=0,1,2,\cdots)$, 则<br>$$\sum_{n=0}^{\infty}c_n =AB.$$</p>
 </blockquote>
-
 <p>反过来, 若级数 $\sum c_n$ 收敛, 那么该级数的和是否就是 $AB$ 呢? 问题的答案是肯定的.应用阿贝尔的方法可以得到如下定理:</p>
-<blockquote>**[级数乘法定理]**<br>
-若级数 $\sum c_{n}$, $\sum a_n$, $\sum b_n$, 分别收敛于 $A, B, C$, 并且 $c_n = \sum_{k=0}^{n}{a_k b_{n-k}}$, 那么$C=AB$.
+<blockquote>
+<p><strong>[级数乘法定理]</strong><br><br>若级数 $\sum c_{n}$, $\sum a_n$, $\sum b_n$, 分别收敛于 $A, B, C$, 并且 $c_n = \sum_{k=0}^{n}{a_k b_{n-k}}$, 那么$C=AB$.</p>
 </blockquote>
 
-</\varepsilon$.></blockquote></\varepsilon$.></blockquote>
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -477,6 +456,33 @@ $$\sum_{n=0}^{\infty}c_n =AB.$$
 </div>
     
         
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#序列与极限">
+        <span class="has-mr-6">1</span>
+        <span>序列与极限</span>
+        </a></li><li>
+        <a class="is-flex" href="#数项级数">
+        <span class="has-mr-6">2</span>
+        <span>数项级数</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#Abel-方法–关于一般项级数的收敛">
+        <span class="has-mr-6">2.1</span>
+        <span>Abel 方法–关于一般项级数的收敛</span>
+        </a></li><li>
+        <a class="is-flex" href="#级数的加法与乘法">
+        <span class="has-mr-6">2.2</span>
+        <span>级数的加法与乘法</span>
+        </a></li></ul></li></ul>
+        </div>
+    </div>
+</div>
+
     
         
 
