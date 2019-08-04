@@ -16,7 +16,7 @@
 <meta property="og:description" content="看到一道不难但是很有意思的综合性习题. 好吧, 事实上这是 2017 年中山大学研究生入学考试[高等代数]科目的最后一道题. 这道题将数学分析和高等代数的知识结合在一起, 值得一看. 也作为自己对相关知识点的一个小小的复习. 下面就是原题题目.">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://zengfk.com.cn/images/og_image.png">
-<meta property="og:updated_time" content="2019-08-04T13:28:24.814Z">
+<meta property="og:updated_time" content="2019-08-04T13:47:09.096Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="解题笔记:一道简单的高等代数综合性题目">
 <meta name="twitter:description" content="看到一道不难但是很有意思的综合性习题. 好吧, 事实上这是 2017 年中山大学研究生入学考试[高等代数]科目的最后一道题. 这道题将数学分析和高等代数的知识结合在一起, 值得一看. 也作为自己对相关知识点的一个小小的复习. 下面就是原题题目.">
@@ -178,7 +178,7 @@ var _hmt = _hmt || [];
                 <span class="level-item has-text-grey">
                     
                     
-                    10 分钟 读完 (大约 1543 个字)
+                    10 分钟 读完 (大约 1541 个字)
                 </span>
                 
                 
@@ -239,7 +239,7 @@ $$\left(\sum_{n=0}^{\infty}{a_{n}x^{n}}\right)' = \sum_{n=0}^{\infty}{\left(a_{n
 <p>首先, 由迹的性质, 对于每一个 $k$, 有<br>$$tr( \mathbf{A}^k) = \lambda_1^k + \lambda_2^k + \cdots + \lambda_n^k. $$</p>
 <p>于是我们可以将式 $(eq.1)$ 重写为<br>$$\sum_{i=1}^{n}{\sum_{k=1}^{\infty}{\frac{1}{k}\lambda_{i}^k}}.\quad(eq.2)$$</p>
 <p>上式中的$\sum_{k=1}^{\infty}{\frac{1}{k}\lambda_{i}^k}$<br>正是一幂级数形式的无穷和.</p>
-<p>考察幂级数<br>$$p(x)=\sum_{k=1}^{\infty}{\frac{1}{k}x^k} \quad ( x &lt; 1).$$<br>容易判断, 上面这个幂级数在 $x &lt; 1$ 这个范围内一致收敛, 求这个幂级数的和.<br>$$p’(x)=\sum_{k=1}^{\infty}{\left(\frac{1}{k}x^k\right)’}=p(x)=\sum_{k=1}^{\infty}{x^{k-1}}=\lim_{k\rightarrow\infty}{\frac{1-x^{k-1}}{1-x}}=\frac{1}{1-x}.$$<br>所以<br>$$p(x)=\int_{0}^{x}{p’(x)dx}=-\ln (1-x).$$</p>
+<p>考察幂级数<br>$$p(x)=\sum_{k=1}^{\infty}{\frac{1}{k}x^k} \quad ( x &lt; 1).$$<br>容易判断, 上面这个幂级数在 $x &lt; 1$ 这个范围内一致收敛, 求这个幂级数的和.<br>$$p’(x)=\sum_{k=1}^{\infty}{\left(\frac{1}{k}x^k\right)’}=\sum_{k=1}^{\infty}{x^{k-1}}=\lim_{k\rightarrow\infty}{\frac{1-x^{k-1}}{1-x}}=\frac{1}{1-x}.$$<br>所以<br>$$p(x)=\int_{0}^{x}{p’(x)dx}=-\ln (1-x).$$</p>
 <p>那么式 $(eq.2)$ 就等于<br>$$\sum_{i=1}^{n}{p(\lambda_{i})} = - \sum_{i=1}^{n}{\ln (1-\lambda_{i})} = -\ln{\prod_{i=1}^{n}{(1-\lambda_{i})}}.\quad(eq.3)$$</p>
 <p>现在我们看式 $(eq.1)$ 的左边, 对于矩阵 $\mathbf{A}$, 根据若尔当标准型的结果, 存在一个与之相似的若尔当标准型 $\mathbf{J}$：使得 $\mathbf{A=PJP^1}$, 其中  $\mathbf{P}$ 是一个可逆矩阵. 所以,<br>$$\mathbf{I-A}=\mathbf{I-A=I-PJP^{-1}=P(I-J)P^{-1}}$$<br>由行列式的性质<br>$$\det\mathbf{P(I-J)P^{-1}}=\det\mathbf{P}\cdot\det\mathbf{(I-J)}\cdot\det\mathbf{P^{-1}}=\det\mathbf{(I-J)}.$$</p>
 <p>而矩阵 $\mathbf{A}$ 的若尔当标准型 $\mathbf{J}$ 是一个上三角矩阵, 其 $n$ 个对角线元素为矩阵 $\mathbf{A}$ 的特征值, 所以 $\det\mathbf{(I-J)}$ 的值就是其对角线元素 $1-\lambda_i$ 相乘,即<br>$$\prod_{i=1}^{n}{(1-\lambda_{i})}.$$</p>

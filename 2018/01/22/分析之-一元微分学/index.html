@@ -16,7 +16,7 @@
 <meta property="og:description" content="这一部分主要集中讨论定义在闭区间上的一元实函数. 导数定义与性质在此先给出定义在$\mathbb{R}$的子集上的可微函数的定义, 并给出计算导数的基本法则. [定义][导数] 令$D\subset \mathbb{R}$,称函数$f:D\rightarrow \mathbb{R}$在点$x_0\in D$可微, 若满足: $$f&apos;(x_0):= \lim_{\small\begin{array}">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://zengfk.com.cn/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-18T10:18:00.007Z">
+<meta property="og:updated_time" content="2019-08-04T13:49:46.815Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="分析之【一元微分学】">
 <meta name="twitter:description" content="这一部分主要集中讨论定义在闭区间上的一元实函数. 导数定义与性质在此先给出定义在$\mathbb{R}$的子集上的可微函数的定义, 并给出计算导数的基本法则. [定义][导数] 令$D\subset \mathbb{R}$,称函数$f:D\rightarrow \mathbb{R}$在点$x_0\in D$可微, 若满足: $$f&apos;(x_0):= \lim_{\small\begin{array}">
@@ -149,6 +149,10 @@ var _hmt = _hmt || [];
                     
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -197,7 +201,7 @@ var _hmt = _hmt || [];
         </h1>
         <div class="content">
             <p>这一部分主要集中讨论定义在闭区间上的一元实函数.</p>
-<h2 id="导数定义与性质"><a href="#导数定义与性质" class="headerlink" title="导数定义与性质"></a>导数定义与性质</h2><p>在此先给出定义在$\mathbb{R}$的子集上的可微函数的定义, 并给出计算导数的基本法则.</p>
+<h1 id="导数定义与性质"><a href="#导数定义与性质" class="headerlink" title="导数定义与性质"></a>导数定义与性质</h1><p>在此先给出定义在$\mathbb{R}$的子集上的可微函数的定义, 并给出计算导数的基本法则.</p>
 <blockquote>[定义][导数]
 令$D\subset \mathbb{R}$,称函数$f:D\rightarrow \mathbb{R}$在点$x_0\in D$可微, 若满足:
 $$f'(x_0):= \lim_{\small\begin{array}{c}
@@ -236,8 +240,8 @@ $$\Delta y = f'(x_0)\Delta x+\omega(x)\Delta x$$
 <blockquote>[定理]
 若函数$f:D\rightarrow \mathbb{R}$在$x_0 \in D$上可微,则函数$f$在$x_0$点连续.
 </blockquote>
-以上命题得逆命题并不成立. 在整个定义域上处处连续单数处处不可微的一个例子是 Weiestrass 给出的函数.
 
+<p>以上命题得逆命题并不成立. 在整个定义域上处处连续单数处处不可微的一个例子是 Weiestrass 给出的函数.</p>
 <p>由极限的运算和导数的定义, 容易得到导数的运算性质:<br>设函数$f, g: D\rightarrow \mathbb{R}$, 均在点$x\in D$可微,则$f+g$,$fg$,$f/g$均在$x$点可微, 且</p>
 <ul>
 <li>$(f+g)’(x)=f’(x)+g’(x)$;</li>
@@ -277,8 +281,8 @@ $$f(x):=\begin{cases} e^{-\frac{1}{x^2}},\quad x\neq 0, \\ 0,\quad x=0, \end{cas
 显然这是一个$\mathbb{R}$上的非常值函数.而事实上利用链式法则和数学归纳法,可以证明这个函数在$x=0$处的任意阶导数都等于$0$.
 </blockquote>
 
-<h2 id="可微函数性质"><a href="#可微函数性质" class="headerlink" title="可微函数性质"></a>可微函数性质</h2><p>关于可微函数典型的一些性质, 我们从微分中值定理开始介绍, 并给出一些应用. 还有重要的泰勒公式. 这些内容构成了微分学的核心部分.</p>
-<h3 id="中值定理"><a href="#中值定理" class="headerlink" title="中值定理"></a>中值定理</h3><p>先引入局部极大值(极小值)的定义</p>
+<h1 id="可微函数性质"><a href="#可微函数性质" class="headerlink" title="可微函数性质"></a>可微函数性质</h1><p>关于可微函数典型的一些性质, 我们从微分中值定理开始介绍, 并给出一些应用. 还有重要的泰勒公式. 这些内容构成了微分学的核心部分.</p>
+<h2 id="中值定理"><a href="#中值定理" class="headerlink" title="中值定理"></a>中值定理</h2><p>先引入局部极大值(极小值)的定义</p>
 <blockquote>[定义]
 设$f$是定义在度量空间$X$上的实值函数,称$f$在点$p\in X$取得**局部极大值(极小值),若$\exists \delta >0$,当$d(p,q)<\delta$而且$q\in x$时, 有$f(q)\leqslant (\geqslant)f(p)$. < blockquote>
 
@@ -350,7 +354,7 @@ $$f'(x_0)=0, f''(x_0)<(>)0$$
 设函数$f_1,f_2:[a,b]\rightarrow \mathbb{R}$, 均在$[a,b]$上连续, 在$(a,b)$中可微.若有$f_1(a)=f_2(a)$,$\forall x\in (a,b), f_1'(x)\leqslant f_2'(x)$, 则$\forall x\in (a,b), f_1(x)\leqslant f_2(x)$.
 </blockquote>
 
-<h3 id="泰勒公式"><a href="#泰勒公式" class="headerlink" title="泰勒公式"></a>泰勒公式</h3><p>前面谈到研究函数性态的工具, 函数$f$在定义域上一点$x_0$处可微, 那么在$x_0$的近旁可以用一个线性函数去近似. 若一个函数高阶可微, 在局部我们可以考虑用多项式来逼近, 以方便研究函数在局部的性态.这就是可以称为\textbf{微分学顶峰}的\textbf{Taylor 展开公式(定理)}.</p>
+<h2 id="泰勒公式"><a href="#泰勒公式" class="headerlink" title="泰勒公式"></a>泰勒公式</h2><p>前面谈到研究函数性态的工具, 函数$f$在定义域上一点$x_0$处可微, 那么在$x_0$的近旁可以用一个线性函数去近似. 若一个函数高阶可微, 在局部我们可以考虑用多项式来逼近, 以方便研究函数在局部的性态.这就是可以称为\textbf{微分学顶峰}的\textbf{Taylor 展开公式(定理)}.</p>
 <blockquote>[定理][(带Peano余项的)Taylor 公式]
 若函数$f$在$x_0$处$n$阶可微,则有
 $$f(x)= \sum_{k=0}^{n}\frac{1}{k!}f^{(k)}(x_0)(x-x_0)^k +o((x-x_0)^n), \quad (x\rightarrow x_0).$$
@@ -366,7 +370,7 @@ $$f(x)= \sum_{k=0}^{n}\frac{1}{k!}f^{(k)}(x_0)(x-x_0)^k + \frac{1}{n!}f^{(n+1)}(
 这两个展开式的余项分别称为**Lagrange余项**与**Cauchy余项**.
 </blockquote>
 
-<h2 id="应用-关于微分方程的一些结论"><a href="#应用-关于微分方程的一些结论" class="headerlink" title="应用:关于微分方程的一些结论"></a>应用:关于微分方程的一些结论</h2><p>这一节的主题是微分学, 作为这一主题的延伸应用, 最后我们谈论一点微分方程.</p>
+<h1 id="应用-关于微分方程的一些结论"><a href="#应用-关于微分方程的一些结论" class="headerlink" title="应用:关于微分方程的一些结论"></a>应用:关于微分方程的一些结论</h1><p>这一节的主题是微分学, 作为这一主题的延伸应用, 最后我们谈论一点微分方程.</p>
 <p><strong>微分方程</strong>是数学方程的一种,用来描述某一类函数与其导数之间的关系.<strong>微分方程的解是一个符合方程的函数</strong>.(在初等数学的代数方程里,其解是常数值.)微分方程的应用十分广泛,可以解决许多与导数有关的问题,比如:物理中许多涉及变力的运动学、动力学问题;如空气的阻力为速度函数的落体运动等问题. 此外,微分方程在化学、工程学、经济学和人口统计等领域都有应用.</p>
 <p>下面给出几个关于微分方程的结论.</p>
 <p>我们用$a\leqslant x\leqslant b$,$\alpha\leqslant y \leqslant\beta$表示平面上的矩形区域$R$,设$\phi$为定义在$R$上的实函数.所谓<strong>初值问题</strong><br>$$y’=\phi(x,y),\quad y(a)=c$$<br>的解,是$[a,b]$上的一个函数$f$,其满足$f(a)=c$,$\alpha\leqslant f(x)\leqslant \beta$,并且$$f’(x)=\phi(x, f(x)),\quad (a\leqslant x\leqslant b)$$.</p>
@@ -570,6 +574,37 @@ $$f(x)= \sum_{k=0}^{n}\frac{1}{k!}f^{(k)}(x_0)(x-x_0)^k + \frac{1}{n!}f^{(n+1)}(
 </div>
     
         
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#导数定义与性质">
+        <span class="has-mr-6">1</span>
+        <span>导数定义与性质</span>
+        </a></li><li>
+        <a class="is-flex" href="#可微函数性质">
+        <span class="has-mr-6">2</span>
+        <span>可微函数性质</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#中值定理">
+        <span class="has-mr-6">2.1</span>
+        <span>中值定理</span>
+        </a></li><li>
+        <a class="is-flex" href="#泰勒公式">
+        <span class="has-mr-6">2.2</span>
+        <span>泰勒公式</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#应用-关于微分方程的一些结论">
+        <span class="has-mr-6">3</span>
+        <span>应用:关于微分方程的一些结论</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
     
         
 
