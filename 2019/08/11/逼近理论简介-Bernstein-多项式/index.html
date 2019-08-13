@@ -2,31 +2,31 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-<title>数学分析习题解-连续函数(2) - 虎头微分同学的Blog</title>
+<title>逼近理论简介-Bernstein 多项式 - 虎头微分同学的Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="【习题来源】数学分析：第七版.（俄罗斯）卓里奇著；李植译. 北京：高等教育出版社，2019.    当 $\delta&amp;gt;0$, 按照以下方式定义的函数 $\omega(\delta)$ 称为函数 $f:E\rightarrow \mathbb{R}$ 的连续模: $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \m">
-<meta name="keywords" content="习题集,连续函数">
+    <meta name="description" content="逼近理论缘起函数的最佳逼近问题起源于俄国数学家 P.L.切比雪夫. 1853 年, 当时切比雪夫正在研究关于将蒸汽引擎的线性运动转化为轮毂的圆周运动的联动装置的问题, 其中,他考虑了如下问题:  给出定义在闭区间 $[a, b]$ 上的连续函数 $f$, 以及正整数 $n$, 是否能用最高不超过 $n$ 次的多项式函数 $\sum_{k=0}^{n}a_k x^k$ 来近似表示函数 $f$, 在区">
+<meta name="keywords" content="最佳逼近,Bernstein 多项式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数学分析习题解-连续函数(2)">
-<meta property="og:url" content="https://zengfk.com.cn/2019/08/04/数学分析习题解-连续函数-2/index.html">
+<meta property="og:title" content="逼近理论简介-Bernstein 多项式">
+<meta property="og:url" content="https://zengfk.com.cn/2019/08/11/逼近理论简介-Bernstein-多项式/index.html">
 <meta property="og:site_name" content="虎头微分同学的Blog">
-<meta property="og:description" content="【习题来源】数学分析：第七版.（俄罗斯）卓里奇著；李植译. 北京：高等教育出版社，2019.    当 $\delta&amp;gt;0$, 按照以下方式定义的函数 $\omega(\delta)$ 称为函数 $f:E\rightarrow \mathbb{R}$ 的连续模: $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \m">
+<meta property="og:description" content="逼近理论缘起函数的最佳逼近问题起源于俄国数学家 P.L.切比雪夫. 1853 年, 当时切比雪夫正在研究关于将蒸汽引擎的线性运动转化为轮毂的圆周运动的联动装置的问题, 其中,他考虑了如下问题:  给出定义在闭区间 $[a, b]$ 上的连续函数 $f$, 以及正整数 $n$, 是否能用最高不超过 $n$ 次的多项式函数 $\sum_{k=0}^{n}a_k x^k$ 来近似表示函数 $f$, 在区">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://zengfk.com.cn/images/og_image.png">
-<meta property="og:updated_time" content="2019-08-04T10:05:06.415Z">
+<meta property="og:image" content="https://i.loli.net/2019/08/13/eIOPLgFVaRZU9f3.jpg">
+<meta property="og:updated_time" content="2019-08-13T07:45:18.277Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数学分析习题解-连续函数(2)">
-<meta name="twitter:description" content="【习题来源】数学分析：第七版.（俄罗斯）卓里奇著；李植译. 北京：高等教育出版社，2019.    当 $\delta&amp;gt;0$, 按照以下方式定义的函数 $\omega(\delta)$ 称为函数 $f:E\rightarrow \mathbb{R}$ 的连续模: $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \m">
-<meta name="twitter:image" content="https://zengfk.com.cn/images/og_image.png">
+<meta name="twitter:title" content="逼近理论简介-Bernstein 多项式">
+<meta name="twitter:description" content="逼近理论缘起函数的最佳逼近问题起源于俄国数学家 P.L.切比雪夫. 1853 年, 当时切比雪夫正在研究关于将蒸汽引擎的线性运动转化为轮毂的圆周运动的联动装置的问题, 其中,他考虑了如下问题:  给出定义在闭区间 $[a, b]$ 上的连续函数 $f$, 以及正整数 $n$, 是否能用最高不超过 $n$ 次的多项式函数 $\sum_{k=0}^{n}a_k x^k$ 来近似表示函数 $f$, 在区">
+<meta name="twitter:image" content="https://i.loli.net/2019/08/13/eIOPLgFVaRZU9f3.jpg">
 
 
 
 
 
-<link rel="alternative" href="/atom.xml" title="数学分析习题解-连续函数(2)" type="application/atom+xml">
+<link rel="alternative" href="/atom.xml" title="逼近理论简介-Bernstein 多项式" type="application/atom+xml">
 
 
 
@@ -119,7 +119,7 @@ var _hmt = _hmt || [];
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo2.png" alt="数学分析习题解-连续函数(2)" height="28">
+                <img src="/images/logo2.png" alt="逼近理论简介-Bernstein 多项式" height="28">
             
             </a>
         </div>
@@ -149,6 +149,10 @@ var _hmt = _hmt || [];
                     
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -164,11 +168,17 @@ var _hmt = _hmt || [];
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
     
+    <div class="card-image">
+        <span class="image is-7by1">
+            <img class="thumbnail" src="https://i.loli.net/2019/08/13/eIOPLgFVaRZU9f3.jpg" alt="逼近理论简介-Bernstein 多项式">
+        </span>
+    </div>
+    
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-04T10:03:11.000Z">2019-08-04</time>
+                <time class="level-item has-text-grey" datetime="2019-08-11T05:05:17.000Z">2019-08-11</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/学习笔记/">学习笔记</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/学习笔记/分析学-Analysis/">分析学/Analysis</a>
@@ -178,7 +188,7 @@ var _hmt = _hmt || [];
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 269 个字)
+                    12 分钟 读完 (大约 1854 个字)
                 </span>
                 
                 
@@ -192,19 +202,57 @@ var _hmt = _hmt || [];
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                数学分析习题解-连续函数(2)
+                逼近理论简介-Bernstein 多项式
             
         </h1>
         <div class="content">
-            <blockquote>
-<p>【习题来源】数学分析：第七版.（俄罗斯）卓里奇著；李植译. 北京：高等教育出版社，2019.</p>
-</blockquote>
+            <h1 id="逼近理论缘起"><a href="#逼近理论缘起" class="headerlink" title="逼近理论缘起"></a>逼近理论缘起</h1><p>函数的最佳逼近问题起源于俄国数学家 P.L.切比雪夫. 1853 年, 当时切比雪夫正在研究关于将蒸汽引擎的线性运动转化为轮毂的圆周运动的联动装置的问题, 其中,他考虑了如下问题:</p>
 <blockquote>
-<ol start="8">
-<li>当 $\delta&gt;0$, 按照以下方式定义的函数 $\omega(\delta)$ 称为函数 $f:E\rightarrow \mathbb{R}$ 的<strong>连续模</strong>:
-$$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \mid &lt; \delta \\ x_1,x_2 \in E \end{array}}} |f(x_1)-f(x_2)|.$$<br>这里对集合 $E$ 中相互距离小于 $\delta$ 的一切可能的两个点取上确界. <br><br>请证明:<br>a) 连续模是具有极限 $\omega(+0) = \lim_{\delta\rightarrow+0}\omega(\delta)$ 的不减非负函数.<br><br>b) $\forall \varepsilon&gt;0$, $\exists\delta&gt;0$, $\forall x_1,x_2\in E$, $|x_1-x_2|&lt;\delta \Rightarrow |f(x_1)-f(x_2)|&lt;\omega(+0)+\varepsilon$.<br><br>c) 如果 $E$ 是闭区间、开区间或者半开半闭区间, 则对于函数 $f:E\rightarrow \mathbb{R}$ 的连续模, 以下关系式成立:<br>$$\omega(\delta_1+\delta_2) \leq \omega(\delta_1)+\omega(\delta_2).$$<br>d) 在整条数轴上考虑的函数 $x$ 和 $\sin x^2$ 的连续模分别是区间 $\delta&gt;0$上的函数 $\omega(\delta) = \delta$ 和常数函数 $\omega(\delta) = 2$.<br><br>e) 函数 $f$ 在集合 $E$ 上一致连续的充要条件是 $\omega(+0) = 0$.</li>
-</ol>
+<p>给出定义在闭区间 $[a, b]$ 上的连续函数 $f$, 以及正整数 $n$, 是否能用最高不超过 $n$ 次的多项式函数 $\sum_{k=0}^{n}a_k x^k$ 来近似表示函数 $f$, 在区间上的任意一点处的误差在可控制的范围内? <br><br>特别的, 我们是否能构造出多项式 $P(x)$ 使得误差 $\max_{a\leq x\leq b}|f(x)-P(X)|$ 最小?</p>
 </blockquote>
+<a id="more"></a>
+
+<p>由这此, 我们产生了如下几个问题:</p>
+<ul>
+<li>存在性: 逼近函数<strong>是否存在</strong>?</li>
+<li>具体形式: 如果存在, 那么具体<strong>如何构造</strong>呢?</li>
+<li>唯一性: 满足条件的逼近函数<strong>是否是唯一</strong>的?</li>
+</ul>
+<p>为了解决这三个问题, 于是诞生了所谓逼近理论. 这一理论在理论和数学的工程应用上都具有重要作用. 作为介绍, 仅讨论定义在在赋予了通常测度的实数域子集上的函数的逼近理论. 这篇主要围绕的是 Bernstein 多项式.</p>
+<h1 id="函数逼近理论中常用概念引入"><a href="#函数逼近理论中常用概念引入" class="headerlink" title="函数逼近理论中常用概念引入"></a>函数逼近理论中常用概念引入</h1><p>对于在同一集合 $X$ 上定义的有界函数函数 $f$, $g$, 定义:</p>
+<ul>
+<li>$g$ 到 $f$ 的<strong>距离</strong>为:<br>$$\Delta(g) = \sup_{x\in X}|f-g|.$$</li>
+<li>定义在 $X$ 上的有界函数 $f$ 的<strong>连续模</strong> (Modulus of Continuity):<br>$$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \mid &lt; \delta \\ x_1,x_2 \in E \end{array}}} |f(x_1)-f(x_2)|\quad(\delta&gt;0).$$</li>
+<li>不超过 $n$ 次的多项式构成的函数类用 $P_{n}$ 表示. 定义<br>$$E_n(f) = \inf_{p_n\in P_n}\Delta(p_n).$$</li>
+<li>若有多项式 $p^{\star}_n\in P_n$ 满足 $\Delta(p^{\star} _{n}) = E _n(f)$, 则其称为函数 $f$ 的<strong>$n$ 次最佳逼近多项式</strong>.</li>
+</ul>
+<h1 id="魏尔斯特拉斯-Weierstrass-逼近定理的-Bernstein-证明"><a href="#魏尔斯特拉斯-Weierstrass-逼近定理的-Bernstein-证明" class="headerlink" title="魏尔斯特拉斯(Weierstrass)逼近定理的 Bernstein 证明"></a>魏尔斯特拉斯(Weierstrass)逼近定理的 Bernstein 证明</h1><p>事实上, 关于<strong>连续函数的最佳(一致)逼近问题</strong>, 数学家魏尔斯特拉斯在 1885 年给出了以下定理:</p>
+<blockquote>
+<p>【<strong>Weierstrass Approximation Theorem</strong>】 令 $f$ 为定义在闭区间 $[a,b]$ 上的函数. 那么, $\forall \varepsilon&gt;0$, 存在多项式 $p$, 使得 $|f-p|&lt;\varepsilon$.</p>
+</blockquote>
+<p>由这一条定理, 我们可以进一步得到, 对于 $f$ 最佳逼近多项式序列 $\{p^{\star} _{n}\}$, $\forall \varepsilon&gt;0$, $\exists N\in \mathbb{N}$, $\forall n&gt; N$, 使得 $|f-p^{\star} _{n}|&lt;\varepsilon$. 即 $p^{\star} _{n}\rightrightarrows f$.</p>
+<p>这个定理的一个构造性的证明是由俄罗斯数学家 <em>S.N.伯恩斯坦</em> 在 1912 年给出的, 在其中构造了<strong>Bernstein 多项式</strong>. 写下证明前, 在此先说明一个事实: <strong>任意的闭区间 $[a, b]$ 都与闭区间 $[0,1]$ 等价</strong> (<u>作为代数在结构上同构, 作为格是序同构的, 而作为赋范空间其线性等距</u>). 所以, 只需要在 $[0,1]$ 区间上证明定理即可.</p>
+<blockquote>
+<p><strong>【伯恩斯坦 (Bernstein) 多项式】</strong> 设 $f$ 为定义在 $[0, 1]$ 上的有界函数. 以下多项式序列称为 $f$ 的 Bernstein 多项式:<br>$$\left(B_n(f)\right)(x) = \sum^{n} _{k=0}{f\left(\frac{k}{n}\right)C^{k} _{n} x^k (1-x)^{n-k}},\quad 0\leqslant x \leqslant 1.$$</p>
+</blockquote>
+<p>显然, 在两个端点上 $(B_n(f))(0) = f(0), (B_n(f))(1) = f(1)$. 从某个意义上, 可以将 $B_n(f)$ 视为 $f\left(\frac{k}{n}\right), k = 1,\cdots,n$ 的加权平均数. </p>
+<p>为了证明 $B_{n}(f)\rightrightarrows f$. 为此, 先证明以下引理, 其中只涉及三个非常简单的函数, 这三个函数分别是<br>$$f_0(x) = 1,\quad f_1(x) = x,\quad f_2 = x^2.$$</p>
+<blockquote>
+<p>【引理】</p>
+<ul>
+<li>a) $B_n(f_0) = f_0$, $B_n(f_1) = f_1$;</li>
+<li>b) $B_n(f_2) = (1-\frac{1}{n})f_2 +\frac{1}{n}f_1$, 并且 $B_{n}(f_2)\rightrightarrows f_2$; </li>
+<li>c) $\sum^{n} _{k=0}{\left(\frac{k}{n}-x\right)^2 C^{k} _{n} x^k (1-x)^{n-k}} = x(1-x)/n \leqslant \frac{1}{4n},\quad \text{if}\quad 0\leqslant x \leqslant 1.$</li>
+<li>d) 给定 $\delta&gt;0$ 以及 $0\leqslant x \leqslant 1$, 用 $D$ 表示 $\{1,\cdots, n\}$ 中使得 $|k/n -x|&gt;\delta$ 的那些 $k$ 构成的集合. 那么$\sum^{n} _{k\in D}{C^{k} _{n} x^k (1-x)^{n-k}}\leqslant \frac{1}{4n\delta ^2}$.</li>
+</ul>
+</blockquote>
+<p><font face="楷体" color="red">【证明】</font><br>a) 由二项式展开, 立刻有 $B_n(f_0) = [x + (1-x)]^n = 1 = f_0$; 而<br>\begin{array}{cl}<br>B_n(f_1) &amp;=&amp; \sum^{n}\limits _{k=0} {\frac{k}{n}C^{k} _{n} x^k (1-x)^{n-k}} \\<br> &amp;=&amp; \sum^{n}\limits _{k=0}{\frac{(n-1)!}{(n-k)!(k-1)!} x^k (1-x)^{n-k}} \\<br> &amp;=&amp; x \sum^{n}\limits _{k=0}{\frac{(n-1)!}{(n-k)!(k-1)!} x^{k-1} (1-x)^{n-k}} \\<br> &amp;=&amp; x [x + (1-x)]^{n-1} = x.<br>\end{array}</p>
+<p>b) 类似的, 依旧通过二项式展开定理证明:<br>\begin{array}{cl}<br>B_n(f_2) &amp;=&amp; \sum^{n}\limits _{k=0} {\left(\frac{k}{n}\right)^2C^{k} _{n} x^k (1-x)^{n-k}} \\<br> &amp;=&amp; \sum^{n}\limits _{k=0}{\frac{k}{n}\frac{(n-1)!}{(n-k)!(k-1)!} x^k (1-x)^{n-k}} \\<br> &amp;=&amp; \sum^{n}\limits _{k=0}{\left(\frac{k-1}{n-1}\frac{n-1}{n}+\frac{1}{n}\right) \frac{(n-1)!}{(n-k)!(k-1)!} x^k (1-x)^{n-k}}\\<br> &amp;=&amp; \sum^{n}\limits _{k=0}{\left(\frac{k-1}{n-1}\right)\left(\frac{n-1}{n}\right) \frac{(n-1)!}{(n-k)!(k-1)!} x^k (1-x)^{n-k}} + \frac{x}{n} \\<br> &amp;=&amp; \left(\frac{n-1}{n}\right)x^2 [x + (1-x)]^{n-2} + \frac{1}{n}x\\<br> &amp;=&amp; (1-\frac{1}{n})f_2 +\frac{1}{n}f_1.<br>\end{array}显然, $n\rightarrow\infty$时有 $B_n(f_2)\rightarrow f_2$, 而且这个收敛是一致的.</p>
+<p>c) 展开 $\left(\frac{k}{n}-x\right)^2 = \left(\frac{k}{n}\right)^2 - 2\left(\frac{k}{n}\right) x + x^2$. 利用 a) 和 b) 的结果, 注意 $0\leqslant x \leqslant 1$, 于是得到<br>\begin{array}{cl}<br> &amp; \sum^{n} _{k=0}{\left(\frac{k}{n}-x\right)^2 C^{k} _{n} x^k (1-x)^{n-k}} \\<br>= &amp; (1-\frac{1}{n})x^2 +\frac{1}{n}x - 2x^2 + x^2\\<br>= &amp; \frac{1}{n}(x^2-x) \leqslant \frac{1}{4n}.<br>\end{array}</p>
+<p>d) 注意到  $|k/n -x|&gt;\delta$, 则  $(k/n -x)^2 /\delta^2 &gt;1$, 故<br>\begin{array}{cl}<br> &amp; \sum^{n} _{k\in D}{C^{k} _{n} x^k (1-x)^{n-k}} \\<br>\leqslant &amp; \frac{1}{\delta^2}\sum^{n} _{k=0}{\left(\frac{k}{n}-x\right)^2 C^{k} _{n} x^k (1-x)^{n-k}}\leqslant \frac{1}{4n\delta^2}.<br>\end{array}</p>
+<p>至此引理证明完毕. 接着完成对于原命题的证明, 也就是证明 $n\rightarrow\infty$ 时, $B_n(f)\rightarrow f$.</p>
+<p>\begin{array}{cl}<br>|f- B_n(f)| &amp;=&amp; \left| f(x) - \sum^{n} _{k=0}{f\left(\frac{k}{n}\right)C^{k} _{n} x^k (1-x)^{n-k}} \right| \\<br> &amp;=&amp; \left| \sum^{n} _{k=0}{\left(f(x) - f\left(\frac{k}{n}\right)\right)C^{k} _{n} x^k (1-x)^{n-k}} \right| \\<br> &amp;\leqslant&amp; \sum^{n} _{k=0}{\left|f(x) - f\left(\frac{k}{n}\right)\right|C^{k} _{n} x^k (1-x)^{n-k}}.<br>\end{array} 由于 $f$ 有界, 设为 $M$; 同时$f$ 又是区间上的连续函数 $\forall \varepsilon/2 &gt; 0$, $\exists\delta &gt; 0$, $\forall x, x_1 \in [1 ,0]$, $|x-x_1|&lt;\delta$ 有 $|f(x)-f(x_1)|&lt;\varepsilon$. 于是按照上述引理的 d) 有:<br>\begin{array}{cl}<br> &amp; \sum^{n} _{k=0}{\left|f(x) - f\left(\frac{k}{n}\right)\right|C^{k} _{n} x^k (1-x)^{n-k}} \\<br>=&amp; \sum _{k\notin D}{\left|f(x) - f\left(\frac{k}{n}\right)\right|C^{k} _{n} x^k (1-x)^{n-k}}\\<br> &amp;+\sum _{k \in D}{\left|f(x) - f\left(\frac{k}{n}\right)\right|C^{k} _{n} x^k (1-x)^{n-k}}\\<br>\leqslant &amp; \frac{\varepsilon}{2} + 2M\frac{1}{4n\delta^2}.<br>\end{array}<br>显然, 只要 $n&gt;M/(\varepsilon\delta^2)$, 上式便小于 $\varepsilon$. 至此, 证明完成. Q.E.D</p>
+<p>Bernstein 通过这一构造, 完成了对于魏尔斯特拉斯逼近定理的证明. 这个证明的重要意义在于其实实在在的构造出了一个一致收敛的多项式函数序列, 为寻找函数 $f$ 的逼近多项式提供了一个便捷的显式表达. 但这会是最佳的逼近多项式吗? 事实是<strong>不一定</strong>. 以前述 $f(x) = x^2$ 为例, 显然, 其最佳逼近多项式就是自身, 但是其 Bernstein 多项式为 $(1-1/n)x^2 + (1/n)x$. 到现在为止, 我们只解决了第一个, 关于逼近多项式函数存在的问题, 并给出了一种可能的构造这样的多项式的方法. 至于最佳逼近, 以及逼近函数唯一性的问题, 则暂时留待下次再谈. </p>
 
         </div>
         
@@ -212,7 +260,7 @@ $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \mid &lt; \delta \
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/习题集/">习题集</a>, <a class="has-link-grey -link" href="/tags/连续函数/">连续函数</a>
+                    <a class="has-link-grey -link" href="/tags/Bernstein-多项式/">Bernstein 多项式</a>, <a class="has-link-grey -link" href="/tags/最佳逼近/">最佳逼近</a>
                 </div>
             </div>
         </div>
@@ -229,17 +277,10 @@ $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \mid &lt; \delta \
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/08/04/一些令我怦然心动的德语句子/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">一些令我怦然心动的德语句子</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/03/数学分析习题解-连续函数-1/">
-                <span class="level-item">数学分析习题解-连续函数(1)</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/11/洛伦兹变换的数学推导/">
+                <span class="level-item">洛伦兹变换的数学推导</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -258,7 +299,7 @@ $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \mid &lt; \delta \
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 	var gitment = new Gitment({
-		id: '2019/08/04/数学分析习题解-连续函数-2/',
+		id: '2019/08/11/逼近理论简介-Bernstein-多项式/',
 		owner: 'zengfk',
 		repo: 'zengfk_blog_comments',
 		oauth: {
@@ -314,7 +355,7 @@ $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \mid &lt; \delta \
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        45
+                        46
                     </p>
                 </div>
             </div>
@@ -334,7 +375,7 @@ $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \mid &lt; \delta \
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        54
+                        59
                     </p>
                 </div>
             </div>
@@ -377,6 +418,29 @@ $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \mid &lt; \delta \
 </div>
     
         
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#逼近理论缘起">
+        <span class="has-mr-6">1</span>
+        <span>逼近理论缘起</span>
+        </a></li><li>
+        <a class="is-flex" href="#函数逼近理论中常用概念引入">
+        <span class="has-mr-6">2</span>
+        <span>函数逼近理论中常用概念引入</span>
+        </a></li><li>
+        <a class="is-flex" href="#魏尔斯特拉斯-Weierstrass-逼近定理的-Bernstein-证明">
+        <span class="has-mr-6">3</span>
+        <span>魏尔斯特拉斯(Weierstrass)逼近定理的 Bernstein 证明</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
     
         
 
@@ -589,7 +653,7 @@ $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \mid &lt; \delta \
                 <span class="level-item">随笔</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">9</span>
+                <span class="level-item tag">10</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/随笔/数学应用/">
@@ -597,7 +661,7 @@ $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \mid &lt; \delta \
                 <span class="level-item">数学应用</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/随笔/数学轶事/">
@@ -635,7 +699,7 @@ $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \mid &lt; \delta \
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/MY-LIFE/" style="font-size: 14px;">MY LIFE</a> <a href="/tags/MathJax/" style="font-size: 10px;">MathJax</a> <a href="/tags/Notes/" style="font-size: 20px;">Notes</a> <a href="/tags/Star-Trek/" style="font-size: 10px;">Star Trek</a> <a href="/tags/introduction/" style="font-size: 10px;">introduction</a> <a href="/tags/一般拓扑/" style="font-size: 12px;">一般拓扑</a> <a href="/tags/不动点/" style="font-size: 10px;">不动点</a> <a href="/tags/丢番图逼近/" style="font-size: 10px;">丢番图逼近</a> <a href="/tags/个人成长/" style="font-size: 10px;">个人成长</a> <a href="/tags/乘积级数/" style="font-size: 12px;">乘积级数</a> <a href="/tags/习题集/" style="font-size: 18px;">习题集</a> <a href="/tags/介值性/" style="font-size: 10px;">介值性</a> <a href="/tags/军事/" style="font-size: 10px;">军事</a> <a href="/tags/函数极限/" style="font-size: 12px;">函数极限</a> <a href="/tags/华罗庚/" style="font-size: 10px;">华罗庚</a> <a href="/tags/备忘/" style="font-size: 16px;">备忘</a> <a href="/tags/学界新闻/" style="font-size: 10px;">学界新闻</a> <a href="/tags/对数函数/" style="font-size: 10px;">对数函数</a> <a href="/tags/小平邦彦/" style="font-size: 10px;">小平邦彦</a> <a href="/tags/幂函数/" style="font-size: 10px;">幂函数</a> <a href="/tags/建军90周年/" style="font-size: 12px;">建军90周年</a> <a href="/tags/微积分/" style="font-size: 10px;">微积分</a> <a href="/tags/德语/" style="font-size: 10px;">德语</a> <a href="/tags/心理/" style="font-size: 10px;">心理</a> <a href="/tags/惰者集/" style="font-size: 10px;">惰者集</a> <a href="/tags/指数函数/" style="font-size: 10px;">指数函数</a> <a href="/tags/数列/" style="font-size: 10px;">数列</a> <a href="/tags/数列极限/" style="font-size: 14px;">数列极限</a> <a href="/tags/数学分析/" style="font-size: 10px;">数学分析</a> <a href="/tags/数学史/" style="font-size: 12px;">数学史</a> <a href="/tags/数学应用/" style="font-size: 10px;">数学应用</a> <a href="/tags/数项级数/" style="font-size: 12px;">数项级数</a> <a href="/tags/方法论/" style="font-size: 16px;">方法论</a> <a href="/tags/旅行/" style="font-size: 12px;">旅行</a> <a href="/tags/时间管理/" style="font-size: 10px;">时间管理</a> <a href="/tags/有理逼近/" style="font-size: 10px;">有理逼近</a> <a href="/tags/杂感/" style="font-size: 14px;">杂感</a> <a href="/tags/极限/" style="font-size: 10px;">极限</a> <a href="/tags/毅力/" style="font-size: 10px;">毅力</a> <a href="/tags/演讲/" style="font-size: 10px;">演讲</a> <a href="/tags/电视节目/" style="font-size: 10px;">电视节目</a> <a href="/tags/矩阵/" style="font-size: 14px;">矩阵</a> <a href="/tags/絮语微言/" style="font-size: 10px;">絮语微言</a> <a href="/tags/级数/" style="font-size: 10px;">级数</a> <a href="/tags/线性代数/" style="font-size: 14px;">线性代数</a> <a href="/tags/自律/" style="font-size: 10px;">自律</a> <a href="/tags/读史/" style="font-size: 10px;">读史</a> <a href="/tags/趣图/" style="font-size: 10px;">趣图</a> <a href="/tags/连分数/" style="font-size: 10px;">连分数</a> <a href="/tags/连续函数/" style="font-size: 12px;">连续函数</a> <a href="/tags/逻辑学/" style="font-size: 10px;">逻辑学</a> <a href="/tags/重温-新知/" style="font-size: 18px;">重温 & 新知</a> <a href="/tags/间断点/" style="font-size: 10px;">间断点</a> <a href="/tags/黎曼猜想/" style="font-size: 14px;">黎曼猜想</a>
+        <a href="/tags/Bernstein-多项式/" style="font-size: 10px;">Bernstein 多项式</a> <a href="/tags/MY-LIFE/" style="font-size: 13.33px;">MY LIFE</a> <a href="/tags/MathJax/" style="font-size: 10px;">MathJax</a> <a href="/tags/Notes/" style="font-size: 20px;">Notes</a> <a href="/tags/Star-Trek/" style="font-size: 10px;">Star Trek</a> <a href="/tags/introduction/" style="font-size: 10px;">introduction</a> <a href="/tags/一般拓扑/" style="font-size: 11.67px;">一般拓扑</a> <a href="/tags/不动点/" style="font-size: 10px;">不动点</a> <a href="/tags/丢番图逼近/" style="font-size: 10px;">丢番图逼近</a> <a href="/tags/个人成长/" style="font-size: 10px;">个人成长</a> <a href="/tags/乘积级数/" style="font-size: 11.67px;">乘积级数</a> <a href="/tags/习题集/" style="font-size: 16.67px;">习题集</a> <a href="/tags/介值性/" style="font-size: 10px;">介值性</a> <a href="/tags/军事/" style="font-size: 10px;">军事</a> <a href="/tags/函数极限/" style="font-size: 11.67px;">函数极限</a> <a href="/tags/华罗庚/" style="font-size: 10px;">华罗庚</a> <a href="/tags/备忘/" style="font-size: 15px;">备忘</a> <a href="/tags/学界新闻/" style="font-size: 10px;">学界新闻</a> <a href="/tags/对数函数/" style="font-size: 10px;">对数函数</a> <a href="/tags/小平邦彦/" style="font-size: 10px;">小平邦彦</a> <a href="/tags/幂函数/" style="font-size: 10px;">幂函数</a> <a href="/tags/建军90周年/" style="font-size: 11.67px;">建军90周年</a> <a href="/tags/微分学/" style="font-size: 10px;">微分学</a> <a href="/tags/微积分/" style="font-size: 10px;">微积分</a> <a href="/tags/德语/" style="font-size: 10px;">德语</a> <a href="/tags/心理/" style="font-size: 10px;">心理</a> <a href="/tags/惰者集/" style="font-size: 10px;">惰者集</a> <a href="/tags/指数函数/" style="font-size: 10px;">指数函数</a> <a href="/tags/数列/" style="font-size: 10px;">数列</a> <a href="/tags/数列极限/" style="font-size: 13.33px;">数列极限</a> <a href="/tags/数学分析/" style="font-size: 10px;">数学分析</a> <a href="/tags/数学史/" style="font-size: 11.67px;">数学史</a> <a href="/tags/数学应用/" style="font-size: 10px;">数学应用</a> <a href="/tags/数项级数/" style="font-size: 11.67px;">数项级数</a> <a href="/tags/方法论/" style="font-size: 15px;">方法论</a> <a href="/tags/旅行/" style="font-size: 11.67px;">旅行</a> <a href="/tags/时间管理/" style="font-size: 10px;">时间管理</a> <a href="/tags/最佳逼近/" style="font-size: 10px;">最佳逼近</a> <a href="/tags/有理逼近/" style="font-size: 10px;">有理逼近</a> <a href="/tags/杂感/" style="font-size: 13.33px;">杂感</a> <a href="/tags/极限/" style="font-size: 10px;">极限</a> <a href="/tags/毅力/" style="font-size: 10px;">毅力</a> <a href="/tags/洛伦兹变换/" style="font-size: 10px;">洛伦兹变换</a> <a href="/tags/演讲/" style="font-size: 10px;">演讲</a> <a href="/tags/狭义相对论/" style="font-size: 10px;">狭义相对论</a> <a href="/tags/电视节目/" style="font-size: 10px;">电视节目</a> <a href="/tags/矩阵/" style="font-size: 13.33px;">矩阵</a> <a href="/tags/絮语微言/" style="font-size: 10px;">絮语微言</a> <a href="/tags/级数/" style="font-size: 10px;">级数</a> <a href="/tags/线性代数/" style="font-size: 13.33px;">线性代数</a> <a href="/tags/自律/" style="font-size: 10px;">自律</a> <a href="/tags/读史/" style="font-size: 10px;">读史</a> <a href="/tags/趣图/" style="font-size: 10px;">趣图</a> <a href="/tags/连分数/" style="font-size: 10px;">连分数</a> <a href="/tags/连续函数/" style="font-size: 10px;">连续函数</a> <a href="/tags/逻辑学/" style="font-size: 10px;">逻辑学</a> <a href="/tags/重温-新知/" style="font-size: 18.33px;">重温 & 新知</a> <a href="/tags/间断点/" style="font-size: 10px;">间断点</a> <a href="/tags/黎曼猜想/" style="font-size: 13.33px;">黎曼猜想</a>
     </div>
 </div>
 
@@ -652,6 +716,44 @@ $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \mid &lt; \delta \
         
         <article class="media">
             
+            <a href="/2019/08/11/逼近理论简介-Bernstein-多项式/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://i.loli.net/2019/08/13/eIOPLgFVaRZU9f3.jpg" alt="逼近理论简介-Bernstein 多项式">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-11T05:05:17.000Z">2019-08-11</time></div>
+                    <a href="/2019/08/11/逼近理论简介-Bernstein-多项式/" class="has-link-black-ter is-size-6">逼近理论简介-Bernstein 多项式</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/学习笔记/">学习笔记</a> / <a class="has-link-grey -link" href="/categories/学习笔记/分析学-Analysis/">分析学/Analysis</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/11/洛伦兹变换的数学推导/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://i.loli.net/2019/08/11/LZV5ovbgwDykA42.jpg" alt="洛伦兹变换的数学推导">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-11T00:41:07.000Z">2019-08-11</time></div>
+                    <a href="/2019/08/11/洛伦兹变换的数学推导/" class="has-link-black-ter is-size-6">洛伦兹变换的数学推导</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/随笔/">随笔</a> / <a class="has-link-grey -link" href="/categories/随笔/数学应用/">数学应用</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/08/04/一些令我怦然心动的德语句子/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="https://i.loli.net/2019/08/04/Rtn4QWsxM9hHLIz.jpg" alt="一些令我怦然心动的德语句子">
@@ -664,25 +766,6 @@ $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \mid &lt; \delta \
                     <a href="/2019/08/04/一些令我怦然心动的德语句子/" class="has-link-black-ter is-size-6">一些令我怦然心动的德语句子</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/书摘/">书摘</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/04/数学分析习题解-连续函数-2/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="数学分析习题解-连续函数(2)">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-04T10:03:11.000Z">2019-08-04</time></div>
-                    <a href="/2019/08/04/数学分析习题解-连续函数-2/" class="has-link-black-ter is-size-6">数学分析习题解-连续函数(2)</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/学习笔记/">学习笔记</a> / <a class="has-link-grey -link" href="/categories/学习笔记/分析学-Analysis/">分析学/Analysis</a>
                     </p>
                 </div>
             </div>
@@ -726,25 +809,6 @@ $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \mid &lt; \delta \
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/07/31/数学分析习题解-函数极限-1/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://i.loli.net/2019/07/22/5d35a35bd963987309.jpg" alt="数学分析习题解-函数极限(1)">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-07-31T03:12:15.000Z">2019-07-31</time></div>
-                    <a href="/2019/07/31/数学分析习题解-函数极限-1/" class="has-link-black-ter is-size-6">数学分析习题解-函数极限(1)</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/学习笔记/">学习笔记</a> / <a class="has-link-grey -link" href="/categories/学习笔记/分析学-Analysis/">分析学/Analysis</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -763,7 +827,7 @@ $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \mid &lt; \delta \
                     <span class="level-item">八月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -936,6 +1000,13 @@ $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \mid &lt; \delta \
             <div class="field is-grouped is-grouped-multiline">
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/Bernstein-多项式/">
+                        <span class="tag">Bernstein 多项式</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/MY-LIFE/">
                         <span class="tag">MY LIFE</span>
                         <span class="tag is-grey">3</span>
@@ -1008,7 +1079,7 @@ $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \mid &lt; \delta \
                 <div class="control">
                     <a class="tags has-addons" href="/tags/习题集/">
                         <span class="tag">习题集</span>
-                        <span class="tag is-grey">8</span>
+                        <span class="tag is-grey">7</span>
                     </a>
                 </div>
                 
@@ -1079,6 +1150,13 @@ $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \mid &lt; \delta \
                     <a class="tags has-addons" href="/tags/建军90周年/">
                         <span class="tag">建军90周年</span>
                         <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/微分学/">
+                        <span class="tag">微分学</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
@@ -1181,6 +1259,13 @@ $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \mid &lt; \delta \
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/最佳逼近/">
+                        <span class="tag">最佳逼近</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/有理逼近/">
                         <span class="tag">有理逼近</span>
                         <span class="tag is-grey">1</span>
@@ -1209,8 +1294,22 @@ $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \mid &lt; \delta \
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/洛伦兹变换/">
+                        <span class="tag">洛伦兹变换</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/演讲/">
                         <span class="tag">演讲</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/狭义相对论/">
+                        <span class="tag">狭义相对论</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -1281,7 +1380,7 @@ $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \mid &lt; \delta \
                 <div class="control">
                     <a class="tags has-addons" href="/tags/连续函数/">
                         <span class="tag">连续函数</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
@@ -1338,6 +1437,44 @@ $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \mid &lt; \delta \
         
         <article class="media">
             
+            <a href="/2019/08/11/逼近理论简介-Bernstein-多项式/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://i.loli.net/2019/08/13/eIOPLgFVaRZU9f3.jpg" alt="逼近理论简介-Bernstein 多项式">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-11T05:05:17.000Z">2019-08-11</time></div>
+                    <a href="/2019/08/11/逼近理论简介-Bernstein-多项式/" class="has-link-black-ter is-size-6">逼近理论简介-Bernstein 多项式</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/学习笔记/">学习笔记</a> / <a class="has-link-grey -link" href="/categories/学习笔记/分析学-Analysis/">分析学/Analysis</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/11/洛伦兹变换的数学推导/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://i.loli.net/2019/08/11/LZV5ovbgwDykA42.jpg" alt="洛伦兹变换的数学推导">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-11T00:41:07.000Z">2019-08-11</time></div>
+                    <a href="/2019/08/11/洛伦兹变换的数学推导/" class="has-link-black-ter is-size-6">洛伦兹变换的数学推导</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/随笔/">随笔</a> / <a class="has-link-grey -link" href="/categories/随笔/数学应用/">数学应用</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/08/04/一些令我怦然心动的德语句子/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="https://i.loli.net/2019/08/04/Rtn4QWsxM9hHLIz.jpg" alt="一些令我怦然心动的德语句子">
@@ -1350,25 +1487,6 @@ $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \mid &lt; \delta \
                     <a href="/2019/08/04/一些令我怦然心动的德语句子/" class="has-link-black-ter is-size-6">一些令我怦然心动的德语句子</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/书摘/">书摘</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/04/数学分析习题解-连续函数-2/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="数学分析习题解-连续函数(2)">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-04T10:03:11.000Z">2019-08-04</time></div>
-                    <a href="/2019/08/04/数学分析习题解-连续函数-2/" class="has-link-black-ter is-size-6">数学分析习题解-连续函数(2)</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/学习笔记/">学习笔记</a> / <a class="has-link-grey -link" href="/categories/学习笔记/分析学-Analysis/">分析学/Analysis</a>
                     </p>
                 </div>
             </div>
@@ -1412,25 +1530,6 @@ $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \mid &lt; \delta \
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/07/31/数学分析习题解-函数极限-1/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://i.loli.net/2019/07/22/5d35a35bd963987309.jpg" alt="数学分析习题解-函数极限(1)">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-07-31T03:12:15.000Z">2019-07-31</time></div>
-                    <a href="/2019/07/31/数学分析习题解-函数极限-1/" class="has-link-black-ter is-size-6">数学分析习题解-函数极限(1)</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/学习笔记/">学习笔记</a> / <a class="has-link-grey -link" href="/categories/学习笔记/分析学-Analysis/">分析学/Analysis</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1449,7 +1548,7 @@ $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \mid &lt; \delta \
                     <span class="level-item">八月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -1622,6 +1721,13 @@ $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \mid &lt; \delta \
             <div class="field is-grouped is-grouped-multiline">
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/Bernstein-多项式/">
+                        <span class="tag">Bernstein 多项式</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/MY-LIFE/">
                         <span class="tag">MY LIFE</span>
                         <span class="tag is-grey">3</span>
@@ -1694,7 +1800,7 @@ $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \mid &lt; \delta \
                 <div class="control">
                     <a class="tags has-addons" href="/tags/习题集/">
                         <span class="tag">习题集</span>
-                        <span class="tag is-grey">8</span>
+                        <span class="tag is-grey">7</span>
                     </a>
                 </div>
                 
@@ -1765,6 +1871,13 @@ $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \mid &lt; \delta \
                     <a class="tags has-addons" href="/tags/建军90周年/">
                         <span class="tag">建军90周年</span>
                         <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/微分学/">
+                        <span class="tag">微分学</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
@@ -1867,6 +1980,13 @@ $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \mid &lt; \delta \
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/最佳逼近/">
+                        <span class="tag">最佳逼近</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/有理逼近/">
                         <span class="tag">有理逼近</span>
                         <span class="tag is-grey">1</span>
@@ -1895,8 +2015,22 @@ $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \mid &lt; \delta \
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/洛伦兹变换/">
+                        <span class="tag">洛伦兹变换</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/演讲/">
                         <span class="tag">演讲</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/狭义相对论/">
+                        <span class="tag">狭义相对论</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -1967,7 +2101,7 @@ $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \mid &lt; \delta \
                 <div class="control">
                     <a class="tags has-addons" href="/tags/连续函数/">
                         <span class="tag">连续函数</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
@@ -2016,7 +2150,7 @@ $$\omega(\delta) = \sup_{\small{\begin{array}{c} \mid x_1-x_2 \mid &lt; \delta \
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo2.png" alt="数学分析习题解-连续函数(2)" height="28">
+                    <img src="/images/logo2.png" alt="逼近理论简介-Bernstein 多项式" height="28">
                 
                 </a>
                 <p class="is-size-7">
