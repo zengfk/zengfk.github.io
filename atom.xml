@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zengfk.com.cn/"/>
-  <updated>2019-09-02T09:11:25.172Z</updated>
+  <updated>2019-09-26T04:32:45.562Z</updated>
   <id>https://zengfk.com.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>絮语微言集-8、9月</title>
+    <link href="https://zengfk.com.cn/2019/09/26/%E7%B5%AE%E8%AF%AD%E5%BE%AE%E8%A8%80%E9%9B%86-8%E3%80%819%E6%9C%88/"/>
+    <id>https://zengfk.com.cn/2019/09/26/絮语微言集-8、9月/</id>
+    <published>2019-09-26T03:28:47.000Z</published>
+    <updated>2019-09-26T04:32:45.562Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;Aug-1st&quot;&gt;&lt;a href=&quot;#Aug-1st&quot; class=&quot;headerlink&quot; title=&quot;Aug 1st&quot;&gt;&lt;/a&gt;Aug 1st&lt;/h4&gt;&lt;p&gt;今天“八·一”, 致敬中国军人.&lt;/p&gt;
+&lt;p&gt;不过我在想的还有另外一件老生常谈的事, 叫做 &lt;strong&gt;“刻奇”&lt;/strong&gt;. 八一大家都在致敬军人, 军人也为自己的奉献而感到自豪与荣光, 里面有多少是发自内心的真情实感, 又有多少是”为自豪而自豪”, “为感动而感动”的刻奇呢? 我的圈子里军人不少, 谈起军队, 有人骄傲, 有人抱怨, 有人无奈, 有人也一直豪情澎湃. 是自己熟知的好友, 有多少真性情, 多少还是能够感受的到. 真心对日复一日的军事训练, 对军事武器, 对战争喜欢并投入的几位, 我时常会恍惚间在他们身上看到一点人性之光——没有多伟大, 就是一种诚挚的情感带来的感动.&lt;/p&gt;
+&lt;p&gt;说回自己学数学, 突然反思起自己大学以来对于这门学科的感情究竟是否真的那么真挚? 毕竟太多的人听说你是学数学的, 都常常感叹一句:”聪明人啊!”,”好厉害啊!”, “大神啊!” etc. &lt;/p&gt;
+&lt;p&gt;还好还好, 来自”外行人”的”吹捧”带来的虚无的快感在我学习数学的过程中占比极少, 我大概还能够不太心虚的说: &lt;strong&gt;我是一个对数学有真挚热爱的人&lt;/strong&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://zengfk.com.cn/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="生活" scheme="https://zengfk.com.cn/categories/%E9%9A%8F%E7%AC%94/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="絮语微言" scheme="https://zengfk.com.cn/tags/%E7%B5%AE%E8%AF%AD%E5%BE%AE%E8%A8%80/"/>
+    
+  </entry>
   
   <entry>
     <title>数交点, 估长度?</title>
@@ -298,42 +323,6 @@
       <category term="习题集" scheme="https://zengfk.com.cn/tags/%E4%B9%A0%E9%A2%98%E9%9B%86/"/>
     
       <category term="数列极限" scheme="https://zengfk.com.cn/tags/%E6%95%B0%E5%88%97%E6%9E%81%E9%99%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数学分析习题解-序列极限(2):连分数</title>
-    <link href="https://zengfk.com.cn/2019/07/24/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E4%B9%A0%E9%A2%98%E8%A7%A3-%E5%BA%8F%E5%88%97%E6%9E%81%E9%99%90-2-%E8%BF%9E%E5%88%86%E6%95%B0/"/>
-    <id>https://zengfk.com.cn/2019/07/24/数学分析习题解-序列极限-2-连分数/</id>
-    <published>2019-07-24T08:21:18.000Z</published>
-    <updated>2019-07-24T10:30:36.516Z</updated>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;【习题来源】数学分析：第七版.（俄罗斯）卓里奇著；李植译. 北京：高等教育出版社，2019.2&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;ol start=&quot;4&quot;&gt;
-&lt;li&gt;表达式 $$n_1 + \frac{1}{n_2 + \frac{1}{\begin{matrix} n_3 + \ddots &amp;amp; \\ &amp;amp; \frac{1}{n_{k-1}+\frac{1}{n_k}}\end{matrix}}},$$其中 $n_i\in\mathbb{N}$, 称为&lt;strong&gt;链式分数&lt;/strong&gt;或有限&lt;strong&gt;连分数&lt;/strong&gt;, 而表达式 $$n_1 + \frac{1}{n_2 + \frac{1}{n_3 + \ddots}}$$称为无穷连分数. 在一个连分数中去掉某个链开始的所有分数, 所得分数称为这个连分数的&lt;strong&gt;渐进分数&lt;/strong&gt;. 无穷连分数的渐进分数序列极限是该无穷连分数的值.&lt;br&gt;关于连分数的基本性质, 参考 &lt;a href=&quot;https://www.encyclopediaofmath.org/index.php/Continued_fraction&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Continued Fraction&lt;/a&gt;.
-请证明:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="学习笔记" scheme="https://zengfk.com.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="分析学/Analysis" scheme="https://zengfk.com.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%88%86%E6%9E%90%E5%AD%A6-Analysis/"/>
-    
-    
-      <category term="习题集" scheme="https://zengfk.com.cn/tags/%E4%B9%A0%E9%A2%98%E9%9B%86/"/>
-    
-      <category term="数列极限" scheme="https://zengfk.com.cn/tags/%E6%95%B0%E5%88%97%E6%9E%81%E9%99%90/"/>
-    
-      <category term="丢番图逼近" scheme="https://zengfk.com.cn/tags/%E4%B8%A2%E7%95%AA%E5%9B%BE%E9%80%BC%E8%BF%91/"/>
-    
-      <category term="连分数" scheme="https://zengfk.com.cn/tags/%E8%BF%9E%E5%88%86%E6%95%B0/"/>
     
   </entry>
   
