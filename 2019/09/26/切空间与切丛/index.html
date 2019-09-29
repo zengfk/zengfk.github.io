@@ -1,0 +1,2436 @@
+<!DOCTYPE html>
+<html  lang="zh">
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 3.9.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>切空间与切丛 - 虎头微分同学的Blog</title>
+
+
+    <meta name="description" content="本文旨在以简单直观的方式介绍切空间与切丛的概念, 为之后的一系列准备发布的内容做知识上的准备.  在此, 有必要先辨析两个概念:”向量空间”, “流形”.">
+<meta name="keywords" content="微分学,流形,切空间">
+<meta property="og:type" content="article">
+<meta property="og:title" content="切空间与切丛">
+<meta property="og:url" content="https://zengfk.com.cn/2019/09/26/切空间与切丛/index.html">
+<meta property="og:site_name" content="虎头微分同学的Blog">
+<meta property="og:description" content="本文旨在以简单直观的方式介绍切空间与切丛的概念, 为之后的一系列准备发布的内容做知识上的准备.  在此, 有必要先辨析两个概念:”向量空间”, “流形”.">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://zengfk.com.cn/images/og_image.png">
+<meta property="og:updated_time" content="2019-09-29T09:04:31.690Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="切空间与切丛">
+<meta name="twitter:description" content="本文旨在以简单直观的方式介绍切空间与切丛的概念, 为之后的一系列准备发布的内容做知识上的准备.  在此, 有必要先辨析两个概念:”向量空间”, “流形”.">
+<meta name="twitter:image" content="https://zengfk.com.cn/images/og_image.png">
+
+
+
+
+
+<link rel="alternative" href="/atom.xml" title="切空间与切丛" type="application/atom+xml">
+
+
+
+<link rel="icon" href="https://i.loli.net/2019/06/18/5d089072456dd44636.png">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142390469-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-142390469-1');
+</script>
+
+
+    
+    
+<script>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?b303d7ab99349393fcb3ed0f719d28ef";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+        <script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+
+<link rel="stylesheet" href="/css/style.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+<body class="is-3-column">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo2.png" alt="切空间与切丛" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">Home</a>
+                
+                <a class="navbar-item"
+                href="/archives">归档/Archives</a>
+                
+                <a class="navbar-item"
+                href="/categories">文章分类/Categories</a>
+                
+                <a class="navbar-item"
+                href="/about">关于/About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="搜索" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-09-26T05:44:10.000Z">2019-09-26</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/学习笔记/">学习笔记</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/学习笔记/分析学-Analysis/">分析学/Analysis</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    8 分钟 读完 (大约 1179 个字)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span>次访问
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                切空间与切丛
+            
+        </h1>
+        <div class="content">
+            <blockquote>
+<p>本文旨在以简单直观的方式介绍<strong>切空间</strong>与<strong>切丛</strong>的概念, 为之后的一系列准备发布的内容做知识上的准备.</p>
+</blockquote>
+<p>在此, 有必要先辨析两个概念:”向量空间”, “流形”.</p>
+<a id="more"></a>
+
+<h3 id="“向量空间”-“流形”之概念"><a href="#“向量空间”-“流形”之概念" class="headerlink" title="“向量空间”, “流形”之概念"></a>“向量空间”, “流形”之概念</h3><p><strong>向量空间</strong>, 顾名思义, 以向量为元素构成的线性空间. 通常用列向量<br>$$\overrightarrow{v} = \begin{pmatrix}<br>x_1\\<br>x_2\\<br>\vdots\\<br>x_n<br>\end{pmatrix}$$<br>来表示 $n$ 维向量空间中的元素 $\overrightarrow{v}$.</p>
+<p>而<strong>流形</strong>, 是满足特定性质一个点集, 不严格的, 我们可以简单的说: “<strong>流形是局部欧几里得化的</strong>(或者说<strong>正则的</strong>)<strong>空间</strong>“, 直观来看, 当我我们放大观察一个 $n$ 维流形的局部区域, 这个局部足够”平坦”, 以至于近似的可以视为欧几里得空间 $\mathbb{R}^n$. 显然, 其元素是一个个点<br>$$x:=(x_1, x_2, \cdots x_n).$$</p>
+<p>这两个概念有时容易混淆, 比如 $\mathbb{R}^n$, 这是 $n$ 维欧氏空间的符号, 可以代表 $n$ 维向量空间, 本身也是一个 $n$ 维流形. 具体写法上, 给定坐标系后都可以写出 $n$ 个分量, 但是, 必须明确, 我们谈到”向量空间 $\mathbb{R}^n$ “时, 每个元素是由给定的坐标原点出发到终点为相应坐标的向量, 而谈到”流形 $\mathbb{R}^n$ “时, 其每个元素是点.<br><img src="https://i.loli.net/2019/09/29/gT21lN7iPMFH3Qr.jpg" alt="左边是向量空间 $\mathbb{R}^3$, 右边是流形 $\mathbb{R}^3$"></p>
+<p>搞清楚我们是在哪里做运算, 这是在理解问题上是很重要的.</p>
+<h3 id="切空间-Tangent-Space"><a href="#切空间-Tangent-Space" class="headerlink" title="切空间 (Tangent Space)"></a>切空间 (Tangent Space)</h3><p>先直观的感受一下. </p>
+<ul>
+<li>平面上的给出一条光滑曲线, 对于其上的给定的一个点 $p$ 可以给出相应的曲线的切线. 由点 $p$ 出发终点位于这条切线上的向量, 自然称为曲线在这一点处的切向量. <br>显然, <u>曲线在点 $p$ 处的全部切向量构成一个向量空间 $\mathbb{R}$</u>.</li>
+</ul>
+<p><img src="https://i.loli.net/2019/09/29/lM43Co5aJSiHTpr.jpg" alt="曲线在一点处的切线以及其上的切向量"></p>
+<ul>
+<li>球面 $S^2$ 是一个 2 维流形, 对于其上的给定的一个点可以给出相应的切平面, 由该点出发终点位于这个切平面上的向量, 也可以称为切向量. 显然, <u>球面在该点处的全部切向量构成一个向量空间 $\mathbb{R}^2$, 每个切向量也对应着球面上一个大圆, 是相应的大圆在这一点处的切向量.</u></li>
+</ul>
+<p><img src="https://i.loli.net/2019/09/29/ka8uLnEhgrpNIRU.jpg" alt="球面在一点处的切平面以及其上的切向量"></p>
+<p>其实以上切向量构成的向量空间, 均为切空间的例子. 下面给出严格的定义:</p>
+<blockquote>
+<p>【定义】光滑流形 $M$ 在一点 $p$ 处的<strong>切空间</strong>, 是由 $M$ 上所有通过点 $p$ 的曲线在 $p$ 处的切向量所构成的空间. 用符号 $TM_{p}$ 或 $T_p M$ 表示.</p>
+</blockquote>
+<p>注意到, <strong>在光滑流形的每一点处都有相应的切空间</strong>. 
+<img src="https://i.loli.net/2019/09/29/6MXbnjEWeLOfG3v.jpg" alt="在光滑流形的每一点处都有相应的切空间"></p>
+<h3 id="切丛-tangent-bundle"><a href="#切丛-tangent-bundle" class="headerlink" title="切丛 (tangent bundle)"></a>切丛 (tangent bundle)</h3><p>直观的说, 对于流形 $M$, 沿着其上每一点构成的切空间, 称之为<strong>流形 $M$ 的切丛</strong>, 一般用符号 $TM$ 表示. 事实上, 流形 $M$ 的切丛也构成一个流形.</p>
+<p>可以这样去想象, 用水平坐标轴表示流形 $M$, 其上每一点处的切空间用过这一点的垂线表示, 而所得到的这个平面便可以表示切丛 $TM$.<br><img src="https://i.loli.net/2019/09/29/oSCnQDN63UHskpZ.jpg" alt="$M$ 的切丛"></p>
+<p>关于切丛, 容易看到以下性质:</p>
+<blockquote>
+<p>$n$ 维流形 $M$ 的切丛 $TM$ 是 $2n$ 维的.</p>
+</blockquote>
+<p>可以这样理解这件事: 为了给出切丛上的一个”点”, 首先需要 $n$ 个坐标描述 $M$ 上的一个点 $p$, 然后需要 $n$ 个由 $p$ 出发的基向量来描述这一点处的切空间, 合起来, 也就是需要 $2n$ 个”分量”. </p>
+<p>另外, 我们可以在流形上给定向量场 (Vector Field), 即在每个点处给定一个向量. 学过微分方程应该知道, 连续的向量场给出一系列曲线, 向量场中的每个向量都是这些曲线中某一条的切向量. 这些曲线称之为<strong>积分曲线</strong>. </p>
+<p>同时注意到, 向量场中每个向量都属于某个切空间, 所以整个向量场相当于在切从上”切了一刀”, 称之为<strong>切丛截面</strong>.
+<img src="https://i.loli.net/2019/09/29/vtxsPEFioCTqVmU.jpg" alt="一个切丛截面"></p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/切空间/">切空间</a>, <a class="has-link-grey -link" href="/tags/微分学/">微分学</a>, <a class="has-link-grey -link" href="/tags/流形/">流形</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/09/26/絮语微言集-8、9月/">
+                <span class="level-item">絮语微言集-8、9月</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="comment-container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+	var gitment = new Gitment({
+		id: 'ad2b026ce9def925339a37927df79143',
+		owner: 'zengfk',
+		repo: 'zengfk_blog_comments',
+		oauth: {
+			client_id: '228f6956af65a79a4942',
+			client_secret: '5e6f3003152a1f709abcf0effc2955cf0c6c0e12',
+		},
+	})
+	gitment.render('comment-container')
+</script>
+
+    </div>
+</div>
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                    <figure class="image is-128x128 has-mb-6">
+                        <img class="" src="https://i.loli.net/2019/06/18/5d0888aba934142318.png" alt="虎头微分同学">
+                    </figure>
+                    
+                    <p class="is-size-4 is-block">
+                        虎头微分同学
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        到中流击水
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>Beijing, China</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        文章
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        49
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        分类
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        22
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        标签
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        64
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/zengfk" target="_blank">
+                关注我</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Github" href="https://github.com/zengfk">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Zhihu" href="https://www.zhihu.com/people/alexa_3.1415">
+                
+                <i class="fab fa-zhihu"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Weibo" href="https://weibo.com/kensongguo">
+                
+                <i class="fab fa-weibo"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="RSS" href="/atom.xml">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#“向量空间”-“流形”之概念">
+        <span class="has-mr-6">1</span>
+        <span>“向量空间”, “流形”之概念</span>
+        </a></li><li>
+        <a class="is-flex" href="#切空间-Tangent-Space">
+        <span class="has-mr-6">2</span>
+        <span>切空间 (Tangent Space)</span>
+        </a></li><li>
+        <a class="is-flex" href="#切丛-tangent-bundle">
+        <span class="has-mr-6">3</span>
+        <span>切丛 (tangent bundle)</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
+    
+        
+
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            链接
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="http://www.sciencenet.cn/" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">科学网</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">www.sciencenet.cn</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="http://www.paper.edu.cn/" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">中国科技论文在线</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">www.paper.edu.cn</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://arxiv.org/" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">ArXiv.org</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">arxiv.org</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="http://www.googleartproject.com/" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">谷歌美术馆</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">www.googleartproject.com</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                分类
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/书摘/">
+            <span class="level-start">
+                <span class="level-item">书摘</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">13</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/书摘/Sci-fi/">
+            <span class="level-start">
+                <span class="level-item">Sci-fi</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/书摘/历史/">
+            <span class="level-start">
+                <span class="level-item">历史</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/书摘/心理学/">
+            <span class="level-start">
+                <span class="level-item">心理学</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/书摘/数学与数学家/">
+            <span class="level-start">
+                <span class="level-item">数学与数学家</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">5</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/书摘/杂录/">
+            <span class="level-start">
+                <span class="level-item">杂录</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/书摘/演讲/">
+            <span class="level-start">
+                <span class="level-item">演讲</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/书摘/生活/">
+            <span class="level-start">
+                <span class="level-item">生活</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/学习笔记/">
+            <span class="level-start">
+                <span class="level-item">学习笔记</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">21</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/学习笔记/代数学-Algebra/">
+            <span class="level-start">
+                <span class="level-item">代数学/Algebra</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">4</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/学习笔记/分析学-Analysis/">
+            <span class="level-start">
+                <span class="level-item">分析学/Analysis</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">14</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/学习笔记/备忘/">
+            <span class="level-start">
+                <span class="level-item">备忘</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/学习笔记/逻辑学/">
+            <span class="level-start">
+                <span class="level-item">逻辑学</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/编程/">
+            <span class="level-start">
+                <span class="level-item">编程</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/编程/JavaScript/">
+            <span class="level-start">
+                <span class="level-item">JavaScript</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/编程/Mathematica/">
+            <span class="level-start">
+                <span class="level-item">Mathematica</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/编程/Tips/">
+            <span class="level-start">
+                <span class="level-item">Tips</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/随笔/">
+            <span class="level-start">
+                <span class="level-item">随笔</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">12</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/随笔/数学应用/">
+            <span class="level-start">
+                <span class="level-item">数学应用</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/随笔/数学轶事/">
+            <span class="level-start">
+                <span class="level-item">数学轶事</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/随笔/生活/">
+            <span class="level-start">
+                <span class="level-item">生活</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">4</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/随笔/相册/">
+            <span class="level-start">
+                <span class="level-item">相册</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li></ul></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            标签云
+        </h3>
+        <a href="/tags/Bernstein-多项式/" style="font-size: 10px;">Bernstein 多项式</a> <a href="/tags/Cauchy-Crofton-公式/" style="font-size: 10px;">Cauchy-Crofton 公式</a> <a href="/tags/MY-LIFE/" style="font-size: 13.33px;">MY LIFE</a> <a href="/tags/MathJax/" style="font-size: 10px;">MathJax</a> <a href="/tags/Notes/" style="font-size: 20px;">Notes</a> <a href="/tags/Star-Trek/" style="font-size: 10px;">Star Trek</a> <a href="/tags/introduction/" style="font-size: 10px;">introduction</a> <a href="/tags/一般拓扑/" style="font-size: 11.67px;">一般拓扑</a> <a href="/tags/不动点/" style="font-size: 10px;">不动点</a> <a href="/tags/丢番图逼近/" style="font-size: 10px;">丢番图逼近</a> <a href="/tags/个人成长/" style="font-size: 10px;">个人成长</a> <a href="/tags/乘积级数/" style="font-size: 11.67px;">乘积级数</a> <a href="/tags/习题集/" style="font-size: 16.67px;">习题集</a> <a href="/tags/介值性/" style="font-size: 10px;">介值性</a> <a href="/tags/军事/" style="font-size: 10px;">军事</a> <a href="/tags/函数极限/" style="font-size: 11.67px;">函数极限</a> <a href="/tags/切空间/" style="font-size: 10px;">切空间</a> <a href="/tags/华罗庚/" style="font-size: 10px;">华罗庚</a> <a href="/tags/可求长曲线/" style="font-size: 10px;">可求长曲线</a> <a href="/tags/备忘/" style="font-size: 15px;">备忘</a> <a href="/tags/学界新闻/" style="font-size: 10px;">学界新闻</a> <a href="/tags/对数函数/" style="font-size: 10px;">对数函数</a> <a href="/tags/小平邦彦/" style="font-size: 10px;">小平邦彦</a> <a href="/tags/幂函数/" style="font-size: 10px;">幂函数</a> <a href="/tags/建军90周年/" style="font-size: 11.67px;">建军90周年</a> <a href="/tags/微分几何/" style="font-size: 10px;">微分几何</a> <a href="/tags/微分学/" style="font-size: 11.67px;">微分学</a> <a href="/tags/微积分/" style="font-size: 10px;">微积分</a> <a href="/tags/德语/" style="font-size: 10px;">德语</a> <a href="/tags/心理/" style="font-size: 10px;">心理</a> <a href="/tags/惰者集/" style="font-size: 10px;">惰者集</a> <a href="/tags/指数函数/" style="font-size: 10px;">指数函数</a> <a href="/tags/数列/" style="font-size: 10px;">数列</a> <a href="/tags/数列极限/" style="font-size: 13.33px;">数列极限</a> <a href="/tags/数学分析/" style="font-size: 10px;">数学分析</a> <a href="/tags/数学史/" style="font-size: 11.67px;">数学史</a> <a href="/tags/数学应用/" style="font-size: 10px;">数学应用</a> <a href="/tags/数项级数/" style="font-size: 11.67px;">数项级数</a> <a href="/tags/方法论/" style="font-size: 15px;">方法论</a> <a href="/tags/旅行/" style="font-size: 11.67px;">旅行</a> <a href="/tags/时间管理/" style="font-size: 10px;">时间管理</a> <a href="/tags/最佳逼近/" style="font-size: 10px;">最佳逼近</a> <a href="/tags/有理逼近/" style="font-size: 10px;">有理逼近</a> <a href="/tags/杂感/" style="font-size: 13.33px;">杂感</a> <a href="/tags/极限/" style="font-size: 10px;">极限</a> <a href="/tags/毅力/" style="font-size: 10px;">毅力</a> <a href="/tags/洛伦兹变换/" style="font-size: 10px;">洛伦兹变换</a> <a href="/tags/流形/" style="font-size: 10px;">流形</a> <a href="/tags/演讲/" style="font-size: 10px;">演讲</a> <a href="/tags/狭义相对论/" style="font-size: 10px;">狭义相对论</a> <a href="/tags/电视节目/" style="font-size: 10px;">电视节目</a> <a href="/tags/矩阵/" style="font-size: 13.33px;">矩阵</a> <a href="/tags/絮语微言/" style="font-size: 11.67px;">絮语微言</a> <a href="/tags/级数/" style="font-size: 10px;">级数</a> <a href="/tags/线性代数/" style="font-size: 13.33px;">线性代数</a> <a href="/tags/自律/" style="font-size: 10px;">自律</a> <a href="/tags/读史/" style="font-size: 10px;">读史</a> <a href="/tags/趣图/" style="font-size: 10px;">趣图</a> <a href="/tags/连分数/" style="font-size: 10px;">连分数</a> <a href="/tags/连续函数/" style="font-size: 10px;">连续函数</a> <a href="/tags/逻辑学/" style="font-size: 10px;">逻辑学</a> <a href="/tags/重温-新知/" style="font-size: 18.33px;">重温 & 新知</a> <a href="/tags/间断点/" style="font-size: 10px;">间断点</a> <a href="/tags/黎曼猜想/" style="font-size: 13.33px;">黎曼猜想</a>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/09/26/切空间与切丛/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="切空间与切丛">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-26T05:44:10.000Z">2019-09-26</time></div>
+                    <a href="/2019/09/26/切空间与切丛/" class="title has-link-black-ter is-size-6 has-text-weight-normal">切空间与切丛</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/学习笔记/">学习笔记</a> / <a class="has-link-grey -link" href="/categories/学习笔记/分析学-Analysis/">分析学/Analysis</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/09/26/絮语微言集-8、9月/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/../../../images/xywy.png" alt="絮语微言集-8、9月">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-26T03:28:47.000Z">2019-09-26</time></div>
+                    <a href="/2019/09/26/絮语微言集-8、9月/" class="title has-link-black-ter is-size-6 has-text-weight-normal">絮语微言集-8、9月</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/随笔/">随笔</a> / <a class="has-link-grey -link" href="/categories/随笔/生活/">生活</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/09/02/数交点-估长度/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://i.loli.net/2019/09/02/lYuAeOE4hNxjvoT.jpg" alt="数交点, 估长度?">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-02T04:10:15.000Z">2019-09-02</time></div>
+                    <a href="/2019/09/02/数交点-估长度/" class="title has-link-black-ter is-size-6 has-text-weight-normal">数交点, 估长度?</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/随笔/">随笔</a> / <a class="has-link-grey -link" href="/categories/随笔/数学应用/">数学应用</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/11/逼近理论简介-Bernstein-多项式/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://i.loli.net/2019/08/13/eIOPLgFVaRZU9f3.jpg" alt="逼近理论简介-Bernstein 多项式">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-11T05:05:17.000Z">2019-08-11</time></div>
+                    <a href="/2019/08/11/逼近理论简介-Bernstein-多项式/" class="title has-link-black-ter is-size-6 has-text-weight-normal">逼近理论简介-Bernstein 多项式</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/学习笔记/">学习笔记</a> / <a class="has-link-grey -link" href="/categories/学习笔记/分析学-Analysis/">分析学/Analysis</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/11/洛伦兹变换的数学推导/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://i.loli.net/2019/08/11/LZV5ovbgwDykA42.jpg" alt="洛伦兹变换的数学推导">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-11T00:41:07.000Z">2019-08-11</time></div>
+                    <a href="/2019/08/11/洛伦兹变换的数学推导/" class="title has-link-black-ter is-size-6 has-text-weight-normal">洛伦兹变换的数学推导</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/随笔/">随笔</a> / <a class="has-link-grey -link" href="/categories/随笔/数学应用/">数学应用</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/09/">
+                <span class="level-start">
+                    <span class="level-item">九月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/08/">
+                <span class="level-start">
+                    <span class="level-item">八月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">5</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/07/">
+                <span class="level-start">
+                    <span class="level-item">七月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">5</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">六月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/11/">
+                <span class="level-start">
+                    <span class="level-item">十一月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/10/">
+                <span class="level-start">
+                    <span class="level-item">十月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/09/">
+                <span class="level-start">
+                    <span class="level-item">九月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/06/">
+                <span class="level-start">
+                    <span class="level-item">六月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/05/">
+                <span class="level-start">
+                    <span class="level-item">五月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/09/">
+                <span class="level-start">
+                    <span class="level-item">九月 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/08/">
+                <span class="level-start">
+                    <span class="level-item">八月 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/07/">
+                <span class="level-start">
+                    <span class="level-item">七月 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">9</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/06/">
+                <span class="level-start">
+                    <span class="level-item">六月 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">5</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Bernstein-多项式/">
+                        <span class="tag">Bernstein 多项式</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Cauchy-Crofton-公式/">
+                        <span class="tag">Cauchy-Crofton 公式</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/MY-LIFE/">
+                        <span class="tag">MY LIFE</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/MathJax/">
+                        <span class="tag">MathJax</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Notes/">
+                        <span class="tag">Notes</span>
+                        <span class="tag is-grey">17</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Star-Trek/">
+                        <span class="tag">Star Trek</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/introduction/">
+                        <span class="tag">introduction</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/一般拓扑/">
+                        <span class="tag">一般拓扑</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/不动点/">
+                        <span class="tag">不动点</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/丢番图逼近/">
+                        <span class="tag">丢番图逼近</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/个人成长/">
+                        <span class="tag">个人成长</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/乘积级数/">
+                        <span class="tag">乘积级数</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/习题集/">
+                        <span class="tag">习题集</span>
+                        <span class="tag is-grey">7</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/介值性/">
+                        <span class="tag">介值性</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/军事/">
+                        <span class="tag">军事</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/函数极限/">
+                        <span class="tag">函数极限</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/切空间/">
+                        <span class="tag">切空间</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/华罗庚/">
+                        <span class="tag">华罗庚</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/可求长曲线/">
+                        <span class="tag">可求长曲线</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/备忘/">
+                        <span class="tag">备忘</span>
+                        <span class="tag is-grey">4</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/学界新闻/">
+                        <span class="tag">学界新闻</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/对数函数/">
+                        <span class="tag">对数函数</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/小平邦彦/">
+                        <span class="tag">小平邦彦</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/幂函数/">
+                        <span class="tag">幂函数</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/建军90周年/">
+                        <span class="tag">建军90周年</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/微分几何/">
+                        <span class="tag">微分几何</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/微分学/">
+                        <span class="tag">微分学</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/微积分/">
+                        <span class="tag">微积分</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/德语/">
+                        <span class="tag">德语</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/心理/">
+                        <span class="tag">心理</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/惰者集/">
+                        <span class="tag">惰者集</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/指数函数/">
+                        <span class="tag">指数函数</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/数列/">
+                        <span class="tag">数列</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/数列极限/">
+                        <span class="tag">数列极限</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/数学分析/">
+                        <span class="tag">数学分析</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/数学史/">
+                        <span class="tag">数学史</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/数学应用/">
+                        <span class="tag">数学应用</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/数项级数/">
+                        <span class="tag">数项级数</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/方法论/">
+                        <span class="tag">方法论</span>
+                        <span class="tag is-grey">4</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/旅行/">
+                        <span class="tag">旅行</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/时间管理/">
+                        <span class="tag">时间管理</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/最佳逼近/">
+                        <span class="tag">最佳逼近</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/有理逼近/">
+                        <span class="tag">有理逼近</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/杂感/">
+                        <span class="tag">杂感</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/极限/">
+                        <span class="tag">极限</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/毅力/">
+                        <span class="tag">毅力</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/洛伦兹变换/">
+                        <span class="tag">洛伦兹变换</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/流形/">
+                        <span class="tag">流形</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/演讲/">
+                        <span class="tag">演讲</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/狭义相对论/">
+                        <span class="tag">狭义相对论</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/电视节目/">
+                        <span class="tag">电视节目</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/矩阵/">
+                        <span class="tag">矩阵</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/絮语微言/">
+                        <span class="tag">絮语微言</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/级数/">
+                        <span class="tag">级数</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/线性代数/">
+                        <span class="tag">线性代数</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/自律/">
+                        <span class="tag">自律</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/读史/">
+                        <span class="tag">读史</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/趣图/">
+                        <span class="tag">趣图</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/连分数/">
+                        <span class="tag">连分数</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/连续函数/">
+                        <span class="tag">连续函数</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/逻辑学/">
+                        <span class="tag">逻辑学</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/重温-新知/">
+                        <span class="tag">重温 &amp; 新知</span>
+                        <span class="tag is-grey">8</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/间断点/">
+                        <span class="tag">间断点</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/黎曼猜想/">
+                        <span class="tag">黎曼猜想</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/09/26/切空间与切丛/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="切空间与切丛">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-26T05:44:10.000Z">2019-09-26</time></div>
+                    <a href="/2019/09/26/切空间与切丛/" class="title has-link-black-ter is-size-6 has-text-weight-normal">切空间与切丛</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/学习笔记/">学习笔记</a> / <a class="has-link-grey -link" href="/categories/学习笔记/分析学-Analysis/">分析学/Analysis</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/09/26/絮语微言集-8、9月/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/../../../images/xywy.png" alt="絮语微言集-8、9月">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-26T03:28:47.000Z">2019-09-26</time></div>
+                    <a href="/2019/09/26/絮语微言集-8、9月/" class="title has-link-black-ter is-size-6 has-text-weight-normal">絮语微言集-8、9月</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/随笔/">随笔</a> / <a class="has-link-grey -link" href="/categories/随笔/生活/">生活</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/09/02/数交点-估长度/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://i.loli.net/2019/09/02/lYuAeOE4hNxjvoT.jpg" alt="数交点, 估长度?">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-02T04:10:15.000Z">2019-09-02</time></div>
+                    <a href="/2019/09/02/数交点-估长度/" class="title has-link-black-ter is-size-6 has-text-weight-normal">数交点, 估长度?</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/随笔/">随笔</a> / <a class="has-link-grey -link" href="/categories/随笔/数学应用/">数学应用</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/11/逼近理论简介-Bernstein-多项式/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://i.loli.net/2019/08/13/eIOPLgFVaRZU9f3.jpg" alt="逼近理论简介-Bernstein 多项式">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-11T05:05:17.000Z">2019-08-11</time></div>
+                    <a href="/2019/08/11/逼近理论简介-Bernstein-多项式/" class="title has-link-black-ter is-size-6 has-text-weight-normal">逼近理论简介-Bernstein 多项式</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/学习笔记/">学习笔记</a> / <a class="has-link-grey -link" href="/categories/学习笔记/分析学-Analysis/">分析学/Analysis</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/11/洛伦兹变换的数学推导/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://i.loli.net/2019/08/11/LZV5ovbgwDykA42.jpg" alt="洛伦兹变换的数学推导">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-11T00:41:07.000Z">2019-08-11</time></div>
+                    <a href="/2019/08/11/洛伦兹变换的数学推导/" class="title has-link-black-ter is-size-6 has-text-weight-normal">洛伦兹变换的数学推导</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/随笔/">随笔</a> / <a class="has-link-grey -link" href="/categories/随笔/数学应用/">数学应用</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/09/">
+                <span class="level-start">
+                    <span class="level-item">九月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/08/">
+                <span class="level-start">
+                    <span class="level-item">八月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">5</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/07/">
+                <span class="level-start">
+                    <span class="level-item">七月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">5</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">六月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/11/">
+                <span class="level-start">
+                    <span class="level-item">十一月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/10/">
+                <span class="level-start">
+                    <span class="level-item">十月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/09/">
+                <span class="level-start">
+                    <span class="level-item">九月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/06/">
+                <span class="level-start">
+                    <span class="level-item">六月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/05/">
+                <span class="level-start">
+                    <span class="level-item">五月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/09/">
+                <span class="level-start">
+                    <span class="level-item">九月 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/08/">
+                <span class="level-start">
+                    <span class="level-item">八月 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/07/">
+                <span class="level-start">
+                    <span class="level-item">七月 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">9</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/06/">
+                <span class="level-start">
+                    <span class="level-item">六月 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">5</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Bernstein-多项式/">
+                        <span class="tag">Bernstein 多项式</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Cauchy-Crofton-公式/">
+                        <span class="tag">Cauchy-Crofton 公式</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/MY-LIFE/">
+                        <span class="tag">MY LIFE</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/MathJax/">
+                        <span class="tag">MathJax</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Notes/">
+                        <span class="tag">Notes</span>
+                        <span class="tag is-grey">17</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Star-Trek/">
+                        <span class="tag">Star Trek</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/introduction/">
+                        <span class="tag">introduction</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/一般拓扑/">
+                        <span class="tag">一般拓扑</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/不动点/">
+                        <span class="tag">不动点</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/丢番图逼近/">
+                        <span class="tag">丢番图逼近</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/个人成长/">
+                        <span class="tag">个人成长</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/乘积级数/">
+                        <span class="tag">乘积级数</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/习题集/">
+                        <span class="tag">习题集</span>
+                        <span class="tag is-grey">7</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/介值性/">
+                        <span class="tag">介值性</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/军事/">
+                        <span class="tag">军事</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/函数极限/">
+                        <span class="tag">函数极限</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/切空间/">
+                        <span class="tag">切空间</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/华罗庚/">
+                        <span class="tag">华罗庚</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/可求长曲线/">
+                        <span class="tag">可求长曲线</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/备忘/">
+                        <span class="tag">备忘</span>
+                        <span class="tag is-grey">4</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/学界新闻/">
+                        <span class="tag">学界新闻</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/对数函数/">
+                        <span class="tag">对数函数</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/小平邦彦/">
+                        <span class="tag">小平邦彦</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/幂函数/">
+                        <span class="tag">幂函数</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/建军90周年/">
+                        <span class="tag">建军90周年</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/微分几何/">
+                        <span class="tag">微分几何</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/微分学/">
+                        <span class="tag">微分学</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/微积分/">
+                        <span class="tag">微积分</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/德语/">
+                        <span class="tag">德语</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/心理/">
+                        <span class="tag">心理</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/惰者集/">
+                        <span class="tag">惰者集</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/指数函数/">
+                        <span class="tag">指数函数</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/数列/">
+                        <span class="tag">数列</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/数列极限/">
+                        <span class="tag">数列极限</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/数学分析/">
+                        <span class="tag">数学分析</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/数学史/">
+                        <span class="tag">数学史</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/数学应用/">
+                        <span class="tag">数学应用</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/数项级数/">
+                        <span class="tag">数项级数</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/方法论/">
+                        <span class="tag">方法论</span>
+                        <span class="tag is-grey">4</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/旅行/">
+                        <span class="tag">旅行</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/时间管理/">
+                        <span class="tag">时间管理</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/最佳逼近/">
+                        <span class="tag">最佳逼近</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/有理逼近/">
+                        <span class="tag">有理逼近</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/杂感/">
+                        <span class="tag">杂感</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/极限/">
+                        <span class="tag">极限</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/毅力/">
+                        <span class="tag">毅力</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/洛伦兹变换/">
+                        <span class="tag">洛伦兹变换</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/流形/">
+                        <span class="tag">流形</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/演讲/">
+                        <span class="tag">演讲</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/狭义相对论/">
+                        <span class="tag">狭义相对论</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/电视节目/">
+                        <span class="tag">电视节目</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/矩阵/">
+                        <span class="tag">矩阵</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/絮语微言/">
+                        <span class="tag">絮语微言</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/级数/">
+                        <span class="tag">级数</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/线性代数/">
+                        <span class="tag">线性代数</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/自律/">
+                        <span class="tag">自律</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/读史/">
+                        <span class="tag">读史</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/趣图/">
+                        <span class="tag">趣图</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/连分数/">
+                        <span class="tag">连分数</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/连续函数/">
+                        <span class="tag">连续函数</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/逻辑学/">
+                        <span class="tag">逻辑学</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/重温-新知/">
+                        <span class="tag">重温 &amp; 新知</span>
+                        <span class="tag is-grey">8</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/间断点/">
+                        <span class="tag">间断点</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/黎曼猜想/">
+                        <span class="tag">黎曼猜想</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo2.png" alt="切空间与切丛" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 Zengfk&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                <br>
+                <span id="busuanzi_container_site_uv">
+                共<span id="busuanzi_value_site_uv">0</span>个访客
+                </span>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Follow me on GitHub" href="https://github.com/zengfk">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh-CN");</script>
+
+<script>
+var IcarusThemeSettings = {
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: true,
+            showMathMenu: true
+        },
+        SVG: {
+            matchFontHeight: true
+        },
+        CommonHTML: {
+            matchFontHeight: true
+        },
+        preRemoveClass: "MathJax_Preview",
+        tex2jax: {
+            inlineMath: [
+                ['$','$']
+            ],
+            displayMath: [ 
+                ['$$','$$'],
+                ['\\[','\\]'] 
+            ],
+            processEscapes: true,
+            processRefs: true,
+            processEnvironments: true,
+            preview: "TeX",
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code']
+        },
+        TeX: { 
+            extensions: ["AMSmath.js", "AMSsymbols.js"],
+            equationNumbers: { 
+                autoNumber: "AMS",
+                useLabelIds: true
+            },
+            Macros: {},
+            MAXMACROS: 10000,
+            MAXBUFFER: 5*1024
+        },
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="回到顶端" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+</body>
+</html>
