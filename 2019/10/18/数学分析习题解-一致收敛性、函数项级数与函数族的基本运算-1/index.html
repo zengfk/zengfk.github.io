@@ -19,7 +19,7 @@
 <meta property="og:description" content="【习题来源】数学分析：第七版.（俄罗斯）卓里奇著；李植译. 北京：高等教育出版社，2019.2    以下函数序列是否一致收敛?a) $$f_n = \frac{\sin{nx}}{x^2}$$b) $$f_n = 2(n+1)x(1-x^2)^n$$c) $$f_n = \lim_{n\rightarrow\infty}(\cos m!\pi x)^{2n}$$   【解】  考察 $\Del">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://zengfk.com.cn/images/og_image.png">
-<meta property="og:updated_time" content="2019-10-22T09:28:37.504Z">
+<meta property="og:updated_time" content="2019-10-22T09:31:32.352Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数学分析习题解-一致收敛性、函数项级数与函数族的基本运算(1)">
 <meta name="twitter:description" content="【习题来源】数学分析：第七版.（俄罗斯）卓里奇著；李植译. 北京：高等教育出版社，2019.2    以下函数序列是否一致收敛?a) $$f_n = \frac{\sin{nx}}{x^2}$$b) $$f_n = 2(n+1)x(1-x^2)^n$$c) $$f_n = \lim_{n\rightarrow\infty}(\cos m!\pi x)^{2n}$$   【解】  考察 $\Del">
@@ -206,7 +206,7 @@ var _hmt = _hmt || [];
 <li>a) 函数 $f_n: X\rightarrow \mathbb{R}$ 由关系式 $f_n(x) = x^n$ 给出, 其中 $X = {x\in\mathbb{R}|x\geqslant 0}$. 证明: 该函数序列在任何区间 $[0,1-\delta]\subset [0,1]$ 上一致收敛, 而在 $[0,1]$ 上不一致收敛.<br><br>b) 对于函数序列 $f_n(x) = x^n -x^{2n}$ 上述结论也成立.<br><br>c) 考虑定义在区间 $I = {x\in\mathbb{R}}$ 上的依赖于参数 $t\in[0,1]$ 的函数族 $f_t : I\rightarrow \mathbb{R}$. 其函数图像由下图给出: <img src="https://i.loli.net/2019/10/22/X4DrNlwLkbTufjm.jpg" alt="$f_t$"><br>d) 研究函数族 $f_t(x) =\sin tx$ 当 $t\rightarrow 0$ 时的收敛性. 然后研究 $t\rightarrow \infty$ 的情况.<br>e) 描述函数族 $f_t(x) = e^{-tx^{2}}$ 当$t\rightarrow \infty$ 时在任意固定集合 $E\subset \mathbb{R}$ 上的收敛性.</li>
 </ol>
 </blockquote>
-<p><font color="red">【证明】</font>  a) 考察  $\Delta <em>n := \sup</em>{x\in E} |f(x) - f_n(x)|$ 在 $n\rightarrow \infty$ 时的情况. $\forall \delta &gt;0 $<br>$$\Delta <em>n := \sup</em>{x\in [0,1-\delta]} |f(x) - f_n(x)|=  (1-\delta)^n$$<br>在 $n\rightarrow \infty$ 时 $\Delta _n\rightarrow 0$. 故函数序列在任何区间 $[0,1-\delta]\subset [0,1]$ 上一致收敛.<br><br>而在 $[0,1]$ 区间上 $\Delta_n = 1$, 在 $n\rightarrow \infty$ 时 $\Delta _n$ 不 趋于 $0$. 故函数序列在任何区间 $[0,1]$ 上不一致收敛. </p>
+<p><font color="red">【证明】</font>  a) 考察  $\Delta _n := \sup _{x\in E} |f(x) - f _n(x)|$ 在 $n\rightarrow \infty$ 时的情况. $\forall \delta &gt;0 $<br>$$\Delta _n := \sup _{x\in [0,1-\delta]} |f(x) - f _n(x)|=  (1-\delta)^n$$<br>在 $n\rightarrow \infty$ 时 $\Delta _n\rightarrow 0$. 故函数序列在任何区间 $[0,1-\delta]\subset [0,1]$ 上一致收敛.<br><br>而在 $[0,1]$ 区间上 $\Delta_n = 1$, 在 $n\rightarrow \infty$ 时 $\Delta _n$ 不 趋于 $0$. 故函数序列在任何区间 $[0,1]$ 上不一致收敛. </p>
 <p>b) 同样的做法. 特别需要考虑的一点在于求 $\Delta_n$. 对 $f_n$ 关于 $x$ 求导, 可得 $x\in [0, \frac{1}{2}^{-1/n}]$ 上单调递增. 而我们知道数列的前有限项不影响其极限值. 以此为基础, 可知, 在 $[0,1-\delta]\subset [0,1]$ 上, $n\rightarrow \infty$ 时 $\Delta _n\rightarrow 0$.</p>
 <p>c) 同上.</p>
 <p>d) 当 $t\rightarrow 0$ 时, 函数族在 $\mathbb{R}$ 上不一致收敛, 但是在任意 $[a,b]\subset \mathbb{R}$ 上一致收敛. 显然, 函数在 $t\rightarrow \infty$ 时不收敛</p>
