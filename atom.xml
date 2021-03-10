@@ -6,7 +6,7 @@
   <link href="https://zengfk.com.cn/atom.xml" rel="self"/>
   
   <link href="https://zengfk.com.cn/"/>
-  <updated>2021-03-09T06:43:03.090Z</updated>
+  <updated>2021-03-10T08:25:06.751Z</updated>
   <id>https://zengfk.com.cn/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>复分析小品-分式线性变换</title>
+    <link href="https://zengfk.com.cn/2021/03/01/%E5%A4%8D%E5%88%86%E6%9E%90%E5%B0%8F%E5%93%81-%E5%88%86%E5%BC%8F%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2/"/>
+    <id>https://zengfk.com.cn/2021/03/01/%E5%A4%8D%E5%88%86%E6%9E%90%E5%B0%8F%E5%93%81-%E5%88%86%E5%BC%8F%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2/</id>
+    <published>2021-03-01T06:11:44.000Z</published>
+    <updated>2021-03-10T08:25:06.751Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在复分析中的几何理论中, 有一个有趣而且重要的主题, 即&lt;strong&gt;共形映射&lt;/strong&gt;. 其中有一类很自然的解析函数类——&lt;strong&gt;分式线性变换&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;考虑以下有理函数&lt;/p&gt;
+&lt;p&gt;$$f(z) = \frac{az+b}{cz+d}$$&lt;/p&gt;
+&lt;p&gt;其中，$a,b,c,d$ 均为复数. 要使得以上函数具有良好的定义, 很自然, 需要要求 $c,d$ 不能同时为 $0$; 另一方面, 为了保证函数不会退化成常数函数, 则需要满足 $a/c \neq b/d$. &lt;/p&gt;
+&lt;p&gt;综合来说, 当以上有理函数满足 $ad-bc\neq 0$ 时, 我们称之为一个分式线性变换. 我们都知道: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;分式线性变换的复合还是一个分式线性变换变换.&lt;/li&gt;
+&lt;li&gt;任何分式线性变换都可以表示为三种简单变换的复合, 即:平移、旋转、反演的复合.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;关于分式线性变换的很多性质, 留到谈共形映射时再谈. 以下提供一个有意思的视角, 也许能帮助我们更容易的认识分式线性变换. &lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://zengfk.com.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="分析学/Analysis" scheme="https://zengfk.com.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%88%86%E6%9E%90%E5%AD%A6-Analysis/"/>
+    
+    
+    <category term="复分析" scheme="https://zengfk.com.cn/tags/%E5%A4%8D%E5%88%86%E6%9E%90/"/>
+    
+    <category term="几何" scheme="https://zengfk.com.cn/tags/%E5%87%A0%E4%BD%95/"/>
+    
+  </entry>
   
   <entry>
     <title>读书笔记整理1</title>
@@ -263,42 +295,6 @@
     
     
     <category term="德语" scheme="https://zengfk.com.cn/tags/%E5%BE%B7%E8%AF%AD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数学分析习题解-连续函数(1)</title>
-    <link href="https://zengfk.com.cn/2019/08/03/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E4%B9%A0%E9%A2%98%E8%A7%A3-%E8%BF%9E%E7%BB%AD%E5%87%BD%E6%95%B0-1/"/>
-    <id>https://zengfk.com.cn/2019/08/03/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E4%B9%A0%E9%A2%98%E8%A7%A3-%E8%BF%9E%E7%BB%AD%E5%87%BD%E6%95%B0-1/</id>
-    <published>2019-08-03T05:45:06.000Z</published>
-    <updated>2019-08-04T09:57:50.890Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;【习题来源】数学分析：第七版.（俄罗斯）卓里奇著；李植译. 北京：高等教育出版社，2019.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;请证明:&lt;br&gt;a) 如果 $f\in C(A)$ 且 $B \subset A$, 则 $f|_ B = C(B)$.&lt;br&gt;&lt;br&gt;b) 如果函数 $f: E_{1} \cup E_2 \rightarrow \mathbb{R}$, 满足 $f|_ {E_i} \in C(E_i), i = 1,2$, 则未必 $f\in C(E_1\cup E_2)$.&lt;br&gt;&lt;br&gt;c) 黎曼函数 $\mathscr{R}$ 以及它在有理数集上的限制 $\mathscr{R}|_ {\mathbb{Q}}$ 在集合 $\mathbb{Q}$ 的每一个非零的点间断, 并且所有的间断点都是可去间断点.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://zengfk.com.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="分析学/Analysis" scheme="https://zengfk.com.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%88%86%E6%9E%90%E5%AD%A6-Analysis/"/>
-    
-    
-    <category term="习题集" scheme="https://zengfk.com.cn/tags/%E4%B9%A0%E9%A2%98%E9%9B%86/"/>
-    
-    <category term="连续函数" scheme="https://zengfk.com.cn/tags/%E8%BF%9E%E7%BB%AD%E5%87%BD%E6%95%B0/"/>
-    
-    <category term="介值性" scheme="https://zengfk.com.cn/tags/%E4%BB%8B%E5%80%BC%E6%80%A7/"/>
-    
-    <category term="间断点" scheme="https://zengfk.com.cn/tags/%E9%97%B4%E6%96%AD%E7%82%B9/"/>
-    
-    <category term="不动点" scheme="https://zengfk.com.cn/tags/%E4%B8%8D%E5%8A%A8%E7%82%B9/"/>
     
   </entry>
   
