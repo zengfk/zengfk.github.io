@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>线性代数-矩阵基础-3 - 虎头微分同学的Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="虎头微分同学的Blog"><meta name="msapplication-TileImage" content="https://i.loli.net/2019/06/18/5d089072456dd44636.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="虎头微分同学的Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="矩阵的秩矩阵的秩,是用于描述矩阵的一个重要的性质,它由行(列)向量组的极大线性无关组中包含的向量的个数来定义, 描述了矩阵的行(列)向量空间的维数. 关于一个矩阵 $A$ 的秩,有一点重要基本的性质: **【定理】** 初等变换不改变矩阵的秩.进一步的,初等行(列)变换不改变矩阵任意列(行)之间的线性相关性."><meta property="og:type" content="blog"><meta property="og:title" content="线性代数-矩阵基础-3"><meta property="og:url" content="https://zengfk.com.cn/2018/06/01/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E7%9F%A9%E9%98%B5%E5%9F%BA%E7%A1%80-3/"><meta property="og:site_name" content="虎头微分同学的Blog"><meta property="og:description" content="矩阵的秩矩阵的秩,是用于描述矩阵的一个重要的性质,它由行(列)向量组的极大线性无关组中包含的向量的个数来定义, 描述了矩阵的行(列)向量空间的维数. 关于一个矩阵 $A$ 的秩,有一点重要基本的性质: **【定理】** 初等变换不改变矩阵的秩.进一步的,初等行(列)变换不改变矩阵任意列(行)之间的线性相关性."><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://zengfk.com.cn/img/og_image.png"><meta property="article:published_time" content="2018-06-01T06:08:31.000Z"><meta property="article:modified_time" content="2019-06-19T04:30:59.834Z"><meta property="article:author" content="Zengfk"><meta property="article:tag" content="Notes"><meta property="article:tag" content="重温 &amp; 新知"><meta property="article:tag" content="线性代数"><meta property="article:tag" content="矩阵"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://zengfk.com.cn/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://zengfk.com.cn/2018/06/01/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E7%9F%A9%E9%98%B5%E5%9F%BA%E7%A1%80-3/"},"headline":"线性代数-矩阵基础-3","image":["https://zengfk.com.cn/img/og_image.png"],"datePublished":"2018-06-01T06:08:31.000Z","dateModified":"2019-06-19T04:30:59.834Z","author":{"@type":"Person","name":"Zengfk"},"publisher":{"@type":"Organization","name":"虎头微分同学的Blog","logo":{"@type":"ImageObject","url":"https://zengfk.com.cn/images/logo2.png"}},"description":"矩阵的秩矩阵的秩,是用于描述矩阵的一个重要的性质,它由行(列)向量组的极大线性无关组中包含的向量的个数来定义, 描述了矩阵的行(列)向量空间的维数. 关于一个矩阵 $A$ 的秩,有一点重要基本的性质: **【定理】** 初等变换不改变矩阵的秩.进一步的,初等行(列)变换不改变矩阵任意列(行)之间的线性相关性."}</script><link rel="canonical" href="https://zengfk.com.cn/2018/06/01/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E7%9F%A9%E9%98%B5%E5%9F%BA%E7%A1%80-3/"><link rel="alternate" href="/atom.xml" title="虎头微分同学的Blog" type="application/atom+xml"><link rel="icon" href="https://i.loli.net/2019/06/18/5d089072456dd44636.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><script><!-- hexo-inject:begin --><!-- hexo-inject:end -->var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?b303d7ab99349393fcb3ed0f719d28ef";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();</script><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><script src="https://www.googletagmanager.com/gtag/js?id=UA-142390469-1" async></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-142390469-1');</script><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/images/logo2.png" alt="虎头微分同学的Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" target="_blank" rel="noopener" href="http://research.zengfk.com.cn">Research</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2018-06-01T06:08:31.000Z" title="2018/6/1 14:08:31">2018-06-01</time>发表</span><span class="level-item"><time dateTime="2019-06-19T04:30:59.834Z" title="2019/6/19 12:30:59">2019-06-19</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E4%BB%A3%E6%95%B0%E5%AD%A6-Algebra/">代数学/Algebra</a></span><span class="level-item">18 分钟读完 (大约2719个字)</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">线性代数-矩阵基础-3</h1><div class="content"><h2 id="矩阵的秩"><a href="#矩阵的秩" class="headerlink" title="矩阵的秩"></a>矩阵的秩</h2><p>矩阵的秩,是用于描述矩阵的一个重要的性质,它<strong>由行(列)向量组的极大线性无关组中包含的向量的个数来定义</strong>, 描述了矩阵的行(列)向量空间的维数. 关于一个矩阵 $A$ 的秩,有一点重要基本的性质:</p>
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><blockquote>**【定理】**
+初等变换不改变矩阵的秩.进一步的,初等行(列)变换不改变矩阵任意列(行)之间的线性相关性.
+</blockquote>
+
+<span id="more"></span>
+<h3 id="矩阵秩的求法"><a href="#矩阵秩的求法" class="headerlink" title="矩阵秩的求法"></a>矩阵秩的求法</h3><p>根据矩阵秩的定义, 秩的唯一的求法就是通过初等行(列)变换,将举证化为阶梯型矩阵, 其中非零行的个数即为行秩. 由由于矩阵的行秩等于列秩,等于矩阵的秩, 这也就求出了矩阵的秩. 这里仅举一例作为参考.</p>
+<p><font color=red>【例】</font><br>求以下矩阵$A$的秩.<br>$$A=\begin{pmatrix}<br>3 &amp; 1 &amp; 1 &amp; 4 \\<br>\lambda &amp; 4 &amp; 10 &amp; 1 \\<br>1 &amp; 7 &amp; 17 &amp; 3 \\<br>2 &amp; 2 &amp; 4 &amp; 3<br>\end{pmatrix}$$</p>
+<p><font color=red>【解】</font><br>对矩阵施行初等行变换. 得到<br>$$A_1=\begin{pmatrix}<br>1 &amp; 7 &amp; 17 &amp; 3 \\<br>0 &amp; 4 &amp; 10 &amp; 1 \\<br>0 &amp; -7\lambda &amp; -17\lambda &amp; -3\lambda \\<br>0 &amp; 0 &amp; 0 &amp; 0 \\<br>\end{pmatrix}$$<br>可以看到, 若 $\lambda=0$, 则$\text{rank} A=2$; 若$\lambda\neq 0$, 对矩阵进一步化简, 容易得到 $\text{rank} A=3$.</p>
+<h3 id="关于秩的等式与不等式"><a href="#关于秩的等式与不等式" class="headerlink" title="关于秩的等式与不等式"></a>关于秩的等式与不等式</h3><p>以下命题的证明中, 将大量的使用分块矩阵的方法. 其实不难, 只要学会了, 解题就会变得很简单, 相比于一般课本上, 使用极大线性无关组叙述的冗长证明, 不仅简单, 而且易于掌握.</p>
+<blockquote>【命题】
+设$A$为$s\times n$矩阵. $P,Q$分别为$s$与$n$阶的可逆矩阵, 则
+\begin{equation}
+\text{rank} A = \text{rank} (PA)= \text{rank} (AQ)=\text{rank} (PAQ).
+\end{equation}
+</blockquote>
+
+<p>所有可逆矩阵都可以通过单位矩阵经过有限步的初等变换得到, 所以其实矩阵 $A$ 乘上可逆矩阵, 就是做了有限次数的初等变换. 根据矩阵作初等变换秩不变的性质, 立即得到以上命题.</p>
+<blockquote>【命题】\label{prop:1.2}
+设$A$为$n$阶方阵, 则$\text{rank} A=n\text{(满秩)}\Longleftrightarrow A$可逆.
+</blockquote>
+
+<blockquote>【命题】\label{prop:1.3}
+$\text{rank} A=\text{rank} A^{T}=\text{rank} (kA)$,其中$k\neq 0$.
+</blockquote>
+
+<blockquote>【命题】\label{prop:1.4}
+$\text{rank} \begin{pmatrix}
+A & 0 \\
+0 & B 
+\end{pmatrix}=\text{rank} A+\text{rank} B$
+</blockquote>
+
+<p>由秩的定义,以上三个命题显然.</p>
+<blockquote>【命题】【秩的第一降阶定理】\label{prop:1.5}
+设$A$可逆,$\begin{pmatrix}
+A & B \\
+C & D 
+\end{pmatrix}$是$m\times n$矩阵, 则
+\begin{equation}\label{eq:prop5}
+\text{rank} \begin{pmatrix}
+A & B \\
+C & D 
+\end{pmatrix}=\text{rank} A+\text{rank} (D-CA^{-1}B).
+\end{equation}
+</blockquote>
+
+<p><font color=red>【证明】</font><br>类似于例\ref{eg:1.3},我们有<br>$$\begin{array}{l}<br>\begin{pmatrix}<br>    I &amp; 0 \\<br>    -CA^{-1} &amp; I \\<br>\end{pmatrix}<br>\begin{pmatrix}<br>    A &amp; B \\<br>    C &amp; D \\<br>\end{pmatrix}<br>\begin{pmatrix}<br>    I &amp; -A^{-1}B \\<br>    0 &amp; I \\<br>\end{pmatrix}\\<br>=\begin{pmatrix}<br>    A &amp; 0 \\<br>    0 &amp; D-CA^{-1}B \\<br>\end{pmatrix}.<br>\end{array}$$<br>其中$\begin{pmatrix}<br>I &amp; 0 \\<br>-CA^{-1} &amp; I \\<br>\end{pmatrix}$和$\begin{pmatrix}<br>I &amp; -A^{-1}B \\<br>0 &amp; I \\<br>\end{pmatrix}$均为广义初等矩阵.自然有命题成立.</p>
+<p><strong>【NOTE】</strong>: 若$D$为可逆矩阵, 则也有类似公式. 亦称为第一降阶公式. 另外将以上命题中式(\ref{eq:prop5})改写为:<br>\begin{equation}\label{eq:prop5.2}<br>\text{rank} (D-CA^{-1}B)=\text{rank} \begin{pmatrix}<br>A &amp; B \\<br>C &amp; D \\<br>\end{pmatrix}-\text{rank} A.<br>\end{equation}<br>称为秩的<strong>升阶公式</strong>.</p>
+<p>应用命题\ref{prop:1.6}立刻得到下面命题.</p>
+<blockquote>【命题】【秩的第二降阶定理】
+设$A,D$分别为$r$阶与$s$阶的可逆矩阵,$B,C$分别是$r\times s$和$s\times r$矩阵,则
+\begin{multline*}\label{eq:prop6}
+\text{rank} (D-CA^{-1}B)\\
+=\text{rank} D - \text{rank} A +\text{rank} (A-BD^{-1}C).
+\end{multline*}
+</blockquote>
+
+<blockquote>【命题】\label{prop:1.7}
+\begin{align}
+\text{rank}\begin{pmatrix}
+A & C \\
+0 & B 
+\end{pmatrix}\geqslant \text{rank} A +\text{rank} B,\\
+\text{rank}\begin{pmatrix}
+A & 0 \\
+C & B 
+\end{pmatrix}\geqslant \text{rank} A +\text{rank} B.
+\end{align}
+</blockquote>
+<font color=red>【证明】</font>
+当$A,B$中任何一个秩为0的时候, 命题显然成立. 现在假设$\text{rank} A=r_1\neq 0,\text{rank} B=r_2 \neq 0$.那么,$A,B$中各自能取出$r_1,r_2$阶的子式$M_1,M_2$,那么矩阵
+$\begin{pmatrix}
+A & C \\
+0 & B \\
+\end{pmatrix},
+\begin{pmatrix}
+A & 0 \\
+C & B \\
+\end{pmatrix}$分别能取出秩为$r_1+r_2$的子式
+$\begin{pmatrix}
+M_1 & * \\
+0 & M_2 \\
+\end{pmatrix},
+\begin{pmatrix}
+M_1 & 0 \\
+* & M_2 \\
+\end{pmatrix}$,故而命题成立(矩阵子式的秩小于等于原矩阵的秩).
+
+<blockquote>【命题】
+设$A=(a_{ij})$为$m\times s$矩阵,$B=(b_{ij})$为$s\times n$矩阵, 则
+\begin{equation}\label{eq:1.8}
+\text{rank} (AB)\leqslant\min\{\text{rank} A,\text{rank} B\}.
+\end{equation}
+</blockquote>
+
+<p><font color=red>【证明】</font><br>\textbf{证明1:} 将$A$表示为列向量组形式$(\alpha_1,\cdots,\alpha_s)$,<br>$$\begin{array}{lll}<br>AB &amp;=&amp; (\alpha_1,\cdots,\alpha_s)\begin{pmatrix}<br>b_{11} &amp; \cdots &amp; b_{1n} \\<br>\vdots &amp;         &amp; \vdots \\<br>b_{s1} &amp; \cdots    &amp; b_{sn} \\<br>\end{pmatrix}\\<br> &amp;=&amp; (\alpha_1 b_{11}+\cdots +\alpha_s b_{s1},\cdots,\alpha_1 b_{1n}+\cdots +\alpha_s b_{sn}).<br>\end{array}$$<br>上式说明$AB$的列向量组可以由$A$的列向量组线性表出, 故而$\text{rank} (AB)\leqslant\text{rank} A$,对$B$同理有$\text{rank} (AB)\leqslant\text{rank} B$.故而命题成立.</p>
+<p>\textbf{证明2:} 设$\text{rank}{A}=r_1,\text{rank}{B}=r_2$.由命题\ref{prop:1.1}以及初等变换的性质, 可知存在 $m\times m$ 可逆矩阵 $P$, 与 $s\times s$ 可逆矩阵 $Q$, 使得<br>$$PQA=\begin{pmatrix}<br>I_{r_1} &amp; 0\\<br>0 &amp; 0\\<br>\end{pmatrix}.$$<br>注意到<br>$$PAB=PAQQ^{-1}B=\begin{pmatrix}<br>I_{r_1} &amp; 0\\<br>0 &amp; 0\\<br>\end{pmatrix}Q^{-1}B.$$</p>
+<p>令 $B_1=Q^{-1}B$, 这是一个 $s\times n$ 矩阵, 用 $ b’_{ij}$ 表示这个矩阵的元, 显然有<br>$$\begin{pmatrix}<br>I_{r_1} &amp; 0 \\<br>0 &amp; 0<br>\end{pmatrix} B_1 = \begin{pmatrix}<br>b’_{11} &amp; \cdots &amp; b’_{1n} \\<br>\vdots &amp; \cdots &amp; \vdots \\<br>b’_{r_{11} &amp; \cdots &amp; b’_{r_{1n} \\<br>0 &amp; \cdots &amp; 0 \\<br>\vdots &amp;  &amp; \vdots \\<br>0 &amp; \cdots &amp; 0<br>\end{pmatrix}_{m\times n} = C.$$</p>
+<p>这个矩阵$C$的行秩最多等于$r_1$, 而列秩则不超过$\text{rank} B_1 = \text{rank} B$.任意矩阵的行秩与列秩与秩都相等, 这就有了$\text{rank}(AB)=\text{rank}(PAB)\leqslant\min\{\text{rank} A, \text{rank} B\}$.</p>
+<blockquote>【命题】\label{prop:1.9}
+将两个同行（列）数矩阵$A,B$并排（竖直）连在一起,构成的新矩阵$(A,B)$（$\begin{pmatrix}
+A \\
+B \\
+\end{pmatrix}$）的秩,小于两矩阵秩之和.
+</blockquote>
+
+<blockquote>【命题】\label{prop:1.10}
+设$A,B$均为$m\times n$矩阵, 则$\text{rank} (A+B)\leqslant\text{rank} A +\text{rank} B$.
+</blockquote>
+
+<p><font color=red>【证明】</font>由广义初等线性变换不改变秩,有<br>$$\begin{pmatrix}<br>A &amp; 0 \\<br>0 &amp; B \\<br>\end{pmatrix}\rightarrow<br>\begin{pmatrix}<br>A &amp; 0 \\<br>A &amp; B \\<br>\end{pmatrix}\rightarrow<br>\begin{pmatrix}<br>A &amp; A \\<br>A &amp; A+B \\<br>\end{pmatrix}$$<br>$A+B$为最右边矩阵的子矩阵,显然命题成立.</p>
+<blockquote>【命题】【Sylvester不等式】
+设$A,B$分别是$m\times n$和$n\times s$矩阵,则
+\begin{equation}\label{prop:1.11}
+\text{rank}{AB}\geqslant\text{rank}{A}+\text{rank}{B}-n.
+\end{equation}
+</blockquote>
+
+<p><font color=red>【证明】</font><br><strong>证明1:</strong> 由于$$C=\begin{pmatrix}<br>A &amp; 0 \\<br>I &amp; B \\<br>\end{pmatrix}\rightarrow<br>\begin{pmatrix}<br>0 &amp; -AB \\<br>I &amp; B \\<br>\end{pmatrix}\rightarrow<br>\begin{pmatrix}<br>0 &amp; -AB \\<br>I &amp; 0 \\<br>\end{pmatrix}$$<br>显然,我们有$$\begin{array}{ll}<br>\text{rank}{A}+\text{rank}{B}&amp;\leqslant\text{rank}{C}=\text{rank}{\begin{pmatrix}<br>0 &amp; -AB \\<br>I &amp; 0 \\<br>\end{pmatrix}}\\<br>&amp;=\text{rank}{(AB)}+\text{rank}{I}.\end{array}.$$</p>
+<p><strong>证明2:</strong> 由秩的升阶公式(\ref{eq:prop5.2}),我们有<br>$$\begin{array}{ll}<br>\text{rank}(AB)&amp;=\text{rank} (0-AI^{-1}B)\\<br>&amp;=\text{rank} \begin{pmatrix}<br>I_n &amp; B \\<br>A &amp; 0 \\<br>\end{pmatrix}-\text{rank} (I_n)\\<br>&amp;\geqslant \text{rank}{A}+\text{rank}{B} - n.\end{array}$$.<br>这样就证明了这个命题.</p>
+<p>\paragraph{NOTEs:} Sylvester不等式应用非常广泛.另外,结合命题\ref{eq:1.8},我们还得到<br>\begin{equation}<br>\text{rank}{A}+\text{rank}{B}-n\leqslant\text{rank} (AB)\leqslant\min{\text{rank} A,\text{rank} B}.<br>\end{equation}</p>
+<p>借由Sylvester不等式, 还可以将命题\ref{prop:1.1}进一步一般化,得到如下推论:<br><strong>【推论】</strong>\label{col:1.11}<br>设$A$是$m\times n$矩阵, $P$是$l\times m$的列满秩矩阵,$Q$是$n\times s$的行满秩矩阵.那么有<br>\begin{equation}<br>\text{rank}  A = \text{rank} (PA)= \text{rank} (AQ)= \text{rank} (PAQ).<br>\end{equation}</p>
+<blockquote>【命题】**【Frobenius不等式】**\label{prop:1.12}
+\begin{equation}
+\text{rank}(ABC)\geqslant\text{rank}(AB)+\text{rank}(BC)-\text{rank} B.
+\end{equation}
+</blockquote>
+
+<p><font color=red>【证明】</font><br>$$\begin{pmatrix}<br>ABC &amp; 0 \\<br>0 &amp; B \\<br>\end{pmatrix}\rightarrow<br>\begin{pmatrix}<br>ABC &amp; AB \\<br>0 &amp; B \\<br>\end{pmatrix}\rightarrow<br>\begin{pmatrix}<br>0 &amp; AB \\<br>-BC &amp; B \\<br>\end{pmatrix},$$<br>于是有$\text{rank}(ABC)+\text{rank} B=\begin{pmatrix}<br>0 &amp; AB \\<br>-BC &amp; B \\<br>\end{pmatrix}\geqslant\text{rank}(AB)+\text{rank}(BC)$.这就是本命题.</p>
+<blockquote>【命题】\label{prop:1.13}
+设$A$为实矩阵,则$\text{rank}(AA^{T})=\text{rank} A=\text{rank} A^{T}$.
+</blockquote>
+
+<p>这个命题对于复矩阵是不成立的,一个简单的反例就是$\begin{pmatrix}<br>1 &amp; i \\<br>-i &amp; 1 \\<br>\end{pmatrix}$.请你自行验证.</p>
+<p>下面给出一些应用的例题,注意所使用的方法.</p>
+<p><font color=red>【例】</font><br>求证: $\text{rank}(AB-I)\leqslant\text{rank}(A-I)+\text{rank}(B-I)$.</p>
+<p><font color=red>【证明】</font><br>由(做初等变换)$$\begin{array}{ll}<br>\begin{pmatrix}<br>A-I &amp; 0 \\<br>0 &amp; B-I \\<br>\end{pmatrix}&amp;\xrightarrow[\text{加到第2列}]{\text{第1列右乘$B$}}\begin{pmatrix}<br>A-I &amp; AB-B \\<br>0 &amp; B-I \\<br>\end{pmatrix}\\<br>&amp;\xrightarrow[\text{第2行}]{\text{第1行减掉}}<br>\begin{pmatrix}<br>A-I &amp; AB-I \\<br>0 &amp; B-I \\<br>\end{pmatrix}\end{array}$$<br>利用命题\ref{prop:1.4},以及矩阵秩的性质即可得到证明.</p>
+<p><font color=red>【例】</font><br>设$A,B\in F^{n\times n}$(即定义在域$F$上的$n\times n$矩阵), $ABA=B^{-1}$.求证: $$\text{rank}(I-AB)+\text{rank}(I+AB)=n.$$</p>
+<p><font color=red>【证明】</font><br>由$$\begin{array}{ll}<br>&amp;\begin{pmatrix}<br>I-AB &amp; 0 \\<br>0 &amp; I+AB \\<br>\end{pmatrix}\xrightarrow[\text{第1列}]{\text{第2列加上}}\begin{pmatrix}<br>I-AB &amp; I-AB \\<br>0 &amp; I+AB \\<br>\end{pmatrix}\\<br>&amp;\xrightarrow[\text{加上第二行}]{\text{第1行}}<br>\begin{pmatrix}<br>I-AB &amp; 2I \\<br>0 &amp; I+AB \\<br>\end{pmatrix}\xrightarrow[ABA=B^{-1}]{\text{利用}}\begin{pmatrix}<br>0 &amp; 2I \\<br>0 &amp; 0 \\<br>\end{pmatrix}.\end{array}$$<br>至此,命题成立显而易见,因为右上角矩阵块的秩为$n$,而其他行列都是$0$.</p>
+<p><font color=red>【例】</font><br>设$A$为$n$阶方阵.求证<br>$$A^2=A\Leftrightarrow \text{rank} A+\text{rank}(I-A)=n.$$</p>
+<p><font color=red>【证明】</font><br>由<br>$$\begin{array}{ll}<br>&amp;\begin{pmatrix}<br>A &amp; 0 \\<br>0 &amp; I-A \\<br>\end{pmatrix}<br>\xrightarrow[\text{第1列}]{\text{第2列加上}}<br>\begin{pmatrix}<br>A &amp; A \\<br>0 &amp; I-A \\<br>\end{pmatrix}\xrightarrow[\text{第1行}]{\text{第2行加上}}\\<br>&amp;\begin{pmatrix}<br>A &amp; A \\<br>A &amp; I \\<br>\end{pmatrix}\xrightarrow[\text{第2行乘$-A$(对列同理)}]{\text{第1行加上}}\begin{pmatrix}<br>A-A^2 &amp; 0 \\<br>0 &amp; I \\<br>\end{pmatrix}.\end{array}$$<br>于是有$$\text{rank} A+\text{rank}(I-A)=\text{rank}(A-A^2)+\text{rank} I.$$<br>$I$是单位矩阵, 秩当然为$n$. 至此结果了然.</p>
+<p><font color=red>【例】</font><br>若$t$个$n$阶方阵的积等于$0$,即$A_1A_2\cdots A_t=0$,则有<br>$$\text{rank} A_1+\text{rank} A_2+\cdots +\text{rank} A_t\leqslant(t-1)n.$$</p>
+<p><font color=red>【证明】</font><br>由Sylvester不等式(\ref{prop:1.11})可知:<br>$$\begin{array}{ll}<br>0&amp;=\text{rank}(A_1A_2\cdots A_t)\geqslant\text{rank} A_1+\text{rank}(A_2\cdots A_t)-n\\<br> &amp;\geqslant\text{rank} A_1+\text{rank} A_2+\text{rank}(A_3\cdots A_t)-2n\\<br> &amp;\cdots\\<br> &amp;\geqslant\text{rank} A_1+\text{rank} A_2+\cdots +\text{rank} A_t-(t-1)n.<br>\end{array}$$<br>这就是我们所要证的结果.</p>
+<p><font color=red>【例】</font><br>设$A$为$n$阶方阵.求证:存在正整数$m$,使得<br>$$\text{rank}(A^m)=\text{rank}(A^{m+1})=\cdots.$$</p>
+<p><font color=red>【证明】</font><br>首先指出一点显然的事实(若$A$可逆,那么全部等号成立,否则可以想想,矩阵自乘次数越多,秩会越小):<br>$$n\geqslant\text{rank} A\geqslant\text{rank}(A^2)\geqslant\cdots\geqslant\text{rank}(A^{n})\geqslant\cdots\geqslant0.$$<br>由于小于$n$的非负整数最多只有$n$个, 由鸽巢原理, 以上等式中必然存在相等的,由此,必然存在正整数$m,t~(m&lt;t)$,使得$\text{rank}(A^m)=\text{rank}(A^t)$.<br>又因为$$\text{rank}(A^t)\leqslant\text{rank}(A^{t-1})\leqslant\cdots\leqslant\text{rank}(A^{m+1})\leqslant\text{rank}(A^{m})$$<br>就得到了$\text{rank}(A^m)=\text{rank}(A^{m+1})$.接下来,利用数学归纳法以及Sylvester不等式(\ref{prop:1.11}),得到待证的结论.(请你自己补全.)</p>
+<p><strong>【NOTE】</strong>: <strong>鸽巢原理</strong>, 举个简单的例子说, 比如你有三个球,要放进两个盒子,你可以断定,肯定有一个盒子里会放入两个球.这是一条不正自明的原理.</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>线性代数-矩阵基础-3</p><p><a href="https://zengfk.com.cn/2018/06/01/线性代数-矩阵基础-3/">https://zengfk.com.cn/2018/06/01/线性代数-矩阵基础-3/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Zengfk</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2018-06-01</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2019-06-19</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Notes/">Notes</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%87%8D%E6%B8%A9-%E6%96%B0%E7%9F%A5/">重温 &amp; 新知</a><a class="link-muted mr-2" rel="tag" href="/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">线性代数</a><a class="link-muted mr-2" rel="tag" href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a></div><div class="a2a_kit a2a_kit_size_32 a2a_default_style"><a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a><a class="a2a_button_facebook"></a><a class="a2a_button_twitter"></a><a class="a2a_button_telegram"></a><a class="a2a_button_whatsapp"></a><a class="a2a_button_reddit"></a></div><script src="https://static.addtoany.com/menu/page.js" defer></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2018/09/15/%E5%85%B3%E4%BA%8E%E6%AF%85%E5%8A%9B%E5%92%8C%E8%87%AA%E5%BE%8B%E7%9A%8415%E4%B8%AA%E7%82%B9/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">关于毅力和自律的15个点</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2018/05/22/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E7%9F%A9%E9%98%B5%E5%9F%BA%E7%A1%80-2/"><span class="level-item">线性代数-矩阵基础 2</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div id="comment-container"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css"><script src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script><script>var gitalk = new Gitalk({
+            id: "5818a18f70b013d17ee387c8fb1a01c9",
+            repo: "zengfk_blog_comments",
+            owner: "zengfk",
+            clientID: "f0ea23557cc8534a3927",
+            clientSecret: "e6ed870839f47437ca30c02ea6f5224705fa4433",
+            admin: ["zengfk"],
+            createIssueManually: false,
+            distractionFreeMode: true,
+            perPage: 20,
+            pagerDirection: "last",
+            
+            
+            enableHotKey: true,
+            language: "zh-CN",
+        })
+        gitalk.render('comment-container')</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="https://i.loli.net/2019/06/18/5d0888aba934142318.png" alt="虎头微分同学"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">虎头微分同学</p><p class="is-size-6 is-block">到中流击水</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Beijing, China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">69</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">22</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">85</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/zengfk" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/zengfk"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Zhihu" href="https://www.zhihu.com/people/alexa_3.1415"><i class="fab fa-zhihu"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Weibo" href="https://weibo.com/kensongguo"><i class="fab fa-weibo"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-12-20T01:28:57.000Z">2022-12-20</time></p><p class="title"><a href="/2022/12/20/%E4%B8%89%E5%9C%86%E5%AE%9A%E7%90%86/">三圆定理</a></p><p class="categories"><a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%88%86%E6%9E%90%E5%AD%A6-Analysis/">分析学/Analysis</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-15T11:00:56.000Z">2022-07-15</time></p><p class="title"><a href="/2022/07/15/%E6%B3%9B%E5%87%BD%E4%B8%AD%E7%9A%84%E9%87%8D%E8%A6%81%E5%AE%9A%E7%90%86%E4%B9%8B-Hahn-Banach-%E5%AE%9A%E7%90%86/">泛函中的重要定理之 Hahn-Banach 定理</a></p><p class="categories"><a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%88%86%E6%9E%90%E5%AD%A6-Analysis/">分析学/Analysis</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2022/04/15/%E5%85%B3%E4%BA%8E%E8%BF%9E%E9%80%9A%E6%80%A7%E7%9A%84%E7%AE%80%E5%8D%95%E8%AE%A8%E8%AE%BA/"><img src="/../../../../images/tpsin.png" alt="关于连通性的简单讨论"></a></figure><div class="media-content"><p class="date"><time dateTime="2022-04-15T10:00:22.000Z">2022-04-15</time></p><p class="title"><a href="/2022/04/15/%E5%85%B3%E4%BA%8E%E8%BF%9E%E9%80%9A%E6%80%A7%E7%9A%84%E7%AE%80%E5%8D%95%E8%AE%A8%E8%AE%BA/">关于连通性的简单讨论</a></p><p class="categories"><a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%8B%93%E6%89%91%E5%AD%A6-Topology/">拓扑学/Topology</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-21T05:54:37.000Z">2022-03-21</time></p><p class="title"><a href="/2022/03/21/%E5%85%B3%E4%BA%8E%E7%A7%AF%E6%8B%93%E6%89%91%E5%92%8C-Tychonoff-%E5%AE%9A%E7%90%86/">关于积拓扑和 Tychonoff 定理</a></p><p class="categories"><a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%8B%93%E6%89%91%E5%AD%A6-Topology/">拓扑学/Topology</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-28T07:33:15.000Z">2021-12-28</time></p><p class="title"><a href="/2021/12/28/%E4%B8%BA%E5%87%BD%E6%95%B0%E9%9B%86%E5%90%88%E8%B5%8B%E4%BA%88%E6%8B%93%E6%89%91%E7%BB%93%E6%9E%84%20-%20%E4%B8%80%E4%BA%9B%E4%BE%8B%E5%AD%90/">为函数空间赋予拓扑结构 - 一些例子</a></p><p class="categories"><a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%88%86%E6%9E%90%E5%AD%A6-Analysis/">分析学/Analysis</a></p></div></article></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Bernstein-%E5%A4%9A%E9%A1%B9%E5%BC%8F/"><span class="tag">Bernstein 多项式</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Cauchy-Crofton-%E5%85%AC%E5%BC%8F/"><span class="tag">Cauchy-Crofton 公式</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/L-p-%E7%A9%BA%E9%97%B4/"><span class="tag">L^p 空间</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Lebesgue-%E7%A7%AF%E5%88%86/"><span class="tag">Lebesgue 积分</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/MY-LIFE/"><span class="tag">MY LIFE</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/MathJax/"><span class="tag">MathJax</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Notes/"><span class="tag">Notes</span><span class="tag">25</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Star-Trek/"><span class="tag">Star Trek</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Zorn-s-Lemma/"><span class="tag">Zorn&#039;s Lemma</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/blog/"><span class="tag">blog</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/introduction/"><span class="tag">introduction</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%80%E8%87%B4%E6%94%B6%E6%95%9B/"><span class="tag">一致收敛</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%80%E8%88%AC%E6%8B%93%E6%89%91/"><span class="tag">一般拓扑</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%8D%E5%8A%A8%E7%82%B9/"><span class="tag">不动点</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%A2%E7%95%AA%E5%9B%BE%E9%80%BC%E8%BF%91/"><span class="tag">丢番图逼近</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/"><span class="tag">个人成长</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B9%98%E7%A7%AF%E7%BA%A7%E6%95%B0/"><span class="tag">乘积级数</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B9%A0%E9%A2%98%E9%9B%86/"><span class="tag">习题集</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B9%A6%E6%91%98/"><span class="tag">书摘</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BB%8B%E5%80%BC%E6%80%A7/"><span class="tag">介值性</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%86%9B%E4%BA%8B/"><span class="tag">军事</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%87%A0%E4%BD%95/"><span class="tag">几何</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%87%B8%E5%87%BD%E6%95%B0/"><span class="tag">凸函数</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%87%BD%E6%95%B0%E6%97%8F/"><span class="tag">函数族</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%87%BD%E6%95%B0%E6%9E%81%E9%99%90/"><span class="tag">函数极限</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%87%BD%E6%95%B0%E9%A1%B9%E7%BA%A7%E6%95%B0/"><span class="tag">函数项级数</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%88%87%E7%A9%BA%E9%97%B4/"><span class="tag">切空间</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8D%8E%E7%BD%97%E5%BA%9A/"><span class="tag">华罗庚</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8F%AF%E6%B1%82%E9%95%BF%E6%9B%B2%E7%BA%BF/"><span class="tag">可求长曲线</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%87%E5%BF%98/"><span class="tag">备忘</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%8D%E5%88%86%E6%9E%90/"><span class="tag">复分析</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%AD%A6%E7%95%8C%E6%96%B0%E9%97%BB/"><span class="tag">学界新闻</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%AF%B9%E6%95%B0%E5%87%BD%E6%95%B0/"><span class="tag">对数函数</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B0%8F%E5%B9%B3%E9%82%A6%E5%BD%A6/"><span class="tag">小平邦彦</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B9%82%E5%87%BD%E6%95%B0/"><span class="tag">幂函数</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BB%BA%E5%86%9B90%E5%91%A8%E5%B9%B4/"><span class="tag">建军90周年</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/"><span class="tag">微分几何</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%AE%E5%88%86%E5%AD%A6/"><span class="tag">微分学</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/"><span class="tag">微积分</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%AE%E8%A8%80%E5%A4%A7%E4%B9%89/"><span class="tag">微言大义</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%B7%E8%AF%AD/"><span class="tag">德语</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BF%83%E7%90%86/"><span class="tag">心理</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%83%B0%E8%80%85%E9%9B%86/"><span class="tag">惰者集</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%8B%93%E6%89%91/"><span class="tag">拓扑</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%8C%87%E6%95%B0%E5%87%BD%E6%95%B0/"><span class="tag">指数函数</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%88%97/"><span class="tag">数列</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%88%97%E6%9E%81%E9%99%90/"><span class="tag">数列极限</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"><span class="tag">数学分析</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6%E5%8F%B2/"><span class="tag">数学史</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6%E5%BA%94%E7%94%A8/"><span class="tag">数学应用</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6%E7%9A%84%E6%9C%AC%E6%80%A7/"><span class="tag">数学的本性</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E9%A1%B9%E7%BA%A7%E6%95%B0/"><span class="tag">数项级数</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%96%87%E5%AD%A6/"><span class="tag">文学</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"><span class="tag">方法论</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%97%85%E8%A1%8C/"><span class="tag">旅行</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"><span class="tag">时间管理</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%9C%80%E4%BD%B3%E9%80%BC%E8%BF%91/"><span class="tag">最佳逼近</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%9C%89%E7%90%86%E9%80%BC%E8%BF%91/"><span class="tag">有理逼近</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%9D%82%E6%84%9F/"><span class="tag">杂感</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%9E%81%E9%99%90/"><span class="tag">极限</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%AF%85%E5%8A%9B/"><span class="tag">毅力</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/"><span class="tag">泛函分析</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%B4%9B%E4%BC%A6%E5%85%B9%E5%8F%98%E6%8D%A2/"><span class="tag">洛伦兹变换</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%B5%81%E5%BD%A2/"><span class="tag">流形</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%BC%94%E8%AE%B2/"><span class="tag">演讲</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%82%B9%E9%9B%86%E6%8B%93%E6%89%91/"><span class="tag">点集拓扑</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%8B%AD%E4%B9%89%E7%9B%B8%E5%AF%B9%E8%AE%BA/"><span class="tag">狭义相对论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0/"><span class="tag">生成函数</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%94%B5%E8%A7%86%E8%8A%82%E7%9B%AE/"><span class="tag">电视节目</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%9F%A9%E9%98%B5/"><span class="tag">矩阵</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%B5%AE%E8%AF%AD%E5%BE%AE%E8%A8%80/"><span class="tag">絮语微言</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BA%A7%E6%95%B0/"><span class="tag">级数</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"><span class="tag">线性代数</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BE%A4%E8%AE%BA/"><span class="tag">群论</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BF%BB%E8%AF%91/"><span class="tag">翻译</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%87%AA%E5%BE%8B/"><span class="tag">自律</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AF%BB%E4%B9%A6%E6%91%98%E5%BD%95/"><span class="tag">读书摘录</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AF%BB%E5%8F%B2/"><span class="tag">读史</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%B6%A3%E5%9B%BE/"><span class="tag">趣图</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%BF%9E%E5%88%86%E6%95%B0/"><span class="tag">连分数</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%BF%9E%E7%BB%AD%E5%87%BD%E6%95%B0/"><span class="tag">连续函数</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%80%BB%E8%BE%91%E5%AD%A6/"><span class="tag">逻辑学</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%87%8D%E6%B8%A9-%E6%96%B0%E7%9F%A5/"><span class="tag">重温 &amp; 新知</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%97%B4%E6%96%AD%E7%82%B9/"><span class="tag">间断点</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%BB%8E%E6%9B%BC%E7%8C%9C%E6%83%B3/"><span class="tag">黎曼猜想</span><span class="tag">3</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/images/logo2.png" alt="虎头微分同学的Blog" height="28"></a><p class="is-size-7"><span>&copy; 2023 Zengfk</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br><span id="busuanzi_container_site_uv">共<span id="busuanzi_value_site_uv">0</span>个访客</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Follow me on GitHub" href="https://github.com/zengfk"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/mhchem.min.js" defer></script><script>window.addEventListener("load", function() {
+            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
+                renderMathInElement(element);
+            });
+        });</script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body></html>
