@@ -6,7 +6,7 @@
   <link href="https://zengfk.com.cn/atom.xml" rel="self"/>
   
   <link href="https://zengfk.com.cn/"/>
-  <updated>2023-03-25T01:57:53.953Z</updated>
+  <updated>2023-05-25T15:41:08.200Z</updated>
   <id>https://zengfk.com.cn/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>复分析学习笔记 - Littlewood 从属定理</title>
+    <link href="https://zengfk.com.cn/2023/05/25/%E5%A4%8D%E5%88%86%E6%9E%90%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-Littlewood-%E4%BB%8E%E5%B1%9E%E5%AE%9A%E7%90%86/"/>
+    <id>https://zengfk.com.cn/2023/05/25/%E5%A4%8D%E5%88%86%E6%9E%90%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-Littlewood-%E4%BB%8E%E5%B1%9E%E5%AE%9A%E7%90%86/</id>
+    <published>2023-05-25T13:56:19.000Z</published>
+    <updated>2023-05-25T15:41:08.200Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;从属性&quot;&gt;&lt;a href=&quot;#从属性&quot; class=&quot;headerlink&quot; title=&quot;从属性&quot;&gt;&lt;/a&gt;从属性&lt;/h2&gt;&lt;p&gt;首先介绍函数从属性的概念. 这一概念,最早来自于 Lindelöf 在 1908 年给出的一个定理, 现在常称为 Lindelöf 原理. &lt;/p&gt;
+&lt;p&gt;我们设 $f, g$ 均为 $&#92;mathbb{D}$ 中的解析函数. 若存在解析函数 $&#92;varphi: &#92;mathbb{D}&#92;rightarrow &#92;mathbb{D}$, 使得 $&#92;varphi(0) &amp;#x3D; 0$ 且 $f &amp;#x3D; g&#92;circ &#92;varphi$ 对于一切 $z&#92;in &#92;mathbb{D}$ 均成立, 则称 &lt;strong&gt;$f$ 从属于 $g$&lt;/strong&gt;, 记为 $f&#92;prec g$.&lt;/p&gt;
+&lt;p&gt;事实上, 设 $g(z)$ 为 $&#92;mathbb{D}$ 上的单叶解析函数, 满足$g(0) &amp;#x3D; 0$. 再设 $f(z)$ 为 $&#92;mathbb{D}$ 上的解析函数, 其满足$f(0) &amp;#x3D; 0$, 并且 $f$ 的值域落在 $F$ 的值域中. 于是函数 $&#92;varphi(z) &amp;#x3D; g^{-1} &#92;circ f$ 是 $&#92;mathbb{D}$ 上良定的解析函数, 并且满足 $&#92;varphi(0) &amp;#x3D; 0$, 以及 $|&#92;varphi(z)|&#92;leqslant 1$. 由 Schwarz 引理, 上述条件等价于要求: $|&#92;varphi(z)|&#92;leqslant |z|$ 且 $f &amp;#x3D; g&#92;circ w$ 对于一切 $z&#92;in &#92;mathbb{D}$ 均成立. &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;几何直观上看, $f&#92;prec g$ 意味着对任意的闭圆盘 $&#92;overline{D(0,r)}, r&#92;in(0,1)$ 在 $f &amp;#x3D; g&#92;circ &#92;varphi$ 作用下的像, 都落在 $g$ 对同一个圆盘作用的像中. 也可以说, 在某种意义下, $f$ 比 $g$ 要”小”. 而 Littlewood 从属定理正是对这一事实的精确表述.&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://zengfk.com.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="分析学/Analysis" scheme="https://zengfk.com.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%88%86%E6%9E%90%E5%AD%A6-Analysis/"/>
+    
+    
+    <category term="Notes" scheme="https://zengfk.com.cn/tags/Notes/"/>
+    
+    <category term="重温 &amp; 新知" scheme="https://zengfk.com.cn/tags/%E9%87%8D%E6%B8%A9-%E6%96%B0%E7%9F%A5/"/>
+    
+    <category term="复分析" scheme="https://zengfk.com.cn/tags/%E5%A4%8D%E5%88%86%E6%9E%90/"/>
+    
+    <category term="几何" scheme="https://zengfk.com.cn/tags/%E5%87%A0%E4%BD%95/"/>
+    
+  </entry>
   
   <entry>
     <title>三圆定理</title>
@@ -26,9 +58,9 @@
     
     <summary type="html">&lt;h2 id=&quot;凸函数&quot;&gt;&lt;a href=&quot;#凸函数&quot; class=&quot;headerlink&quot; title=&quot;凸函数&quot;&gt;&lt;/a&gt;凸函数&lt;/h2&gt;&lt;p&gt;可进一步参考&lt;a href=&quot;https://encyclopediaofmath.org/wiki/Convex_function_(of_a_real_variable)&quot;&gt;Convex Function of a Real Variable&lt;/a&gt; 以及 &lt;a href=&quot;https://encyclopediaofmath.org/wiki/Convex_function_(of_a_complex_variable)&quot;&gt;Convex Function of a Complex Variable&lt;/a&gt;.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Definition.&lt;br&gt;$I$ 为区间, 函数 $f: I\rightarrow \mathbb{R}$ 称为(下)&lt;strong&gt;凸函数&lt;/strong&gt;, 若 $\forall x_1, x_2 \in I$ (不妨设$x_1 &amp;lt; x_2$), $\forall t\in (0,1)$, 有以下不等式成立:&lt;br&gt;$$f((1-t)x_1+tx_2) \leqslant (1-t)f(x_1) + tf(x_2).$$&lt;br&gt;集 $A\in \mathbb{C}$ 称为&lt;strong&gt;凸集&lt;/strong&gt;, 若 $\forall z,w \in A$, $\forall 0\leqslant t\leqslant 1$, 点 $tz + (1-t)w \in A$.&lt;/p&gt;
+&lt;p&gt;Definition.&lt;br&gt;$I$ 为区间, 函数 $f: I&#92;rightarrow &#92;mathbb{R}$ 称为(下)&lt;strong&gt;凸函数&lt;/strong&gt;, 若 $&#92;forall x_1, x_2 &#92;in I$ (不妨设$x_1 &amp;lt; x_2$), $&#92;forall t&#92;in (0,1)$, 有以下不等式成立:&lt;br&gt;$$f((1-t)x_1+tx_2) &#92;leqslant (1-t)f(x_1) + tf(x_2).$$&lt;br&gt;集 $A&#92;in &#92;mathbb{C}$ 称为&lt;strong&gt;凸集&lt;/strong&gt;, 若 $&#92;forall z,w &#92;in A$, $&#92;forall 0&#92;leqslant t&#92;leqslant 1$, 点 $tz + (1-t)w &#92;in A$.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;$f(x)$ 为凸函数的条件可以等价的写成: $\forall x_1, x_2, x_3\in I$, 满足 $x_1 &amp;lt; x_3 &amp;lt; x_2$, 有&lt;br&gt;$$\begin{equation}&lt;br&gt;        (x_2 - x_1) f(x_3) \leqslant (x_2 - x_3) f(x_1) + (x_3 - x_1) f(x_2).&lt;br&gt;\end{equation}$$&lt;br&gt;上式也可以写成&lt;br&gt;$$\begin{equation}&lt;br&gt;    \left|\begin{matrix}&lt;br&gt;        f(x_1) &amp;amp; x_1 &amp;amp; 1 \\&lt;br&gt;        f(x_2) &amp;amp; x_2 &amp;amp; 1 \\&lt;br&gt;        f(x_3) &amp;amp; x_3 &amp;amp; 1 \\&lt;br&gt;    \end{matrix}\right| \geqslant 0&lt;br&gt;\end{equation}$$&lt;/p&gt;
+&lt;p&gt;$f(x)$ 为凸函数的条件可以等价的写成: $&#92;forall x_1, x_2, x_3&#92;in I$, 满足 $x_1 &amp;lt; x_3 &amp;lt; x_2$, 有&lt;br&gt;$$&#92;begin{equation}&lt;br&gt;        (x_2 - x_1) f(x_3) &#92;leqslant (x_2 - x_3) f(x_1) + (x_3 - x_1) f(x_2).&lt;br&gt;&#92;end{equation}$$&lt;br&gt;上式也可以写成&lt;br&gt;$$&#92;begin{equation}&lt;br&gt;    &#92;left|&#92;begin{matrix}&lt;br&gt;        f(x_1) &amp;amp; x_1 &amp;amp; 1 &#92;&#92;&lt;br&gt;        f(x_2) &amp;amp; x_2 &amp;amp; 1 &#92;&#92;&lt;br&gt;        f(x_3) &amp;amp; x_3 &amp;amp; 1 &#92;&#92;&lt;br&gt;    &#92;end{matrix}&#92;right| &#92;geqslant 0&lt;br&gt;&#92;end{equation}$$&lt;/p&gt;
 &lt;p&gt;凸函数(Convex)的几何意义是明显的. 即其上任意两点的连线, 必然位于两点之间函数图像的上方. 相对应的, 不等号反向的情况下称其为 Concave (上凸).&lt;/p&gt;</summary>
     
     
@@ -58,8 +90,8 @@
 &lt;p&gt;Hahn-Banach Theorem is one of the core theorems of linear functional analysis. The Hahn-Banach Theorem in &lt;em&gt;Vector Space&lt;/em&gt; is also called &lt;em&gt;Analytic Form of Hahn-Banach Theorem&lt;/em&gt;. Two corollaries are especially important: Hahn-Banach Theorem in Normed Vector Space, and Geometric Form of Hahn-Banach Theorem.&lt;/p&gt;
 &lt;h2 id=&quot;Analytic-Form&quot;&gt;&lt;a href=&quot;#Analytic-Form&quot; class=&quot;headerlink&quot; title=&quot;Analytic Form&quot;&gt;&lt;/a&gt;Analytic Form&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;定理.[Hahn-Banach Theorem in Real Vector Space]&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Let $X$ be a real vector space, and $p$ is a &lt;em&gt;sublinear functional&lt;/em&gt; in $X$, that is, $p:X\rightarrow\mathbb{R}$ is a function satisfies the following properties:&lt;/p&gt;
-&lt;p&gt;$$\begin{eqnarray}p(\alpha x) &amp;#x3D; \alpha p(x),\quad \forall \alpha&amp;gt;0 \text{ and } x\in X,\\p(x+y) \leqslant p(x)+p(y)\quad \forall x,y\in X.\end{eqnarray}$$&lt;br&gt;And let $Y$ be a subspace of $X$, $l:Y\rightarrow\mathbb{R}$ is a linear functional in $Y$ which satisfies&lt;br&gt;$$l(y)\leqslant q(y),\quad \forall y\in Y.$$&lt;br&gt;Then there exists a linear functional $\widetilde{j}:X\rightarrow\mathbb{R}$, such that&lt;br&gt;$$\widetilde{l}(y)&amp;#x3D;l(y),\quad \forall y\in Y.\quad \text{ and } \widetilde{l}(y)\leqslant p(x),\quad \forall x\in X.$$&lt;/p&gt;
+&lt;p&gt;Let $X$ be a real vector space, and $p$ is a &lt;em&gt;sublinear functional&lt;/em&gt; in $X$, that is, $p:X&#92;rightarrow&#92;mathbb{R}$ is a function satisfies the following properties:&lt;/p&gt;
+&lt;p&gt;$$&#92;begin{eqnarray}p(&#92;alpha x) &amp;#x3D; &#92;alpha p(x),&#92;quad &#92;forall &#92;alpha&amp;gt;0 &#92;text{ and } x&#92;in X,&#92;&#92;p(x+y) &#92;leqslant p(x)+p(y)&#92;quad &#92;forall x,y&#92;in X.&#92;end{eqnarray}$$&lt;br&gt;And let $Y$ be a subspace of $X$, $l:Y&#92;rightarrow&#92;mathbb{R}$ is a linear functional in $Y$ which satisfies&lt;br&gt;$$l(y)&#92;leqslant q(y),&#92;quad &#92;forall y&#92;in Y.$$&lt;br&gt;Then there exists a linear functional $&#92;widetilde{j}:X&#92;rightarrow&#92;mathbb{R}$, such that&lt;br&gt;$$&#92;widetilde{l}(y)&amp;#x3D;l(y),&#92;quad &#92;forall y&#92;in Y.&#92;quad &#92;text{ and } &#92;widetilde{l}(y)&#92;leqslant p(x),&#92;quad &#92;forall x&#92;in X.$$&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
@@ -87,11 +119,11 @@
 &lt;p&gt;说明. 本文为以前学习拓扑学时的部分笔记, 现发布于博客中供参考备忘. 若有读者发现错漏之处, 敬请电邮联系更正.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&quot;Recall-连通性的基本概念&quot;&gt;&lt;a href=&quot;#Recall-连通性的基本概念&quot; class=&quot;headerlink&quot; title=&quot;Recall: 连通性的基本概念&quot;&gt;&lt;/a&gt;Recall: 连通性的基本概念&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;【定义】[连通性] $X$ 为一拓扑空间. 若 $X$ 的一对&lt;strong&gt;非空开子集&lt;/strong&gt; $U,V$ 满足 $U\cap V &amp;#x3D; \varnothing, U\cup V &amp;#x3D;X$, 则称 $U,V$ 是分离的, 它们构成 $X$ 的一个分解. 若 $X$ 存在这样的分解, 则称 $X$ 是&lt;strong&gt;不连通的&lt;/strong&gt;, 否则称为&lt;strong&gt;连通的&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;【定义】[连通性] $X$ 为一拓扑空间. 若 $X$ 的一对&lt;strong&gt;非空开子集&lt;/strong&gt; $U,V$ 满足 $U&#92;cap V &amp;#x3D; &#92;varnothing, U&#92;cup V &amp;#x3D;X$, 则称 $U,V$ 是分离的, 它们构成 $X$ 的一个分解. 若 $X$ 存在这样的分解, 则称 $X$ 是&lt;strong&gt;不连通的&lt;/strong&gt;, 否则称为&lt;strong&gt;连通的&lt;/strong&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;关于连通性有以下等价描述:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;空间 $X$ 是连通的, 当且仅当除了 $X$ 自身和 $\varnothing$ 外, 不存在其他既开又闭的子集.&lt;/p&gt;
+&lt;p&gt;空间 $X$ 是连通的, 当且仅当除了 $X$ 自身和 $&#92;varnothing$ 外, 不存在其他既开又闭的子集.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Note.&lt;/strong&gt; 由于连通性的定义仅涉及到一族开子集之间的关系, 显然, 这个概念是一个拓扑概念. 事实上, &lt;strong&gt;连通性具有遗传性, 同时在连续映射, 有限积下依然保持&lt;/strong&gt;.&lt;/p&gt;</summary>
     
@@ -120,7 +152,7 @@
 &lt;p&gt;&lt;em&gt;说明. 本文为以前学习拓扑学时的部分笔记, 现发布于博客中供参考备忘. 若有读者发现错漏之处, 敬请电邮联系更正.&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;首先在集合的层次上讨论积的概念, 然后再转向考虑积拓扑空间, 最后讨论了积空间紧性的问题.&lt;/p&gt;
-&lt;h2 id=&quot;集族的笛卡尔积&quot;&gt;&lt;a href=&quot;#集族的笛卡尔积&quot; class=&quot;headerlink&quot; title=&quot;集族的笛卡尔积&quot;&gt;&lt;/a&gt;集族的笛卡尔积&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Note.&lt;/strong&gt; 有限个集合的笛卡尔积被定义为有序数组的形式 $(x_1,\cdots,x_n)$, 其中 $x_{i} \in X_{i}$. 也可以将其视为一族 $X_1\times\cdots\times X_2$ 上的映射&lt;br&gt;$$\left\{x:{1,\cdots,n}\rightarrow X_1\cup\cdots\cup X_n\mid x(j)\in X_{j}, \forall j &amp;#x3D; 1,\cdots,n \right\}.$$&lt;br&gt;这个形式方便我们将笛卡尔积推广到一般的集族的情况上.&lt;/p&gt;</summary>
+&lt;h2 id=&quot;集族的笛卡尔积&quot;&gt;&lt;a href=&quot;#集族的笛卡尔积&quot; class=&quot;headerlink&quot; title=&quot;集族的笛卡尔积&quot;&gt;&lt;/a&gt;集族的笛卡尔积&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Note.&lt;/strong&gt; 有限个集合的笛卡尔积被定义为有序数组的形式 $(x_1,&#92;cdots,x_n)$, 其中 $x_{i} &#92;in X_{i}$. 也可以将其视为一族 $X_1&#92;times&#92;cdots&#92;times X_2$ 上的映射&lt;br&gt;$$&#92;left&#92;{x:{1,&#92;cdots,n}&#92;rightarrow X_1&#92;cup&#92;cdots&#92;cup X_n&#92;mid x(j)&#92;in X_{j}, &#92;forall j &amp;#x3D; 1,&#92;cdots,n &#92;right&#92;}.$$&lt;br&gt;这个形式方便我们将笛卡尔积推广到一般的集族的情况上.&lt;/p&gt;</summary>
     
     
     
@@ -168,13 +200,13 @@
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;本Note收纳一些重要的关于 Lebesgue 积分的一些结论. 这里 $\Omega$ 总表示 $\mathbb{R}^n$ 中的开集, 具有 Lebesgue 测度 $dx$; $L^1(\Omega)$ 表示 $\Omega$ 上的可积函数空间.&lt;/p&gt;
+&lt;p&gt;本Note收纳一些重要的关于 Lebesgue 积分的一些结论. 这里 $&#92;Omega$ 总表示 $&#92;mathbb{R}^n$ 中的开集, 具有 Lebesgue 测度 $dx$; $L^1(&#92;Omega)$ 表示 $&#92;Omega$ 上的可积函数空间.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&quot;Beppo-Levi-单调收敛定理&quot;&gt;&lt;a href=&quot;#Beppo-Levi-单调收敛定理&quot; class=&quot;headerlink&quot; title=&quot;Beppo Levi 单调收敛定理&quot;&gt;&lt;/a&gt;Beppo Levi 单调收敛定理&lt;/h3&gt;&lt;p&gt;设 ${f_n}$ 是 $L^1$ 中的递增序列(即 $\forall n, f_n\leqslant f_{n+1}~ a.e.$) 使得&lt;br&gt;$$\sup_{n}\int f_n &amp;lt;\infty,$$&lt;br&gt;那么 $f_n(x)$ 在 $\Omega$ 上几乎处处收敛, 记为 $f(x)$; 更进一步有 $f\in L^1$ 且 $|f_n- f|_{L^1}\rightarrow 0$.&lt;/p&gt;
+&lt;h3 id=&quot;Beppo-Levi-单调收敛定理&quot;&gt;&lt;a href=&quot;#Beppo-Levi-单调收敛定理&quot; class=&quot;headerlink&quot; title=&quot;Beppo Levi 单调收敛定理&quot;&gt;&lt;/a&gt;Beppo Levi 单调收敛定理&lt;/h3&gt;&lt;p&gt;设 ${f_n}$ 是 $L^1$ 中的递增序列(即 $&#92;forall n, f_n&#92;leqslant f_{n+1}~ a.e.$) 使得&lt;br&gt;$$&#92;sup_{n}&#92;int f_n &amp;lt;&#92;infty,$$&lt;br&gt;那么 $f_n(x)$ 在 $&#92;Omega$ 上几乎处处收敛, 记为 $f(x)$; 更进一步有 $f&#92;in L^1$ 且 $|f_n- f|_{L^1}&#92;rightarrow 0$.&lt;/p&gt;
 &lt;h3 id=&quot;Legesgue-控制收敛定理&quot;&gt;&lt;a href=&quot;#Legesgue-控制收敛定理&quot; class=&quot;headerlink&quot; title=&quot;Legesgue 控制收敛定理&quot;&gt;&lt;/a&gt;Legesgue 控制收敛定理&lt;/h3&gt;&lt;p&gt;设 ${f_n}$ 是 $L^1$ 中的函数序列. 假设&lt;/p&gt;
-&lt;p&gt;a) $f_n(x)\rightarrow f(x)$ a.e. 收敛于 $\Omega$ 中,&lt;/p&gt;
-&lt;p&gt;b) 存在函数 $g\in L^1$, 使得每个 $n$, $|f_n(x)|\leqslant g(x)$, a.e. 于 $\Omega$ 中.&lt;/p&gt;
-&lt;p&gt;则 $f\in L^1(\Omega)$, 并且 $|f_n-f|_{L^1}\rightarrow 0$.&lt;/p&gt;</summary>
+&lt;p&gt;a) $f_n(x)&#92;rightarrow f(x)$ a.e. 收敛于 $&#92;Omega$ 中,&lt;/p&gt;
+&lt;p&gt;b) 存在函数 $g&#92;in L^1$, 使得每个 $n$, $|f_n(x)|&#92;leqslant g(x)$, a.e. 于 $&#92;Omega$ 中.&lt;/p&gt;
+&lt;p&gt;则 $f&#92;in L^1(&#92;Omega)$, 并且 $|f_n-f|_{L^1}&#92;rightarrow 0$.&lt;/p&gt;</summary>
     
     
     
@@ -203,10 +235,10 @@
 &lt;p&gt;内容节选自 from J. Rotman’s &lt;em&gt;Galois Theory&lt;/em&gt; - Appendix 1. 仅供学习时备忘使用.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Abelian Group.&lt;/strong&gt; A group in which multiplication is commutative.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Alternating Group $A_n$.&lt;/strong&gt; The subgroup of $S_n$ consisting of all the even permutations. it has order  $\frac{1}{2}n!$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Associativity.&lt;/strong&gt; For all $x,y,z$, one has $(xy)z=x(yz)$. it follows that one does not need parentheses for any product of three or more factors.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Alternating Group $A_n$.&lt;/strong&gt; The subgroup of $S_n$ consisting of all the even permutations. it has order  $&#92;frac{1}{2}n!$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Associativity.&lt;/strong&gt; For all $x,y,z$, one has $(xy)z&amp;#x3D;x(yz)$. it follows that one does not need parentheses for any product of three or more factors.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Automorphism.&lt;/strong&gt; An isomorphism of a group with itself.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Commutativity.&lt;/strong&gt; For all $x,y$, one has $xy=yx$.&lt;/p&gt;</summary>
+&lt;p&gt;&lt;strong&gt;Commutativity.&lt;/strong&gt; For all $x,y$, one has $xy&amp;#x3D;yx$.&lt;/p&gt;</summary>
     
     
     
@@ -230,7 +262,7 @@
     
     
     <summary type="html">&lt;h2 id=&quot;一段历史&quot;&gt;&lt;a href=&quot;#一段历史&quot; class=&quot;headerlink&quot; title=&quot;一段历史&quot;&gt;&lt;/a&gt;一段历史&lt;/h2&gt;&lt;p&gt;每一个学习数学的人一定都会知道 Reimann, 作为著名的数学家, 我们总能在各种地方见到他的名字. Reimann 在 1851 年获得了博士学位, 在 1854 年获得了讲师资格. 在德国的大学是这样的, 仅获得博士学位是不足以获得任教资格的, 还需要做出一份超越博士论文水平的研究成果——而 Reimann 的教授资格论文的选题是关于 Fourier 级数的. &lt;/p&gt;
-&lt;p&gt;这篇论文的题目是 &lt;em&gt;Über die Darstellbarkeit einer Function durch eine trigonometrische Reihe (关于用三角级数表示一个函数的可能性)&lt;/em&gt;. 这篇文章实际上解答了一个更大的问题, 即: &lt;strong&gt;在什么情况下, 一个函数可以被表示为 $\frac{a_0}{2}+\sum_{n=1}^{\infty}{(a_n\cos(nx) + b_n\sin(nx))}$?&lt;/strong&gt; 也正是在这篇论文中,  Reimann 首次提出并建立的&lt;strong&gt;Reimann 积分&lt;/strong&gt;的概念.&lt;/p&gt;
+&lt;p&gt;这篇论文的题目是 &lt;em&gt;Über die Darstellbarkeit einer Function durch eine trigonometrische Reihe (关于用三角级数表示一个函数的可能性)&lt;/em&gt;. 这篇文章实际上解答了一个更大的问题, 即: &lt;strong&gt;在什么情况下, 一个函数可以被表示为 $&#92;frac{a_0}{2}+&#92;sum_{n&amp;#x3D;1}^{&#92;infty}{(a_n&#92;cos(nx) + b_n&#92;sin(nx))}$?&lt;/strong&gt; 也正是在这篇论文中,  Reimann 首次提出并建立的&lt;strong&gt;Reimann 积分&lt;/strong&gt;的概念.&lt;/p&gt;
 &lt;p&gt;这篇论文直到 Reimann 在 39 岁去世后的两年后, 1968年, 才在 Dedekind 的促进下被公开发表. 基于 Reimann 的研究成果, 在随后的几年里, 诞生了数篇重要的论文, 它们来自 Hankel, Heine, Cantor, 这些论文, 澄清了一致收敛的概念和可逐项积分的关系, 将函数可积性的问题转化为了对函数间断点集的研究(而这一研究为集合论的发展开拓了道路, 并进一步加深了数学领域对于实数集结构的认识).&lt;/p&gt;</summary>
     
     
@@ -272,37 +304,6 @@
     <category term="方法论" scheme="https://zengfk.com.cn/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
     
     <category term="翻译" scheme="https://zengfk.com.cn/tags/%E7%BF%BB%E8%AF%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>每日一言 - 5月31日言</title>
-    <link href="https://zengfk.com.cn/2021/05/31/%E6%AF%8F%E6%97%A5%E4%B8%80%E8%A8%80-5%E6%9C%8831%E6%97%A5%E8%A8%80/"/>
-    <id>https://zengfk.com.cn/2021/05/31/%E6%AF%8F%E6%97%A5%E4%B8%80%E8%A8%80-5%E6%9C%8831%E6%97%A5%E8%A8%80/</id>
-    <published>2021-05-31T02:02:38.000Z</published>
-    <updated>2021-08-31T01:41:34.522Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;今日一言, 来自施瓦茨关于傅里叶级数与傅里叶积分的评价:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The theory of Fourier series and integrals has always had major difficulties and</summary>
-        
-      
-    
-    
-    
-    <category term="书摘" scheme="https://zengfk.com.cn/categories/%E4%B9%A6%E6%91%98/"/>
-    
-    <category term="每日一言" scheme="https://zengfk.com.cn/categories/%E4%B9%A6%E6%91%98/%E6%AF%8F%E6%97%A5%E4%B8%80%E8%A8%80/"/>
-    
-    
-    <category term="微言大义" scheme="https://zengfk.com.cn/tags/%E5%BE%AE%E8%A8%80%E5%A4%A7%E4%B9%89/"/>
-    
-    <category term="数学的本性" scheme="https://zengfk.com.cn/tags/%E6%95%B0%E5%AD%A6%E7%9A%84%E6%9C%AC%E6%80%A7/"/>
     
   </entry>
   
